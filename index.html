@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BECE Past Questions — Select Filters</title>
+
+  <!-- Google Font (primary) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* font-face / site typography */
+    :root{
+      --bg: #0f172a;
+      --card: #0b1220;
+      --muted: #9aa4bf;
+      --accent: #7c3aed;
+      --glass: rgba(255,255,255,0.03);
+      --success: #10b981;
+      --danger: #ef4444;
+      --max-w: 980px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background: linear-gradient(180deg,#071029 0%, #071033 100%); color:#e6eef8}
+
+    .container{max-width:var(--max-w);margin:28px auto;padding:20px}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:0;color:var(--muted);font-size:13px}
+
+    .card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(2,6,23,0.6); margin-bottom: 20px;}
+    .section{margin-bottom:14px}
+    .section h3{margin:0 0 8px 0;font-size:13px}
+    .subjects{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--glass);padding:8px 10px;border-radius:999px;font-size:13px;cursor:pointer;color:var(--muted)}
+    .chip.active{background:linear-gradient(90deg,var(--accent),#4f46e5);color:white}
+
+    select,button{padding:10px 12px;border-radius:10px;border:0;background:transparent;color:inherit}
+    .controls{display:flex;gap:8px;align-items:center}
+    .btn{background:var(--accent);padding:10px 14px;border-radius:10px;border:0;color:white;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04)}
+
+    footer.small{margin-top:18px;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:900px){.logo{width:40px;height:40px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">BE</div>
+        <div>
+          <h1>BECE Prep [Interactive MVP]</h1>
+          <p class="lead">Practice by subject or year • Get performance analytics and improvement tips</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="section">
+        <h3>Filter</h3>
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
+          <select id="yearSelect" aria-label="Select year">
+            <option value="all">All years</option>
+          </select>
+          <label style="color:var(--muted);font-size:13px">    </label>
+          <select id="modeSelect" aria-label="Mode">
+            <option value="practice">Practice Mode</option>
+            <option value="exam">Exam Mode</option>
+          </select>
+        </div>
+
+        <h3>Subjects</h3>
+        <div class="subjects" id="subjectsList"></div>
+      </div>
+
+      <div class="section">
+        <h3>Controls</h3>
+        <div class="controls">
+          <button id="startBtn" class="btn">Start Quiz</button>
+          <label class="switch">
+            <input type="checkbox" id="endlessMode">
+            <span style="font-size: 13px; color: var(--muted)">Endless Mode</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <footer class="small">This is a front-end MVP with dummy questions. Answers are stored in your browser's localStorage.</footer>
+  </div>
+
+  <script>
+    /*********************** Dummy dataset ************************/
+    // In a real app you'll fetch this from your backend. Each question has: id, year, subject, question, options, answerIndex
+    const QUESTIONS = [
+      {id:1, year:2019, subject:'Mathematics', q: 'Simplify: 3(x+4) - 2x', options:['x+12','x+4','5x+12','x+8'], a:0},
+      {id:2, year:2019, subject:'English', q: 'Choose the correct sentence', options:['He dont like it','He does not like it','He do not like it','He not like it'], a:1},
+      {id:3, year:2020, subject:'Integrated Science', q: 'Which gas do plants consume?', options:['Oxygen','Nitrogen','Carbon dioxide','Helium'], a:2},
+      {id:4, year:2020, subject:'Mathematics', q: 'What is the next number: 2,4,8,16,...', options:['20','24','32','34'], a:2},
+      {id:5, year:2021, subject:'Social Studies', q: 'What is a democracy?', options:['One-man rule','Rule by the people','Military rule','A type of crop'], a:1},
+      {id:6, year:2021, subject:'Mathematics', q: 'Solve for x: 2x = 10', options:['4','5','10','8'], a:1},
+      {id:7, year:2022, subject:'English', q: 'Pick the synonym for "happy"', options:['Sad','Angry','Glad','Tired'], a:2},
+      {id:8, year:2022, subject:'Integrated Science', q: 'Which device measures temperature?', options:['Barometer','Thermometer','Ammeter','Voltmeter'], a:1},
+      {id:9, year:2023, subject:'Mathematics', q: 'Find area of rectangle with sides 4 and 6', options:['10','24','12','20'], a:1},
+      {id:10, year:2023, subject:'Social Studies', q: 'Capital city of Ghana', options:['Kumasi','Accra','Tamale','Takoradi'], a:1}
+    ];
+    /****************************************************************/
+
+    // DOM refs
+    const subjectsList = document.getElementById('subjectsList');
+    const yearSelect = document.getElementById('yearSelect');
+    const startBtn = document.getElementById('startBtn');
+    const modeSelect = document.getElementById('modeSelect');
+    const endlessMode = document.getElementById('endlessMode');
+
+    // initialize
+    function init(){
+      populateYears();
+      renderSubjects();
+      bindEvents();
+    }
+
+    function populateYears(){
+      const years = Array.from(new Set(QUESTIONS.map(q=>q.year))).sort((a,b)=>b-a);
+      for(const y of years){
+        const o = document.createElement('option'); o.value = y; o.textContent = y; yearSelect.appendChild(o);
+      }
+    }
+
+    function renderSubjects(){
+      const subjects = Array.from(new Set(QUESTIONS.map(q=>q.subject))).sort();
+      subjectsList.innerHTML = '';
+      for(const t of subjects){
+        const chip = document.createElement('button');
+        chip.className='chip';
+        chip.textContent=t;
+        chip.setAttribute('data-subject',t);
+        chip.addEventListener('click', ()=>{chip.classList.toggle('active')});
+        subjectsList.appendChild(chip);
+      }
+    }
+
+    function bindEvents(){
+      startBtn.addEventListener('click', startQuiz);
+    }
+
+    function startQuiz(){
+      const selectedSubjects = Array.from(document.querySelectorAll('.chip.active')).map(c=>c.dataset.subject);
+      const year = yearSelect.value;
+      const mode = modeSelect.value;
+      const endless = endlessMode.checked;
+
+      // Store filter settings in localStorage
+      const filterSettings = {
+        selectedSubjects,
+        year,
+        mode,
+        endless
+      };
+      
+      localStorage.setItem('bece_filter_settings', JSON.stringify(filterSettings));
+      
+      // Redirect to quiz page
+      window.location.href = 'quiz.html';
+    }
+
+    // init app on load
+    init();
+  </script>
+</body>
+</html>

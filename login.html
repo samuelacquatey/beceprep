@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BECE Prep - Sign In / Sign Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #0b1220;
+      --muted: #9aa4bf;
+      --accent: #7c3aed;
+      --glass: rgba(255,255,255,0.03);
+      --success: #10b981;
+      --danger: #ef4444;
+      --max-w: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg, #071029 0%, #071033 100%);
+      color: #e6eef8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 420px;
+      width: 100%;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), #4f46e5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .brand-text {
+      text-align: center;
+    }
+
+    .brand-text h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .brand-text p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tabs {
+      display: flex;
+      background: var(--glass);
+      border-radius: 10px;
+      padding: 4px;
+      margin-bottom: 24px;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 12px;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-weight: 500;
+    }
+
+    .tab.active {
+      background: linear-gradient(90deg, var(--accent), #4f46e5);
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .form-group input {
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      color: #e6eef8;
+      font-family: inherit;
+      font-size: 15px;
+      transition: all 0.2s;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(124,58,237,0.2);
+    }
+
+    .password-toggle {
+      position: relative;
+    }
+
+    .toggle-icon {
+      position: absolute;
+      right: 14px;
+      top: 38px;
+      cursor: pointer;
+      color: var(--muted);
+    }
+
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .remember {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .remember input {
+      accent-color: var(--accent);
+    }
+
+    .forgot {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .forgot:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, var(--accent), #4f46e5);
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 10px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: 8px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(124,58,237,0.3);
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 20px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .social-login {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .social-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+      border-radius: 10px;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,0.04);
+      color: #e6eef8;
+      font-family: inherit;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .social-btn:hover {
+      background: rgba(255,255,255,0.06);
+    }
+
+    .signup-prompt {
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 24px;
+    }
+
+    .signup-prompt a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .signup-prompt a:hover {
+      text-decoration: underline;
+    }
+
+    .form-page {
+      display: none;
+    }
+
+    .form-page.active {
+      display: block;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 24px;
+      }
+      
+      .social-login {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="brand">
+        <div class="logo">BE</div>
+        <div class="brand-text">
+          <h1>BECE Prep</h1>
+          <p>Master your exams with practice</p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active" id="signin-tab">Sign In</div>
+        <div class="tab" id="signup-tab">Sign Up</div>
+      </div>
+
+      <div class="form-page active" id="signin-form">
+        <div class="form-container">
+          <div class="form-group">
+            <label for="email">number</label>
+            <input type="tel" id="email" placeholder="Enter your number">
+          </div>
+          
+          <div class="form-group password-toggle">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <span class="toggle-icon" id="toggle-password">👁️</span>
+          </div>
+          
+          <div class="remember-forgot">
+            <label class="remember">
+              <input type="checkbox" id="remember">
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot">Forgot password?</a>
+          </div>
+          
+          <button class="btn">Sign In</button>
+        </div>
+
+        <div class="divider">or continue with</div>
+
+        <div class="social-login">
+          <button class="social-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Google
+          </button>
+          
+          <button class="social-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            Facebook
+          </button>
+        </div>
+
+        <div class="signup-prompt">
+          Don't have an account? <a href="#" id="switch-to-signup">Sign up</a>
+        </div>
+      </div>
+
+      <div class="form-page" id="signup-form">
+        <div class="form-container">
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" placeholder="Enter your full name">
+          </div>
+          
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" placeholder="Enter your email">
+          </div>
+          
+          <div class="form-group password-toggle">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" placeholder="Create a password">
+            <span class="toggle-icon" id="toggle-signup-password">👁️</span>
+          </div>
+          
+          <div class="form-group password-toggle">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="Confirm your password">
+            <span class="toggle-icon" id="toggle-confirm-password">👁️</span>
+          </div>
+          
+          <div class="remember">
+            <input type="checkbox" id="terms">
+            <label for="terms">I agree to the <a href="#" style="color: var(--accent);">Terms & Conditions</a></label>
+          </div>
+          
+          <button class="btn">Create Account</button>
+        </div>
+
+        <div class="divider">or continue with</div>
+
+        <div class="social-login">
+          <button class="social-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Google
+          </button>
+          
+          <button class="social-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.042-3.441.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.920-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+            </svg>
+            Facebook
+          </button>
+        </div>
+
+        <div class="signup-prompt">
+          Already have an account? <a href="#" id="switch-to-signin">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Toggle between sign in and sign up forms
+      const signinTab = document.getElementById('signin-tab');
+      const signupTab = document.getElementById('signup-tab');
+      const signinForm = document.getElementById('signin-form');
+      const signupForm = document.getElementById('signup-form');
+      const switchToSignup = document.getElementById('switch-to-signup');
+      const switchToSignin = document.getElementById('switch-to-signin');
+      
+      function activateSignIn() {
+        signinTab.classList.add('active');
+        signupTab.classList.remove('active');
+        signinForm.classList.add('active');
+        signupForm.classList.remove('active');
+      }
+      
+      function activateSignUp() {
+        signinTab.classList.remove('active');
+        signupTab.classList.add('active');
+        signinForm.classList.remove('active');
+        signupForm.classList.add('active');
+      }
+      
+      signinTab.addEventListener('click', activateSignIn);
+      signupTab.addEventListener('click', activateSignUp);
+      switchToSignup.addEventListener('click', function(e) {
+        e.preventDefault();
+        activateSignUp();
+      });
+      switchToSignin.addEventListener('click', function(e) {
+        e.preventDefault();
+        activateSignIn();
+      });
+      
+      // Toggle password visibility
+      function setupPasswordToggle(toggleId, inputId) {
+        const toggle = document.getElementById(toggleId);
+        const input = document.getElementById(inputId);
+        
+        toggle.addEventListener('click', function() {
+          if (input.type === 'password') {
+            input.type = 'text';
+            toggle.textContent = '🔒';
+          } else {
+            input.type = 'password';
+            toggle.textContent = '👁️';
+          }
+        });
+      }
+      
+      setupPasswordToggle('toggle-password', 'password');
+      setupPasswordToggle('toggle-signup-password', 'signup-password');
+      setupPasswordToggle('toggle-confirm-password', 'confirm-password');
+      
+      // Form submission
+      const signInBtn = document.querySelector('#signin-form .btn');
+      const signUpBtn = document.querySelector('#signup-form .btn');
+      
+      signInBtn.addEventListener('click', function() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        
+        if (!email || !password) {
+          alert('Please fill in all fields');
+          return;
+        }
+        
+        // Simulate successful login
+        alert('Sign in successful! Redirecting to dashboard...');
+        // In a real app, you would redirect to the main app page
+        // window.location.href = 'index.html';
+      });
+      
+      signUpBtn.addEventListener('click', function() {
+        const fullname = document.getElementById('fullname').value;
+        const email = document.getElementById('signup-email').value;
+        const password = document.getElementById('signup-password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+        const terms = document.getElementById('terms').checked;
+        
+        if (!fullname || !email || !password || !confirmPassword) {
+          alert('Please fill in all fields');
+          return;
+        }
+        
+        if (password !== confirmPassword) {
+          alert('Passwords do not match');
+          return;
+        }
+        
+        if (!terms) {
+          alert('Please agree to the Terms & Conditions');
+          return;
+        }
+        
+        // Simulate successful registration
+        alert('Account created successfully! You can now sign in.');
+        activateSignIn();
+      });
+    });
+  </script>
+</body>
+</html>

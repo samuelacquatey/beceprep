@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BECE Past Questions — Quiz</title>
+
+  <!-- Google Font (primary) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- jsPDF library for PDF generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+  <style>
+    /* font-face / site typography */
+    :root{
+      --bg: #0f172a;
+      --card: #0b1220;
+      --muted: #9aa4bf;
+      --accent: #7c3aed;
+      --glass: rgba(255,255,255,0.03);
+      --success: #10b981;
+      --danger: #ef4444;
+      --max-w: 980px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background: linear-gradient(180deg,#071029 0%, #071033 100%); color:#e6eef8}
+
+    .container{max-width:var(--max-w);margin:28px auto;padding:20px}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:0;color:var(--muted);font-size:13px}
+
+    .grid{display:grid;grid-template-columns:320px 1fr;gap:18px}
+
+    /* Sidebar */
+    .card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .sidebar .section{margin-bottom:14px}
+    .section h3{margin:0 0 8px 0;font-size:13px}
+
+    label.switch{display:flex;align-items:center;gap:8px}
+    select,button{padding:10px 12px;border-radius:10px;border:0;background:transparent;color:inherit}
+    .controls{display:flex;gap:8px;align-items:center}
+
+    /* Main */
+    .main{display:flex;flex-direction:column;gap:12px}
+    .question-card{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));min-height:220px}
+    .meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+    .prompt{font-size:18px;margin:12px 0}
+    .options{display:flex;flex-direction:column;gap:10px}
+    .option{padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);cursor:pointer}
+    .option:hover{transform:translateY(-2px);transition:all .12s}
+    .option.selected{background:rgba(124,58,237,0.12);border-color:rgba(124,58,237,0.8)}
+    .option.correct{background:rgba(16,185,129,0.12);border-color:rgba(16,185,129,0.8)}
+    .option.wrong{background:rgba(239,68,68,0.08);border-color:rgba(239,68,68,0.8)}
+
+    .actions{display:flex;gap:8px;justify-content:space-between;align-items:center;margin-top:8px}
+    .btn{background:var(--accent);padding:10px 14px;border-radius:10px;border:0;color:white;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04)}
+
+    .progress{height:10px;background:rgba(255,255,255,0.04);border-radius:999px;overflow:hidden}
+    .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#4f46e5)}
+
+    .results{display:flex;gap:10px;flex-wrap:wrap}
+    .stat{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);min-width:140px}
+
+    footer.small{margin-top:18px;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:900px){.grid{grid-template-columns:1fr;}.logo{width:40px;height:40px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">BE</div>
+        <div>
+          <h1>BECE Prep [Interactive MVP]</h1>
+          <p class="lead">Practice by subject or year • Get performance analytics and improvement tips</p>
+        </div>
+      </div>
+      <div>
+        <button id="backBtn" class="btn ghost">Change Filters</button>
+        <button id="exportBtn" class="btn ghost">Export Answers</button>
+      </div>
+    </header>
+
+    <div class="grid">
+      <aside class="sidebar card">
+        <div class="section">
+          <h3>Current Filters</h3>
+          <div id="currentFilters" style="color:var(--muted);font-size:13px;margin-bottom:12px"></div>
+        </div>
+
+        <div class="section">
+          <h3>Controls</h3>
+          <div class="controls">
+            <button id="restartBtn" class="btn">Restart</button>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Progress</h3>
+          <div style="display:flex;gap:8px;align-items:center">
+            <div style="flex:1">
+              <div class="progress" aria-hidden><i id="progressBar" style="width:0%"></i></div>
+            </div>
+            <div id="progressLabel" style="min-width:70px;text-align:right;color:var(--muted)">0 / 0</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Quick stats</h3>
+          <div class="results" id="statsArea">
+            <div class="stat">Answered: <strong id="answeredCount">0</strong></div>
+            <div class="stat">Correct: <strong id="correctCount">0</strong></div>
+            <div class="stat">Accuracy: <strong id="accuracy">0%</strong></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Saved Sessions</h3>
+          <div id="sessionsList" style="display:flex;flex-direction:column;gap:8px"></div>
+        </div>
+
+      </aside>
+
+      <main class="main">
+        <div class="question-card card" id="questionCard">
+          <div class="meta">
+            <div id="metaLeft">Loading questions...</div>
+            <div id="metaRight"></div>
+          </div>
+
+          <div style="margin-top:10px">
+            <div class="prompt" id="prompt">—</div>
+            <div class="options" id="options"></div>
+          </div>
+
+          <div class="actions">
+            <div style="display:flex;gap:8px">
+              <button class="btn ghost" id="prevBtn">Previous</button>
+              <button class="btn ghost" id="nextBtn">Skip</button>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <button class="btn" id="submitBtn">Submit</button>
+              <button class="btn ghost" id="reviewBtn">Summary</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="summaryPanel" style="display:none">
+          <h3>Session summary</h3>
+          <div id="summaryContent"></div>
+          <div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
+            <button class="btn ghost" id="closeSummary">Close</button>
+            <button class="btn" id="clearSession">Clear answers</button>
+          </div>
+        </div>
+
+        <footer class="small">This is a front-end MVP with dummy questions. Answers are stored in your browser's localStorage.</footer>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    /*********************** Dummy dataset ************************/
+    // In a real app you'll fetch this from your backend. Each question has: id, year, subject, question, options, answerIndex
+    const QUESTIONS = [
+      {id:1, year:2019, topic: "algebraic expressions", subject:'Mathematics', q: 'Simplify: 3(x+4) - 2x', options:['x+12','x+4','5x+12','x+8'], a:0},
+      {id:2, year:2019, topic: "grammar", subject:'English', q: 'Choose the correct sentence', options:['He dont like it','He does not like it','He do not like it','He not like it'], a:1},
+      {id:3, year:2020, topic: "plant biology", subject:'Integrated Science', q: 'Which gas do plants consume?', options:['Oxygen','Nitrogen','Carbon dioxide','Helium'], a:2},
+      {id:4, year:2020, topic: "sequences", subject:'Mathematics', q: 'What is the next number: 2,4,8,16,...', options:['20','24','32','34'], a:2},
+      {id:5, year:2021, topic: "civics", subject:'Social Studies', q: 'What is a democracy?', options:['One-man rule','Rule by the people','Military rule','A type of crop'], a:1},
+      {id:6, year:2021, topic: "algebra", subject:'Mathematics', q: 'Solve for x: 2x = 10', options:['4','5','10','8'], a:1},
+      {id:7, year:2022, topic: "vocabulary", subject:'English', q: 'Pick the synonym for "happy"', options:['Sad','Angry','Glad','Tired'], a:2},
+      {id:8, year:2022, topic: "measurement", subject:'Integrated Science', q: 'Which device measures temperature?', options:['Barometer','Thermometer','Ammeter','Voltmeter'], a:1},
+      {id:9, year:2023, topic: "geometry", subject:'Mathematics', q: 'Find area of rectangle with sides 4 and 6', options:['10','24','12','20'], a:1},
+      {id:10, year:2023, topic: "geography", subject:'Social Studies', q: 'Capital city of Ghana', options:['Kumasi','Accra','Tamale','Takoradi'], a:1}
+    ];
+    /****************************************************************/
+
+    // App state
+    let state = {
+      pool: [], // filtered question ids
+      index: 0, // current index in pool
+      mode: 'practice',
+      endless: false,
+      answers: {}, // {questionId: {choice: i, correct: bool, time: ts}}
+      filterSettings: null
+    };
+
+    // DOM refs
+    const backBtn = document.getElementById('backBtn');
+    const restartBtn = document.getElementById('restartBtn');
+    const currentFilters = document.getElementById('currentFilters');
+    const promptEl = document.getElementById('prompt');
+    const optionsEl = document.getElementById('options');
+    const metaLeft = document.getElementById('metaLeft');
+    const metaRight = document.getElementById('metaRight');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const reviewBtn = document.getElementById('reviewBtn');
+    const progressBar = document.getElementById('progressBar');
+    const progressLabel = document.getElementById('progressLabel');
+    const answeredCount = document.getElementById('answeredCount');
+    const correctCount = document.getElementById('correctCount');
+    const accuracy = document.getElementById('accuracy');
+    const summaryPanel = document.getElementById('summaryPanel');
+    const summaryContent = document.getElementById('summaryContent');
+    const closeSummary = document.getElementById('closeSummary');
+    const clearSession = document.getElementById('clearSession');
+    const sessionsList = document.getElementById('sessionsList');
+    const exportBtn = document.getElementById('exportBtn');
+
+    // initialize
+    function init(){
+      // Load filter settings from localStorage
+      const filterSettings = localStorage.getItem('bece_filter_settings');
+      if (!filterSettings) {
+        // No filters selected, redirect back to index
+        window.location.href = 'index.html';
+        return;
+      }
+      
+      state.filterSettings = JSON.parse(filterSettings);
+      displayCurrentFilters();
+      loadSavedSession();
+      startSession();
+      bindEvents();
+      updateStats();
+    }
+
+    function displayCurrentFilters() {
+      let filterText = '';
+      
+      if (state.filterSettings.year !== 'all') {
+        filterText += `Year: ${state.filterSettings.year}<br>`;
+      }
+      
+      if (state.filterSettings.selectedSubjects.length > 0) {
+        filterText += `Subjects: ${state.filterSettings.selectedSubjects.join(', ')}<br>`;
+      }
+      
+      filterText += `Mode: ${state.filterSettings.mode === 'practice' ? 'Practice' : 'Exam'}<br>`;
+      filterText += `Endless: ${state.filterSettings.endless ? 'On' : 'Off'}`;
+      
+      currentFilters.innerHTML = filterText;
+    }
+
+    function startSession(){
+      const selectedSubjects = state.filterSettings.selectedSubjects;
+      const year = state.filterSettings.year;
+      state.mode = state.filterSettings.mode;
+      state.endless = state.filterSettings.endless;
+
+      state.pool = QUESTIONS.filter(q=>{
+        if(selectedSubjects.length && !selectedSubjects.includes(q.subject)) return false;
+        if(year!=='all' && String(q.year)!==String(year)) return false;
+        return true;
+      }).map(q=>q.id);
+
+      if(state.pool.length===0){
+        promptEl.textContent='No questions match your filters.';
+        optionsEl.innerHTML='';
+        metaLeft.textContent='—';
+        metaRight.textContent='';
+        return;
+      }
+      
+      state.index = 0;
+      renderQuestion();
+      updateProgress();
+    }
+
+    function renderQuestion(){
+      if(state.pool.length===0){ 
+        promptEl.textContent='No active session. Choose filters and press Start.'; 
+        optionsEl.innerHTML=''; 
+        metaLeft.textContent='—'; 
+        metaRight.textContent=''; 
+        return; 
+      }
+      
+      const qid = state.pool[state.index];
+      const q = QUESTIONS.find(x=>x.id===qid);
+      metaLeft.textContent = `${q.topic} • ${q.year}`;
+      metaRight.textContent = `Question ${state.index+1} of ${state.pool.length}`;
+      promptEl.textContent = q.q;
+
+      optionsEl.innerHTML = '';
+      q.options.forEach((opt, i)=>{
+        const el = document.createElement('div');
+        el.className='option';
+        el.tabIndex = 0;
+        el.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center"><span>${String.fromCharCode(65+i)}. ${opt}</span><small style="color:var(--muted)"></small></div>`;
+        el.addEventListener('click', ()=> selectOption(q.id,i));
+        optionsEl.appendChild(el);
+      });
+
+      // restore selection if any
+      const prev = state.answers[q.id];
+      if(prev){
+        const nodes = optionsEl.querySelectorAll('.option');
+        nodes[prev.choice].classList.add('selected');
+        if(state.mode==='practice') showCorrectness(q.id);
+      }
+    }
+
+    function selectOption(qid, choice){
+      // toggle selection
+      const nodes = optionsEl.querySelectorAll('.option');
+      nodes.forEach(n=>n.classList.remove('selected'));
+      nodes[choice].classList.add('selected');
+      // store temporarily, not marking correct until submit
+      state.answers[qid] = state.answers[qid]||{};
+      state.answers[qid].choice = choice;
+      saveSession();
+      updateStats();
+    }
+
+    function submitAnswer(){
+      if(state.pool.length===0) return;
+      const qid = state.pool[state.index];
+      const q = QUESTIONS.find(x=>x.id===qid);
+      const record = state.answers[qid];
+      if(!record || typeof record.choice !== 'number'){ alert('Please select an option first.'); return }
+      const correct = (record.choice === q.a);
+      record.correct = correct;
+      record.time = Date.now();
+      saveSession();
+      if(state.mode==='practice') showCorrectness(qid);
+      updateStats();
+
+      // auto-advance
+      if(state.index < state.pool.length - 1) nextQuestion();
+      else if(state.endless) {
+        // shuffle to a random question
+        state.index = Math.floor(Math.random() * state.pool.length);
+        renderQuestion();
+      }
+    }
+
+    function showCorrectness(qid){
+      const q = QUESTIONS.find(x=>x.id===qid);
+      const nodes = optionsEl.querySelectorAll('.option');
+      nodes.forEach((n, i)=>{
+        n.classList.remove('correct','wrong');
+        if(i===q.a) n.classList.add('correct');
+        const rec = state.answers[qid];
+        if(rec && rec.choice === i && rec.choice !== q.a) n.classList.add('wrong');
+      });
+    }
+
+    function prevQuestion(){
+      if(state.pool.length===0) return;
+      state.index = Math.max(0, state.index - 1);
+      renderQuestion();
+      updateProgress();
+    }
+
+    function nextQuestion(){
+      if(state.pool.length===0) return;
+      state.index = Math.min(state.pool.length - 1, state.index + 1);
+      renderQuestion();
+      updateProgress();
+    }
+
+    function updateProgress(){
+      const total = state.pool.length;
+      const done = state.pool.filter(id=> state.answers[id] && typeof state.answers[id].choice==='number').length;
+      progressBar.style.width = total? Math.round((done/total)*100) + '%':'0%';
+      progressLabel.textContent = `${done} / ${total}`;
+    }
+
+    function updateStats(){
+      const answered = Object.keys(state.answers).length;
+      const correct = Object.values(state.answers).filter(r=>r.correct).length;
+      answeredCount.textContent = answered;
+      correctCount.textContent = correct;
+      accuracy.textContent = answered? Math.round((correct/answered)*100) + '%':'0%';
+      updateProgress();
+      renderSavedSessionsList();
+    }
+
+    function saveSession(){
+      localStorage.setItem('bece_mvp_answers', JSON.stringify(state.answers));
+    }
+
+    function loadSavedSession(){
+      const raw = localStorage.getItem('bece_mvp_answers');
+      if(raw) state.answers = JSON.parse(raw);
+    }
+
+    function renderSavedSessionsList(){
+      sessionsList.innerHTML = '';
+      const raw = localStorage.getItem('bece_mvp_answers');
+      if(raw){
+        const div = document.createElement('div');
+        div.style.display='flex';div.style.justifyContent='space-between';div.style.alignItems='center';
+        div.innerHTML = `<small style="color:var(--muted)">Local session saved</small><div><button class='btn ghost load-session' data-session='local'>Load</button></div>`;
+        sessionsList.appendChild(div);
+      } else {
+        sessionsList.innerHTML = '<small style="color:var(--muted)">No saved sessions</small>';
+      }
+    }
+
+    function loadSession(name){
+      if(name==='local') loadSavedSession();
+      updateStats(); renderQuestion();
+    }
+
+    function showSummary(){
+      summaryPanel.style.display='block';
+      const answeredIds = Object.keys(state.answers).map(x=>Number(x));
+      if(answeredIds.length===0) { summaryContent.innerHTML = '<p style="color:var(--muted)">No answers yet. Start a session and submit answers.</p>'; return }
+
+      // Build per-subject summary
+      const bySubject = {};
+      for(const id of answeredIds){
+        const q = QUESTIONS.find(x=>x.id===id);
+        const rec = state.answers[id];
+        bySubject[q.subject] = bySubject[q.subject] || {correct:0,total:0,items:[]};
+        bySubject[q.subject].total +=1;
+        if(rec.correct) bySubject[q.subject].correct +=1;
+        bySubject[q.subject].items.push({q,rec});
+      }
+
+      let html = '<div style="display:flex;flex-direction:column;gap:8px">';
+      for(const t of Object.keys(bySubject)){
+        const s = bySubject[t];
+        const perc = Math.round((s.correct/s.total)*100);
+        html += `<div style="padding:12px;border-radius:8px;background:rgba(255,255,255,0.02)"><strong>${t}</strong> — ${s.correct}/${s.total} correct (${perc}%)</div>`;
+      }
+      html += '</div>';
+      summaryContent.innerHTML = html;
+    }
+
+    function clearAll(){ localStorage.removeItem('bece_mvp_answers'); state.answers={}; updateStats(); renderQuestion(); }
+
+    function exportAnswers(){
+      // Create a new PDF document
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      
+      // Add title
+      doc.setFontSize(20);
+      doc.setTextColor(61, 61, 139);
+      doc.text("BECE Exam Results Summary", 105, 20, { align: "center" });
+      
+      // Add date
+      doc.setFontSize(12);
+      doc.setTextColor(100, 100, 100);
+      doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 105, 30, { align: "center" });
+      
+      // Add summary statistics
+      doc.setFontSize(14);
+      doc.setTextColor(0, 0, 0);
+      doc.text("Performance Summary", 20, 45);
+      
+      doc.setFontSize(12);
+      const answered = Object.keys(state.answers).length;
+      const correct = Object.values(state.answers).filter(r=>r.correct).length;
+      const accuracy = answered ? Math.round((correct/answered)*100) : 0;
+      
+      doc.text(`Questions Answered: ${answered}`, 20, 55);
+      doc.text(`Correct Answers: ${correct}`, 20, 65);
+      doc.text(`Accuracy: ${accuracy}%`, 20, 75);
+      
+      // Add subject breakdown
+      doc.setFontSize(14);
+      doc.text("Subject Performance", 20, 90);
+      
+      const bySubject = {};
+      for(const id of Object.keys(state.answers)){
+        const q = QUESTIONS.find(x=>x.id === parseInt(id));
+        if (q) {
+          bySubject[q.subject] = bySubject[q.subject] || {correct:0, total:0};
+          bySubject[q.subject].total += 1;
+          if(state.answers[id].correct) bySubject[q.subject].correct += 1;
+        }
+      }
+      
+      let yPos = 100;
+      doc.setFontSize(12);
+      for(const subject of Object.keys(bySubject)){
+        const s = bySubject[subject];
+        const perc = Math.round((s.correct/s.total)*100);
+        doc.text(`${subject}: ${s.correct}/${s.total} (${perc}%)`, 20, yPos);
+        yPos += 10;
+      }
+      
+      // Add detailed answers
+      doc.setFontSize(14);
+      yPos += 10;
+      doc.text("Detailed Answers", 20, yPos);
+      yPos += 15;
+      
+      doc.setFontSize(10);
+      for(const id of Object.keys(state.answers)){
+        const q = QUESTIONS.find(x=>x.id === parseInt(id));
+        if (q) {
+          const answer = state.answers[id];
+          
+          // Check if we need a new page
+          if (yPos > 250) {
+            doc.addPage();
+            yPos = 20;
+          }
+          
+          doc.setFontSize(10);
+          doc.setTextColor(0, 0, 0);
+          doc.text(`Q: ${q.q}`, 20, yPos);
+          yPos += 7;
+          
+          doc.setTextColor(0, 0, 0);
+          doc.text(`Your answer: ${q.options[answer.choice]}`, 20, yPos);
+          yPos += 7;
+          
+          if (answer.correct) {
+            doc.setTextColor(0, 128, 0);
+            doc.text("✓ Correct", 20, yPos);
+          } else {
+            doc.setTextColor(255, 0, 0);
+            doc.text(`✗ Incorrect (Correct: ${q.options[q.a]})`, 20, yPos);
+          }
+          yPos += 12;
+        }
+      }
+      
+      // Save the PDF
+      doc.save("bece_exam_results.pdf");
+    }
+
+    function bindEvents(){
+      prevBtn.addEventListener('click', prevQuestion);
+      nextBtn.addEventListener('click', nextQuestion);
+      submitBtn.addEventListener('click', submitAnswer);
+      reviewBtn.addEventListener('click', showSummary);
+      closeSummary.addEventListener('click', ()=> summaryPanel.style.display='none');
+      clearSession.addEventListener('click', ()=>{ if(confirm('Clear saved answers?')){ state.answers={}; saveSession(); updateStats(); renderQuestion(); }});
+      exportBtn.addEventListener('click', exportAnswers);
+      sessionsList.addEventListener('click', (e)=>{ if(e.target.matches('.load-session')) loadSession(e.target.dataset.session) });
+      backBtn.addEventListener('click', () => { window.location.href = 'index.html'; });
+      restartBtn.addEventListener('click', () => { 
+        state.answers = {};
+        saveSession();
+        state.index = 0;
+        updateStats();
+        renderQuestion();
+      });
+    }
+
+    // init app on load
+    init();
+  </script>
+</body>
+</html>
