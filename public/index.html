@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BECE Prep - Sign In / Sign Up</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
   <style>
     :root {
       --bg: #0f172a;
@@ -14,7 +15,6 @@
       --glass: rgba(255,255,255,0.03);
       --success: #10b981;
       --danger: #ef4444;
-      --max-w: 980px;
     }
 
     * {
@@ -44,6 +44,7 @@
       border-radius: 16px;
       padding: 32px;
       box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+      position: relative;
     }
 
     .brand {
@@ -263,6 +264,54 @@
       display: block;
     }
 
+    .loading-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(11, 18, 32, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      z-index: 10;
+      display: none;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(124, 58, 237, 0.3);
+      border-radius: 50%;
+      border-top-color: var(--accent);
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .alert {
+      padding: 12px 16px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      font-size: 14px;
+      display: none;
+    }
+
+    .alert-error {
+      background-color: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .alert-success {
+      background-color: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
     @media (max-width: 480px) {
       .card {
         padding: 24px;
@@ -277,6 +326,12 @@
 <body>
   <div class="container">
     <div class="card">
+      <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+      </div>
+
+      <div class="alert" id="alertBox"></div>
+
       <div class="brand">
         <div class="logo">BE</div>
         <div class="brand-text">
@@ -293,8 +348,8 @@
       <div class="form-page active" id="signin-form">
         <div class="form-container">
           <div class="form-group">
-            <label for="email">number</label>
-            <input type="tel" id="email" placeholder="Enter your number">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
           </div>
           
           <div class="form-group password-toggle">
@@ -308,16 +363,16 @@
               <input type="checkbox" id="remember">
               <span>Remember me</span>
             </label>
-            <a href="#" class="forgot">Forgot password?</a>
+            <a href="#" class="forgot" id="forgotPassword">Forgot password?</a>
           </div>
           
-          <button class="btn">Sign In</button>
+          <button class="btn" id="signInBtn" >Sign In</button>
         </div>
 
         <div class="divider">or continue with</div>
 
         <div class="social-login">
-          <button class="social-btn">
+          <button class="social-btn" id="googleSignIn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -325,13 +380,6 @@
               <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
             </svg>
             Google
-          </button>
-          
-          <button class="social-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-            Facebook
           </button>
         </div>
 
@@ -354,7 +402,7 @@
           
           <div class="form-group password-toggle">
             <label for="signup-password">Password</label>
-            <input type="password" id="signup-password" placeholder="Create a password">
+            <input type="password" id="signup-password" placeholder="Create a password (min. 6 characters)">
             <span class="toggle-icon" id="toggle-signup-password">👁️</span>
           </div>
           
@@ -369,13 +417,13 @@
             <label for="terms">I agree to the <a href="#" style="color: var(--accent);">Terms & Conditions</a></label>
           </div>
           
-          <button class="btn">Create Account</button>
+          <button class="btn" id="signUpBtn">Create Account</button>
         </div>
 
         <div class="divider">or continue with</div>
 
         <div class="social-login">
-          <button class="social-btn">
+          <button class="social-btn" id="googleSignUp">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -383,13 +431,6 @@
               <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
             </svg>
             Google
-          </button>
-          
-          <button class="social-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.042-3.441.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.920-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
-            </svg>
-            Facebook
           </button>
         </div>
 
@@ -400,8 +441,70 @@
     </div>
   </div>
 
-  <script>
+  <!-- Import and initialize Firebase -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { 
+      getAuth, 
+      createUserWithEmailAndPassword, 
+      signInWithEmailAndPassword, 
+      signInWithPopup, 
+      GoogleAuthProvider,
+      sendPasswordResetEmail,
+      updateProfile,
+      onAuthStateChanged,
+      setPersistence,
+      browserSessionPersistence,
+      browserLocalPersistence
+    } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "",
+      authDomain: "bece-2eb33.firebaseapp.com",
+      projectId: "bece-2eb33",
+      storageBucket: "bece-2eb33.firebasestorage.app",
+      messagingSenderId: "",
+      appId: "",
+      measurementId: "G-"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const googleProvider = new GoogleAuthProvider();
+
     document.addEventListener('DOMContentLoaded', function() {
+      // UI Elements
+      const loadingOverlay = document.getElementById('loadingOverlay');
+      const alertBox = document.getElementById('alertBox');
+      const signInBtn = document.getElementById('signInBtn');
+      const signUpBtn = document.getElementById('signUpBtn');
+      const googleSignIn = document.getElementById('googleSignIn');
+      const googleSignUp = document.getElementById('googleSignUp');
+      const forgotPassword = document.getElementById('forgotPassword');
+
+      // Show alert message
+      function showAlert(message, type = 'error') {
+        alertBox.textContent = message;
+        alertBox.className = `alert alert-${type}`;
+        alertBox.style.display = 'block';
+        
+        setTimeout(() => {
+          alertBox.style.display = 'none';
+        }, 5000);
+      }
+
+      // Show loading state
+      function setLoading(isLoading) {
+        loadingOverlay.style.display = isLoading ? 'flex' : 'none';
+        signInBtn.disabled = isLoading;
+        signUpBtn.disabled = isLoading;
+        googleSignIn.disabled = isLoading;
+        googleSignUp.disabled = isLoading;
+      }
+
       // Toggle between sign in and sign up forms
       const signinTab = document.getElementById('signin-tab');
       const signupTab = document.getElementById('signup-tab');
@@ -415,6 +518,7 @@
         signupTab.classList.remove('active');
         signinForm.classList.add('active');
         signupForm.classList.remove('active');
+        alertBox.style.display = 'none';
       }
       
       function activateSignUp() {
@@ -422,6 +526,7 @@
         signupTab.classList.add('active');
         signinForm.classList.remove('active');
         signupForm.classList.add('active');
+        alertBox.style.display = 'none';
       }
       
       signinTab.addEventListener('click', activateSignIn);
@@ -455,23 +560,53 @@
       setupPasswordToggle('toggle-signup-password', 'signup-password');
       setupPasswordToggle('toggle-confirm-password', 'confirm-password');
       
-      // Form submission
-      const signInBtn = document.querySelector('#signin-form .btn');
-      const signUpBtn = document.querySelector('#signup-form .btn');
-      
+      // Email/password authentication
       signInBtn.addEventListener('click', function() {
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
+        const rememberMe = document.getElementById('remember').checked;
         
         if (!email || !password) {
-          alert('Please fill in all fields');
+          showAlert('Please fill in all fields');
           return;
         }
         
-        // Simulate successful login
-        alert('Sign in successful! Redirecting to dashboard...');
-        // In a real app, you would redirect to the main app page
-        // window.location.href = 'index.html';
+        setLoading(true);
+        
+        // Set persistence based on "remember me" selection
+        const persistence = rememberMe ? browserLocalPersistence : browserSessionPersistence;
+        
+        setPersistence(auth, persistence)
+          .then(() => {
+            // Sign in with Firebase
+            return signInWithEmailAndPassword(auth, email, password);
+          })
+          .then((userCredential) => {
+            // Signed in successfully
+            const user = userCredential.user;
+            showAlert('Sign in successful! Redirecting...', 'success');
+            
+            // Redirect to quiz app after a brief delay
+            setTimeout(() => {
+              window.location.href = 'quiz.html';
+            }, 1500);
+          })
+          .catch((error) => {
+            setLoading(false);
+            const errorCode = error.code;
+            
+            if (errorCode === 'auth/invalid-email') {
+              showAlert('Invalid email address');
+            } else if (errorCode === 'auth/user-disabled') {
+              showAlert('This account has been disabled');
+            } else if (errorCode === 'auth/user-not-found') {
+              showAlert('No account found with this email');
+            } else if (errorCode === 'auth/wrong-password') {
+              showAlert('Incorrect password');
+            } else {
+              showAlert('Sign in failed. Please try again.');
+            }
+          });
       });
       
       signUpBtn.addEventListener('click', function() {
@@ -482,23 +617,120 @@
         const terms = document.getElementById('terms').checked;
         
         if (!fullname || !email || !password || !confirmPassword) {
-          alert('Please fill in all fields');
+          showAlert('Please fill in all fields');
+          return;
+        }
+        
+        if (password.length < 6) {
+          showAlert('Password must be at least 6 characters long');
           return;
         }
         
         if (password !== confirmPassword) {
-          alert('Passwords do not match');
+          showAlert('Passwords do not match');
           return;
         }
         
         if (!terms) {
-          alert('Please agree to the Terms & Conditions');
+          showAlert('Please agree to the Terms & Conditions');
           return;
         }
         
-        // Simulate successful registration
-        alert('Account created successfully! You can now sign in.');
-        activateSignIn();
+        setLoading(true);
+        
+        // Create user with Firebase
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // Signed up successfully
+            const user = userCredential.user;
+            
+            // Update user profile with display name
+            return updateProfile(user, {
+              displayName: fullname
+            }).then(() => {
+              showAlert('Account created successfully!', 'success');
+              
+              // Redirect to quiz app after a brief delay
+              setTimeout(() => {
+                window.location.href = 'quiz.html';
+              }, 1500);
+            });
+          })
+          .catch((error) => {
+            setLoading(false);
+            const errorCode = error.code;
+            
+            if (errorCode === 'auth/email-already-in-use') {
+              showAlert('This email is already registered');
+            } else if (errorCode === 'auth/invalid-email') {
+              showAlert('Invalid email address');
+            } else if (errorCode === 'auth/weak-password') {
+              showAlert('Password is too weak');
+            } else if (errorCode === 'auth/operation-not-allowed') {
+              showAlert('Email/password accounts are not enabled');
+            } else {
+              showAlert('Account creation failed. Please try again.');
+            }
+          });
+      });
+      
+      // Google authentication
+      function signInWithGoogle() {
+        setLoading(true);
+        
+        signInWithPopup(auth, googleProvider)
+          .then((result) => {
+            // Signed in successfully
+            showAlert('Sign in successful! Redirecting...', 'success');
+            
+            // Redirect to quiz app after a brief delay
+            setTimeout(() => {
+              window.location.href = 'quiz.html';
+            }, 1500);
+          })
+          .catch((error) => {
+            setLoading(false);
+            showAlert('Google sign-in failed. Please try again.');
+          });
+      }
+      
+      googleSignIn.addEventListener('click', signInWithGoogle);
+      googleSignUp.addEventListener('click', signInWithGoogle);
+      
+      // Password reset
+      forgotPassword.addEventListener('click', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        
+        if (!email) {
+          showAlert('Please enter your email address first');
+          return;
+        }
+        
+        setLoading(true);
+        
+        sendPasswordResetEmail(auth, email)
+          .then(() => {
+            setLoading(false);
+            showAlert('Password reset email sent! Check your inbox.', 'success');
+          })
+          .catch((error) => {
+            setLoading(false);
+            if (error.code === 'auth/user-not-found') {
+              showAlert('No account found with this email');
+            } else {
+              showAlert('Failed to send reset email. Please try again.');
+            }
+          });
+      });
+
+      // Check if user is already logged in
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          if(window.location.pathname == '/quiz.html') {
+            window.location.href = 'quiz.html';
+          };
+        };
       });
     });
   </script>
