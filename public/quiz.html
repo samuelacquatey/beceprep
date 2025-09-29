@@ -1,15 +1,4 @@
-<script>
-  // Run this as soon as the page loads
-  onAuthStateChanged(auth, (user) => {
-    if (!user) {
-      // user not logged in → go back to signin
-      window.location.href = "index.html";
-    } else {
-      console.log("Logged in:", user.email);
-      // load quiz content here
-    }
-  });
-</script>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -108,23 +97,11 @@
     <footer class="small">This is a front-end MVP with dummy questions. Answers are stored in your browser's localStorage.</footer>
   </div>
 
-  <script>
+  <script type="module">
     import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
     import { app } from "./auth-config.js"; // You'll need to create this
 
     const auth = getAuth(app);
-
-    // Protect route - redirect if not authenticated
-    onAuthStateChanged(auth, (user) => {
-      if (!user) {
-        // user not logged in → go back to signin
-        window.location.href = "index.html";
-      } else {
-        console.log("Logged in:", user.email);
-        // load quiz content here
-      }
-    });
-
 
     // Add logout functionality
     document.getElementById('logoutBtn').addEventListener('click', () => {
@@ -144,7 +121,8 @@
       {id:7, year:2022, subject:'English', q: 'Pick the synonym for "happy"', options:['Sad','Angry','Glad','Tired'], a:2},
       {id:8, year:2022, subject:'Integrated Science', q: 'Which device measures temperature?', options:['Barometer','Thermometer','Ammeter','Voltmeter'], a:1},
       {id:9, year:2023, subject:'Mathematics', q: 'Find area of rectangle with sides 4 and 6', options:['10','24','12','20'], a:1},
-      {id:10, year:2023, subject:'Social Studies', q: 'Capital city of Ghana', options:['Kumasi','Accra','Tamale','Takoradi'], a:1}
+      {id:10, year:2023, subject:'Social Studies', q: 'Capital city of Ghana', options:['Kumasi','Accra','Tamale','Takoradi'], a:1},
+      
     ];
     /****************************************************************/
 
@@ -206,8 +184,17 @@
       window.location.href = 'qna.html';
     }
 
-    // init app on load
-    init();
+    // Protect route - redirect if not authenticated, otherwise init app
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        // user not logged in → go back to signin
+        window.location.href = "index.html";
+      } else {
+        console.log("Logged in:", user.email);
+        // Initialize the quiz interface
+        init();
+      }
+    });
   </script>
 </body>
 </html>
