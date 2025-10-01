@@ -70,3 +70,6 @@ node_modules/
 
 #auth-config.json
 auth-config.json
+
+#auth
+auth.json

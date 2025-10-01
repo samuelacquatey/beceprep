@@ -5,323 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BECE Prep - Sign In / Sign Up</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card: #0b1220;
-      --muted: #9aa4bf;
-      --accent: #7c3aed;
-      --glass: rgba(255,255,255,0.03);
-      --success: #10b981;
-      --danger: #ef4444;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background: linear-gradient(180deg, #071029 0%, #071033 100%);
-      color: #e6eef8;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .container {
-      max-width: 420px;
-      width: 100%;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 16px;
-      padding: 32px;
-      box-shadow: 0 6px 18px rgba(2,6,23,0.6);
-      position: relative;
-    }
-
-    .brand {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 28px;
-    }
-
-    .logo {
-      width: 56px;
-      height: 56px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent), #4f46e5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 20px;
-    }
-
-    .brand-text {
-      text-align: center;
-    }
-
-    .brand-text h1 {
-      font-size: 24px;
-      margin: 0;
-    }
-
-    .brand-text p {
-      margin: 4px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .tabs {
-      display: flex;
-      background: var(--glass);
-      border-radius: 10px;
-      padding: 4px;
-      margin-bottom: 24px;
-    }
-
-    .tab {
-      flex: 1;
-      padding: 12px;
-      text-align: center;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-weight: 500;
-    }
-
-    .tab.active {
-      background: linear-gradient(90deg, var(--accent), #4f46e5);
-    }
-
-    .form-container {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .form-group label {
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .form-group input {
-      padding: 12px 14px;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.03);
-      color: #e6eef8;
-      font-family: inherit;
-      font-size: 15px;
-      transition: all 0.2s;
-    }
-
-    .form-group input:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 2px rgba(124,58,237,0.2);
-    }
-
-    .password-toggle {
-      position: relative;
-    }
-
-    .toggle-icon {
-      position: absolute;
-      right: 14px;
-      top: 38px;
-      cursor: pointer;
-      color: var(--muted);
-    }
-
-    .remember-forgot {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 14px;
-    }
-
-    .remember {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .remember input {
-      accent-color: var(--accent);
-    }
-
-    .forgot {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .forgot:hover {
-      text-decoration: underline;
-    }
-
-    .btn {
-      background: linear-gradient(90deg, var(--accent), #4f46e5);
-      color: white;
-      border: none;
-      padding: 14px;
-      border-radius: 10px;
-      font-family: inherit;
-      font-weight: 600;
-      font-size: 16px;
-      cursor: pointer;
-      transition: all 0.2s;
-      margin-top: 8px;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(124,58,237,0.3);
-    }
-
-    .divider {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 20px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .divider::before,
-    .divider::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: rgba(255,255,255,0.08);
-    }
-
-    .social-login {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-
-    .social-btn {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px;
-      border-radius: 10px;
-      background: var(--glass);
-      border: 1px solid rgba(255,255,255,0.04);
-      color: #e6eef8;
-      font-family: inherit;
-      font-size: 14px;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .social-btn:hover {
-      background: rgba(255,255,255,0.06);
-    }
-
-    .signup-prompt {
-      text-align: center;
-      font-size: 14px;
-      color: var(--muted);
-      margin-top: 24px;
-    }
-
-    .signup-prompt a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .signup-prompt a:hover {
-      text-decoration: underline;
-    }
-
-    .form-page {
-      display: none;
-    }
-
-    .form-page.active {
-      display: block;
-    }
-
-    .loading-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(11, 18, 32, 0.9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 16px;
-      z-index: 10;
-      display: none;
-    }
-
-    .spinner {
-      width: 40px;
-      height: 40px;
-      border: 4px solid rgba(124, 58, 237, 0.3);
-      border-radius: 50%;
-      border-top-color: var(--accent);
-      animation: spin 1s ease-in-out infinite;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    .alert {
-      padding: 12px 16px;
-      border-radius: 10px;
-      margin-bottom: 16px;
-      font-size: 14px;
-      display: none;
-    }
-
-    .alert-error {
-      background-color: rgba(239, 68, 68, 0.15);
-      color: #f87171;
-      border: 1px solid rgba(239, 68, 68, 0.3);
-    }
-
-    .alert-success {
-      background-color: rgba(16, 185, 129, 0.15);
-      color: #34d399;
-      border: 1px solid rgba(16, 185, 129, 0.3);
-    }
-
-    @media (max-width: 480px) {
-      .card {
-        padding: 24px;
-      }
-      
-      .social-login {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="container">
@@ -355,7 +39,12 @@
           <div class="form-group password-toggle">
             <label for="password">Password</label>
             <input type="password" id="password" placeholder="Enter your password">
-            <span class="toggle-icon" id="toggle-password">👁️</span>
+            <span class="toggle-icon" id="toggle-password">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
           </div>
           
           <div class="remember-forgot">
@@ -366,7 +55,7 @@
             <a href="#" class="forgot" id="forgotPassword">Forgot password?</a>
           </div>
           
-          <button class="btn" id="signInBtn" >Sign In</button>
+          <button class="btn" id="signInBtn">Sign In</button>
         </div>
 
         <div class="divider">or continue with</div>
@@ -403,13 +92,23 @@
           <div class="form-group password-toggle">
             <label for="signup-password">Password</label>
             <input type="password" id="signup-password" placeholder="Create a password (min. 6 characters)">
-            <span class="toggle-icon" id="toggle-signup-password">👁️</span>
+            <span class="toggle-icon" id="toggle-signup-password">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
           </div>
           
           <div class="form-group password-toggle">
             <label for="confirm-password">Confirm Password</label>
             <input type="password" id="confirm-password" placeholder="Confirm your password">
-            <span class="toggle-icon" id="toggle-confirm-password">👁️</span>
+            <span class="toggle-icon" id="toggle-confirm-password">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
           </div>
           
           <div class="remember">
@@ -441,7 +140,6 @@
     </div>
   </div>
 
-  <!-- Import and initialize Firebase -->
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
@@ -505,6 +203,37 @@
         googleSignUp.disabled = isLoading;
       }
 
+      // Toggle password visibility with SVG icons
+      function setupPasswordToggle(toggleId, inputId) {
+        const toggle = document.getElementById(toggleId);
+        const input = document.getElementById(inputId);
+        
+        toggle.addEventListener('click', function() {
+          if (input.type === 'password') {
+            input.type = 'text';
+            toggle.innerHTML = `
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+            `;
+          } else {
+            input.type = 'password';
+            toggle.innerHTML = `
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            `;
+          }
+        });
+      }
+
+      // Setup all password toggles
+      setupPasswordToggle('toggle-password', 'password');
+      setupPasswordToggle('toggle-signup-password', 'signup-password');
+      setupPasswordToggle('toggle-confirm-password', 'confirm-password');
+
       // Toggle between sign in and sign up forms
       const signinTab = document.getElementById('signin-tab');
       const signupTab = document.getElementById('signup-tab');
@@ -539,26 +268,6 @@
         e.preventDefault();
         activateSignIn();
       });
-      
-      // Toggle password visibility
-      function setupPasswordToggle(toggleId, inputId) {
-        const toggle = document.getElementById(toggleId);
-        const input = document.getElementById(inputId);
-        
-        toggle.addEventListener('click', function() {
-          if (input.type === 'password') {
-            input.type = 'text';
-            toggle.textContent = '🔒';
-          } else {
-            input.type = 'password';
-            toggle.textContent = '👁️';
-          }
-        });
-      }
-      
-      setupPasswordToggle('toggle-password', 'password');
-      setupPasswordToggle('toggle-signup-password', 'signup-password');
-      setupPasswordToggle('toggle-confirm-password', 'confirm-password');
       
       // Email/password authentication
       signInBtn.addEventListener('click', function() {
@@ -727,10 +436,8 @@
       // Check if user is already logged in
       onAuthStateChanged(auth, (user) => {
         if (user) {
-          if(window.location.pathname == '/quiz.html') {
-            window.location.href = 'quiz.html';
-          };
-        };
+          window.location.href = 'quiz.html';
+        }
       });
     });
   </script>
