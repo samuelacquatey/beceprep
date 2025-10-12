@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BECE Prep - Teacher Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">BE</div>
+        <div>
+          <h1>Teacher Dashboard</h1>
+          <p class="lead">Monitor class performance and identify learning gaps</p>
+        </div>
+      </div>
+      <div>
+        <span style="color: var(--muted); margin-right: 16px;">JHS 3A - Presec Legon</span>
+        <button id="createAssignment" class="btn">📝 Create Assignment</button>
+      </div>
+    </header>
+
+    <div class="dashboard-grid">
+      <!-- Class Overview -->
+      <div class="metric-card">
+        <h3>👨‍🎓 Class Overview</h3>
+        <div class="class-stats">
+          <div>Total Students: <strong>42</strong></div>
+          <div>Average Accuracy: <strong>68%</strong></div>
+          <div>Active This Week: <strong>38</strong></div>
+          <div>Total Study Time: <strong>124 hours</strong></div>
+        </div>
+      </div>
+
+      <!-- Topic Performance -->
+      <div class="metric-card">
+        <h3>📚 Topic Performance</h3>
+        <canvas id="topicPerformanceChart" height="200"></canvas>
+      </div>
+
+      <!-- Students Needing Attention -->
+      <div class="metric-card">
+        <h3>🎯 Students Needing Help</h3>
+        <div id="strugglingStudents" class="student-list">
+          <!-- Dynamic content -->
+        </div>
+      </div>
+
+      <!-- Assignment Performance -->
+      <div class="metric-card">
+        <h3>📝 Recent Assignments</h3>
+        <div id="assignmentPerformance" class="assignment-list">
+          <!-- Dynamic content -->
+        </div>
+      </div>
+
+      <!-- Weekly Progress -->
+      <div class="metric-card" style="grid-column: span 2;">
+        <h3>📈 Class Progress Trend</h3>
+        <canvas id="classProgressChart" height="150"></canvas>
+      </div>
+
+      <!-- Topic Revision Planner -->
+      <div class="metric-card" style="grid-column: span 2;">
+        <h3>🔄 Recommended Revisions</h3>
+        <div id="revisionPlanner" class="revision-list">
+          <!-- Dynamic content -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    const teacherAnalytics = {
+      // Identify topics needing class-wide revision
+      getTopicsForRevision: function(classId) {
+        const classPerformance = this.getClassPerformance(classId);
+        return classPerformance.topics
+          .filter(topic => topic.accuracy < 60)
+          .sort((a, b) => a.accuracy - b.accuracy);
+      },
+
+      // Generate revision schedule
+      createRevisionPlan: function(weakTopics, availableTime) {
+        return weakTopics.map(topic => ({
+          topic: topic.name,
+          priority: topic.accuracy < 40 ? 'high' : 'medium',
+          suggestedDuration: topic.accuracy < 40 ? '2 lessons' : '1 lesson',
+          resources: this.getTeachingResources(topic.name),
+          studentsStruggling: topic.strugglingStudents
+        }));
+      },
+
+      // Monitor individual student progress
+      getStudentAlerts: function() {
+        return students.filter(student => 
+          student.accuracy < 50 || 
+          student.studyTime < 2 || // hours per week
+          student.performanceTrend === 'declining'
+        );
+      }
+    };
+  </script>
+</body>
+</html>

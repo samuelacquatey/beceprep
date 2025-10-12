@@ -11,20 +11,22 @@
 </head>
 <body>
   <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">BE</div>
-        <div>
-          <h1>BECE Prep [Interactive MVP]</h1>
-          <p class="lead">Practice by subject or year • Get performance analytics and improvement tips</p>
-        </div>
-      </div>
+  <header>
+    <div class="brand">
+      <div class="logo">BE</div>
       <div>
-        <button id="backBtn" class="btn ghost">Change Filters</button>
-        <button id="dashboardBtn" class="btn ghost">View Analytics</button>
-        <button id="exportBtn" class="btn ghost">Export Answers</button>
+        <h1>BECE Prep [Interactive MVP]</h1>
+        <p class="lead">Practice by subject or year • Get performance analytics and improvement tips</p>
       </div>
-    </header>
+    </div>
+    <div>
+      <button id="backBtn" class="btn ghost">Change Filters</button>
+      <button id="dashboardBtn" class="btn ghost">📊 Analytics</button>
+      <button id="socialBtn" class="btn ghost">👥 Social</button>
+      <button id="flashcardsBtn" class="btn ghost">🎴 Flashcards</button>
+      <button id="exportBtn" class="btn ghost">Export Answers</button>
+    </div>
+  </header>
 
     <div class="grid">
       <aside class="sidebar card">
@@ -80,7 +82,7 @@
           <div class="actions">
             <div style="display:flex;gap:8px">
               <button class="btn ghost" id="prevBtn">Previous</button>
-              <button class="btn ghost" id="nextBtn">Skip</button>
+              <button class="btn ghost" id="nextBtn">Next</button>
             </div>
             <div style="display:flex;gap:8px;align-items:center">
               <button class="btn" id="submitBtn">Submit</button>
@@ -117,97 +119,69 @@
     import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
     import { trackQuestionAttempt } from "./js/database.js";
     import { app } from "./js/auth.js";
+    import { ENHANCED_QUESTIONS } from "./js/data/questionBank.js"
+// Add this test right after your imports in qna.html
+console.log("=== FIRESTORE DEBUG TEST ===");
+
+import { db } from './js/auth.js';
+import { collection, addDoc, getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+// Test 1: Check if db object exists
+console.log("Firestore db object:", db);
+console.log("Firestore instance type:", typeof getFirestore);
+
+// Test 2: Simple write test
+async function testFirestore() {
+  try {
+    console.log("Starting Firestore test...");
+    
+    const docRef = await addDoc(collection(db, 'debug_test'), {
+      test: 'Firestore connection test',
+      timestamp: new Date(),
+      userId: 'test-user'
+    });
+    
+    console.log('✅ Firestore test PASSED - Document ID:', docRef.id);
+    return true;
+  } catch (error) {
+    console.error('❌ Firestore test FAILED:', error);
+    console.error('Error code:', error.code);
+    console.error('Error message:', error.message);
+    return false;
+  }
+}
+
+// Run the test immediately
+testFirestore().then(success => {
+  if (success) {
+    console.log('🎉 Firestore is working! Analytics should work now.');
+  } else {
+    console.log('⚠️ Firestore configuration issue detected.');
+  }
+});
+
+    // Call it when page loads
+    testFirestore();
 
     const auth = getAuth(app);
 
+    // Add to both quiz.html and qna.html
+    document.getElementById('dashboardBtn').addEventListener('click', () => {
+      window.location.href = 'dashboard.html';
+    });
+
+    document.getElementById('socialBtn').addEventListener('click', () => {
+      window.location.href = 'social.html';
+    });
+
+    document.getElementById('flashcardsBtn').addEventListener('click', () => {
+      window.location.href = 'flashcards.html';
+    });
+
     /*********************** Enhanced Question Dataset ************************/
-    const QUESTIONS = [
-      {
-        id: 1, year: 2019, subject: 'Mathematics', topic: 'algebraic expressions', 
-        subtopic: 'Linear Equations', difficulty: 'medium',
-        q: 'Simplify: 3(x+4) - 2x', 
-        options: ['x+12', 'x+4', '5x+12', 'x+8'], 
-        a: 0
-      },
-      {
-        id: 2, year: 2019, subject: 'English', topic: 'grammar', 
-        subtopic: 'Verb Tenses', difficulty: 'easy',
-        q: 'Choose the correct sentence', 
-        options: ['He dont like it', 'He does not like it', 'He do not like it', 'He not like it'], 
-        a: 1
-      },
-      {
-        id: 3, year: 2020, subject: 'Integrated Science', topic: 'plant biology', 
-        subtopic: 'Photosynthesis', difficulty: 'medium',
-        q: 'Which gas do plants consume?', 
-        options: ['Oxygen', 'Nitrogen', 'Carbon dioxide', 'Helium'], 
-        a: 2
-      },
-      {
-        id: 4, year: 2020, subject: 'Mathematics', topic: 'sequences', 
-        subtopic: 'Geometric Sequences', difficulty: 'medium',
-        q: 'What is the next number: 2,4,8,16,...', 
-        options: ['20', '24', '32', '34'], 
-        a: 2
-      },
-      {
-        id: 5, year: 2021, subject: 'Social Studies', topic: 'civics', 
-        subtopic: 'Government Systems', difficulty: 'easy',
-        q: 'What is a democracy?', 
-        options: ['One-man rule', 'Rule by the people', 'Military rule', 'A type of crop'], 
-        a: 1
-      },
-      {
-        id: 6, year: 2021, subject: 'Mathematics', topic: 'algebra', 
-        subtopic: 'Linear Equations', difficulty: 'easy',
-        q: 'Solve for x: 2x = 10', 
-        options: ['4', '5', '10', '8'], 
-        a: 1
-      },
-      {
-        id: 7, year: 2022, subject: 'English', topic: 'vocabulary', 
-        subtopic: 'Synonyms', difficulty: 'easy',
-        q: 'Pick the synonym for "happy"', 
-        options: ['Sad', 'Angry', 'Glad', 'Tired'], 
-        a: 2
-      },
-      {
-        id: 8, year: 2022, subject: 'Integrated Science', topic: 'measurement', 
-        subtopic: 'Scientific Instruments', difficulty: 'easy',
-        q: 'Which device measures temperature?', 
-        options: ['Barometer', 'Thermometer', 'Ammeter', 'Voltmeter'], 
-        a: 1
-      },
-      {
-        id: 9, year: 2023, subject: 'Mathematics', topic: 'geometry', 
-        subtopic: 'Area Calculation', difficulty: 'medium',
-        q: 'Find area of rectangle with sides 4 and 6', 
-        options: ['10', '24', '12', '20'], 
-        a: 1
-      },
-      {
-        id: 10, year: 2023, subject: 'Social Studies', topic: 'geography', 
-        subtopic: 'African Capitals', difficulty: 'easy',
-        q: 'Capital city of Ghana', 
-        options: ['Kumasi', 'Accra', 'Tamale', 'Takoradi'], 
-        a: 1
-      },
-      {
-        id: 11, year: 2022, subject: 'Mathematics', topic: 'fractions', 
-        subtopic: 'Basic Operations', difficulty: 'medium',
-        q: 'What is 1/2 + 1/4?', 
-        options: ['1/6', '2/6', '3/4', '2/8'], 
-        a: 2
-      },
-      {
-        id: 12, year: 2021, subject: 'English', topic: 'comprehension', 
-        subtopic: 'Reading Skills', difficulty: 'hard',
-        q: 'What is the main idea of a story?', 
-        options: ['The first sentence', 'The central message', 'The characters', 'The setting'], 
-        a: 1
-      }
-    ];
+    const QUESTIONS = ENHANCED_QUESTIONS
     /****************************************************************/
+
 
     // App state
     let state = {
@@ -224,7 +198,6 @@
     };
 
     // DOM refs
-    const backBtn = document.getElementById('backBtn');
     const dashboardBtn = document.getElementById('dashboardBtn');
     const restartBtn = document.getElementById('restartBtn');
     const currentFilters = document.getElementById('currentFilters');
@@ -249,9 +222,11 @@
     const exportBtn = document.getElementById('exportBtn');
     const confidenceRating = document.getElementById('confidenceRating');
 
+
+
     // initialize
     function init(){
-      // Load filter settings from localStorage
+      // Load filter settings from localStorage (this is okay for preferences)
       const filterSettings = localStorage.getItem('bece_filter_settings');
       if (!filterSettings) {
         window.location.href = 'index.html';
@@ -260,10 +235,36 @@
       
       state.filterSettings = JSON.parse(filterSettings);
       displayCurrentFilters();
-      loadSavedSession();
+      
+      // NEW: Clear previous session and load fresh
+      clearPreviousSession();
+      loadCurrentSession();
+      
       startSession();
       bindEvents();
       updateStats();
+    }
+
+    // NEW: Clear previous session data
+    function clearPreviousSession() {
+      sessionStorage.removeItem('current_quiz_answers');
+      sessionStorage.removeItem('current_quiz_progress');
+      state.answers = {};
+      state.index = 0;
+    }
+
+    // NEW: Load only current session data
+    function loadCurrentSession() {
+      const raw = sessionStorage.getItem('current_quiz_answers');
+      if (raw) {
+        try {
+          state.answers = JSON.parse(raw);
+          console.log('Loaded current session answers:', Object.keys(state.answers).length);
+        } catch (e) {
+          console.error('Error loading session data:', e);
+          state.answers = {};
+        }
+      }
     }
 
     function displayCurrentFilters() {
@@ -283,31 +284,6 @@
       currentFilters.innerHTML = filterText;
     }
 
-    function startSession(){
-      const selectedSubjects = state.filterSettings.selectedSubjects;
-      const year = state.filterSettings.year;
-      state.mode = state.filterSettings.mode;
-      state.endless = state.filterSettings.endless;
-
-      state.pool = QUESTIONS.filter(q => {
-        if(selectedSubjects.length && !selectedSubjects.includes(q.subject)) return false;
-        if(year !== 'all' && String(q.year) !== String(year)) return false;
-        return true;
-      }).map(q => q.id);
-
-      if(state.pool.length === 0){
-        promptEl.textContent = 'No questions match your filters.';
-        optionsEl.innerHTML = '';
-        metaLeft.textContent = '—';
-        metaRight.textContent = '';
-        return;
-      }
-      
-      state.index = 0;
-      state.startTime = Date.now();
-      renderQuestion();
-      updateProgress();
-    }
 
     function renderQuestion(){
       if(state.pool.length === 0){ 
@@ -366,18 +342,30 @@
       updateStats();
     }
 
+    // NEW: Enhanced save session - sessionStorage only
+    function saveSession() {
+      try {
+        sessionStorage.setItem('current_quiz_answers', JSON.stringify(state.answers));
+        sessionStorage.setItem('current_quiz_progress', state.index.toString());
+      } catch (e) {
+        console.error('Error saving session:', e);
+      }
+    }
+
+    // NEW: Enhanced answer submission with guaranteed Firebase sync
     async function submitAnswer(){
       if(state.pool.length === 0) return;
+      
+      const timeSpent = Math.round((Date.now() - state.currentQuestionStart) / 1000);
       const qid = state.pool[state.index];
       const q = QUESTIONS.find(x => x.id === qid);
-      const record = state.answers[qid];
+      const record = state.answers[qid] || {};
       
       if(!record || typeof record.choice !== 'number'){ 
         alert('Please select an option first.'); 
         return; 
       }
       
-      const timeSpent = Math.round((Date.now() - state.currentQuestionStart) / 1000);
       const correct = (record.choice === q.a);
       
       // Update record with final data
@@ -386,27 +374,10 @@
       record.timeSpent = timeSpent;
       record.confidence = state.userConfidence || 0.5;
       
-      // Enhanced tracking data for analytics
-      const trackingData = {
-        choice: record.choice,
-        timeSpent: timeSpent,
-        confidence: state.userConfidence || 0.5,
-        sessionId: state.sessionId,
-        mode: state.mode,
-        timestamp: new Date(),
-        isCorrect: correct
-      };
+      // GUARANTEE Firebase sync before anything else
+      await syncAnswerToFirebase(q, record, timeSpent, correct);
       
-      // Track in Firebase if user is logged in
-      const user = auth.currentUser;
-      if (user) {
-        try {
-          await trackQuestionAttempt(user.uid, q, trackingData);
-        } catch (error) {
-          console.log('Analytics tracking failed, continuing without:', error);
-        }
-      }
-      
+      // Then update local state
       saveSession();
       if(state.mode === 'practice') showCorrectness(qid);
       updateStats();
@@ -425,6 +396,32 @@
       }
     }
 
+    // NEW: Dedicated Firebase sync function
+    async function syncAnswerToFirebase(q, record, timeSpent, isCorrect) {
+      const user = auth.currentUser;
+      if (!user) {
+        console.log('User not logged in, skipping analytics sync');
+        return;
+      }
+
+      const trackingData = {
+        choice: record.choice,
+        timeSpent: timeSpent,
+        confidence: record.confidence || 0.5,
+        sessionId: state.sessionId,
+        mode: state.mode,
+        timestamp: new Date(),
+        isCorrect: isCorrect
+      };
+
+      try {
+        await trackQuestionAttempt(user.uid, q, trackingData);
+        console.log('✅ Answer synced to Firebase analytics');
+      } catch (error) {
+        console.error('❌ Analytics sync failed:', error);
+        // Don't throw - we don't want to block the user experience
+      }
+    }
     function showCorrectness(qid){
       const q = QUESTIONS.find(x => x.id === qid);
       const nodes = optionsEl.querySelectorAll('.option');
@@ -467,27 +464,20 @@
       renderSavedSessionsList();
     }
 
-    function saveSession(){
-      localStorage.setItem('bece_mvp_answers', JSON.stringify(state.answers));
-    }
 
-    function loadSavedSession(){
-      const raw = localStorage.getItem('bece_mvp_answers');
-      if(raw) state.answers = JSON.parse(raw);
-    }
 
     function renderSavedSessionsList(){
       sessionsList.innerHTML = '';
-      const raw = localStorage.getItem('bece_mvp_answers');
+      const raw = sessionStorage.getItem('current_quiz_answers');
       if(raw){
         const div = document.createElement('div');
         div.style.display = 'flex';
         div.style.justifyContent = 'space-between';
         div.style.alignItems = 'center';
-        div.innerHTML = `<small style="color:var(--muted)">Local session saved</small><div><button class='btn ghost load-session' data-session='local'>Load</button></div>`;
+        div.innerHTML = `<small style="color:var(--muted)">Current session</small><div><button class='btn ghost load-session' data-session='current'>Load</button></div>`;
         sessionsList.appendChild(div);
       } else {
-        sessionsList.innerHTML = '<small style="color:var(--muted)">No saved sessions</small>';
+        sessionsList.innerHTML = '<small style="color:var(--muted)">No active session</small>';
       }
     }
 
@@ -495,6 +485,44 @@
       if(name === 'local') loadSavedSession();
       updateStats(); 
       renderQuestion();
+    }
+
+    // NEW: Enhanced session start
+    function startSession() {
+      const selectedSubjects = state.filterSettings.selectedSubjects;
+      const year = state.filterSettings.year;
+      state.mode = state.filterSettings.mode;
+      state.endless = state.filterSettings.endless;
+
+      state.pool = QUESTIONS.filter(q => {
+        if (selectedSubjects.length && !selectedSubjects.includes(q.subject)) return false;
+        if (year !== 'all' && String(q.year) !== String(year)) return false;
+        return true;
+      }).map(q => q.id);
+
+      if (state.pool.length === 0) {
+        promptEl.textContent = 'No questions match your filters.';
+        optionsEl.innerHTML = '';
+        metaLeft.textContent = '—';
+        metaRight.textContent = '';
+        return;
+      }
+      
+      state.index = 0;
+      state.startTime = Date.now();
+      
+      // NEW: Clear any previous progress when starting fresh
+      sessionStorage.removeItem('current_quiz_progress');
+      
+      renderQuestion();
+      updateProgress();
+    }
+
+    // NEW: Session cleanup function
+    function cleanupSession() {
+      sessionStorage.removeItem('current_quiz_answers');
+      sessionStorage.removeItem('current_quiz_progress');
+      console.log('Session cleaned up');
     }
 
     function showSummary(){
@@ -527,7 +555,8 @@
     }
 
     function clearAll(){ 
-      localStorage.removeItem('bece_mvp_answers'); 
+      sessionStorage.removeItem('current_quiz_answers'); 
+      sessionStorage.removeItem('current_quiz_progress');
       state.answers = {}; 
       updateStats(); 
       renderQuestion(); 
@@ -645,9 +674,11 @@
         if(e.target.matches('.load-session')) loadSession(e.target.dataset.session); 
       });
       backBtn.addEventListener('click', () => { 
+        cleanupSession();
         window.location.href = 'quiz.html'; 
       });
       dashboardBtn.addEventListener('click', () => {
+        cleanupSession();
         window.location.href = 'dashboard.html';
       });
       restartBtn.addEventListener('click', () => { 

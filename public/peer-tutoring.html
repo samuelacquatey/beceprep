@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BECE Prep - Peer Tutoring</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">BE</div>
+        <div>
+          <h1>Peer Tutoring Hub</h1>
+          <p class="lead">Help others, earn rewards, and master topics together</p>
+        </div>
+      </div>
+      <div>
+        <button id="backToSocial" class="btn ghost">Back to Social</button>
+        <button id="pointsShop" class="btn">🎁 Rewards Shop (250 pts)</button>
+      </div>
+    </header>
+
+    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 24px;">
+      <!-- Available Help Requests -->
+      <div class="card">
+        <h3>🆘 Students Needing Help</h3>
+        <div id="helpRequests" class="request-list">
+          <!-- Dynamic content -->
+        </div>
+      </div>
+
+      <!-- My Tutoring Stats -->
+      <div class="card">
+        <h3>📊 My Tutoring Impact</h3>
+        <div class="tutoring-stats">
+          <div class="stat">
+            <strong id="studentsHelped">0</strong>
+            <span>Students Helped</span>
+          </div>
+          <div class="stat">
+            <strong id="tutoringPoints">0</strong>
+            <span>Points Earned</span>
+          </div>
+          <div class="stat">
+            <strong id="successRate">0%</strong>
+            <span>Success Rate</span>
+          </div>
+        </div>
+
+        <div class="rewards-preview">
+          <h4>🎯 Available Rewards</h4>
+          <div class="reward-item">
+            <span>500 pts - ₵50 Mobile Credit</span>
+            <button class="btn ghost" disabled>Need 250 more</button>
+          </div>
+          <div class="reward-item">
+            <span>1000 pts - Melcom Voucher</span>
+            <button class="btn ghost" disabled>Need 750 more</button>
+          </div>
+          <div class="reward-item">
+            <span>2000 pts - Accra Mall Gift Card</span>
+            <button class="btn ghost" disabled>Need 1750 more</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Tutoring Sessions -->
+      <div class="card" style="grid-column: span 2;">
+        <h3>👥 Active Tutoring Sessions</h3>
+        <div id="activeSessions" class="session-list">
+          <!-- Dynamic content -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    const peerTutoringSystem = {
+      // Student gets matched with tutor based on topic performance
+      matchTutor: function(strugglingStudentId, topic) {
+        const potentialTutors = this.getTopPerformers(topic);
+        return {
+          matchId: `match_${Date.now()}`,
+          strugglingStudent: strugglingStudentId,
+          tutor: potentialTutors[0].id,
+          topic: topic,
+          status: 'pending',
+          createdAt: new Date()
+        };
+      },
+
+      // Reward system
+      calculateReward: function(improvementScore, topicDifficulty) {
+        const basePoints = 50;
+        const improvementBonus = improvementScore * 20; // 0-100 scale
+        const difficultyMultiplier = topicDifficulty === 'hard' ? 1.5 : 1;
+        return Math.round((basePoints + improvementBonus) * difficultyMultiplier);
+      },
+
+      // Available rewards in Ghana
+      rewards: [
+        { id: 1, name: "₵50 Mobile Credit", points: 500, partner: "MTN/AirtelTigo/Vodafone" },
+        { id: 2, name: "Melcom Voucher", points: 1000, partner: "Melcom" },
+        { id: 3, name: "Game Store Voucher", points: 1500, partner: "Game" },
+        { id: 4, name: "Accra Mall Gift Card", points: 2000, partner: "Accra Mall" },
+        { id: 5, name: "Silverbird Cinema Tickets", points: 800, partner: "Silverbird" }
+      ]
+    };
+  </script>
+</body>
+</html>

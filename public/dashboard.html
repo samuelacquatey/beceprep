@@ -5,32 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BECE Prep - Analytics Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    /* Consolidated styles from previous files */
-    :root {
-      --bg: #0f172a;
-      --card: #0b1220;
-      --muted: #9aa4bf;
-      --accent: #7c3aed;
-      --success: #10b981;
-      --danger: #ef4444;
-    }
-    
-    .metric-card {
-      background: var(--card);
-      border-radius: 12px;
-      padding: 20px;
-      margin: 10px;
-      flex: 1;
-      min-width: 200px;
-    }
-    
-    .progress-ring {
-      width: 100px;
-      height: 100px;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -39,7 +15,7 @@
         <div class="logo">BE</div>
         <div>
           <h1>BECE Prep Analytics</h1>
-          <p class="lead">Your personalized learning insights</p>
+          <p class="lead">Your personalized learning insights and performance tracking</p>
         </div>
       </div>
       <div>
@@ -55,35 +31,466 @@
         <div class="progress-ring">
           <canvas id="overallProgress"></canvas>
         </div>
-        <div id="overallStats"></div>
+        <div id="overallStats" style="text-align: center; margin-top: 16px;"></div>
+      </div>
+
+      <!-- Accuracy Trends -->
+      <div class="metric-card">
+        <h3>📈 Performance Trend</h3>
+        <canvas id="performanceChart" height="200"></canvas>
       </div>
 
       <!-- Subject Performance -->
       <div class="metric-card">
         <h3>📊 Subject Breakdown</h3>
-        <canvas id="subjectChart"></canvas>
+        <canvas id="subjectChart" height="200"></canvas>
+      </div>
+
+      <!-- Study Habits -->
+      <div class="metric-card">
+        <h3>⏰ Study Patterns</h3>
+        <canvas id="studyPatternsChart" height="200"></canvas>
       </div>
 
       <!-- Weakness Analysis -->
       <div class="metric-card">
         <h3>🎯 Focus Areas</h3>
-        <div id="weaknessList"></div>
+        <div id="weaknessList" style="max-height: 300px; overflow-y: auto;"></div>
       </div>
 
-      <!-- Study Patterns -->
+      <!-- Topic Performance -->
       <div class="metric-card">
-        <h3>⏰ Study Habits</h3>
-        <canvas id="studyPatternsChart"></canvas>
+        <h3>📚 Topic Mastery</h3>
+        <div id="topicPerformance" style="max-height: 300px; overflow-y: auto;"></div>
       </div>
 
       <!-- Recommendations -->
-      <div class="metric-card" style="flex-basis: 100%;">
+      <div class="metric-card" style="grid-column: span 2;">
         <h3>💡 Personalized Recommendations</h3>
-        <div id="recommendations"></div>
+        <div id="recommendations" style="display: flex; flex-direction: column; gap: 12px;"></div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="metric-card" style="grid-column: span 2;">
+        <h3>📝 Recent Activity</h3>
+        <div id="recentActivity" style="max-height: 300px; overflow-y: auto;"></div>
       </div>
     </div>
   </div>
 
-  <script type="module" src="js/dashboard.js"></script>
+  <script type="module">
+    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    import { AnalyticsEngine } from "./js/analytics.js";
+    import { app } from "./js/auth.js";
+
+    const auth = getAuth(app);
+
+    onAuthStateChanged(auth, async (user) => {
+      if (!user) {
+        window.location.href = 'index.html';
+        return;
+      }
+
+      await initializeDashboard(user);
+    });
+
+async function initializeDashboard(user) {
+  const analytics = new AnalyticsEngine(user.uid);
+  
+  try {
+    // NEW: Load real user data from Firebase
+    const data = await analytics.loadData(30);
+    console.log('Loaded real user data:', data);
+    
+    if (data.insights.length === 0) {
+      showNoDataMessage();
+      return;
+    }
+    
+    renderOverallProgress(analytics);
+    renderPerformanceChart(analytics);
+    renderSubjectChart(analytics);
+    renderStudyPatterns(analytics);
+    renderWeaknessAnalysis(analytics);
+    renderTopicPerformance(analytics);
+    renderRecommendations(analytics);
+    renderRecentActivity(analytics);
+    
+  } catch (error) {
+    console.error('Error loading dashboard data:', error);
+    showErrorMessage('Failed to load analytics data. Please try again.');
+  }
+  
+  // Add navigation
+  document.getElementById('backToQuiz').addEventListener('click', () => {
+    window.location.href = 'quiz.html';
+  });
+  
+  document.getElementById('logoutBtn').addEventListener('click', () => {
+    signOut(auth).then(() => {
+      window.location.href = 'index.html';
+    });
+  });
+}
+
+// NEW: Helper functions for data states
+function showNoDataMessage() {
+  const container = document.querySelector('.dashboard-grid');
+  container.innerHTML = `
+    <div class="metric-card" style="grid-column: span 2; text-align: center; padding: 40px;">
+      <h3>📊 No Data Yet</h3>
+      <p>Complete some quizzes to see your analytics dashboard.</p>
+      <p><small>Your performance data will appear here after you answer questions.</small></p>
+      <button class="btn" onclick="window.location.href='quiz.html'">Start Your First Quiz</button>
+    </div>
+  `;
+}
+
+function showErrorMessage(message) {
+  const container = document.querySelector('.dashboard-grid');
+  container.innerHTML = `
+    <div class="metric-card" style="grid-column: span 2; text-align: center; padding: 40px;">
+      <h3>⚠️ Unable to Load Data</h3>
+      <p>${message}</p>
+      <button class="btn" onclick="location.reload()">Try Again</button>
+    </div>
+  `;
+}
+    function renderOverallProgress(analytics) {
+      const progress = analytics.calculateOverallProgress();
+      
+      document.getElementById('overallStats').innerHTML = `
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px;">
+          <div style="text-align: center;">
+            <div style="font-size: 12px; color: var(--muted);">Accuracy</div>
+            <div style="font-size: 24px; font-weight: 700; color: var(--accent);">${progress.accuracy}%</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 12px; color: var(--muted);">Questions</div>
+            <div style="font-size: 24px; font-weight: 700; color: var(--accent);">${progress.totalQuestions}</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 12px; color: var(--muted);">Study Time</div>
+            <div style="font-size: 24px; font-weight: 700; color: var(--accent);">${progress.totalStudyTime}m</div>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 12px; color: var(--muted);">Consistency</div>
+            <div style="font-size: 24px; font-weight: 700; color: var(--accent);">${progress.consistencyScore}%</div>
+          </div>
+        </div>
+      `;
+      
+      // Render progress chart
+      const ctx = document.getElementById('overallProgress').getContext('2d');
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Correct', 'Incorrect'],
+          datasets: [{
+            data: [progress.correctAnswers, progress.totalQuestions - progress.correctAnswers],
+            backgroundColor: ['#10B981', '#EF4444'],
+            borderWidth: 0,
+          }]
+        },
+        options: {
+          cutout: '70%',
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                usePointStyle: true,
+                padding: 20
+              }
+            }
+          },
+          animation: {
+            animateScale: true
+          }
+        }
+      });
+    }
+
+    function renderPerformanceChart(analytics) {
+      const insights = analytics.insights.slice(-7); // Last 7 days
+      const labels = insights.map(day => {
+        const date = new Date(day.date);
+        return date.toLocaleDateString('en-US', { weekday: 'short' });
+      });
+      
+      const accuracyData = insights.map(day => {
+        return day.totalQuestions > 0 ? Math.round((day.correctAnswers / day.totalQuestions) * 100) : 0;
+      });
+      
+      const questionsData = insights.map(day => day.totalQuestions);
+      
+      const ctx = document.getElementById('performanceChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: 'Accuracy %',
+              data: accuracyData,
+              borderColor: '#2563EB',
+              backgroundColor: 'rgba(37, 99, 235, 0.1)',
+              tension: 0.4,
+              fill: true,
+              yAxisID: 'y'
+            },
+            {
+              label: 'Questions',
+              data: questionsData,
+              borderColor: '#10B981',
+              backgroundColor: 'rgba(16, 185, 129, 0.1)',
+              tension: 0.4,
+              fill: true,
+              yAxisID: 'y1'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          interaction: {
+            mode: 'index',
+            intersect: false,
+          },
+          scales: {
+            y: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              max: 100,
+              ticks: {
+                callback: function(value) {
+                  return value + '%';
+                }
+              }
+            },
+            y1: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              grid: {
+                drawOnChartArea: false,
+              },
+            }
+          },
+          plugins: {
+            legend: {
+              position: 'top',
+            }
+          }
+        }
+      });
+    }
+
+    function renderSubjectChart(analytics) {
+      const subjects = analytics.insights.reduce((acc, day) => {
+        Object.entries(day.subjects || {}).forEach(([subject, data]) => {
+          if (!acc[subject]) acc[subject] = { total: 0, correct: 0 };
+          acc[subject].total += data.total;
+          acc[subject].correct += data.correct;
+        });
+        return acc;
+      }, {});
+      
+      const labels = Object.keys(subjects);
+      const accuracyData = labels.map(subject => {
+        const data = subjects[subject];
+        return data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
+      });
+      
+      const ctx = document.getElementById('subjectChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Accuracy %',
+            data: accuracyData,
+            backgroundColor: '#2563EB',
+            borderRadius: 4,
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100,
+              ticks: {
+                callback: function(value) {
+                  return value + '%';
+                }
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }
+      });
+    }
+
+    function renderStudyPatterns(analytics) {
+      // Mock data for study patterns (in a real app, this would come from analytics)
+      const patterns = {
+        days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        activity: [45, 52, 38, 61, 55, 30, 40]
+      };
+      
+      const ctx = document.getElementById('studyPatternsChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: patterns.days,
+          datasets: [{
+            label: 'Questions Answered',
+            data: patterns.activity,
+            backgroundColor: '#8B5CF6',
+            borderRadius: 4,
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Questions'
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }
+      });
+    }
+
+    function renderWeaknessAnalysis(analytics) {
+      const weaknesses = analytics.identifyWeaknesses();
+      const container = document.getElementById('weaknessList');
+      
+      if (weaknesses.length === 0) {
+        container.innerHTML = '<p style="color: var(--muted); text-align: center; padding: 20px;">No weakness data available yet. Complete more questions to see insights.</p>';
+        return;
+      }
+      
+      container.innerHTML = weaknesses.map(weakness => `
+        <div class="insight-item ${weakness.priority}-priority" style="margin-bottom: 12px;">
+          <div style="display: flex; justify-content: between; align-items: start; gap: 12px;">
+            <div style="flex: 1;">
+              <div style="font-weight: 600; color: #111827; margin-bottom: 4px;">
+                ${weakness.subject}: ${weakness.topic}
+              </div>
+              <div style="display: flex; gap: 16px; font-size: 12px; color: var(--muted);">
+                <span>Accuracy: ${weakness.accuracy}%</span>
+                <span>Attempts: ${weakness.totalAttempts}</span>
+              </div>
+            </div>
+            <div style="font-size: 14px; font-weight: 600; color: ${weakness.priority === 'high' ? '#EF4444' : weakness.priority === 'medium' ? '#2563EB' : '#10B981'}">
+              ${weakness.priority.toUpperCase()}
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderTopicPerformance(analytics) {
+      const topics = Object.values(analytics.topicPerformance)
+        .sort((a, b) => b.accuracy - a.accuracy)
+        .slice(0, 5);
+      
+      const container = document.getElementById('topicPerformance');
+      
+      if (topics.length === 0) {
+        container.innerHTML = '<p style="color: var(--muted); text-align: center; padding: 20px;">Complete more questions to see topic performance.</p>';
+        return;
+      }
+      
+      container.innerHTML = topics.map(topic => `
+        <div style="padding: 16px; background: white; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px;">
+          <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 8px;">
+            <div style="font-weight: 600; color: #111827;">${topic.topic}</div>
+            <div style="font-size: 14px; font-weight: 600; color: ${topic.accuracy >= 70 ? '#10B981' : topic.accuracy >= 50 ? '#2563EB' : '#EF4444'}">
+              ${Math.round(topic.accuracy)}%
+            </div>
+          </div>
+          <div style="display: flex; justify-content: between; align-items: center; font-size: 12px; color: var(--muted);">
+            <span>${topic.subject}</span>
+            <span>${topic.total} attempts</span>
+          </div>
+          <div style="margin-top: 8px; height: 4px; background: #E5E7EB; border-radius: 2px; overflow: hidden;">
+            <div style="height: 100%; background: ${topic.accuracy >= 70 ? '#10B981' : topic.accuracy >= 50 ? '#2563EB' : '#EF4444'}; width: ${topic.accuracy}%;"></div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderRecommendations(analytics) {
+      const recommendations = analytics.generateRecommendations();
+      const container = document.getElementById('recommendations');
+      
+      if (recommendations.length === 0) {
+        container.innerHTML = '<p style="color: var(--muted); text-align: center; padding: 20px;">Complete more questions to get personalized recommendations.</p>';
+        return;
+      }
+      
+      container.innerHTML = recommendations.map(rec => `
+        <div class="insight-item ${rec.priority}-priority">
+          <div style="display: flex; align-items: start; gap: 12px;">
+            <div style="flex-shrink: 0; width: 24px; height: 24px; border-radius: 6px; background: ${rec.priority === 'high' ? '#EF4444' : rec.priority === 'medium' ? '#2563EB' : '#10B981'}; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px;">
+              ${rec.priority === 'high' ? '!' : rec.priority === 'medium' ? 'i' : '✓'}
+            </div>
+            <div style="flex: 1;">
+              <div style="font-weight: 600; color: #111827; margin-bottom: 4px;">${rec.title}</div>
+              <div style="color: var(--muted); font-size: 14px; margin-bottom: 8px;">${rec.message}</div>
+              <div style="font-size: 12px; color: var(--accent); font-weight: 500;">
+                💡 ${rec.action}
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderRecentActivity(analytics) {
+      const recentDays = analytics.insights.slice(0, 5);
+      const container = document.getElementById('recentActivity');
+      
+      if (recentDays.length === 0) {
+        container.innerHTML = '<p style="color: var(--muted); text-align: center; padding: 20px;">No recent activity. Start practicing to see your progress!</p>';
+        return;
+      }
+      
+      container.innerHTML = recentDays.map(day => {
+        const date = new Date(day.date);
+        const accuracy = day.totalQuestions > 0 ? Math.round((day.correctAnswers / day.totalQuestions) * 100) : 0;
+        
+        return `
+          <div style="padding: 16px; background: white; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px;">
+            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 8px;">
+              <div style="font-weight: 600; color: #111827;">
+                ${date.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
+              </div>
+              <div style="font-size: 14px; font-weight: 600; color: ${accuracy >= 70 ? '#10B981' : accuracy >= 50 ? '#2563EB' : '#EF4444'}">
+                ${accuracy}%
+              </div>
+            </div>
+            <div style="display: flex; justify-content: between; align-items: center; font-size: 12px; color: var(--muted);">
+              <span>${day.totalQuestions} questions</span>
+              <span>${Math.round(day.timeSpent / 60)} minutes</span>
+              <span>${day.sessionCount} sessions</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+  </script>
 </body>
 </html>

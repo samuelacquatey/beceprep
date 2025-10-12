@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BECE Prep - Parent Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">BE</div>
+        <div>
+          <h1>Parent Portal</h1>
+          <p class="lead">Monitor your child's BECE preparation progress</p>
+        </div>
+      </div>
+      <div>
+        <span style="color: var(--muted); margin-right: 16px;">Monitoring: Kwame Mensah (JHS 3)</span>
+        <button id="weeklyReport" class="btn">📧 Get Weekly Report</button>
+      </div>
+    </header>
+
+    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 24px;">
+      <!-- Child Overview -->
+      <div class="card">
+        <h3>👦 Student Overview</h3>
+        <div class="student-summary">
+          <div class="stat">
+            <strong>72%</strong>
+            <span>Overall Accuracy</span>
+          </div>
+          <div class="stat">
+            <strong>14h</strong>
+            <span>Study Time (Week)</span>
+          </div>
+          <div class="stat">
+            <strong>28</strong>
+            <span>Session Streak</span>
+          </div>
+        </div>
+        
+        <div class="study-habits">
+          <h4>📊 Study Habits</h4>
+          <div>Preferred Time: <strong>Evenings (6-9PM)</strong></div>
+          <div>Average Session: <strong>35 minutes</strong></div>
+          <div>Consistency: <strong>85%</strong></div>
+        </div>
+      </div>
+
+      <!-- Subject Performance -->
+      <div class="card">
+        <h3>📚 Subject Performance</h3>
+        <div id="subjectPerformance" class="performance-list">
+          <!-- Dynamic content -->
+        </div>
+      </div>
+
+      <!-- Weekly Activity -->
+      <div class="card" style="grid-column: span 2;">
+        <h3>📅 Weekly Activity</h3>
+        <div class="activity-calendar">
+          <!-- Calendar view of study sessions -->
+        </div>
+      </div>
+
+      <!-- Teacher Comments -->
+      <div class="card">
+        <h3>👨‍🏫 Teacher Feedback</h3>
+        <div id="teacherComments" class="comments-list">
+          <!-- Dynamic content -->
+        </div>
+      </div>
+
+      <!-- Recommendations for Parents -->
+      <div class="card">
+        <h3>💡 How You Can Help</h3>
+        <div id="parentRecommendations" class="recommendations-list">
+          <!-- Dynamic content -->
+        </div>
+      </div>
+
+      <!-- BECE Readiness -->
+      <div class="card" style="grid-column: span 2;">
+        <h3>🎓 BECE Readiness Tracker</h3>
+        <div class="readiness-metrics">
+          <div class="readiness-item">
+            <span>Mathematics</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 78%"></div>
+            </div>
+            <span>78%</span>
+          </div>
+          <div class="readiness-item">
+            <span>English</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 85%"></div>
+            </div>
+            <span>85%</span>
+          </div>
+          <div class="readiness-item">
+            <span>Integrated Science</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 65%"></div>
+            </div>
+            <span>65%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    const parentPortal = {
+      // Generate parent-friendly insights
+      getParentInsights: function(studentId) {
+        const studentData = this.getStudentData(studentId);
+        return {
+          strengths: this.identifyStrengths(studentData),
+          weaknesses: this.identifyWeaknesses(studentData),
+          studyHabits: this.analyzeHabits(studentData),
+          recommendations: this.generateParentTips(studentData)
+        };
+      },
+
+      // Weekly report generator
+      generateWeeklyReport: function(studentId) {
+        const weekData = this.getWeekData(studentId);
+        return {
+          summary: `Kwame studied for ${weekData.totalHours} hours this week`,
+          improvements: weekData.improvements,
+          concerns: weekData.concerns,
+          nextWeekGoals: this.setNextWeekGoals(weekData)
+        };
+      },
+
+      // Parent action items
+      getParentActions: function(studentData) {
+        return [
+          {
+            action: "Encourage more Integrated Science practice",
+            reason: "Accuracy dropped 5% this week",
+            priority: "medium"
+          },
+          {
+            action: "Celebrate Math improvement",
+            reason: "Reached 78% accuracy (up from 70%)",
+            priority: "low"
+          }
+        ];
+      }
+    };
+  </script>
+</body>
+</html>

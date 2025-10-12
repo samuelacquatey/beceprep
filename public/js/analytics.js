@@ -8,9 +8,21 @@ export class AnalyticsEngine {
   }
 
   async loadData(days = 30) {
-    this.insights = await getUserInsights(this.userId, days);
-    this.topicPerformance = await getUserTopicPerformance(this.userId);
-    return { insights: this.insights, topicPerformance: this.topicPerformance };
+    try {
+      this.insights = await getUserInsights(this.userId, days);
+      this.topicPerformance = await getUserTopicPerformance(this.userId);
+      
+      console.log(`Loaded ${this.insights.length} insights and ${Object.keys(this.topicPerformance).length} topics`);
+      
+      return { 
+        insights: this.insights, 
+        topicPerformance: this.topicPerformance 
+      };
+    } catch (error) {
+      console.error('Error loading analytics data:', error);
+      // Return empty arrays instead of failing
+      return { insights: [], topicPerformance: {} };
+    }
   }
 
   calculateOverallProgress() {

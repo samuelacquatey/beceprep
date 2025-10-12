@@ -40,7 +40,7 @@
             <label for="password">Password</label>
             <input type="password" id="password" placeholder="Enter your password">
             <span class="toggle-icon" id="toggle-password">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
@@ -93,7 +93,7 @@
             <label for="signup-password">Password</label>
             <input type="password" id="signup-password" placeholder="Create a password (min. 6 characters)">
             <span class="toggle-icon" id="toggle-signup-password">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
@@ -104,11 +104,43 @@
             <label for="confirm-password">Confirm Password</label>
             <input type="password" id="confirm-password" placeholder="Confirm your password">
             <span class="toggle-icon" id="toggle-confirm-password">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
             </span>
+          </div>
+
+          <!-- School Code Section -->
+          <div class="form-group">
+            <label for="schoolCode">School Code (Optional)</label>
+            <input type="text" id="schoolCode" placeholder="Enter your school code if provided">
+            <small style="color: var(--muted); font-size: 12px;">If your school registered with BECE Prep, enter the code to join your class</small>
+          </div>
+
+          <!-- Teacher Registration Option -->
+          <div class="form-group">
+            <label class="remember">
+              <input type="checkbox" id="isTeacher">
+              <span>I am a teacher registering my school</span>
+            </label>
+          </div>
+
+          <!-- School Registration Form (hidden by default) -->
+          <div id="schoolRegistrationForm" style="display: none; background: var(--glass); padding: 16px; border-radius: 8px; margin-top: 12px;">
+            <h4 style="margin-bottom: 16px; color: var(--accent);">🏫 School Registration</h4>
+            <div class="form-group">
+              <label for="schoolName">School Name</label>
+              <input type="text" id="schoolName" placeholder="e.g., Presec Legon">
+            </div>
+            <div class="form-group">
+              <label for="schoolLocation">School Location</label>
+              <input type="text" id="schoolLocation" placeholder="e.g., Accra, Ghana">
+            </div>
+            <div class="form-group">
+              <label for="teacherId">Teacher ID Number</label>
+              <input type="text" id="teacherId" placeholder="School-provided ID">
+            </div>
           </div>
           
           <div class="remember">
@@ -156,6 +188,7 @@
       browserSessionPersistence,
       browserLocalPersistence
     } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    import { SchoolManager } from "./js/schools.js";
 
     // Your web app's Firebase configuration
     const firebaseConfig = {
@@ -172,6 +205,7 @@
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const googleProvider = new GoogleAuthProvider();
+    const schoolManager = new SchoolManager();
 
     document.addEventListener('DOMContentLoaded', function() {
       // UI Elements
@@ -182,6 +216,8 @@
       const googleSignIn = document.getElementById('googleSignIn');
       const googleSignUp = document.getElementById('googleSignUp');
       const forgotPassword = document.getElementById('forgotPassword');
+      const isTeacherCheckbox = document.getElementById('isTeacher');
+      const schoolRegistrationForm = document.getElementById('schoolRegistrationForm');
 
       // Show alert message
       function showAlert(message, type = 'error') {
@@ -212,7 +248,7 @@
           if (input.type === 'password') {
             input.type = 'text';
             toggle.innerHTML = `
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
                 <line x1="1" y1="1" x2="23" y2="23"></line>
               </svg>
@@ -220,7 +256,7 @@
           } else {
             input.type = 'password';
             toggle.innerHTML = `
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
@@ -233,6 +269,15 @@
       setupPasswordToggle('toggle-password', 'password');
       setupPasswordToggle('toggle-signup-password', 'signup-password');
       setupPasswordToggle('toggle-confirm-password', 'confirm-password');
+
+      // Toggle school registration form
+      isTeacherCheckbox.addEventListener('change', function(e) {
+        if (e.target.checked) {
+          schoolRegistrationForm.style.display = 'block';
+        } else {
+          schoolRegistrationForm.style.display = 'none';
+        }
+      });
 
       // Toggle between sign in and sign up forms
       const signinTab = document.getElementById('signin-tab');
@@ -291,14 +336,24 @@
             return signInWithEmailAndPassword(auth, email, password);
           })
           .then((userCredential) => {
-            // Signed in successfully
             const user = userCredential.user;
             showAlert('Sign in successful! Redirecting...', 'success');
             
-            // Redirect to quiz app after a brief delay
-            setTimeout(() => {
-              window.location.href = 'quiz.html';
-            }, 1500);
+            // NEW: Clear any previous session data
+            sessionStorage.clear();
+            
+            // Check if user is a teacher and redirect accordingly
+            schoolManager.getTeacherSchool(user.uid)
+              .then(schoolData => {
+                if (schoolData) {
+                  window.location.href = 'teacher-admin.html';
+                } else {
+                  window.location.href = 'quiz.html';
+                }
+              })
+              .catch(() => {
+                window.location.href = 'quiz.html';
+              });
           })
           .catch((error) => {
             setLoading(false);
@@ -318,12 +373,17 @@
           });
       });
       
-      signUpBtn.addEventListener('click', function() {
+      signUpBtn.addEventListener('click', async function() {
         const fullname = document.getElementById('fullname').value;
         const email = document.getElementById('signup-email').value;
         const password = document.getElementById('signup-password').value;
         const confirmPassword = document.getElementById('confirm-password').value;
         const terms = document.getElementById('terms').checked;
+        const schoolCode = document.getElementById('schoolCode').value;
+        const isTeacher = document.getElementById('isTeacher').checked;
+        const schoolName = document.getElementById('schoolName')?.value;
+        const schoolLocation = document.getElementById('schoolLocation')?.value;
+        const teacherId = document.getElementById('teacherId')?.value;
         
         if (!fullname || !email || !password || !confirmPassword) {
           showAlert('Please fill in all fields');
@@ -344,43 +404,73 @@
           showAlert('Please agree to the Terms & Conditions');
           return;
         }
+
+        if (isTeacher && (!schoolName || !schoolLocation || !teacherId)) {
+          showAlert('Please fill in all school registration details');
+          return;
+        }
         
         setLoading(true);
         
-        // Create user with Firebase
-        createUserWithEmailAndPassword(auth, email, password)
-          .then((userCredential) => {
-            // Signed up successfully
-            const user = userCredential.user;
+        try {
+          // Create user with Firebase
+          const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+          const user = userCredential.user;
+          
+          // Update user profile with display name
+          await updateProfile(user, { displayName: fullname });
+
+          let redirectUrl = 'quiz.html';
+          let successMessage = 'Account created successfully!';
+
+          // Handle school registration/joining
+          if (isTeacher) {
+            // Teacher registering new school
+            const schoolData = await schoolManager.registerSchool(
+              { name: schoolName, location: schoolLocation },
+              { userId: user.uid, fullName: fullname, teacherId: teacherId }
+            );
+            successMessage = `School registered successfully! Your school code is: ${schoolData.code}`;
+            redirectUrl = 'teacher-admin.html';
+          } else if (schoolCode) {
+            // Student joining existing school
+            const studentData = {
+              fullName: fullname,
+              class: 'JHS 3' // Default, can be updated later
+            };
             
-            // Update user profile with display name
-            return updateProfile(user, {
-              displayName: fullname
-            }).then(() => {
-              showAlert('Account created successfully!', 'success');
-              
-              // Redirect to quiz app after a brief delay
-              setTimeout(() => {
-                window.location.href = 'quiz.html';
-              }, 1500);
-            });
-          })
-          .catch((error) => {
-            setLoading(false);
-            const errorCode = error.code;
-            
-            if (errorCode === 'auth/email-already-in-use') {
-              showAlert('This email is already registered');
-            } else if (errorCode === 'auth/invalid-email') {
-              showAlert('Invalid email address');
-            } else if (errorCode === 'auth/weak-password') {
-              showAlert('Password is too weak');
-            } else if (errorCode === 'auth/operation-not-allowed') {
-              showAlert('Email/password accounts are not enabled');
-            } else {
-              showAlert('Account creation failed. Please try again.');
-            }
-          });
+            await schoolManager.joinSchool(user.uid, schoolCode, studentData);
+            successMessage = 'Successfully joined school!';
+          }
+
+          showAlert(successMessage, 'success');
+
+          // NEW: Clear any previous session data
+          sessionStorage.clear();
+
+          // Redirect after delay
+          setTimeout(() => {
+            window.location.href = redirectUrl;
+          }, 2000);
+
+        } catch (error) {
+          setLoading(false);
+          const errorCode = error.code;
+          
+          if (errorCode === 'auth/email-already-in-use') {
+            showAlert('This email is already registered');
+          } else if (errorCode === 'auth/invalid-email') {
+            showAlert('Invalid email address');
+          } else if (errorCode === 'auth/weak-password') {
+            showAlert('Password is too weak');
+          } else if (errorCode === 'auth/operation-not-allowed') {
+            showAlert('Email/password accounts are not enabled');
+          } else if (error.message.includes('school')) {
+            showAlert(error.message);
+          } else {
+            showAlert('Account creation failed. Please try again.');
+          }
+        }
       });
       
       // Google authentication
@@ -391,6 +481,9 @@
           .then((result) => {
             // Signed in successfully
             showAlert('Sign in successful! Redirecting...', 'success');
+            
+            // NEW: Clear any previous session data
+            sessionStorage.clear();
             
             // Redirect to quiz app after a brief delay
             setTimeout(() => {
@@ -436,7 +529,18 @@
       // Check if user is already logged in
       onAuthStateChanged(auth, (user) => {
         if (user) {
-          window.location.href = 'quiz.html';
+          // Check if user is a teacher and redirect accordingly
+          /*schoolManager.getTeacherSchool(user.uid)
+            .then(schoolData => {
+              if (schoolData) {
+                window.location.href = 'teacher-admin.html';
+              } else {
+                window.location.href = 'quiz.html';
+              }
+            })
+            .catch(() => {
+              window.location.href = 'quiz.html';
+            });*/
         }
       });
     });

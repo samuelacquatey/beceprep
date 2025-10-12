@@ -1,31 +1,220 @@
-const ENHANCED_QUESTIONS = [
+// js/data/questionBank.js
+export const ENHANCED_QUESTIONS = [
   {
     id: 1,
     year: 2019,
     subject: 'Mathematics',
     topic: 'Algebra',
     subtopic: 'Linear Equations',
-    difficulty: 'medium', // low/medium/high
+    difficulty: 'medium',
     tags: ['simplification', 'variables', 'basic_algebra'],
     prerequisites: ['basic_arithmetic'],
-    cognitiveLevel: 'application', // knowledge/comprehension/application/analysis
-    timeEstimate: 60, // seconds
+    cognitiveLevel: 'application',
+    timeEstimate: 60,
     explanation: 'Distribute and combine like terms: 3(x+4) - 2x = 3x + 12 - 2x = x + 12',
     q: 'Simplify: 3(x+4) - 2x',
     options: ['x+12', 'x+4', '5x+12', 'x+8'],
     a: 0
   },
-  // ... more questions with enhanced metadata
+  {
+    id: 2,
+    year: 2019,
+    subject: 'English',
+    topic: 'Grammar',
+    subtopic: 'Verb Tenses',
+    difficulty: 'easy',
+    tags: ['verbs', 'tenses', 'sentence_structure'],
+    prerequisites: ['basic_grammar'],
+    cognitiveLevel: 'knowledge',
+    timeEstimate: 45,
+    explanation: 'The correct form is "does not" for third person singular present tense.',
+    q: 'Choose the correct sentence',
+    options: ['He dont like it', 'He does not like it', 'He do not like it', 'He not like it'],
+    a: 1
+  },
+  {
+    id: 3,
+    year: 2020,
+    subject: 'Integrated Science',
+    topic: 'Biology',
+    subtopic: 'Photosynthesis',
+    difficulty: 'medium',
+    tags: ['plants', 'respiration', 'energy'],
+    prerequisites: ['basic_biology'],
+    cognitiveLevel: 'comprehension',
+    timeEstimate: 50,
+    explanation: 'Plants consume carbon dioxide and release oxygen during photosynthesis.',
+    q: 'Which gas do plants consume?',
+    options: ['Oxygen', 'Nitrogen', 'Carbon dioxide', 'Helium'],
+    a: 2
+  },
+  {
+    id: 4,
+    year: 2020,
+    subject: 'Mathematics',
+    topic: 'Sequences',
+    subtopic: 'Geometric Sequences',
+    difficulty: 'medium',
+    tags: ['patterns', 'multiplication', 'series'],
+    prerequisites: ['basic_arithmetic'],
+    cognitiveLevel: 'application',
+    timeEstimate: 55,
+    explanation: 'This is a geometric sequence where each term is multiplied by 2: 2×2=4, 4×2=8, 8×2=16, 16×2=32',
+    q: 'What is the next number: 2,4,8,16,...',
+    options: ['20', '24', '32', '34'],
+    a: 2
+  },
+  {
+    id: 5,
+    year: 2021,
+    subject: 'Social Studies',
+    topic: 'Civics',
+    subtopic: 'Government Systems',
+    difficulty: 'easy',
+    tags: ['government', 'politics', 'systems'],
+    prerequisites: ['basic_civics'],
+    cognitiveLevel: 'knowledge',
+    timeEstimate: 40,
+    explanation: 'Democracy means rule by the people, typically through elected representatives.',
+    q: 'What is a democracy?',
+    options: ['One-man rule', 'Rule by the people', 'Military rule', 'A type of crop'],
+    a: 1
+  },
+  {
+    id: 6,
+    year: 2021,
+    subject: 'Mathematics',
+    topic: 'Algebra',
+    subtopic: 'Linear Equations',
+    difficulty: 'easy',
+    tags: ['solving', 'equations', 'basic_algebra'],
+    prerequisites: ['basic_arithmetic'],
+    cognitiveLevel: 'application',
+    timeEstimate: 45,
+    explanation: 'Divide both sides by 2: 2x = 10 → x = 10 ÷ 2 → x = 5',
+    q: 'Solve for x: 2x = 10',
+    options: ['4', '5', '10', '8'],
+    a: 1
+  },
+  {
+    id: 7,
+    year: 2022,
+    subject: 'English',
+    topic: 'Vocabulary',
+    subtopic: 'Synonyms',
+    difficulty: 'easy',
+    tags: ['words', 'meanings', 'vocabulary'],
+    prerequisites: ['basic_vocabulary'],
+    cognitiveLevel: 'knowledge',
+    timeEstimate: 35,
+    explanation: 'Synonyms are words with similar meanings. "Glad" means the same as "happy".',
+    q: 'Pick the synonym for "happy"',
+    options: ['Sad', 'Angry', 'Glad', 'Tired'],
+    a: 2
+  },
+  {
+    id: 8,
+    year: 2022,
+    subject: 'Integrated Science',
+    topic: 'Physics',
+    subtopic: 'Measurement',
+    difficulty: 'easy',
+    tags: ['instruments', 'measurement', 'science_tools'],
+    prerequisites: ['basic_science'],
+    cognitiveLevel: 'knowledge',
+    timeEstimate: 40,
+    explanation: 'A thermometer measures temperature, a barometer measures pressure, ammeter measures current, voltmeter measures voltage.',
+    q: 'Which device measures temperature?',
+    options: ['Barometer', 'Thermometer', 'Ammeter', 'Voltmeter'],
+    a: 1
+  },
+  {
+    id: 9,
+    year: 2023,
+    subject: 'Mathematics',
+    topic: 'Geometry',
+    subtopic: 'Area Calculation',
+    difficulty: 'medium',
+    tags: ['area', 'rectangle', 'measurement'],
+    prerequisites: ['multiplication'],
+    cognitiveLevel: 'application',
+    timeEstimate: 50,
+    explanation: 'Area of rectangle = length × width = 4 × 6 = 24',
+    q: 'Find area of rectangle with sides 4 and 6',
+    options: ['10', '24', '12', '20'],
+    a: 1
+  },
+  {
+    id: 10,
+    year: 2023,
+    subject: 'Social Studies',
+    topic: 'Geography',
+    subtopic: 'African Capitals',
+    difficulty: 'easy',
+    tags: ['geography', 'africa', 'capitals'],
+    prerequisites: ['basic_geography'],
+    cognitiveLevel: 'knowledge',
+    timeEstimate: 30,
+    explanation: 'Accra is the capital city of Ghana, located on the Atlantic coast.',
+    q: 'Capital city of Ghana',
+    options: ['Kumasi', 'Accra', 'Tamale', 'Takoradi'],
+    a: 1
+  },
+  {
+    id: 11,
+    year: 2022,
+    subject: 'Mathematics',
+    topic: 'Fractions',
+    subtopic: 'Basic Operations',
+    difficulty: 'medium',
+    tags: ['fractions', 'addition', 'basic_math'],
+    prerequisites: ['basic_fractions'],
+    cognitiveLevel: 'application',
+    timeEstimate: 55,
+    explanation: '1/2 = 2/4, so 2/4 + 1/4 = 3/4',
+    q: 'What is 1/2 + 1/4?',
+    options: ['1/6', '2/6', '3/4', '2/8'],
+    a: 2
+  },
+  {
+    id: 12,
+    year: 2021,
+    subject: 'English',
+    topic: 'Comprehension',
+    subtopic: 'Reading Skills',
+    difficulty: 'hard',
+    tags: ['comprehension', 'analysis', 'reading'],
+    prerequisites: ['basic_reading'],
+    cognitiveLevel: 'analysis',
+    timeEstimate: 65,
+    explanation: 'The main idea is the central message or most important point the author wants to convey.',
+    q: 'What is the main idea of a story?',
+    options: ['The first sentence', 'The central message', 'The characters', 'The setting'],
+    a: 1
+  }
 ];
 
-const TOPIC_HIERARCHY = {
+export const TOPIC_HIERARCHY = {
   'Mathematics': {
     'Algebra': ['Linear Equations', 'Quadratic Equations', 'Factorization'],
     'Geometry': ['Shapes', 'Angles', 'Area'],
-    'Statistics': ['Mean', 'Median', 'Probability']
+    'Statistics': ['Mean', 'Median', 'Probability'],
+    'Sequences': ['Geometric Sequences', 'Arithmetic Sequences'],
+    'Fractions': ['Basic Operations', 'Simplification']
   },
   'English': {
     'Grammar': ['Tenses', 'Parts of Speech', 'Sentence Structure'],
-    'Comprehension': ['Inference', 'Vocabulary', 'Context']
+    'Comprehension': ['Inference', 'Vocabulary', 'Context'],
+    'Vocabulary': ['Synonyms', 'Antonyms', 'Word Meanings']
+  },
+  'Integrated Science': {
+    'Biology': ['Photosynthesis', 'Respiration', 'Cells'],
+    'Physics': ['Measurement', 'Forces', 'Energy'],
+    'Chemistry': ['Elements', 'Compounds', 'Reactions']
+  },
+  'Social Studies': {
+    'Civics': ['Government Systems', 'Citizenship', 'Rights'],
+    'Geography': ['African Capitals', 'Climate', 'Resources'],
+    'History': ['Independence', 'Cultural Heritage', 'Historical Events']
   }
 };

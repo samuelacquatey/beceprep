@@ -1,0 +1,32 @@
+<!-- School Dashboard -->
+<div class="school-dashboard">
+  <!-- School Leaderboard -->
+  <div class="leaderboard-card">
+    <h3>🏆 School Rankings</h3>
+    <div class="school-list">
+      <div class="school-item" v-for="school in schools">
+        <span class="rank">#{{ school.rank }}</span>
+        <span class="name">{{ school.name }}</span>
+        <span class="score">{{ school.avgScore }}%</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Study Groups -->
+  <div class="groups-card">
+    <h3>👥 My Study Groups</h3>
+    <button class="btn" @click="createGroup">Create Group</button>
+    <div class="group-list">
+      <!-- Group cards here -->
+    </div>
+  </div>
+  
+  <!-- Weekly Challenges -->
+  <div class="challenges-card">
+    <h3>🎯 This Week's Challenge</h3>
+    <div class="challenge">
+      "Solve 50 Math questions with 80%+ accuracy"
+      <div class="progress">Progress: 32/50</div>
+    </div>
+  </div>
+</div>

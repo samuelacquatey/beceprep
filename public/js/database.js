@@ -1,155 +1,155 @@
-import { getFirestore, doc, setDoc, getDoc, collection, addDoc, query, where, getDocs, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-import { app } from './auth.js';
+import { db } from './auth.js';
+import { 
+  collection, 
+  addDoc, 
+  query, 
+  where, 
+  orderBy, 
+  limit,
+  getDocs,
+  Timestamp 
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-const db = getFirestore(app);
-const auth = getAuth(app);
-
-// User performance tracking
-export const trackQuestionAttempt = async (userId, questionData, userResponse) => {
-  const attemptData = {
-    userId,
-    questionId: questionData.id,
-    timestamp: new Date(),
-    subject: questionData.subject,
-    topic: questionData.topic,
-    difficulty: questionData.difficulty || 'medium',
-    userAnswer: userResponse.choice,
-    correctAnswer: questionData.a,
-    isCorrect: userResponse.isCorrect,
-    timeSpent: userResponse.timeSpent || 0,
-    confidence: userResponse.confidence || 0.5,
-    sessionId: userResponse.sessionId,
-    mode: userResponse.mode
-  };
-
+// Track question attempts
+export async function trackQuestionAttempt(userId, question, trackingData) {
   try {
-    await addDoc(collection(db, 'questionAttempts'), attemptData);
-    await updateUserAnalytics(userId, attemptData);
-    return true;
-  } catch (error) {
-    console.error('Error tracking attempt:', error);
-    return false;
-  }
-};
-
-// User analytics aggregation
-export const updateUserAnalytics = async (userId, attemptData) => {
-  const today = new Date().toISOString().split('T')[0];
-  const analyticsRef = doc(db, 'userAnalytics', `${userId}_${today}`);
-  
-  try {
-    const existing = await getDoc(analyticsRef);
-    const currentData = existing.exists() ? existing.data() : {
-      userId,
-      date: today,
-      totalQuestions: 0,
-      correctAnswers: 0,
-      timeSpent: 0,
-      subjects: {},
-      topics: {},
-      sessionCount: 0,
-      sessions: []
+    const attemptData = {
+      userId: userId,
+      questionId: question.id,
+      subject: question.subject,
+      topic: question.topic,
+      subtopic: question.subtopic,
+      difficulty: question.difficulty,
+      year: question.year,
+      correct: trackingData.isCorrect,
+      choice: trackingData.choice,
+      timeSpent: trackingData.timeSpent,
+      confidence: trackingData.confidence,
+      sessionId: trackingData.sessionId,
+      mode: trackingData.mode,
+      timestamp: Timestamp.now()
     };
 
-    // Update aggregates
-    currentData.totalQuestions++;
-    if (attemptData.isCorrect) currentData.correctAnswers++;
-    currentData.timeSpent += attemptData.timeSpent;
-    
-    // Update sessions
-    if (!currentData.sessions.includes(attemptData.sessionId)) {
-      currentData.sessions.push(attemptData.sessionId);
-      currentData.sessionCount = currentData.sessions.length;
-    }
-
-    // Update subject performance
-    if (!currentData.subjects[attemptData.subject]) {
-      currentData.subjects[attemptData.subject] = { total: 0, correct: 0, timeSpent: 0 };
-    }
-    currentData.subjects[attemptData.subject].total++;
-    if (attemptData.isCorrect) currentData.subjects[attemptData.subject].correct++;
-    currentData.subjects[attemptData.subject].timeSpent += attemptData.timeSpent;
-
-    // Update topic performance
-    const topicKey = `${attemptData.subject}_${attemptData.topic}`;
-    if (!currentData.topics[topicKey]) {
-      currentData.topics[topicKey] = { total: 0, correct: 0, subject: attemptData.subject, topic: attemptData.topic };
-    }
-    currentData.topics[topicKey].total++;
-    if (attemptData.isCorrect) currentData.topics[topicKey].correct++;
-
-    await setDoc(analyticsRef, currentData);
+    const docRef = await addDoc(collection(db, 'questionAttempts'), attemptData);
+    console.log('✅ Question attempt saved with ID: ', docRef.id);
+    return docRef.id;
   } catch (error) {
-    console.error('Error updating analytics:', error);
+    console.error('❌ Error saving question attempt: ', error);
+    throw error;
   }
-};
+}
 
-// Get user insights
-export const getUserInsights = async (userId, days = 30) => {
-  const startDate = new Date();
-  startDate.setDate(startDate.getDate() - days);
-  
+// Get user insights for dashboard
+export async function getUserInsights(userId, days = 30) {
   try {
-    const q = query(
-      collection(db, 'userAnalytics'),
-      where('userId', '==', userId),
-      where('date', '>=', startDate.toISOString().split('T')[0]),
-      orderBy('date', 'desc')
-    );
+    const startDate = new Date();
+    startDate.setDate(startDate.getDate() - days);
     
-    const snapshot = await getDocs(q);
-    return snapshot.docs.map(doc => doc.data());
-  } catch (error) {
-    console.error('Error getting insights:', error);
-    return [];
-  }
-};
-
-// Get user performance by topic
-export const getUserTopicPerformance = async (userId) => {
-  try {
     const q = query(
       collection(db, 'questionAttempts'),
       where('userId', '==', userId),
-      orderBy('timestamp', 'desc'),
-      limit(1000)
+      where('timestamp', '>=', Timestamp.fromDate(startDate)),
+      orderBy('timestamp', 'desc')
     );
+
+    const querySnapshot = await getDocs(q);
+    const attempts = querySnapshot.docs.map(doc => doc.data());
     
-    const snapshot = await getDocs(q);
-    const attempts = snapshot.docs.map(doc => doc.data());
+    // Group by date and calculate daily stats
+    const dailyStats = {};
+    attempts.forEach(attempt => {
+      const date = attempt.timestamp.toDate().toDateString();
+      if (!dailyStats[date]) {
+        dailyStats[date] = {
+          date: attempt.timestamp.toDate(),
+          totalQuestions: 0,
+          correctAnswers: 0,
+          timeSpent: 0,
+          sessionCount: 0,
+          subjects: {}
+        };
+      }
+      
+      dailyStats[date].totalQuestions++;
+      dailyStats[date].timeSpent += attempt.timeSpent || 0;
+      
+      if (attempt.correct) {
+        dailyStats[date].correctAnswers++;
+      }
+      
+      // Track by subject
+      if (!dailyStats[date].subjects[attempt.subject]) {
+        dailyStats[date].subjects[attempt.subject] = { total: 0, correct: 0 };
+      }
+      dailyStats[date].subjects[attempt.subject].total++;
+      if (attempt.correct) {
+        dailyStats[date].subjects[attempt.subject].correct++;
+      }
+    });
+
+    // Convert to array and calculate session count (simplified)
+    return Object.values(dailyStats).map(day => ({
+      ...day,
+      sessionCount: 1 // Simplified - you can enhance this
+    }));
+
+  } catch (error) {
+    console.error('❌ Error getting user insights: ', error);
+    return [];
+  }
+}
+
+// Get topic performance
+export async function getUserTopicPerformance(userId) {
+  try {
+    const q = query(
+      collection(db, 'questionAttempts'),
+      where('userId', '==', userId)
+    );
+
+    const querySnapshot = await getDocs(q);
+    const attempts = querySnapshot.docs.map(doc => doc.data());
     
+    // Group by topic
     const topicPerformance = {};
     attempts.forEach(attempt => {
-      const key = `${attempt.subject}_${attempt.topic}`;
-      if (!topicPerformance[key]) {
-        topicPerformance[key] = {
+      const topicKey = `${attempt.subject}-${attempt.topic}`;
+      if (!topicPerformance[topicKey]) {
+        topicPerformance[topicKey] = {
           subject: attempt.subject,
           topic: attempt.topic,
           total: 0,
           correct: 0,
           totalTime: 0,
-          avgConfidence: 0
+          avgConfidence: 0,
+          confidenceCount: 0
         };
       }
       
-      topicPerformance[key].total++;
-      if (attempt.isCorrect) topicPerformance[key].correct++;
-      topicPerformance[key].totalTime += attempt.timeSpent;
-      topicPerformance[key].avgConfidence += attempt.confidence;
+      topicPerformance[topicKey].total++;
+      topicPerformance[topicKey].totalTime += attempt.timeSpent || 0;
+      
+      if (attempt.correct) {
+        topicPerformance[topicKey].correct++;
+      }
+      
+      if (attempt.confidence) {
+        topicPerformance[topicKey].avgConfidence += attempt.confidence;
+        topicPerformance[topicKey].confidenceCount++;
+      }
     });
-    
-    // Calculate averages
-    Object.keys(topicPerformance).forEach(key => {
-      const topic = topicPerformance[key];
+
+    // Calculate averages and accuracy
+    Object.values(topicPerformance).forEach(topic => {
       topic.accuracy = topic.total > 0 ? (topic.correct / topic.total) * 100 : 0;
       topic.avgTime = topic.total > 0 ? topic.totalTime / topic.total : 0;
-      topic.avgConfidence = topic.total > 0 ? topic.avgConfidence / topic.total : 0;
+      topic.avgConfidence = topic.confidenceCount > 0 ? topic.avgConfidence / topic.confidenceCount : 0.5;
     });
-    
+
     return topicPerformance;
+
   } catch (error) {
-    console.error('Error getting topic performance:', error);
+    console.error('❌ Error getting topic performance: ', error);
     return {};
   }
-};
+}
