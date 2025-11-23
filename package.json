@@ -1,0 +1,15 @@
+{
+    "name": "bece-prep",
+    "version": "1.0.0",
+    "description": "BECE Prep Application",
+    "type": "module",
+    "scripts": {
+        "start": "serve public"
+    },
+    "dependencies": {
+        "firebase": "^10.7.1"
+    },
+    "devDependencies": {
+        "serve": "^14.2.1"
+    }
+}

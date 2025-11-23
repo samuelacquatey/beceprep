@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BECE Prep - Sign In / Sign Up</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- Firebase SDK -->
+  <!-- Removed Compat SDKs -->
 </head>
+
 <body>
   <div class="container">
     <div class="card">
@@ -35,7 +39,7 @@
             <label for="email">Email</label>
             <input type="email" id="email" placeholder="Enter your email">
           </div>
-          
+
           <div class="form-group password-toggle">
             <label for="password">Password</label>
             <input type="password" id="password" placeholder="Enter your password">
@@ -46,7 +50,7 @@
               </svg>
             </span>
           </div>
-          
+
           <div class="remember-forgot">
             <label class="remember">
               <input type="checkbox" id="remember">
@@ -54,7 +58,7 @@
             </label>
             <a href="#" class="forgot" id="forgotPassword">Forgot password?</a>
           </div>
-          
+
           <button class="btn" id="signInBtn">Sign In</button>
         </div>
 
@@ -63,10 +67,14 @@
         <div class="social-login">
           <button class="social-btn" id="googleSignIn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+              <path
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+              <path
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+              <path
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+              <path
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
             </svg>
             Google
           </button>
@@ -83,12 +91,12 @@
             <label for="fullname">Full Name</label>
             <input type="text" id="fullname" placeholder="Enter your full name">
           </div>
-          
+
           <div class="form-group">
             <label for="signup-email">Email</label>
             <input type="email" id="signup-email" placeholder="Enter your email">
           </div>
-          
+
           <div class="form-group password-toggle">
             <label for="signup-password">Password</label>
             <input type="password" id="signup-password" placeholder="Create a password (min. 6 characters)">
@@ -99,7 +107,7 @@
               </svg>
             </span>
           </div>
-          
+
           <div class="form-group password-toggle">
             <label for="confirm-password">Confirm Password</label>
             <input type="password" id="confirm-password" placeholder="Confirm your password">
@@ -115,7 +123,8 @@
           <div class="form-group">
             <label for="schoolCode">School Code (Optional)</label>
             <input type="text" id="schoolCode" placeholder="Enter your school code if provided">
-            <small style="color: var(--muted); font-size: 12px;">If your school registered with BECE Prep, enter the code to join your class</small>
+            <small style="color: var(--muted); font-size: 12px;">If your school registered with BECE Prep, enter the
+              code to join your class</small>
           </div>
 
           <!-- Teacher Registration Option -->
@@ -127,7 +136,8 @@
           </div>
 
           <!-- School Registration Form (hidden by default) -->
-          <div id="schoolRegistrationForm" style="display: none; background: var(--glass); padding: 16px; border-radius: 8px; margin-top: 12px;">
+          <div id="schoolRegistrationForm"
+            style="display: none; background: var(--glass); padding: 16px; border-radius: 8px; margin-top: 12px;">
             <h4 style="margin-bottom: 16px; color: var(--accent);">🏫 School Registration</h4>
             <div class="form-group">
               <label for="schoolName">School Name</label>
@@ -142,12 +152,12 @@
               <input type="text" id="teacherId" placeholder="School-provided ID">
             </div>
           </div>
-          
+
           <div class="remember">
             <input type="checkbox" id="terms">
             <label for="terms">I agree to the <a href="#" style="color: var(--accent);">Terms & Conditions</a></label>
           </div>
-          
+
           <button class="btn" id="signUpBtn">Create Account</button>
         </div>
 
@@ -156,10 +166,14 @@
         <div class="social-login">
           <button class="social-btn" id="googleSignUp">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+              <path
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+              <path
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+              <path
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+              <path
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
             </svg>
             Google
           </button>
@@ -174,12 +188,10 @@
 
   <script type="module">
     // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { 
-      getAuth, 
-      createUserWithEmailAndPassword, 
-      signInWithEmailAndPassword, 
-      signInWithPopup, 
+    import {
+      createUserWithEmailAndPassword,
+      signInWithEmailAndPassword,
+      signInWithPopup,
       GoogleAuthProvider,
       sendPasswordResetEmail,
       updateProfile,
@@ -189,25 +201,14 @@
       browserLocalPersistence
     } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
     import { SchoolManager } from "./js/schools.js";
-
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyDOxJIMYJKPz8518ZfywPQtizwAVvZlJnQ",
-      authDomain: "bece-2eb33.firebaseapp.com",
-      projectId: "bece-2eb33",
-      storageBucket: "bece-2eb33.firebasestorage.app",
-      messagingSenderId: "3811495501",
-      appId: "1:3811495501:web:a33ef4d4256093d1d35604",
-      measurementId: "G-T0S5XLYLT5"
-    };
+    import { app, auth, db } from "./js/auth.js";
 
     // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
+    // app, auth, db are already initialized in ./js/auth.js
     const googleProvider = new GoogleAuthProvider();
     const schoolManager = new SchoolManager();
 
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // UI Elements
       const loadingOverlay = document.getElementById('loadingOverlay');
       const alertBox = document.getElementById('alertBox');
@@ -224,7 +225,7 @@
         alertBox.textContent = message;
         alertBox.className = `alert alert-${type}`;
         alertBox.style.display = 'block';
-        
+
         setTimeout(() => {
           alertBox.style.display = 'none';
         }, 5000);
@@ -243,8 +244,8 @@
       function setupPasswordToggle(toggleId, inputId) {
         const toggle = document.getElementById(toggleId);
         const input = document.getElementById(inputId);
-        
-        toggle.addEventListener('click', function() {
+
+        toggle.addEventListener('click', function () {
           if (input.type === 'password') {
             input.type = 'text';
             toggle.innerHTML = `
@@ -271,7 +272,7 @@
       setupPasswordToggle('toggle-confirm-password', 'confirm-password');
 
       // Toggle school registration form
-      isTeacherCheckbox.addEventListener('change', function(e) {
+      isTeacherCheckbox.addEventListener('change', function (e) {
         if (e.target.checked) {
           schoolRegistrationForm.style.display = 'block';
         } else {
@@ -286,7 +287,7 @@
       const signupForm = document.getElementById('signup-form');
       const switchToSignup = document.getElementById('switch-to-signup');
       const switchToSignin = document.getElementById('switch-to-signin');
-      
+
       function activateSignIn() {
         signinTab.classList.add('active');
         signupTab.classList.remove('active');
@@ -294,7 +295,7 @@
         signupForm.classList.remove('active');
         alertBox.style.display = 'none';
       }
-      
+
       function activateSignUp() {
         signinTab.classList.remove('active');
         signupTab.classList.add('active');
@@ -302,34 +303,34 @@
         signupForm.classList.add('active');
         alertBox.style.display = 'none';
       }
-      
+
       signinTab.addEventListener('click', activateSignIn);
       signupTab.addEventListener('click', activateSignUp);
-      switchToSignup.addEventListener('click', function(e) {
+      switchToSignup.addEventListener('click', function (e) {
         e.preventDefault();
         activateSignUp();
       });
-      switchToSignin.addEventListener('click', function(e) {
+      switchToSignin.addEventListener('click', function (e) {
         e.preventDefault();
         activateSignIn();
       });
-      
+
       // Email/password authentication
-      signInBtn.addEventListener('click', function() {
+      signInBtn.addEventListener('click', function () {
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         const rememberMe = document.getElementById('remember').checked;
-        
+
         if (!email || !password) {
           showAlert('Please fill in all fields');
           return;
         }
-        
+
         setLoading(true);
-        
+
         // Set persistence based on "remember me" selection
         const persistence = rememberMe ? browserLocalPersistence : browserSessionPersistence;
-        
+
         setPersistence(auth, persistence)
           .then(() => {
             // Sign in with Firebase
@@ -338,10 +339,10 @@
           .then((userCredential) => {
             const user = userCredential.user;
             showAlert('Sign in successful! Redirecting...', 'success');
-            
+
             // NEW: Clear any previous session data
             sessionStorage.clear();
-            
+
             // Check if user is a teacher and redirect accordingly
             schoolManager.getTeacherSchool(user.uid)
               .then(schoolData => {
@@ -358,7 +359,7 @@
           .catch((error) => {
             setLoading(false);
             const errorCode = error.code;
-            
+
             if (errorCode === 'auth/invalid-email') {
               showAlert('Invalid email address');
             } else if (errorCode === 'auth/user-disabled') {
@@ -372,8 +373,8 @@
             }
           });
       });
-      
-      signUpBtn.addEventListener('click', async function() {
+
+      signUpBtn.addEventListener('click', async function () {
         const fullname = document.getElementById('fullname').value;
         const email = document.getElementById('signup-email').value;
         const password = document.getElementById('signup-password').value;
@@ -384,22 +385,22 @@
         const schoolName = document.getElementById('schoolName')?.value;
         const schoolLocation = document.getElementById('schoolLocation')?.value;
         const teacherId = document.getElementById('teacherId')?.value;
-        
+
         if (!fullname || !email || !password || !confirmPassword) {
           showAlert('Please fill in all fields');
           return;
         }
-        
+
         if (password.length < 6) {
           showAlert('Password must be at least 6 characters long');
           return;
         }
-        
+
         if (password !== confirmPassword) {
           showAlert('Passwords do not match');
           return;
         }
-        
+
         if (!terms) {
           showAlert('Please agree to the Terms & Conditions');
           return;
@@ -409,14 +410,14 @@
           showAlert('Please fill in all school registration details');
           return;
         }
-        
+
         setLoading(true);
-        
+
         try {
           // Create user with Firebase
           const userCredential = await createUserWithEmailAndPassword(auth, email, password);
           const user = userCredential.user;
-          
+
           // Update user profile with display name
           await updateProfile(user, { displayName: fullname });
 
@@ -438,7 +439,7 @@
               fullName: fullname,
               class: 'JHS 3' // Default, can be updated later
             };
-            
+
             await schoolManager.joinSchool(user.uid, schoolCode, studentData);
             successMessage = 'Successfully joined school!';
           }
@@ -456,7 +457,7 @@
         } catch (error) {
           setLoading(false);
           const errorCode = error.code;
-          
+
           if (errorCode === 'auth/email-already-in-use') {
             showAlert('This email is already registered');
           } else if (errorCode === 'auth/invalid-email') {
@@ -472,19 +473,19 @@
           }
         }
       });
-      
+
       // Google authentication
       function signInWithGoogle() {
         setLoading(true);
-        
+
         signInWithPopup(auth, googleProvider)
           .then((result) => {
             // Signed in successfully
             showAlert('Sign in successful! Redirecting...', 'success');
-            
+
             // NEW: Clear any previous session data
             sessionStorage.clear();
-            
+
             // Redirect to quiz app after a brief delay
             setTimeout(() => {
               window.location.href = 'quiz.html';
@@ -495,22 +496,22 @@
             showAlert('Google sign-in failed. Please try again.');
           });
       }
-      
+
       googleSignIn.addEventListener('click', signInWithGoogle);
       googleSignUp.addEventListener('click', signInWithGoogle);
-      
+
       // Password reset
-      forgotPassword.addEventListener('click', function(e) {
+      forgotPassword.addEventListener('click', function (e) {
         e.preventDefault();
         const email = document.getElementById('email').value;
-        
+
         if (!email) {
           showAlert('Please enter your email address first');
           return;
         }
-        
+
         setLoading(true);
-        
+
         sendPasswordResetEmail(auth, email)
           .then(() => {
             setLoading(false);
@@ -546,4 +547,5 @@
     });
   </script>
 </body>
+
 </html>

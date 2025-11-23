@@ -1,32 +1,755 @@
-<!-- School Dashboard -->
-<div class="school-dashboard">
-  <!-- School Leaderboard -->
-  <div class="leaderboard-card">
-    <h3>🏆 School Rankings</h3>
-    <div class="school-list">
-      <div class="school-item" v-for="school in schools">
-        <span class="rank">#{{ school.rank }}</span>
-        <span class="name">{{ school.name }}</span>
-        <span class="score">{{ school.avgScore }}%</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BECE Prep - Social Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">BE</div>
+        <div>
+          <h1>Social Learning Hub</h1>
+          <p class="lead">Compete with schools, join study groups, and earn rewards together</p>
+        </div>
+      </div>
+      <div>
+        <button id="backToQuiz" class="btn ghost">Back to Quiz</button>
+        <button id="refreshData" class="btn">🔄 Refresh</button>
+      </div>
+    </header>
+
+    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 24px;">
+      <!-- School Leaderboard -->
+      <div class="card">
+        <h3>🏆 School Rankings</h3>
+        <div class="leaderboard" id="schoolLeaderboard">
+          <!-- Dynamic content -->
+        </div>
+      </div>
+
+      <!-- Weekly Challenge -->
+      <div class="card">
+        <h3>🎯 Weekly Challenge</h3>
+        <div class="challenge-card" id="weeklyChallenge">
+          <!-- Dynamic content -->
+        </div>
+        
+        <div class="my-stats">
+          <h4>📊 My Progress</h4>
+          <div class="stat-item">
+            <span>This Week's Points</span>
+            <strong id="weeklyPoints">0</strong>
+          </div>
+          <div class="stat-item">
+            <span>Questions Solved</span>
+            <strong id="weeklyQuestions">0</strong>
+          </div>
+          <div class="stat-item">
+            <span>Current Rank</span>
+            <strong id="myRank">-</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Study Groups -->
+      <div class="card">
+        <h3>👥 My Study Groups</h3>
+        <button class="btn" id="createGroupBtn" style="margin-bottom: 16px;">+ Create Study Group</button>
+        <div class="groups-list" id="studyGroups">
+          <!-- Dynamic content -->
+        </div>
+      </div>
+
+      <!-- Peer Help Requests -->
+      <div class="card">
+        <h3>🆘 Help Requests</h3>
+        <div class="help-requests" id="helpRequests">
+          <!-- Dynamic content -->
+        </div>
+      </div>
+
+      <!-- My Rewards -->
+      <div class="card" style="grid-column: span 2;">
+        <h3>🎁 My Rewards & Points</h3>
+        <div class="rewards-section">
+          <div class="points-balance">
+            <div class="points-display">
+              <span>Total Points</span>
+              <strong id="totalPoints">0</strong>
+            </div>
+            <button class="btn ghost" id="viewRewardsBtn">View Rewards Shop</button>
+          </div>
+          
+          <div class="recent-activity">
+            <h4>Recent Activity</h4>
+            <div id="recentActivity">
+              <!-- Dynamic content -->
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  
-  <!-- Study Groups -->
-  <div class="groups-card">
-    <h3>👥 My Study Groups</h3>
-    <button class="btn" @click="createGroup">Create Group</button>
-    <div class="group-list">
-      <!-- Group cards here -->
+
+  <!-- Create Group Modal -->
+  <div id="createGroupModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h3>Create Study Group</h3>
+      <div class="form-container">
+        <div class="form-group">
+          <label for="groupName">Group Name</label>
+          <input type="text" id="groupName" placeholder="e.g., Math Warriors, Science Squad">
+        </div>
+        <div class="form-group">
+          <label for="groupSubject">Focus Subject</label>
+          <select id="groupSubject">
+            <option value="Mathematics">Mathematics</option>
+            <option value="English">English</option>
+            <option value="Integrated Science">Integrated Science</option>
+            <option value="Social Studies">Social Studies</option>
+            <option value="All Subjects">All Subjects</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="groupDescription">Description</label>
+          <textarea id="groupDescription" placeholder="What will your group focus on?" rows="3"></textarea>
+        </div>
+      </div>
+      <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 20px;">
+        <button class="btn ghost" id="cancelCreateGroup">Cancel</button>
+        <button class="btn" id="confirmCreateGroup">Create Group</button>
+      </div>
     </div>
   </div>
-  
-  <!-- Weekly Challenges -->
-  <div class="challenges-card">
-    <h3>🎯 This Week's Challenge</h3>
-    <div class="challenge">
-      "Solve 50 Math questions with 80%+ accuracy"
-      <div class="progress">Progress: 32/50</div>
-    </div>
-  </div>
-</div>
+
+  <script>
+    // Local Social Data Manager
+    class SocialManager {
+      constructor() {
+        this.storageKey = 'bece_social_data';
+        this.userKey = 'bece_user_profile';
+        this.loadData();
+      }
+
+      loadData() {
+        // Load social data from localStorage
+        const saved = localStorage.getItem(this.storageKey);
+        if (saved) {
+          this.data = JSON.parse(saved);
+        } else {
+          // Initialize with demo data
+          this.data = this.getDefaultData();
+          this.saveData();
+        }
+
+        // Load user profile
+        const userProfile = localStorage.getItem(this.userKey);
+        if (userProfile) {
+          this.user = JSON.parse(userProfile);
+        } else {
+          this.user = this.getDefaultUser();
+          this.saveUser();
+        }
+      }
+
+      getDefaultData() {
+        return {
+          schools: [
+            { id: 1, name: 'Presec Legon', avgScore: 78, students: 45, rank: 1 },
+            { id: 2, name: 'Achimota School', avgScore: 75, students: 38, rank: 2 },
+            { id: 3, name: 'Wesley Girls', avgScore: 72, students: 42, rank: 3 },
+            { id: 4, name: 'St. Thomas Aquinas', avgScore: 68, students: 35, rank: 4 },
+            { id: 5, name: 'Mfantsipim School', avgScore: 65, students: 40, rank: 5 }
+          ],
+          studyGroups: [
+            {
+              id: 1,
+              name: 'Math Warriors',
+              subject: 'Mathematics',
+              members: 8,
+              createdBy: 'Kwame Mensah',
+              activity: '2 hours ago'
+            },
+            {
+              id: 2,
+              name: 'Science Squad',
+              subject: 'Integrated Science', 
+              members: 5,
+              createdBy: 'Ama Serwaa',
+              activity: '1 day ago'
+            }
+          ],
+          helpRequests: [
+            {
+              id: 1,
+              student: 'Kofi Annan',
+              subject: 'Mathematics',
+              topic: 'Algebra',
+              question: 'Struggling with quadratic equations',
+              timestamp: '2 hours ago',
+              helped: false
+            },
+            {
+              id: 2, 
+              student: 'Esi Boateng',
+              subject: 'English',
+              topic: 'Grammar',
+              question: 'Need help with verb tenses',
+              timestamp: '5 hours ago',
+              helped: false
+            }
+          ],
+          weeklyChallenge: {
+            title: 'Math Mastery Week',
+            description: 'Solve 50 Mathematics questions with 80%+ accuracy',
+            reward: '500 points + Math Champion Badge',
+            progress: 32,
+            target: 50,
+            endDate: 'in 3 days'
+          }
+        };
+      }
+
+      getDefaultUser() {
+        return {
+          name: 'Current Student',
+          points: 1250,
+          weeklyPoints: 320,
+          weeklyQuestions: 45,
+          rank: 15,
+          school: 'Presec Legon',
+          recentActivity: [
+            { action: 'Helped with Algebra', points: 50, timestamp: '2 hours ago' },
+            { action: 'Completed Math Quiz', points: 25, timestamp: '5 hours ago' },
+            { action: 'Joined Science Squad', points: 10, timestamp: '1 day ago' }
+          ]
+        };
+      }
+
+      saveData() {
+        localStorage.setItem(this.storageKey, JSON.stringify(this.data));
+      }
+
+      saveUser() {
+        localStorage.setItem(this.userKey, JSON.stringify(this.user));
+      }
+
+      // Study Group Management
+      createGroup(groupData) {
+        const newGroup = {
+          id: Date.now(),
+          ...groupData,
+          members: 1,
+          createdBy: this.user.name,
+          activity: 'just now'
+        };
+        
+        this.data.studyGroups.unshift(newGroup);
+        this.saveData();
+        return newGroup;
+      }
+
+      joinGroup(groupId) {
+        const group = this.data.studyGroups.find(g => g.id === groupId);
+        if (group) {
+          group.members++;
+          group.activity = 'just now';
+          this.saveData();
+        }
+      }
+
+      // Help Request Management
+      createHelpRequest(requestData) {
+        const newRequest = {
+          id: Date.now(),
+          ...requestData,
+          student: this.user.name,
+          timestamp: 'just now',
+          helped: false
+        };
+        
+        this.data.helpRequests.unshift(newRequest);
+        this.saveData();
+        return newRequest;
+      }
+
+      helpStudent(requestId) {
+        const request = this.data.helpRequests.find(r => r.id === requestId);
+        if (request && !request.helped) {
+          request.helped = true;
+          request.helpedBy = this.user.name;
+          
+          // Award points for helping
+          this.user.points += 50;
+          this.user.weeklyPoints += 50;
+          this.user.recentActivity.unshift({
+            action: `Helped with ${request.topic}`,
+            points: 50,
+            timestamp: 'just now'
+          });
+          
+          this.saveData();
+          this.saveUser();
+          return true;
+        }
+        return false;
+      }
+
+      // Challenge Progress
+      updateChallengeProgress(questionsSolved) {
+        this.user.weeklyQuestions += questionsSolved;
+        this.user.weeklyPoints += questionsSolved * 5;
+        this.saveUser();
+      }
+
+      getSchoolRankings() {
+        return this.data.schools.sort((a, b) => a.rank - b.rank);
+      }
+
+      getUserRank() {
+        return this.user.rank;
+      }
+    }
+
+    // Initialize when page loads
+    let socialManager;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      socialManager = new SocialManager();
+      initializeSocialPage();
+      setupEventListeners();
+    });
+
+    function initializeSocialPage() {
+      renderSchoolLeaderboard();
+      renderWeeklyChallenge();
+      renderStudyGroups();
+      renderHelpRequests();
+      renderUserStats();
+      renderRecentActivity();
+    }
+
+    function renderSchoolLeaderboard() {
+      const schools = socialManager.getSchoolRankings();
+      const container = document.getElementById('schoolLeaderboard');
+      
+      container.innerHTML = schools.map(school => `
+        <div class="school-item ${school.name === socialManager.user.school ? 'my-school' : ''}">
+          <div class="school-rank">#${school.rank}</div>
+          <div class="school-info">
+            <div class="school-name">${school.name}</div>
+            <div class="school-stats">${school.students} students</div>
+          </div>
+          <div class="school-score">${school.avgScore}%</div>
+        </div>
+      `).join('');
+    }
+
+    function renderWeeklyChallenge() {
+      const challenge = socialManager.data.weeklyChallenge;
+      const progressPercent = (challenge.progress / challenge.target) * 100;
+      
+      document.getElementById('weeklyChallenge').innerHTML = `
+        <div class="challenge-content">
+          <h4>${challenge.title}</h4>
+          <p>${challenge.description}</p>
+          <div class="challenge-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: ${progressPercent}%"></div>
+            </div>
+            <div class="progress-text">${challenge.progress}/${challenge.target} • ${challenge.endDate}</div>
+          </div>
+          <div class="challenge-reward">🏆 Reward: ${challenge.reward}</div>
+        </div>
+      `;
+    }
+
+    function renderStudyGroups() {
+      const groups = socialManager.data.studyGroups;
+      const container = document.getElementById('studyGroups');
+      
+      if (groups.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <p>No study groups yet. Create one to start collaborating!</p>
+          </div>
+        `;
+        return;
+      }
+      
+      container.innerHTML = groups.map(group => `
+        <div class="group-card">
+          <div class="group-header">
+            <h4>${group.name}</h4>
+            <span class="group-subject">${group.subject}</span>
+          </div>
+          <div class="group-details">
+            <div class="group-members">👥 ${group.members} members</div>
+            <div class="group-activity">${group.activity}</div>
+          </div>
+          <div class="group-actions">
+            <button class="btn ghost join-group" data-group="${group.id}">Join Group</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderHelpRequests() {
+      const requests = socialManager.data.helpRequests.filter(r => !r.helped);
+      const container = document.getElementById('helpRequests');
+      
+      if (requests.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <p>No help requests right now. Check back later!</p>
+          </div>
+        `;
+        return;
+      }
+      
+      container.innerHTML = requests.map(request => `
+        <div class="help-request">
+          <div class="request-header">
+            <span class="student-name">${request.student}</span>
+            <span class="request-time">${request.timestamp}</span>
+          </div>
+          <div class="request-subject">${request.subject} • ${request.topic}</div>
+          <div class="request-question">"${request.question}"</div>
+          <button class="btn help-btn" data-request="${request.id}">Offer Help</button>
+        </div>
+      `).join('');
+    }
+
+    function renderUserStats() {
+      document.getElementById('weeklyPoints').textContent = socialManager.user.weeklyPoints;
+      document.getElementById('weeklyQuestions').textContent = socialManager.user.weeklyQuestions;
+      document.getElementById('myRank').textContent = `#${socialManager.user.rank}`;
+      document.getElementById('totalPoints').textContent = socialManager.user.points;
+    }
+
+    function renderRecentActivity() {
+      const activity = socialManager.user.recentActivity.slice(0, 5);
+      const container = document.getElementById('recentActivity');
+      
+      container.innerHTML = activity.map(item => `
+        <div class="activity-item">
+          <span class="activity-action">${item.action}</span>
+          <span class="activity-points">+${item.points} pts</span>
+          <span class="activity-time">${item.timestamp}</span>
+        </div>
+      `).join('');
+    }
+
+    function setupEventListeners() {
+      // Navigation
+      document.getElementById('backToQuiz').addEventListener('click', () => {
+        window.location.href = 'quiz.html';
+      });
+
+      document.getElementById('refreshData').addEventListener('click', () => {
+        socialManager.loadData();
+        initializeSocialPage();
+      });
+
+      // Create Group Modal
+      document.getElementById('createGroupBtn').addEventListener('click', () => {
+        document.getElementById('createGroupModal').style.display = 'flex';
+      });
+
+      document.getElementById('cancelCreateGroup').addEventListener('click', () => {
+        document.getElementById('createGroupModal').style.display = 'none';
+      });
+
+      document.getElementById('confirmCreateGroup').addEventListener('click', () => {
+        const groupData = {
+          name: document.getElementById('groupName').value,
+          subject: document.getElementById('groupSubject').value,
+          description: document.getElementById('groupDescription').value
+        };
+
+        if (!groupData.name) {
+          alert('Please enter a group name');
+          return;
+        }
+
+        socialManager.createGroup(groupData);
+        document.getElementById('createGroupModal').style.display = 'none';
+        renderStudyGroups();
+        
+        // Reset form
+        document.getElementById('groupName').value = '';
+        document.getElementById('groupDescription').value = '';
+      });
+
+      // Join Group buttons (delegated)
+      document.getElementById('studyGroups').addEventListener('click', (e) => {
+        if (e.target.classList.contains('join-group')) {
+          const groupId = parseInt(e.target.dataset.group);
+          socialManager.joinGroup(groupId);
+          renderStudyGroups();
+          alert('Joined group successfully!');
+        }
+      });
+
+      // Help buttons (delegated)
+      document.getElementById('helpRequests').addEventListener('click', (e) => {
+        if (e.target.classList.contains('help-btn')) {
+          const requestId = parseInt(e.target.dataset.request);
+          const helped = socialManager.helpStudent(requestId);
+          if (helped) {
+            renderHelpRequests();
+            renderUserStats();
+            renderRecentActivity();
+            alert('Thanks for helping! You earned 50 points.');
+          }
+        }
+      });
+    }
+  </script>
+
+  <style>
+    .school-item {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .school-item.my-school {
+      background: rgba(37, 99, 235, 0.05);
+      border-color: var(--accent);
+    }
+
+    .school-rank {
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--accent);
+      min-width: 40px;
+    }
+
+    .school-info {
+      flex: 1;
+    }
+
+    .school-name {
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .school-stats {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .school-score {
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .challenge-content {
+      text-align: center;
+    }
+
+    .challenge-progress {
+      margin: 16px 0;
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: #E5E7EB;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .progress-text {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .challenge-reward {
+      font-size: 14px;
+      color: var(--success);
+      font-weight: 500;
+    }
+
+    .group-card {
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      background: white;
+    }
+
+    .group-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 8px;
+    }
+
+    .group-header h4 {
+      margin: 0;
+    }
+
+    .group-subject {
+      font-size: 12px;
+      background: var(--glass);
+      padding: 4px 8px;
+      border-radius: 12px;
+      color: var(--muted);
+    }
+
+    .group-details {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .group-actions {
+      text-align: right;
+    }
+
+    .help-request {
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      background: white;
+    }
+
+    .request-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .student-name {
+      font-weight: 600;
+    }
+
+    .request-time {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .request-subject {
+      font-size: 14px;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .request-question {
+      font-style: italic;
+      margin-bottom: 12px;
+      color: var(--muted);
+    }
+
+    .help-btn {
+      width: 100%;
+    }
+
+    .my-stats {
+      margin-top: 20px;
+    }
+
+    .stat-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat-item:last-child {
+      border-bottom: none;
+    }
+
+    .points-balance {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: var(--glass);
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .points-display {
+      text-align: center;
+    }
+
+    .points-display strong {
+      display: block;
+      font-size: 32px;
+      color: var(--accent);
+    }
+
+    .activity-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    .activity-item:last-child {
+      border-bottom: none;
+    }
+
+    .activity-points {
+      color: var(--success);
+      font-weight: 600;
+    }
+
+    .activity-time {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--muted);
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+  </style>
+</body>
+</html>

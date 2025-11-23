@@ -1,5 +1,5 @@
+import { db } from './auth.js';
 import { 
-  getFirestore, 
   doc, 
   setDoc, 
   getDoc, 
@@ -9,11 +9,9 @@ import {
   where, 
   getDocs,
   updateDoc,
-  deleteDoc
+  deleteDoc,
+  Timestamp 
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-import { app } from './auth.js';
-
-const db = getFirestore(app);
 
 // Default flashcards for new users
 export const defaultFlashcards = [
@@ -148,7 +146,7 @@ export class FlashcardSystem {
         const card = {
           userId: userId,
           ...cardData,
-          createdAt: new Date(),
+          createdAt: Timestamp.now(),
           interval: 1, // days until next review
           ease: 2.5, // ease factor
           // Set due date to NOW so they're immediately available
@@ -174,7 +172,7 @@ export class FlashcardSystem {
       const card = {
         userId,
         ...cardData,
-        createdAt: new Date(),
+        createdAt: Timestamp.now(),
         interval: 1,
         ease: 2.5,
         dueDate: new Date(), // Due immediately

@@ -1,4 +1,4 @@
-import { getUserInsights, getUserTopicPerformance } from './database.js';
+import { getUserInsights, getUserTopicPerformance, trackStudySession, trackQuizAttempt } from './database.js';
 
 export class AnalyticsEngine {
   constructor(userId) {
@@ -20,7 +20,6 @@ export class AnalyticsEngine {
       };
     } catch (error) {
       console.error('Error loading analytics data:', error);
-      // Return empty arrays instead of failing
       return { insights: [], topicPerformance: {} };
     }
   }
@@ -171,8 +170,34 @@ export class AnalyticsEngine {
   calculatePerformanceTrend() {
     if (this.insights.length < 2) return 'insufficient_data';
     
-    const recentAccuracy = this.insights[0].correctAnswers / this.insights[0].totalQuestions;
-    const olderAccuracy = this.insights[this.insights.length - 1].correctAnswers / this.insights[this.insights.length - 1].totalQuestions;
+    const recent = this.insights[0];
+    const older = this.insights[this.insights.length - 1];
     
+    const recentAccuracy = recent.totalQuestions > 0 ? (recent.correctAnswers / recent.totalQuestions) * 100 : 0;
+    const olderAccuracy = older.totalQuestions > 0 ? (older.correctAnswers / older.totalQuestions) * 100 : 0;
+    
+    if (recentAccuracy > olderAccuracy + 5) return 'improving';
+    if (recentAccuracy < olderAccuracy - 5) return 'declining';
+    return 'stable';
+  }
+
+  // Track a study session (call this when user completes a quiz)
+  async trackSession(sessionData) {
+    const data = {
+      userId: this.userId,
+      ...sessionData
+    };
+    
+    return await trackStudySession(data);
+  }
+
+  // Track a quiz attempt
+  async trackQuiz(quizData) {
+    const data = {
+      userId: this.userId,
+      ...quizData
+    };
+    
+    return await trackQuizAttempt(data);
   }
 }
