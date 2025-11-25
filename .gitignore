@@ -73,3 +73,5 @@ auth-config.json
 
 #auth
 auth.json
+
+serviceAccountKey.json

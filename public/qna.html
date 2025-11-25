@@ -4,488 +4,747 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BECE Past Questions — Quiz</title>
+  <title>BECE Q&A - Practice</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- jsPDF -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+  <style>
+    .option {
+      padding: 15px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .option:hover {
+      background: var(--surface-hover);
+      border-color: var(--primary);
+    }
+
+    .option.selected {
+      background: var(--primary-light);
+      border-color: var(--primary);
+    }
+
+    .option.correct {
+      background: rgba(40, 167, 69, 0.1);
+      border-color: #28a745;
+    }
+
+    .option.wrong {
+      background: rgba(220, 53, 69, 0.1);
+      border-color: #dc3545;
+    }
+
+    .progress-track {
+      background: var(--border);
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+
+    #progressBar {
+      background: var(--primary);
+      height: 100%;
+      transition: width 0.3s ease;
+    }
+
+    .summary-section {
+      margin-top: 20px;
+      padding: 20px;
+      background: var(--surface);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .subject-score {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      margin-bottom: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .score-percentage {
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--muted);
+    }
+
+    .empty-state i {
+      font-size: 3em;
+      margin-bottom: 15px;
+      opacity: 0.5;
+    }
+  </style>
 </head>
 
 <body>
   <div class="container">
+    <!-- Header -->
     <header>
       <div class="brand">
         <div class="logo">BE</div>
         <div>
-          <h1>BECE Prep [Interactive MVP]</h1>
-          <p class="lead">Practice by subject or year • Get performance analytics and improvement tips</p>
+          <h1>BECE Prep</h1>
         </div>
       </div>
-      <div>
-        <button id="backBtn" class="btn ghost">Change Filters</button>
+      <div style="display: flex; gap: 8px; align-items: center;">
         <button id="dashboardBtn" class="btn ghost">📊 Analytics</button>
         <button id="socialBtn" class="btn ghost">👥 Social Hub</button>
         <button id="flashcardsBtn" class="btn ghost">🎴 Flashcards</button>
-        <button id="exportBtn" class="btn ghost">Export Answers</button>
       </div>
     </header>
 
-    <div class="grid">
-      <aside class="sidebar card">
-        <div class="section">
-          <h3>Current Filters</h3>
-          <div id="currentFilters" style="color:var(--muted);font-size:13px;margin-bottom:12px"></div>
-        </div>
+    <!-- Main Quiz Area -->
+    <div class="card">
+      <!-- Top Bar: Back, Stats, Restart -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
+        <button id="backBtn" class="btn ghost"><i class="fas fa-arrow-left"></i> Back</button>
+        <div id="currentFilters" style="font-size: 0.9em; color: var(--muted); text-align: center;"></div>
+        <button id="restartBtn" class="btn ghost"><i class="fas fa-redo"></i> Restart</button>
+      </div>
 
-        <div class="section">
-          <h3>Controls</h3>
-          <div class="controls">
-            <button id="restartBtn" class="btn">Restart</button>
+      <!-- Progress -->
+      <div style="margin-bottom: 20px;">
+        <div style="display:flex; justify-content:space-between; margin-bottom: 5px;">
+          <span id="progressLabel">0 / 0</span>
+          <div style="font-size: 0.9em;">
+            Answered: <span id="answeredCount">0</span> |
+            Correct: <span id="correctCount">0</span> |
+            Accuracy: <span id="accuracy">0%</span>
           </div>
         </div>
+        <div class="progress-track">
+          <div id="progressBar" style="width: 0%"></div>
+        </div>
+      </div>
 
-        <div class="section">
-          <h3>Progress</h3>
-          <div style="display:flex;gap:8px;align-items:center">
-            <div style="flex:1">
-              <div class="progress" aria-hidden><i id="progressBar" style="width:0%"></i></div>
-            </div>
-            <div id="progressLabel" style="min-width:70px;text-align:right;color:var(--muted)">0 / 0</div>
-          </div>
+      <!-- Question Area -->
+      <div class="question-container" style="margin-bottom: 30px;">
+        <div
+          style="display:flex; justify-content:space-between; margin-bottom: 10px; color: var(--muted); font-size: 0.9em;">
+          <span id="metaLeft">Subject • Topic • Year</span>
+          <span id="metaRight">Question X of Y</span>
+        </div>
+        <h3 id="prompt" style="margin-bottom: 20px; font-size: 1.2em; line-height: 1.5;">Loading question...</h3>
+        <div id="options" class="options-grid">
+          <!-- Options injected here -->
+        </div>
+      </div>
+
+      <!-- Confidence Rating (Hidden by default) -->
+      <div id="confidenceRating"
+        style="display:none; margin-bottom: 20px; text-align: center; padding: 15px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px;">
+        <p style="margin-bottom: 10px; font-weight: 600;">How confident are you?</p>
+        <div style="display:flex; justify-content: center; gap: 10px;">
+          <button class="btn ghost confidence-btn" data-level="0.2">Guessing</button>
+          <button class="btn ghost confidence-btn" data-level="0.6">Unsure</button>
+          <button class="btn ghost confidence-btn" data-level="1.0">Confident</button>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls" style="display:flex; justify-content: space-between; align-items: center;">
+        <button id="prevBtn" class="btn ghost">Previous</button>
+        <div style="display:flex; gap: 10px;">
+          <button id="submitBtn" class="btn primary">Submit Answer</button>
+          <button id="nextBtn" class="btn ghost">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Session Management / Summary Area -->
+    <div class="card" style="margin-top: 20px;">
+      <div id="sessionManagementHeader" style="display:flex; justify-content: space-between; align-items: center;">
+        <h3>Session Management</h3>
+        <div id="sessionControls" style="display:flex; gap: 10px;">
+          <button id="reviewBtn" class="btn ghost">Review Session</button>
+          <button id="exportBtn" class="btn ghost">Export PDF</button>
+          <button id="clearSession" class="btn ghost" style="color: #dc3545;">Clear</button>
+        </div>
+      </div>
+
+      <!-- Empty State (shown when no answers submitted) -->
+      <div id="emptyState" class="empty-state">
+        <i class="fas fa-chart-bar"></i>
+        <h4>No Results Yet</h4>
+        <p>Complete the quiz to see your performance summary here</p>
+      </div>
+
+      <!-- Summary Content (hidden until submission) -->
+      <div id="summaryContent" style="display: none;">
+        <div
+          style="text-align:center; margin-bottom:20px; padding: 20px; background: var(--primary-light); border-radius: 8px;">
+          <div id="totalScore" style="font-size: 3em; font-weight: bold; color: var(--primary);">0%</div>
+          <div style="color: var(--muted); font-size: 1.1em;">Overall Score</div>
+          <div id="motivationalMessage" style="margin-top: 10px; font-style: italic;"></div>
         </div>
 
-        <div class="section">
-          <h3>Quick stats</h3>
-          <div class="results" id="statsArea">
-            <div class="stat">Answered: <strong id="answeredCount">0</strong></div>
-            <div class="stat">Correct: <strong id="correctCount">0</strong></div>
-            <div class="stat">Accuracy: <strong id="accuracy">0%</strong></div>
-          </div>
+        <h4>Subject Breakdown</h4>
+        <div id="subjectBreakdown">
+          <!-- Subject scores will be inserted here -->
         </div>
 
-        <div class="section">
-          <h3>Saved Sessions</h3>
-          <div id="sessionsList" style="display:flex;flex-direction:column;gap:8px"></div>
+        <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center;">
+          <button id="newQuizBtn" class="btn primary">Start New Quiz</button>
+          <button id="dashboardBtn2" class="btn ghost">View Analytics</button>
         </div>
-      </aside>
-
-      <main class="main">
-        <div class="question-card card" id="questionCard">
-          <div class="meta">
-            <div id="metaLeft">Loading questions...</div>
-            <div id="metaRight"></div>
-          </div>
-
-          <div style="margin-top:10px">
-            <div class="prompt" id="prompt">—</div>
-            <div class="options" id="options"></div>
-          </div>
-
-          <div class="actions">
-            <div style="display:flex;gap:8px">
-              <button class="btn ghost" id="prevBtn">Previous</button>
-              <button class="btn ghost" id="nextBtn">Next</button>
-            </div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <button class="btn" id="submitBtn">Submit</button>
-              <button class="btn ghost" id="reviewBtn">Summary</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="confidence-rating" id="confidenceRating">
-          <h4>How confident are you in your answer?</h4>
-          <div class="confidence-buttons">
-            <button class="btn ghost confidence-btn" data-level="0.2">Not Sure</button>
-            <button class="btn ghost confidence-btn" data-level="0.5">Somewhat Sure</button>
-            <button class="btn ghost confidence-btn" data-level="0.8">Confident</button>
-            <button class="btn ghost confidence-btn" data-level="1.0">Very Confident</button>
-          </div>
-        </div>
-
-        <div class="card" id="summaryPanel" style="display:none">
-          <h3>Session summary</h3>
-          <div id="summaryContent"></div>
-          </p>';
-          return;
-          }
-
-          // Build per-subject summary
-          const bySubject = {};
-          for(const id of answeredIds){
-          const q = QUESTIONS.find(x => x.id === id);
-          const rec = state.answers[id];
-          bySubject[q.subject] = bySubject[q.subject] || {correct: 0, total: 0, items: []};
-          bySubject[q.subject].total += 1;
-          if(rec.correct) bySubject[q.subject].correct += 1;
-          bySubject[q.subject].items.push({q, rec});
-          }
-
-          let html = '<div style="display:flex;flex-direction:column;gap:8px">';
-            for(const t of Object.keys(bySubject)){
-            const s = bySubject[t];
-            const perc = Math.round((s.correct / s.total) * 100);
-            html += `<div style="padding:12px;border-radius:8px;background:rgba(255,255,255,0.02)"><strong>${t}</strong>
-              —
-              ${s.correct}/${s.total} correct (${perc}%)</div>`;
-            }
-            html += '</div>';
-          summaryContent.innerHTML = html;
-          }
-
-          function clearAll(){
-          sessionStorage.removeItem('current_quiz_answers');
-          sessionStorage.removeItem('current_quiz_progress');
-          state.answers = {};
-          updateStats();
-          renderQuestion();
-          }
-
-          function exportAnswers(){
-          const { jsPDF } = window.jspdf;
-          const doc = new jsPDF();
-
-          // Add title
-          doc.setFontSize(20);
-          doc.setTextColor(61, 61, 139);
-          doc.text("BECE Exam Results Summary", 105, 20, { align: "center" });
-
-          // Add date
-          doc.setFontSize(12);
-          doc.setTextColor(100, 100, 100);
-          doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 105, 30, { align: "center" });
-
-          // Add summary statistics
-          doc.setFontSize(14);
-          doc.setTextColor(0, 0, 0);
-          doc.text("Performance Summary", 20, 45);
-
-          doc.setFontSize(12);
-          const answered = Object.keys(state.answers).length;
-          const correct = Object.values(state.answers).filter(r => r.correct).length;
-          const accuracy = answered ? Math.round((correct / answered) * 100) : 0;
-
-          doc.text(`Questions Answered: ${answered}`, 20, 55);
-          doc.text(`Correct Answers: ${correct}`, 20, 65);
-          doc.text(`Accuracy: ${accuracy}%`, 20, 75);
-
-          // Add subject breakdown
-          doc.setFontSize(14);
-          doc.text("Subject Performance", 20, 90);
-
-          const bySubject = {};
-          for(const id of Object.keys(state.answers)){
-          const q = QUESTIONS.find(x => x.id === parseInt(id));
-          if (q) {
-          bySubject[q.subject] = bySubject[q.subject] || {correct: 0, total: 0};
-          bySubject[q.subject].total += 1;
-          if(state.answers[id].correct) bySubject[q.subject].correct += 1;
-          }
-          }
-
-          let yPos = 100;
-          doc.setFontSize(12);
-          for(const subject of Object.keys(bySubject)){
-          const s = bySubject[subject];
-          const perc = Math.round((s.correct / s.total) * 100);
-          doc.text(`${subject}: ${s.correct}/${s.total} (${perc}%)`, 20, yPos);
-          yPos += 10;
-          }
-
-          // Add detailed answers
-          doc.setFontSize(14);
-          yPos += 10;
-          doc.text("Detailed Answers", 20, yPos);
-          yPos += 15;
-
-          doc.setFontSize(10);
-          for(const id of Object.keys(state.answers)){
-          const q = QUESTIONS.find(x => x.id === parseInt(id));
-          if (q) {
-          const answer = state.answers[id];
-
-          // Check if we need a new page
-          if (yPos > 250) {
-          doc.addPage();
-          yPos = 20;
-          }
-
-          doc.setFontSize(10);
-          doc.setTextColor(0, 0, 0);
-          doc.text(`Q: ${q.q}`, 20, yPos);
-          yPos += 7;
-
-          doc.setTextColor(0, 0, 0);
-          doc.text(`Your answer: ${q.options[answer.choice]}`, 20, yPos);
-          yPos += 7;
-
-          if (answer.correct) {
-          doc.setTextColor(0, 128, 0);
-          doc.text("✓ Correct", 20, yPos);
-          } else {
-          doc.setTextColor(255, 0, 0);
-          doc.text(`✗ Incorrect (Correct: ${q.options[q.a]})`, 20, yPos);
-          }
-          yPos += 12;
-          }
-          }
-
-          // Save the PDF
-          doc.save("bece_exam_results.pdf");
-          }
-
-          function bindEvents(){
-          prevBtn.addEventListener('click', prevQuestion);
-          nextBtn.addEventListener('click', nextQuestion);
-          submitBtn.addEventListener('click', submitAnswer);
-          reviewBtn.addEventListener('click', showSummary);
-          closeSummary.addEventListener('click', () => summaryPanel.style.display = 'none');
-          clearSession.addEventListener('click', () => {
-          if(confirm('Clear saved answers?')){
-          state.answers = {};
-          saveSession();
-          updateStats();
-          renderQuestion();
-          }
-          });
-          exportBtn.addEventListener('click', exportAnswers);
-          sessionsList.addEventListener('click', (e) => {
-          if(e.target.matches('.load-session')) loadSession(e.target.dataset.session);
-          });
-          backBtn.addEventListener('click', () => {
-          cleanupSession();
-          window.location.href = 'quiz.html';
-          });
-          dashboardBtn.addEventListener('click', () => {
-          cleanupSession();
-          window.location.href = 'dashboard.html';
-          });
-          restartBtn.addEventListener('click', () => {
-          state.answers = {};
-          saveSession();
-          state.index = 0;
-          updateStats();
-          renderQuestion();
-          });
-
-          // Confidence button handlers
-          document.addEventListener('click', function(e) {
-          if (e.target.classList.contains('confidence-btn')) {
-          state.userConfidence = parseFloat(e.target.dataset.level);
-          submitAnswer(); // Auto-submit after confidence selection
-          }
-          });
-          }
-
-          function generateSessionId() {
-          <button class="btn ghost" id="prevBtn">Previous</button>
-          <button class="btn ghost" id="nextBtn">Next</button>
-        </div>
-        <div style="display:flex;gap:8px;align-items:center">
-          <button class="btn" id="submitBtn">Submit</button>
-          <button class="btn ghost" id="reviewBtn">Summary</button>
-        </div>
+      </div>
     </div>
   </div>
 
-  <div class="confidence-rating" id="confidenceRating">
-    <h4>How confident are you in your answer?</h4>
-    <div class="confidence-buttons">
-      <button class="btn ghost confidence-btn" data-level="0.2">Not Sure</button>
-      <button class="btn ghost confidence-btn" data-level="0.5">Somewhat Sure</button>
-      <button class="btn ghost confidence-btn" data-level="0.8">Confident</button>
-      <button class="btn ghost confidence-btn" data-level="1.0">Very Confident</button>
-    </div>
-  </div>
+  <script type="module">
+    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    import { trackQuestionAttempt, fetchQuestions } from "./js/database.js";
+    import { app } from "./js/auth.js";
 
-  <div class="card" id="summaryPanel" style="display:none">
-    <h3>Session summary</h3>
-    <div id="summaryContent"></div>
-    </p>';
-    return;
-    }
+    const auth = getAuth(app);
 
-    // Build per-subject summary
-    const bySubject = {};
-    for(const id of answeredIds){
-    const q = QUESTIONS.find(x => x.id === id);
-    const rec = state.answers[id];
-    bySubject[q.subject] = bySubject[q.subject] || {correct: 0, total: 0, items: []};
-    bySubject[q.subject].total += 1;
-    if(rec.correct) bySubject[q.subject].correct += 1;
-    bySubject[q.subject].items.push({q, rec});
-    }
+    // Navigation handlers
+    document.getElementById('dashboardBtn').addEventListener('click', () => {
+      window.location.href = 'dashboard.html';
+    });
 
-    let html = '<div style="display:flex;flex-direction:column;gap:8px">';
-      for(const t of Object.keys(bySubject)){
-      const s = bySubject[t];
-      const perc = Math.round((s.correct / s.total) * 100);
-      html += `<div style="padding:12px;border-radius:8px;background:rgba(255,255,255,0.02)"><strong>${t}</strong>
-        —
-        ${s.correct}/${s.total} correct (${perc}%)</div>`;
+    document.getElementById('socialBtn').addEventListener('click', () => {
+      window.location.href = 'social.html';
+    });
+
+    document.getElementById('flashcardsBtn').addEventListener('click', () => {
+      window.location.href = 'flashcards.html';
+    });
+
+    /*********************** Enhanced Question Dataset ************************/
+    let QUESTIONS = [];
+    /****************************************************************/
+
+    // App state
+    let state = {
+      pool: [], // filtered question ids
+      index: 0, // current index in pool
+      mode: 'practice',
+      endless: false,
+      answers: {}, // {questionId: {choice: i, correct: bool, time: ts, confidence: float}}
+      filterSettings: null,
+      sessionId: generateSessionId(),
+      startTime: null,
+      currentQuestionStart: null,
+      userConfidence: null,
+      isSubmitted: false
+    };
+
+    // DOM refs
+    const dashboardBtn = document.getElementById('dashboardBtn');
+    const restartBtn = document.getElementById('restartBtn');
+    const currentFilters = document.getElementById('currentFilters');
+    const promptEl = document.getElementById('prompt');
+    const optionsEl = document.getElementById('options');
+    const metaLeft = document.getElementById('metaLeft');
+    const metaRight = document.getElementById('metaRight');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const progressBar = document.getElementById('progressBar');
+    const progressLabel = document.getElementById('progressLabel');
+    const answeredCount = document.getElementById('answeredCount');
+    const correctCount = document.getElementById('correctCount');
+    const accuracy = document.getElementById('accuracy');
+    const exportBtn = document.getElementById('exportBtn');
+    const backBtn = document.getElementById('backBtn');
+    const confidenceRating = document.getElementById('confidenceRating');
+    const reviewBtn = document.getElementById('reviewBtn');
+    const clearSession = document.getElementById('clearSession');
+
+    // New DOM refs for summary area
+    const emptyState = document.getElementById('emptyState');
+    const summaryContent = document.getElementById('summaryContent');
+    const totalScore = document.getElementById('totalScore');
+    const motivationalMessage = document.getElementById('motivationalMessage');
+    const subjectBreakdown = document.getElementById('subjectBreakdown');
+    const newQuizBtn = document.getElementById('newQuizBtn');
+    const dashboardBtn2 = document.getElementById('dashboardBtn2');
+
+    // NEW: Load only current session data
+    function loadCurrentSession() {
+      const raw = sessionStorage.getItem('current_quiz_answers');
+      if (raw) {
+        try {
+          state.answers = JSON.parse(raw);
+          console.log('Loaded current session answers:', Object.keys(state.answers).length);
+
+          // Check if we have submitted answers and show summary if so
+          const hasSubmittedAnswers = Object.values(state.answers).some(answer => answer.correct !== undefined);
+          if (hasSubmittedAnswers) {
+            state.isSubmitted = true;
+            showSummary();
+          }
+        } catch (e) {
+          console.error('Error loading session data:', e);
+          state.answers = {};
+        }
       }
-      html += '</div>';
-    summaryContent.innerHTML = html;
+      const progressRaw = sessionStorage.getItem('current_quiz_progress');
+      if (progressRaw) {
+        state.index = parseInt(progressRaw, 10);
+      }
     }
 
-    function clearAll(){
-    sessionStorage.removeItem('current_quiz_answers');
-    sessionStorage.removeItem('current_quiz_progress');
-    state.answers = {};
-    updateStats();
-    renderQuestion();
+    function displayCurrentFilters() {
+      let filterText = '';
+      if (state.filterSettings.subjects && state.filterSettings.subjects.length > 0) {
+        filterText += `Subjects: ${state.filterSettings.subjects.join(', ')} • `;
+      }
+      if (state.filterSettings.year !== 'all') {
+        filterText += `Year: ${state.filterSettings.year} • `;
+      }
+      filterText += `Mode: ${state.filterSettings.mode === 'practice' ? 'Practice' : 'Exam'}`;
+      if (state.filterSettings.endless) filterText += ' • Endless';
+
+      currentFilters.innerHTML = filterText;
     }
 
-    function exportAnswers(){
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
+    function renderQuestion() {
+      if (state.pool.length === 0) {
+        promptEl.textContent = 'No active session. Choose filters and press Start.';
+        optionsEl.innerHTML = '';
+        metaLeft.textContent = '—';
+        metaRight.textContent = '';
+        return;
+      }
 
-    // Add title
-    doc.setFontSize(20);
-    doc.setTextColor(61, 61, 139);
-    doc.text("BECE Exam Results Summary", 105, 20, { align: "center" });
+      const qid = state.pool[state.index];
+      const q = QUESTIONS.find(x => x.id === qid);
 
-    // Add date
-    doc.setFontSize(12);
-    doc.setTextColor(100, 100, 100);
-    doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 105, 30, { align: "center" });
+      if (!q) {
+        console.error("Question not found for ID:", qid);
+        return;
+      }
 
-    // Add summary statistics
-    doc.setFontSize(14);
-    doc.setTextColor(0, 0, 0);
-    doc.text("Performance Summary", 20, 45);
+      metaLeft.textContent = `${q.subject} • ${q.topic} • ${q.year}`;
+      metaRight.textContent = `Question ${state.index + 1} of ${state.pool.length}`;
+      promptEl.textContent = q.q;
 
-    doc.setFontSize(12);
-    const answered = Object.keys(state.answers).length;
-    const correct = Object.values(state.answers).filter(r => r.correct).length;
-    const accuracy = answered ? Math.round((correct / answered) * 100) : 0;
+      optionsEl.innerHTML = '';
+      q.options.forEach((opt, i) => {
+        const el = document.createElement('div');
+        el.className = 'option';
+        el.tabIndex = 0;
+        el.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center"><span>${String.fromCharCode(65 + i)}. ${opt}</span></div>`;
+        el.addEventListener('click', () => {
+          if (state.isSubmitted) return; // Read-only if submitted
+          selectOption(q.id, i);
+        });
+        optionsEl.appendChild(el);
+      });
 
-    doc.text(`Questions Answered: ${answered}`, 20, 55);
-    doc.text(`Correct Answers: ${correct}`, 20, 65);
-    doc.text(`Accuracy: ${accuracy}%`, 20, 75);
+      // Restore selection if any
+      const prev = state.answers[q.id];
+      if (prev) {
+        const nodes = optionsEl.querySelectorAll('.option');
+        if (nodes[prev.choice]) {
+          nodes[prev.choice].classList.add('selected');
+        }
+      }
 
-    // Add subject breakdown
-    doc.setFontSize(14);
-    doc.text("Subject Performance", 20, 90);
+      // Show correctness ONLY if submitted
+      if (state.isSubmitted) {
+        showCorrectness(q.id);
+        confidenceRating.style.display = 'none'; // Hide confidence after submit
+      } else {
+        confidenceRating.style.display = 'block'; // Show confidence during quiz
+      }
 
-    const bySubject = {};
-    for(const id of Object.keys(state.answers)){
-    const q = QUESTIONS.find(x => x.id === parseInt(id));
-    if (q) {
-    bySubject[q.subject] = bySubject[q.subject] || {correct: 0, total: 0};
-    bySubject[q.subject].total += 1;
-    if(state.answers[id].correct) bySubject[q.subject].correct += 1;
-    }
-    }
+      // Button Visibility Logic
+      if (state.index === state.pool.length - 1) {
+        nextBtn.style.display = 'none';
+        submitBtn.textContent = 'Submit Quiz';
+        submitBtn.style.display = 'block';
+      } else {
+        nextBtn.style.display = 'block';
+        submitBtn.textContent = 'Submit Answer';
+        submitBtn.style.display = 'none';
+      }
 
-    let yPos = 100;
-    doc.setFontSize(12);
-    for(const subject of Object.keys(bySubject)){
-    const s = bySubject[subject];
-    const perc = Math.round((s.correct / s.total) * 100);
-    doc.text(`${subject}: ${s.correct}/${s.total} (${perc}%)`, 20, yPos);
-    yPos += 10;
-    }
+      // Disable prev button on first question
+      prevBtn.disabled = state.index === 0;
+      prevBtn.style.opacity = state.index === 0 ? '0.5' : '1';
 
-    // Add detailed answers
-    doc.setFontSize(14);
-    yPos += 10;
-    doc.text("Detailed Answers", 20, yPos);
-    yPos += 15;
-
-    doc.setFontSize(10);
-    for(const id of Object.keys(state.answers)){
-    const q = QUESTIONS.find(x => x.id === parseInt(id));
-    if (q) {
-    const answer = state.answers[id];
-
-    // Check if we need a new page
-    if (yPos > 250) {
-    doc.addPage();
-    yPos = 20;
-    }
-
-    doc.setFontSize(10);
-    doc.setTextColor(0, 0, 0);
-    doc.text(`Q: ${q.q}`, 20, yPos);
-    yPos += 7;
-
-    doc.setTextColor(0, 0, 0);
-    doc.text(`Your answer: ${q.options[answer.choice]}`, 20, yPos);
-    yPos += 7;
-
-    if (answer.correct) {
-    doc.setTextColor(0, 128, 0);
-    doc.text("✓ Correct", 20, yPos);
-    } else {
-    doc.setTextColor(255, 0, 0);
-    doc.text(`✗ Incorrect (Correct: ${q.options[q.a]})`, 20, yPos);
-    }
-    yPos += 12;
-    }
+      // Start timing for this question
+      state.currentQuestionStart = Date.now();
     }
 
-    // Save the PDF
-    doc.save("bece_exam_results.pdf");
+    function selectOption(qid, choice) {
+      // toggle selection
+      const nodes = optionsEl.querySelectorAll('.option');
+      nodes.forEach(n => n.classList.remove('selected'));
+      nodes[choice].classList.add('selected');
+
+      // store temporarily
+      state.answers[qid] = state.answers[qid] || {};
+      state.answers[qid].choice = choice;
+
+      // Auto-save session
+      saveSession();
+      updateStats();
     }
 
-    function bindEvents(){
-    prevBtn.addEventListener('click', prevQuestion);
-    nextBtn.addEventListener('click', nextQuestion);
-    submitBtn.addEventListener('click', submitAnswer);
-    reviewBtn.addEventListener('click', showSummary);
-    closeSummary.addEventListener('click', () => summaryPanel.style.display = 'none');
-    clearSession.addEventListener('click', () => {
-    if(confirm('Clear saved answers?')){
-    state.answers = {};
-    saveSession();
-    updateStats();
-    renderQuestion();
+    function saveSession() {
+      try {
+        sessionStorage.setItem('current_quiz_answers', JSON.stringify(state.answers));
+        sessionStorage.setItem('current_quiz_progress', state.index.toString());
+      } catch (e) {
+        console.error('Error saving session:', e);
+      }
     }
-    });
-    exportBtn.addEventListener('click', exportAnswers);
-    sessionsList.addEventListener('click', (e) => {
-    if(e.target.matches('.load-session')) loadSession(e.target.dataset.session);
-    });
-    backBtn.addEventListener('click', () => {
-    cleanupSession();
-    window.location.href = 'quiz.html';
-    });
-    dashboardBtn.addEventListener('click', () => {
-    cleanupSession();
-    window.location.href = 'dashboard.html';
-    });
-    restartBtn.addEventListener('click', () => {
-    state.answers = {};
-    saveSession();
-    state.index = 0;
-    updateStats();
-    renderQuestion();
-    });
 
-    // Confidence button handlers
-    document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('confidence-btn')) {
-    state.userConfidence = parseFloat(e.target.dataset.level);
-    submitAnswer(); // Auto-submit after confidence selection
+    function handleNext() {
+      // Save current confidence if selected
+      const qid = state.pool[state.index];
+      const confidenceInput = document.querySelector('input[name="confidence"]:checked');
+      if (confidenceInput && state.answers[qid]) {
+        state.answers[qid].confidence = parseFloat(confidenceInput.value);
+      }
+
+      // Move to next
+      if (state.index < state.pool.length - 1) {
+        state.index++;
+        renderQuestion();
+        updateProgress();
+        saveSession();
+      }
     }
-    });
+
+    function handlePrevious() {
+      if (state.index > 0) {
+        state.index--;
+        renderQuestion();
+        updateProgress();
+        saveSession();
+      }
+    }
+
+    async function handleSubmitQuiz() {
+      if (state.index < state.pool.length - 1) {
+        // Submit single answer
+        const qid = state.pool[state.index];
+        const confidenceInput = document.querySelector('input[name="confidence"]:checked');
+        if (confidenceInput && state.answers[qid]) {
+          state.answers[qid].confidence = parseFloat(confidenceInput.value);
+        }
+
+        // Move to next question
+        handleNext();
+        return;
+      }
+
+      // Final submission
+      if (!confirm("Are you sure you want to submit your quiz? You won't be able to change answers.")) {
+        return;
+      }
+
+      // Save final question state
+      const qid = state.pool[state.index];
+      const confidenceInput = document.querySelector('input[name="confidence"]:checked');
+      if (confidenceInput && state.answers[qid]) {
+        state.answers[qid].confidence = parseFloat(confidenceInput.value);
+      }
+
+      state.isSubmitted = true;
+
+      // Calculate results and sync
+      let correctCount = 0;
+      let totalAnswered = 0;
+
+      for (const qId of state.pool) {
+        const answer = state.answers[qId];
+        if (answer && typeof answer.choice === 'number') {
+          totalAnswered++;
+          const q = QUESTIONS.find(x => x.id === qId);
+          const isCorrect = (answer.choice === q.a);
+          answer.correct = isCorrect; // Update local state
+          if (isCorrect) correctCount++;
+
+          // Sync to Firebase
+          syncAnswerToFirebase(q, answer, answer.timeSpent || 0, isCorrect);
+        }
+      }
+
+      saveSession(); // Save "correct" status
+      showSummary();
+      updateStats();
+    }
+
+    async function syncAnswerToFirebase(q, record, timeSpent, isCorrect) {
+      const user = auth.currentUser;
+      if (!user) return;
+
+      const trackingData = {
+        choice: record.choice,
+        timeSpent: timeSpent,
+        confidence: record.confidence || 0.5,
+        sessionId: state.sessionId,
+        mode: state.mode,
+        timestamp: new Date(),
+        isCorrect: isCorrect
+      };
+
+      try {
+        await trackQuestionAttempt(user.uid, q, trackingData);
+      } catch (error) {
+        console.error('Analytics sync failed:', error);
+      }
+    }
+
+    function showCorrectness(qid) {
+      const q = QUESTIONS.find(x => x.id === qid);
+      const nodes = optionsEl.querySelectorAll('.option');
+      nodes.forEach((n, i) => {
+        n.classList.remove('correct', 'wrong');
+        if (i === q.a) n.classList.add('correct');
+        const rec = state.answers[qid];
+        if (rec && rec.choice === i && rec.choice !== q.a) n.classList.add('wrong');
+      });
+    }
+
+    function updateProgress() {
+      const total = state.pool.length;
+      const current = state.index + 1;
+      const done = Object.keys(state.answers).length;
+
+      progressBar.style.width = total ? Math.round((current / total) * 100) + '%' : '0%';
+      progressLabel.textContent = `${current} / ${total}`;
+      answeredCount.textContent = done;
+    }
+
+    function updateStats() {
+      const answered = Object.keys(state.answers).length;
+      const correct = Object.values(state.answers).filter(a => a.correct).length;
+
+      answeredCount.textContent = answered;
+      correctCount.textContent = correct;
+      accuracy.textContent = answered ? Math.round((correct / answered) * 100) + '%' : '0%';
+    }
+
+    function getMotivationalMessage(score) {
+      if (score === 100) return "🏆 Perfect Score! You're a genius!";
+      if (score >= 80) return "🌟 Amazing Job! You're doing great!";
+      if (score >= 60) return "👍 Good Effort! Keep practicing!";
+      if (score >= 40) return "📚 Nice Try! Review your mistakes and try again.";
+      return "💪 Don't Give Up! Every mistake is a learning opportunity.";
+    }
+
+    function showSummary() {
+      // Hide empty state, show summary
+      emptyState.style.display = 'none';
+      summaryContent.style.display = 'block';
+
+      const answeredIds = Object.keys(state.answers);
+      const totalQuestions = state.pool.length;
+      let correctCount = 0;
+
+      answeredIds.forEach(id => {
+        if (state.answers[id].correct) correctCount++;
+      });
+
+      const score = totalQuestions ? Math.round((correctCount / totalQuestions) * 100) : 0;
+      totalScore.textContent = `${score}%`;
+      motivationalMessage.textContent = getMotivationalMessage(score);
+
+      // Build per-subject summary
+      const bySubject = {};
+      state.pool.forEach(id => {
+        const q = QUESTIONS.find(x => x.id === id);
+        const rec = state.answers[id];
+        bySubject[q.subject] = bySubject[q.subject] || { correct: 0, total: 0 };
+        bySubject[q.subject].total += 1;
+        if (rec && rec.correct) bySubject[q.subject].correct += 1;
+      });
+
+      let html = '';
+      for (const subject of Object.keys(bySubject)) {
+        const s = bySubject[subject];
+        const perc = Math.round((s.correct / s.total) * 100);
+        html += `
+          <div class="subject-score">
+            <strong>${subject}</strong>
+            <div>
+              <span>${s.correct}/${s.total}</span>
+              <span class="score-percentage">(${perc}%)</span>
+            </div>
+          </div>
+        `;
+      }
+      subjectBreakdown.innerHTML = html;
+    }
+
+    function exportAnswers() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      doc.setFontSize(20);
+      doc.text("BECE Quiz Results", 20, 20);
+      doc.setFontSize(12);
+      doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 20, 30);
+
+      // Add summary data
+      const answeredIds = Object.keys(state.answers);
+      const totalQuestions = state.pool.length;
+      let correctCount = 0;
+      answeredIds.forEach(id => {
+        if (state.answers[id].correct) correctCount++;
+      });
+      const score = totalQuestions ? Math.round((correctCount / totalQuestions) * 100) : 0;
+
+      doc.text(`Overall Score: ${score}%`, 20, 45);
+      doc.text(`Correct Answers: ${correctCount}/${totalQuestions}`, 20, 55);
+
+      doc.save("bece-quiz-results.pdf");
+    }
+
+    function bindEvents() {
+      prevBtn.addEventListener('click', handlePrevious);
+      nextBtn.addEventListener('click', handleNext);
+      submitBtn.addEventListener('click', handleSubmitQuiz);
+
+      reviewBtn.addEventListener('click', () => {
+        state.index = 0;
+        renderQuestion();
+      });
+
+      exportBtn.addEventListener('click', exportAnswers);
+
+      clearSession.addEventListener('click', () => {
+        if (confirm("Clear all answers and restart?")) {
+          state.answers = {};
+          state.index = 0;
+          state.isSubmitted = false;
+          saveSession();
+          renderQuestion();
+          updateStats();
+
+          // Show empty state again
+          emptyState.style.display = 'block';
+          summaryContent.style.display = 'none';
+        }
+      });
+
+      backBtn.addEventListener('click', () => {
+        if (confirm("Leave quiz? Progress will be lost.")) {
+          window.location.href = 'quiz.html';
+        }
+      });
+
+      restartBtn.addEventListener('click', () => {
+        if (confirm("Restart quiz? All answers will be cleared.")) {
+          state.answers = {};
+          state.index = 0;
+          state.isSubmitted = false;
+          saveSession();
+          renderQuestion();
+          updateStats();
+
+          // Show empty state again
+          emptyState.style.display = 'block';
+          summaryContent.style.display = 'none';
+        }
+      });
+
+      newQuizBtn.addEventListener('click', () => {
+        window.location.href = 'quiz.html';
+      });
+
+      dashboardBtn2.addEventListener('click', () => {
+        window.location.href = 'dashboard.html';
+      });
     }
 
     function generateSessionId() {
-    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+      return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    }
+
+    // Initialize the application
+    async function init() {
+      console.log("Initializing quiz application...");
+
+      // Load filter settings from sessionStorage
+      const filterSettings = sessionStorage.getItem('quizSettings');
+      if (filterSettings) {
+        state.filterSettings = JSON.parse(filterSettings);
+
+        // Fetch questions dynamically
+        try {
+          promptEl.textContent = "Loading questions...";
+          QUESTIONS = await fetchQuestions();
+          console.log("Questions loaded:", QUESTIONS.length);
+
+          displayCurrentFilters();
+          startSession();
+        } catch (error) {
+          console.error("Failed to load questions:", error);
+          promptEl.textContent = "Error loading questions. Please try again.";
+        }
+
+      } else {
+        promptEl.textContent = "No quiz settings found. Please go back and start a quiz.";
+      }
+
+      loadCurrentSession();
+      bindEvents();
+      updateStats();
+    }
+
+    function startSession() {
+      const selectedSubjects = state.filterSettings.subjects;
+      const year = state.filterSettings.year;
+      state.mode = state.filterSettings.mode;
+      state.endless = state.filterSettings.endless;
+
+      state.pool = QUESTIONS.filter(q => {
+        if (selectedSubjects.length && !selectedSubjects.includes(q.subject)) return false;
+        if (year !== 'all' && String(q.year) !== String(year)) return false;
+        return true;
+      }).map(q => q.id);
+
+      if (state.pool.length === 0) {
+        promptEl.textContent = 'No questions match your filters.';
+        optionsEl.innerHTML = '';
+        metaLeft.textContent = '—';
+        metaRight.textContent = '';
+        return;
+      }
+
+      // If we are reloading a session, don't reset index unless invalid
+      if (state.index >= state.pool.length) state.index = 0;
+
+      renderQuestion();
+      updateProgress();
     }
 
     // Protect route - redirect if not authenticated
     onAuthStateChanged(auth, (user) => {
-    if (!user) {
-    window.location.href = "index.html";
-    } else {
-    console.log("Logged in:", user.email);
-    init();
-    }
+      if (!user) {
+        window.location.href = "index.html";
+      } else {
+        console.log("Logged in:", user.email);
+        init();
+      }
     });
-    </script>
+  </script>
 </body>
 
 </html>

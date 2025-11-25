@@ -493,7 +493,8 @@
           })
           .catch((error) => {
             setLoading(false);
-            showAlert('Google sign-in failed. Please try again.');
+            console.error("Google Sign-In Error:", error);
+            showAlert(`Google sign-in failed: ${error.message}`);
           });
       }
 

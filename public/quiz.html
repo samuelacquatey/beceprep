@@ -56,14 +56,95 @@
         </div>
       </div>
     </div>
+  </div>
 
+  <script type="module">
+    import { auth } from './js/auth.js';
+    import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    import { fetchQuestions } from './js/database.js';
 
-    if (selectedSubjects.length === 0) {
-    alert('Please select at least one subject');
-    return;
+    // DOM Elements
+    const subjectsList = document.getElementById('subjectsList');
+    const yearSelect = document.getElementById('yearSelect');
+    const startBtn = document.getElementById('startBtn');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const dashboardBtn = document.getElementById('dashboardBtn');
+    const socialBtn = document.getElementById('socialBtn');
+    const flashcardsBtn = document.getElementById('flashcardsBtn');
+
+    // State
+    let allQuestions = [];
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Check auth
+      onAuthStateChanged(auth, (user) => {
+        if (!user) {
+          window.location.href = 'index.html';
+        }
+      });
+
+      // Load Data
+      try {
+        allQuestions = await fetchQuestions();
+        console.log('Loaded questions:', allQuestions.length);
+
+        populateFilters();
+      } catch (error) {
+        console.error('Error loading questions:', error);
+        alert('Failed to load questions. Please refresh.');
+      }
+    });
+
+    function populateFilters() {
+      // Extract unique subjects and years
+      const subjects = [...new Set(allQuestions.map(q => q.subject))].sort();
+      const years = [...new Set(allQuestions.map(q => q.year))].sort((a, b) => b - a);
+
+      // Populate Subjects
+      subjectsList.innerHTML = subjects.map(subject => `
+        <label class="subject-chip">
+          <input type="checkbox" value="${subject}" checked>
+          <span>${subject}</span>
+        </label>
+      `).join('');
+
+      // Populate Years
+      yearSelect.innerHTML = '<option value="all">All years</option>' +
+        years.map(year => `<option value="${year}">${year}</option>`).join('');
     }
 
-    // NEW: Clear any previous quiz session
-    sessionStorage.removeItem('current_quiz_answers');
+    // Start Quiz
+    startBtn.addEventListener('click', () => {
+      const selectedSubjects = Array.from(document.querySelectorAll('#subjectsList input:checked'))
+        .map(cb => cb.value);
+
+      const selectedYear = yearSelect.value;
+      const mode = document.getElementById('modeSelect').value;
+      const endless = document.getElementById('endlessMode').checked;
+
+      if (selectedSubjects.length === 0) {
+        alert('Please select at least one subject');
+        return;
+      }
+
+      // Save settings
+      sessionStorage.removeItem('current_quiz_answers'); // Clear old session
+      sessionStorage.setItem('quizSettings', JSON.stringify({
+        subjects: selectedSubjects,
+        year: selectedYear,
+        mode: mode,
+        endless: endless
+      }));
+
+      window.location.href = 'qna.html';
+    });
+
+    // Navigation
+    logoutBtn.addEventListener('click', () => signOut(auth));
+    dashboardBtn.addEventListener('click', () => window.location.href = 'dashboard.html');
+    // socialBtn and flashcardsBtn placeholders
+  </script>
+</body>
 
 </html>

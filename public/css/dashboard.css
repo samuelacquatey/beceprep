@@ -1,0 +1,22 @@
+/* Dashboard-specific styles to fix chart height issues */
+.metric-card {
+    max-height: 450px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.metric-card canvas {
+    max-height: 300px !important;
+    height: auto !important;
+}
+
+.metric-card h3 {
+    flex-shrink: 0;
+}
+
+.metric-card>div {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+}
