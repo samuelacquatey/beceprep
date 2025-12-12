@@ -13,6 +13,7 @@ import {
   updateDoc,
   arrayUnion,
   increment,
+  writeBatch,
   Timestamp
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 import { db } from './auth.js';
@@ -109,60 +110,142 @@ export async function trackQuestionAttempt(userId, questionId, isCorrect, choice
   }
 }
 
-// Get user insights for dashboard
-export async function getUserInsights(userId, days = 30) {
+// Batch track question attempts (Optimized)
+export async function batchTrackQuestionAttempts(userId, attempts) {
   try {
-    const startDate = new Date();
-    startDate.setDate(startDate.getDate() - days);
+    const batch = writeBatch(db);
+    const collectionRef = collection(db, 'questionAttempts');
 
-    const q = query(
-      collection(db, 'questionAttempts'),
-      where('userId', '==', userId),
-      where('timestamp', '>=', Timestamp.fromDate(startDate)),
-      orderBy('timestamp', 'desc')
-    );
-
-    const querySnapshot = await getDocs(q);
-    const attempts = querySnapshot.docs.map(doc => doc.data());
-
-    // Group by date and calculate daily stats
-    const dailyStats = {};
+    // 1. Queue all attempt writes
     attempts.forEach(attempt => {
-      const date = attempt.timestamp.toDate().toDateString();
-      if (!dailyStats[date]) {
-        dailyStats[date] = {
-          date: attempt.timestamp.toDate(),
-          totalQuestions: 0,
-          correctAnswers: 0,
-          timeSpent: 0,
-          sessionCount: 0,
-          subjects: {}
+      const docRef = doc(collectionRef); // generated ID
+      const data = {
+        userId,
+        ...attempt,
+        timestamp: Timestamp.now()
+      };
+
+      // Fallback metadata if missing
+      if (!data.subject || !data.topic) {
+        let question = ENHANCED_QUESTIONS.find(q => q.id === attempt.questionId);
+        if (question) {
+          data.subject = question.subject;
+          data.topic = question.topic;
+          data.year = question.year;
+        }
+      }
+
+      batch.set(docRef, data);
+    });
+
+    // 2. Commit batch
+    await batch.commit();
+    console.log(`✅ Batch saved ${attempts.length} question attempts.`);
+
+    // 3. Update Aggregates (Fire and forget, or await if critical)
+    await updateTopicAggregates(userId, attempts);
+
+    return true;
+  } catch (error) {
+    console.error('❌ Error batch saving attempts: ', error);
+    return false;
+  }
+}
+
+// Helper: Update aggregate stats
+async function updateTopicAggregates(userId, newAttempts) {
+  try {
+    const statsRef = doc(db, 'user_stats', userId);
+    const statsSnap = await getDoc(statsRef);
+
+    let topicPerformance = {};
+    if (statsSnap.exists()) {
+      topicPerformance = statsSnap.data().topicPerformance || {};
+    }
+
+    // Process new attempts into the aggregate
+    newAttempts.forEach(attempt => {
+      // Enforce metadata lookup if missing (re-doing simpler version here)
+      let subject = attempt.subject;
+      let topic = attempt.topic;
+
+      if (!subject || !topic) {
+        const q = ENHANCED_QUESTIONS.find(x => x.id === attempt.questionId);
+        if (q) {
+          subject = q.subject;
+          topic = q.topic;
+        }
+      }
+
+      if (!subject || !topic) return;
+
+      const key = `${subject}-${topic}`;
+      if (!topicPerformance[key]) {
+        topicPerformance[key] = {
+          subject,
+          topic,
+          total: 0,
+          correct: 0,
+          totalTime: 0,
+          avgConfidence: 0, // Running average
+          confidenceCount: 0
         };
       }
 
-      dailyStats[date].totalQuestions++;
-      // dailyStats[date].timeSpent += attempt.timeSpent || 0; 
+      const t = topicPerformance[key];
+      t.total++;
+      if (attempt.isCorrect || attempt.correct) t.correct++;
+      // t.totalTime += attempt.timeSpent || 0; // Optional if we track time per q
 
-      if (attempt.correct) {
-        dailyStats[date].correctAnswers++;
-      }
-
-      // Track by subject
-      if (attempt.subject) {
-        if (!dailyStats[date].subjects[attempt.subject]) {
-          dailyStats[date].subjects[attempt.subject] = { total: 0, correct: 0 };
-        }
-        dailyStats[date].subjects[attempt.subject].total++;
-        if (attempt.correct) {
-          dailyStats[date].subjects[attempt.subject].correct++;
-        }
+      // Update confidence average
+      if (attempt.confidence) {
+        const currentTotalConf = (t.avgConfidence || 0) * (t.confidenceCount || 0);
+        t.confidenceCount = (t.confidenceCount || 0) + 1;
+        t.avgConfidence = (currentTotalConf + attempt.confidence) / t.confidenceCount;
       }
     });
 
-    return Object.values(dailyStats).map(day => ({
-      ...day,
-      sessionCount: 1
-    }));
+    // Recalculate derived stats like accuracy for the snapshot
+    Object.values(topicPerformance).forEach(t => {
+      t.accuracy = (t.correct / t.total) * 100;
+    });
+
+    // Save back
+    await setDoc(statsRef, { topicPerformance, lastUpdated: Timestamp.now() }, { merge: true });
+    console.log('✅ Aggregated stats updated.');
+
+  } catch (err) {
+    console.error('❌ Error updating aggregates:', err);
+  }
+}
+
+// Get user insights (optimized to use quiz_attempts)
+export async function getUserInsights(userId, days = 30) {
+  try {
+    const quizHistory = await getUserQuizHistory(userId, days);
+
+    // Group by date and calculate daily stats
+    const dailyStats = {};
+
+    quizHistory.forEach(quiz => {
+      const date = quiz.timestamp.toDate().toDateString();
+      if (!dailyStats[date]) {
+        dailyStats[date] = {
+          date: quiz.timestamp.toDate(),
+          totalQuestions: 0,
+          correctAnswers: 0,
+          timeSpent: 0,
+          sessionCount: 0
+        };
+      }
+
+      dailyStats[date].totalQuestions += (quiz.totalQuestions || 0);
+      dailyStats[date].correctAnswers += (quiz.correctCount || 0);
+      dailyStats[date].timeSpent += (quiz.timeSpent || 0);
+      dailyStats[date].sessionCount += 1;
+    });
+
+    return Object.values(dailyStats).sort((a, b) => a.date - b.date);
 
   } catch (error) {
     console.error('❌ Error getting user insights: ', error);
@@ -170,9 +253,45 @@ export async function getUserInsights(userId, days = 30) {
   }
 }
 
-// Get topic performance
+// Fetch raw quiz history
+export async function getUserQuizHistory(userId, days = 30) {
+  try {
+    const startDate = new Date();
+    startDate.setDate(startDate.getDate() - days);
+
+    const q = query(
+      collection(db, 'quiz_attempts'),
+      where('userId', '==', userId),
+      where('timestamp', '>=', Timestamp.fromDate(startDate)),
+      orderBy('timestamp', 'desc')
+    );
+
+    const querySnapshot = await getDocs(q);
+    return querySnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
+  } catch (error) {
+    console.error('❌ Error getting quiz history: ', error);
+    return [];
+  }
+}
+
+// Get topic performance (from Aggregate with fallback)
 export async function getUserTopicPerformance(userId) {
   try {
+    // 1. Try fetching prepared aggregate
+    const statsRef = doc(db, 'user_stats', userId);
+    const statsSnap = await getDoc(statsRef);
+
+    if (statsSnap.exists() && statsSnap.data().topicPerformance) {
+      console.log("⚡ Loaded topic performance from Aggregate.");
+      return statsSnap.data().topicPerformance;
+    }
+
+    console.log("⚠️ No aggregate found. Calculating from scratch (Legacy Mode)...");
+
+    // 2. Fallback: Calculate from scratch
     const q = query(
       collection(db, 'questionAttempts'),
       where('userId', '==', userId)
@@ -214,6 +333,12 @@ export async function getUserTopicPerformance(userId) {
       topic.accuracy = topic.total > 0 ? (topic.correct / topic.total) * 100 : 0;
       topic.avgConfidence = topic.confidenceCount > 0 ? topic.avgConfidence / topic.confidenceCount : 0.5;
     });
+
+    // Optional: Save this calculation to bootstrap the aggregate
+    if (Object.keys(topicPerformance).length > 0) {
+      await setDoc(statsRef, { topicPerformance, lastUpdated: Timestamp.now() }, { merge: true });
+      console.log("✅ Bootstrapped aggregate stats from legacy data.");
+    }
 
     return topicPerformance;
 
@@ -289,5 +414,25 @@ export async function getUserProgress(userId) {
   } catch (error) {
     console.error('Error getting user progress:', error);
     return null;
+  }
+}
+
+// System Logging
+export async function logSystemError(error, context = {}, userId = null) {
+  try {
+    const logData = {
+      message: error.message || String(error),
+      stack: error.stack || null,
+      context: context,
+      userId: userId,
+      timestamp: Timestamp.now(),
+      userAgent: navigator.userAgent,
+      url: window.location.href
+    };
+
+    await addDoc(collection(db, 'system_logs'), logData);
+    console.error('System error logged:', logData);
+  } catch (loggingError) {
+    console.error('Failed to log system error:', loggingError);
   }
 }

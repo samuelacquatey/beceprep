@@ -1,4 +1,4 @@
-import { getUserInsights, getUserTopicPerformance, trackStudySession, trackQuizAttempt } from './database.js';
+import { getUserTopicPerformance, trackStudySession, trackQuizAttempt, getUserQuizHistory } from './database.js';
 import { TOPIC_HIERARCHY, BECE_PASS_MARK, EXAM_DATE } from './data/topicData.js';
 
 export class AnalyticsEngine {
@@ -10,19 +10,59 @@ export class AnalyticsEngine {
 
   async loadData(days = 30) {
     try {
-      this.insights = await getUserInsights(this.userId, days);
+      // Fetch raw history and topic performance
+      const rawHistory = await getUserQuizHistory(this.userId, days);
+
+      // Sanitize history (convert Timestamps to Dates)
+      this.history = rawHistory.map(h => ({
+        ...h,
+        date: h.timestamp.toDate ? h.timestamp.toDate() : new Date(h.timestamp)
+      }));
+
       this.topicPerformance = await getUserTopicPerformance(this.userId);
 
-      console.log(`Loaded ${this.insights.length} insights and ${Object.keys(this.topicPerformance).length} topics`);
+      // Aggregate history into daily insights
+      this.insights = this.aggregateDailyStats(this.history);
+
+      console.log(`Loaded ${this.history.length} quiz attempts and ${Object.keys(this.topicPerformance).length} topics`);
 
       return {
         insights: this.insights,
+        history: this.history,
         topicPerformance: this.topicPerformance
       };
     } catch (error) {
       console.error('Error loading analytics data:', error);
-      return { insights: [], topicPerformance: {} };
+      return { insights: [], history: [], topicPerformance: {} };
     }
+  }
+
+  aggregateDailyStats(history) {
+    const dailyStats = {};
+
+    history.forEach(quiz => {
+      // Ensure we have a valid date object
+      const dateObj = quiz.timestamp.toDate ? quiz.timestamp.toDate() : new Date(quiz.timestamp);
+      const date = dateObj.toDateString();
+
+      if (!dailyStats[date]) {
+        dailyStats[date] = {
+          date: dateObj,
+          totalQuestions: 0,
+          correctAnswers: 0,
+          timeSpent: 0,
+          sessionCount: 0
+        };
+      }
+
+      dailyStats[date].totalQuestions += (quiz.totalQuestions || 0);
+      dailyStats[date].correctAnswers += (quiz.correctCount || 0);
+      dailyStats[date].timeSpent += (quiz.timeSpent || 0);
+      dailyStats[date].sessionCount += 1;
+    });
+
+    // Return sorted by date (ascending) for charts
+    return Object.values(dailyStats).sort((a, b) => a.date - b.date);
   }
 
   calculateOverallProgress() {

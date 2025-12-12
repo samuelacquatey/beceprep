@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -43,12 +45,13 @@
               <div class="card-content">
                 <div class="card-answer" id="cardAnswer">πr²</div>
                 <div class="card-explanation" id="cardExplanation">
-                  The area of a circle is calculated by multiplying π (approximately 3.14159) by the square of the radius.
+                  The area of a circle is calculated by multiplying π (approximately 3.14159) by the square of the
+                  radius.
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div class="flashcard-controls">
             <div class="difficulty-buttons">
               <button class="btn" id="againBtn">🔴 Again</button>
@@ -120,7 +123,7 @@
             <button class="btn ghost" data-filter="new">New Cards</button>
             <button class="btn ghost" data-filter="mastered">Mastered</button>
           </div>
-          
+
           <div class="decks-grid" id="decksContainer">
             <!-- Dynamic deck cards will be inserted here -->
           </div>
@@ -192,63 +195,82 @@
     });
 
     async function initializeFlashcards(user) {
-        console.log('Initializing flashcards for user:', user.uid);
-        
-        try {
-            await flashcardSystem.loadUserCards(user.uid);
-            console.log('Flashcards loaded:', flashcardSystem.cards);
-            
-            // Debug: Log all cards and their due dates
-            flashcardSystem.cards.forEach((card, index) => {
-            console.log(`Card ${index + 1}:`, {
-                question: card.question.substring(0, 50) + '...',
-                dueDate: card.dueDate,
-                isDue: card.dueDate <= new Date()
-            });
-            });
-            
-            updateStats();
-            showNextCard();
-            setupEventListeners();
-            loadDecks();
-            
-            console.log('Flashcards initialization complete');
-        } catch (error) {
-            console.error('Error initializing flashcards:', error);
-            // Show error message to user
-            document.getElementById('currentFlashcard').innerHTML = `
-            <div class="no-cards-message">
-                <h3>⚠️ Error Loading Flashcards</h3>
-                <p>There was a problem loading your flashcards. Please try refreshing the page.</p>
-                <button class="btn" onclick="location.reload()">Refresh Page</button>
-            </div>
-            `;
+      console.log('Initializing flashcards for user:', user.uid);
+
+      try {
+        await flashcardSystem.loadUserCards(user.uid);
+        console.log('Flashcards loaded:', flashcardSystem.cards);
+
+        // Debug: Log all cards and their due dates
+        flashcardSystem.cards.forEach((card, index) => {
+          console.log(`Card ${index + 1}:`, {
+            question: card.question.substring(0, 50) + '...',
+            dueDate: card.dueDate,
+            isDue: card.dueDate <= new Date()
+          });
+        });
+
+        updateStats();
+        showNextCard();
+        setupEventListeners();
+        loadDecks();
+
+        console.log('Flashcards initialization complete');
+      } catch (error) {
+        console.error('Error initializing flashcards:', error);
+        // Show error message to user
+        const flashcardElement = document.getElementById('currentFlashcard');
+        if (flashcardElement) {
+          flashcardElement.innerHTML = `
+          <div class="no-cards-message">
+            <h3>⚠️ Error Loading Flashcards</h3>
+            <p>There was a problem loading your flashcards. Please try refreshing the page.</p>
+            <button class="btn" onclick="location.reload()">Refresh Page</button>
+          </div>
+        `;
         }
-        }
+      }
+    }
 
     function setupEventListeners() {
+      // Safe element access with null checks
+      const currentFlashcard = document.getElementById('currentFlashcard');
+      const againBtn = document.getElementById('againBtn');
+      const hardBtn = document.getElementById('hardBtn');
+      const goodBtn = document.getElementById('goodBtn');
+      const easyBtn = document.getElementById('easyBtn');
+      const showHintBtn = document.getElementById('showHintBtn');
+      const backToQuiz = document.getElementById('backToQuiz');
+      const createCardBtn = document.getElementById('createCardBtn');
+      const cancelCreateCard = document.getElementById('cancelCreateCard');
+      const saveCardBtn = document.getElementById('saveCardBtn');
+
       // Flashcard flip
-      document.getElementById('currentFlashcard').addEventListener('click', flipCard);
-      
+      if (currentFlashcard) {
+        currentFlashcard.addEventListener('click', flipCard);
+      }
+
       // Difficulty buttons
-      document.getElementById('againBtn').addEventListener('click', () => rateCard('again'));
-      document.getElementById('hardBtn').addEventListener('click', () => rateCard('hard'));
-      document.getElementById('goodBtn').addEventListener('click', () => rateCard('good'));
-      document.getElementById('easyBtn').addEventListener('click', () => rateCard('easy'));
-      
+      if (againBtn) againBtn.addEventListener('click', () => rateCard('again'));
+      if (hardBtn) hardBtn.addEventListener('click', () => rateCard('hard'));
+      if (goodBtn) goodBtn.addEventListener('click', () => rateCard('good'));
+      if (easyBtn) easyBtn.addEventListener('click', () => rateCard('easy'));
+
       // Hint button
-      document.getElementById('showHintBtn').addEventListener('click', showHint);
-      
+      if (showHintBtn) showHintBtn.addEventListener('click', showHint);
+
       // Navigation
-      document.getElementById('backToQuiz').addEventListener('click', () => {
-        window.location.href = 'quiz.html';
-      });
-      
+      if (backToQuiz) {
+        backToQuiz.addEventListener('click', () => {
+          window.location.href = 'quiz.html';
+        });
+      }
+
       // Create card modal
-      document.getElementById('createCardBtn').addEventListener('click', showCreateModal);
-      document.getElementById('cancelCreateCard').addEventListener('click', hideCreateModal);
-      document.getElementById('saveCardBtn').addEventListener('click', saveNewCard);
-      
+      if (createCardBtn) createCardBtn.addEventListener('click', showCreateModal);
+      if (cancelCreateCard) cancelCreateCard.addEventListener('click', hideCreateModal);
+      if (saveCardBtn) saveCardBtn.addEventListener('click', saveNewCard);
+
       // Deck filters
       document.querySelectorAll('.deck-filters .btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -261,8 +283,10 @@
 
     function flipCard() {
       const card = document.getElementById('currentFlashcard');
+      if (!card) return;
+
       isFlipped = !isFlipped;
-      
+
       if (isFlipped) {
         card.classList.add('flipped');
       } else {
@@ -272,81 +296,103 @@
 
     function showHint(e) {
       e.stopPropagation();
-      document.getElementById('cardHint').style.display = 'block';
-      document.getElementById('showHintBtn').style.display = 'none';
+      const hintElement = document.getElementById('cardHint');
+      const showHintBtn = document.getElementById('showHintBtn');
+
+      if (hintElement) hintElement.style.display = 'block';
+      if (showHintBtn) showHintBtn.style.display = 'none';
     }
 
     async function rateCard(difficulty) {
-      const currentCard = flashcardSystem.getDueCards()[currentCardIndex];
+      const dueCards = flashcardSystem.getDueCards();
+      if (dueCards.length === 0) return;
+
+      const currentCard = dueCards[currentCardIndex];
       if (!currentCard) return;
 
       await flashcardSystem.rateCard(currentCard.id, difficulty);
-      
+
       // Move to next card
       currentCardIndex++;
-      if (currentCardIndex >= flashcardSystem.getDueCards().length) {
+      if (currentCardIndex >= dueCards.length) {
         currentCardIndex = 0;
       }
-      
+
       isFlipped = false;
       showNextCard();
       updateStats();
     }
 
     function showNextCard() {
-        const dueCards = flashcardSystem.getDueCards();
-        console.log('Showing next card. Due cards:', dueCards.length);
-        
-        if (dueCards.length === 0) {
-            // No cards due, show message
-            document.getElementById('currentFlashcard').innerHTML = `
-            <div class="no-cards-message">
-                <h3>🎉 All Caught Up!</h3>
-                <p>No cards due for review today.</p>
-                <p><small>You can study new cards or create your own flashcards.</small></p>
-                <button class="btn" id="studyNewCards">Study New Cards</button>
-                <button class="btn ghost" id="createFirstCard">Create Your First Card</button>
-            </div>
-            `;
-            document.getElementById('studyNewCards').addEventListener('click', studyNewCards);
-            document.getElementById('createFirstCard').addEventListener('click', showCreateModal);
-            return;
-        }
+      const dueCards = flashcardSystem.getDueCards();
+      console.log('Showing next card. Due cards:', dueCards.length);
 
-        // Make sure we don't go out of bounds
-        if (currentCardIndex >= dueCards.length) {
-            currentCardIndex = 0;
-        }
+      const flashcardElement = document.getElementById('currentFlashcard');
+      if (!flashcardElement) return;
 
-        const card = dueCards[currentCardIndex];
-        console.log('Displaying card:', card.question);
-        
-        // Update card content
-        document.getElementById('cardSubject').textContent = card.subject || 'General';
-        document.getElementById('cardQuestion').textContent = card.question;
-        document.getElementById('cardAnswer').textContent = card.answer;
-        document.getElementById('cardExplanation').textContent = card.explanation || 'No explanation available.';
-        
-        // Handle hint
-        const hintElement = document.getElementById('cardHint');
-        const showHintBtn = document.getElementById('showHintBtn');
-        
-        if (card.hint) {
-            hintElement.innerHTML = `<small>💡 ${card.hint}</small>`;
-            hintElement.style.display = 'none';
-            showHintBtn.style.display = 'block';
-        } else {
-            hintElement.style.display = 'none';
-            showHintBtn.style.display = 'none';
-        }
-        
-        // Reset card state
-        const flashcardElement = document.getElementById('currentFlashcard');
-        flashcardElement.classList.remove('flipped');
-        flashcardElement.style.display = 'block';
-        isFlipped = false;
+      if (dueCards.length === 0) {
+        // No cards due, show message
+        flashcardElement.innerHTML = `
+        <div class="no-cards-message">
+          <h3>🎉 All Caught Up!</h3>
+          <p>No cards due for review today.</p>
+          <p><small>You can study new cards or create your own flashcards.</small></p>
+          <button class="btn" id="studyNewCards">Study New Cards</button>
+          <button class="btn ghost" id="createFirstCard">Create Your First Card</button>
+        </div>
+      `;
 
-        console.log('Card displayed successfully');
+        // Add event listeners to dynamically created buttons
+        setTimeout(() => {
+          const studyNewCardsBtn = document.getElementById('studyNewCards');
+          const createFirstCardBtn = document.getElementById('createFirstCard');
+          if (studyNewCardsBtn) studyNewCardsBtn.addEventListener('click', studyNewCards);
+          if (createFirstCardBtn) createFirstCardBtn.addEventListener('click', showCreateModal);
+        }, 0);
+
+        return;
+      }
+
+      // Make sure we don't go out of bounds
+      if (currentCardIndex >= dueCards.length) {
+        currentCardIndex = 0;
+      }
+
+      const card = dueCards[currentCardIndex];
+      console.log('Displaying card:', card.question);
+
+      // Update card content
+      const cardSubject = document.getElementById('cardSubject');
+      const cardQuestion = document.getElementById('cardQuestion');
+      const cardAnswer = document.getElementById('cardAnswer');
+      const cardExplanation = document.getElementById('cardExplanation');
+
+      if (cardSubject) cardSubject.textContent = card.subject || 'General';
+      if (cardQuestion) cardQuestion.textContent = card.question;
+      if (cardAnswer) cardAnswer.textContent = card.answer;
+      if (cardExplanation) cardExplanation.textContent = card.explanation || 'No explanation available.';
+
+      // Handle hint
+      const hintElement = document.getElementById('cardHint');
+      const showHintBtn = document.getElementById('showHintBtn');
+
+      if (card.hint) {
+        if (hintElement) {
+          hintElement.innerHTML = `<small>💡 ${card.hint}</small>`;
+          hintElement.style.display = 'none';
+        }
+        if (showHintBtn) showHintBtn.style.display = 'block';
+      } else {
+        if (hintElement) hintElement.style.display = 'none';
+        if (showHintBtn) showHintBtn.style.display = 'none';
+      }
+
+      // Reset card state
+      flashcardElement.classList.remove('flipped');
+      flashcardElement.style.display = 'block';
+      isFlipped = false;
+
+      console.log('Card displayed successfully');
     }
 
     function studyNewCards() {
@@ -357,34 +403,40 @@
 
     function updateStats() {
       const stats = flashcardSystem.getStats();
-      document.getElementById('dueCount').textContent = stats.dueToday;
-      document.getElementById('totalCount').textContent = stats.totalCards;
-      document.getElementById('masteredCount').textContent = stats.mastered;
-      document.getElementById('streakCount').textContent = stats.streak;
+      const dueCount = document.getElementById('dueCount');
+      const totalCount = document.getElementById('totalCount');
+      const masteredCount = document.getElementById('masteredCount');
+      const streakCount = document.getElementById('streakCount');
+
+      if (dueCount) dueCount.textContent = stats.dueToday;
+      if (totalCount) totalCount.textContent = stats.totalCards;
+      if (masteredCount) masteredCount.textContent = stats.mastered;
+      if (streakCount) streakCount.textContent = stats.streak;
     }
 
     function loadDecks() {
       const decks = flashcardSystem.getDecksBySubject();
       const container = document.getElementById('decksContainer');
-      
+      if (!container) return;
+
       container.innerHTML = Object.entries(decks).map(([subject, cards]) => `
-        <div class="deck-card">
-          <div class="deck-header">
-            <h4>${subject}</h4>
-            <span class="deck-count">${cards.length} cards</span>
-          </div>
-          <div class="deck-progress">
-            <div class="progress-bar">
-              <div class="progress-fill" style="width: ${calculateMastery(cards)}%"></div>
-            </div>
-            <span>${Math.round(calculateMastery(cards))}% mastered</span>
-          </div>
-          <div class="deck-actions">
-            <button class="btn ghost study-deck" data-subject="${subject}">Study</button>
-            <button class="btn ghost manage-deck" data-subject="${subject}">Manage</button>
-          </div>
+      <div class="deck-card">
+        <div class="deck-header">
+          <h4>${subject}</h4>
+          <span class="deck-count">${cards.length} cards</span>
         </div>
-      `).join('');
+        <div class="deck-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: ${calculateMastery(cards)}%"></div>
+          </div>
+          <span>${Math.round(calculateMastery(cards))}% mastered</span>
+        </div>
+        <div class="deck-actions">
+          <button class="btn ghost study-deck" data-subject="${subject}">Study</button>
+          <button class="btn ghost manage-deck" data-subject="${subject}">Manage</button>
+        </div>
+      </div>
+    `).join('');
 
       // Add deck action listeners
       document.querySelectorAll('.study-deck').forEach(btn => {
@@ -411,21 +463,32 @@
     }
 
     function showCreateModal() {
-      document.getElementById('createCardModal').style.display = 'flex';
+      const modal = document.getElementById('createCardModal');
+      if (modal) modal.style.display = 'flex';
     }
 
     function hideCreateModal() {
-      document.getElementById('createCardModal').style.display = 'none';
+      const modal = document.getElementById('createCardModal');
+      if (modal) modal.style.display = 'none';
     }
 
     async function saveNewCard() {
+      const cardSubjectSelect = document.getElementById('cardSubjectSelect');
+      const cardTopic = document.getElementById('cardTopic');
+      const cardQuestionInput = document.getElementById('cardQuestionInput');
+      const cardAnswerInput = document.getElementById('cardAnswerInput');
+      const cardHintInput = document.getElementById('cardHintInput');
+      const cardExplanationInput = document.getElementById('cardExplanationInput');
+
+      if (!cardSubjectSelect || !cardTopic || !cardQuestionInput || !cardAnswerInput) return;
+
       const cardData = {
-        subject: document.getElementById('cardSubjectSelect').value,
-        topic: document.getElementById('cardTopic').value,
-        question: document.getElementById('cardQuestionInput').value,
-        answer: document.getElementById('cardAnswerInput').value,
-        hint: document.getElementById('cardHintInput').value,
-        explanation: document.getElementById('cardExplanationInput').value
+        subject: cardSubjectSelect.value,
+        topic: cardTopic.value,
+        question: cardQuestionInput.value,
+        answer: cardAnswerInput.value,
+        hint: cardHintInput ? cardHintInput.value : '',
+        explanation: cardExplanationInput ? cardExplanationInput.value : ''
       };
 
       if (!cardData.question || !cardData.answer) {
@@ -435,17 +498,17 @@
 
       const user = auth.currentUser;
       await flashcardSystem.createCard(user.uid, cardData);
-      
+
       hideCreateModal();
       updateStats();
       loadDecks();
-      
+
       // Reset form
-      document.getElementById('cardTopic').value = '';
-      document.getElementById('cardQuestionInput').value = '';
-      document.getElementById('cardAnswerInput').value = '';
-      document.getElementById('cardHintInput').value = '';
-      document.getElementById('cardExplanationInput').value = '';
+      if (cardTopic) cardTopic.value = '';
+      if (cardQuestionInput) cardQuestionInput.value = '';
+      if (cardAnswerInput) cardAnswerInput.value = '';
+      if (cardHintInput) cardHintInput.value = '';
+      if (cardExplanationInput) cardExplanationInput.value = '';
     }
   </script>
 
@@ -642,4 +705,5 @@
     }
   </style>
 </body>
+
 </html>

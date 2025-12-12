@@ -173,8 +173,12 @@
         // Render weak areas
         renderWeakAreas(recommendations);
 
-        // Render activity timeline
-        renderActivityTimeline(data.insights.slice(-5));
+        // Render activity timeline (prefer granular history)
+        const timelineData = (data.history && data.history.length > 0)
+          ? data.history.slice(0, 5).reverse()
+          : data.insights.slice(-5);
+
+        renderActivityTimeline(timelineData);
 
       } catch (error) {
         console.error('Error loading dashboard:', error);
@@ -360,7 +364,9 @@
       }
 
       container.innerHTML = recentInsights.reverse().map(insight => {
-        const accuracy = insight.totalQuestions > 0 ? Math.round((insight.correctAnswers / insight.totalQuestions) * 100) : 0;
+        const total = insight.totalQuestions || 0;
+        const correct = insight.correctAnswers !== undefined ? insight.correctAnswers : (insight.correctCount || 0);
+        const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
         const icon = accuracy >= 70 ? '✅' : accuracy >= 50 ? '⚠️' : '❌';
 
         return `
@@ -368,10 +374,10 @@
             <div class="timeline-icon">${icon}</div>
             <div class="timeline-content">
               <div class="timeline-header">
-                <h4>Quiz Session</h4>
+                <h4>${insight.mode ? (insight.mode === 'practice' ? 'Practice Quiz' : 'Exam Simulation') : 'Quiz Session'}</h4>
                 <span class="timeline-date">${new Date(insight.date).toLocaleDateString()}</span>
               </div>
-              <p>${insight.correctAnswers}/${insight.totalQuestions} correct (${accuracy}%)</p>
+              <p>${correct}/${total} correct (${accuracy}%)</p>
             </div>
           </div>
         `;

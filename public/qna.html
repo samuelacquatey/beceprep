@@ -211,7 +211,7 @@
 
   <script type="module">
     import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-    import { trackQuestionAttempt, fetchQuestions } from "./js/database.js";
+    import { fetchQuestions, trackQuizAttempt, batchTrackQuestionAttempts, logSystemError } from "./js/database.js";
     import { app } from "./js/auth.js";
 
     const auth = getAuth(app);
@@ -245,7 +245,8 @@
       startTime: null,
       currentQuestionStart: null,
       userConfidence: null,
-      isSubmitted: false
+      isSubmitted: false,
+      quizStartTime: Date.now()
     };
 
     // DOM refs
@@ -466,22 +467,65 @@
 
       state.isSubmitted = true;
 
-      // Calculate results and sync
+      // Calculate results and build batch payload
       let correctCount = 0;
       let totalAnswered = 0;
+      const attemptList = [];
 
       for (const qId of state.pool) {
         const answer = state.answers[qId];
         if (answer && typeof answer.choice === 'number') {
           totalAnswered++;
           const q = QUESTIONS.find(x => x.id === qId);
+
+          // Check correctness
           const isCorrect = (answer.choice === q.a);
-          answer.correct = isCorrect; // Update local state
+          answer.correct = isCorrect; // Update local state for summary
           if (isCorrect) correctCount++;
 
-          // Sync to Firebase
-          syncAnswerToFirebase(q, answer, answer.timeSpent || 0, isCorrect);
+          // Build batch payload item
+          attemptList.push({
+            questionId: qId,
+            correct: isCorrect,
+            isCorrect: isCorrect,
+            choice: answer.choice,
+            confidence: answer.confidence || 0.5,
+            subject: q.subject,
+            topic: q.topic,
+            year: q.year,
+            timeSpent: answer.timeSpent || 0
+          });
         }
+      }
+
+      // Track full quiz attempt
+      try {
+        const score = totalAnswered ? Math.round((correctCount / totalAnswered) * 100) : 0;
+        const totalTimeSpent = Math.round((Date.now() - state.quizStartTime) / 1000); // seconds
+
+        const quizData = {
+          mode: state.mode,
+          score: score,
+          totalQuestions: state.pool.length,
+          answeredCount: totalAnswered,
+          correctCount: correctCount,
+          timeSpent: totalTimeSpent,
+          subjects: [...new Set(QUESTIONS.filter(q => state.pool.includes(q.id)).map(q => q.subject))],
+          timestamp: new Date()
+        };
+
+        if (auth.currentUser) {
+          // 1. Batch save attempts
+          if (attemptList.length > 0) {
+            await batchTrackQuestionAttempts(auth.currentUser.uid, attemptList);
+          }
+
+          // 2. Save session summary
+          await trackQuizAttempt({ userId: auth.currentUser.uid, ...quizData });
+        }
+      } catch (err) {
+        console.error("Error tracking quiz:", err);
+        logSystemError(err, { context: 'handleSubmitQuiz', sessionId: state.sessionId }, auth.currentUser?.uid);
       }
 
       saveSession(); // Save "correct" status
@@ -489,26 +533,7 @@
       updateStats();
     }
 
-    async function syncAnswerToFirebase(q, record, timeSpent, isCorrect) {
-      const user = auth.currentUser;
-      if (!user) return;
 
-      const trackingData = {
-        choice: record.choice,
-        timeSpent: timeSpent,
-        confidence: record.confidence || 0.5,
-        sessionId: state.sessionId,
-        mode: state.mode,
-        timestamp: new Date(),
-        isCorrect: isCorrect
-      };
-
-      try {
-        await trackQuestionAttempt(user.uid, q, trackingData);
-      } catch (error) {
-        console.error('Analytics sync failed:', error);
-      }
-    }
 
     function showCorrectness(qid) {
       const q = QUESTIONS.find(x => x.id === qid);
@@ -696,6 +721,7 @@
           startSession();
         } catch (error) {
           console.error("Failed to load questions:", error);
+          logSystemError(error, { context: 'init_fetchQuestions' }, auth.currentUser?.uid);
           promptEl.textContent = "Error loading questions. Please try again.";
         }
 
