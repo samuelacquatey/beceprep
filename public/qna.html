@@ -146,465 +146,499 @@
         <div id="options" class="options-grid">
           <!-- Options injected here -->
         </div>
-      </div>
 
-      <!-- Confidence Rating (Hidden by default) -->
-      <div id="confidenceRating"
-        style="display:none; margin-bottom: 20px; text-align: center; padding: 15px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px;">
-        <p style="margin-bottom: 10px; font-weight: 600;">How confident are you?</p>
-        <div style="display:flex; justify-content: center; gap: 10px;">
-          <button class="btn ghost confidence-btn" data-level="0.2">Guessing</button>
-          <button class="btn ghost confidence-btn" data-level="0.6">Unsure</button>
-          <button class="btn ghost confidence-btn" data-level="1.0">Confident</button>
+
+
+        <!-- Confidence Rating (Hidden by default) -->
+        <div id="confidenceRating"
+          style="display:none; margin-bottom: 20px; text-align: center; padding: 15px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px;">
+          <p style="margin-bottom: 10px; font-weight: 600;">How confident are you?</p>
+          <div style="display:flex; justify-content: center; gap: 10px;">
+            <button class="btn ghost confidence-btn" data-level="0.2">Guessing</button>
+            <button class="btn ghost confidence-btn" data-level="0.6">Unsure</button>
+            <button class="btn ghost confidence-btn" data-level="1.0">Confident</button>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls" style="display:flex; justify-content: space-between; align-items: center;">
+          <button id="prevBtn" class="btn ghost">Previous</button>
+          <div style="display:flex; gap: 10px;">
+
+            <button id="submitBtn" class="btn primary">Submit Answer</button>
+            <button id="nextBtn" class="btn ghost">Next</button>
+          </div>
         </div>
       </div>
 
-      <!-- Controls -->
-      <div class="controls" style="display:flex; justify-content: space-between; align-items: center;">
-        <button id="prevBtn" class="btn ghost">Previous</button>
-        <div style="display:flex; gap: 10px;">
-          <button id="submitBtn" class="btn primary">Submit Answer</button>
-          <button id="nextBtn" class="btn ghost">Next</button>
+      <!-- Session Management / Summary Area -->
+      <div class="card" style="margin-top: 20px;">
+        <div id="sessionManagementHeader" style="display:flex; justify-content: space-between; align-items: center;">
+          <h3>Session Management</h3>
+          <div id="sessionControls" style="display:flex; gap: 10px;">
+            <button id="reviewBtn" class="btn ghost">Review Session</button>
+            <button id="exportBtn" class="btn ghost">Export PDF</button>
+            <button id="clearSession" class="btn ghost" style="color: #dc3545;">Clear</button>
+          </div>
+        </div>
+
+        <!-- Empty State (shown when no answers submitted) -->
+        <div id="emptyState" class="empty-state">
+          <i class="fas fa-chart-bar"></i>
+          <h4>No Results Yet</h4>
+          <p>Complete the quiz to see your performance summary here</p>
+        </div>
+
+        <!-- Summary Content (hidden until submission) -->
+        <div id="summaryContent" style="display: none;">
+          <div
+            style="text-align:center; margin-bottom:20px; padding: 20px; background: var(--primary-light); border-radius: 8px;">
+            <div id="totalScore" style="font-size: 3em; font-weight: bold; color: var(--primary);">0%</div>
+            <div style="color: var(--muted); font-size: 1.1em;">Overall Score</div>
+            <div id="motivationalMessage" style="margin-top: 10px; font-style: italic;"></div>
+          </div>
+
+          <h4>Subject Breakdown</h4>
+          <div id="subjectBreakdown">
+            <!-- Subject scores will be inserted here -->
+          </div>
+
+          <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center;">
+            <button id="newQuizBtn" class="btn primary">Start New Quiz</button>
+            <button id="dashboardBtn2" class="btn ghost">View Analytics</button>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Session Management / Summary Area -->
-    <div class="card" style="margin-top: 20px;">
-      <div id="sessionManagementHeader" style="display:flex; justify-content: space-between; align-items: center;">
-        <h3>Session Management</h3>
-        <div id="sessionControls" style="display:flex; gap: 10px;">
-          <button id="reviewBtn" class="btn ghost">Review Session</button>
-          <button id="exportBtn" class="btn ghost">Export PDF</button>
-          <button id="clearSession" class="btn ghost" style="color: #dc3545;">Clear</button>
-        </div>
-      </div>
+    <script type="module">
+      import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+      import { fetchQuestions, trackQuizAttempt, batchTrackQuestionAttempts, logSystemError } from "./js/database.js";
+      import { app } from "./js/auth.js";
 
-      <!-- Empty State (shown when no answers submitted) -->
-      <div id="emptyState" class="empty-state">
-        <i class="fas fa-chart-bar"></i>
-        <h4>No Results Yet</h4>
-        <p>Complete the quiz to see your performance summary here</p>
-      </div>
 
-      <!-- Summary Content (hidden until submission) -->
-      <div id="summaryContent" style="display: none;">
-        <div
-          style="text-align:center; margin-bottom:20px; padding: 20px; background: var(--primary-light); border-radius: 8px;">
-          <div id="totalScore" style="font-size: 3em; font-weight: bold; color: var(--primary);">0%</div>
-          <div style="color: var(--muted); font-size: 1.1em;">Overall Score</div>
-          <div id="motivationalMessage" style="margin-top: 10px; font-style: italic;"></div>
-        </div>
+      const auth = getAuth(app);
 
-        <h4>Subject Breakdown</h4>
-        <div id="subjectBreakdown">
-          <!-- Subject scores will be inserted here -->
-        </div>
-
-        <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center;">
-          <button id="newQuizBtn" class="btn primary">Start New Quiz</button>
-          <button id="dashboardBtn2" class="btn ghost">View Analytics</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script type="module">
-    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-    import { fetchQuestions, trackQuizAttempt, batchTrackQuestionAttempts, logSystemError } from "./js/database.js";
-    import { app } from "./js/auth.js";
-
-    const auth = getAuth(app);
-
-    // Navigation handlers
-    document.getElementById('dashboardBtn').addEventListener('click', () => {
-      window.location.href = 'dashboard.html';
-    });
-
-    document.getElementById('socialBtn').addEventListener('click', () => {
-      window.location.href = 'social.html';
-    });
-
-    document.getElementById('flashcardsBtn').addEventListener('click', () => {
-      window.location.href = 'flashcards.html';
-    });
-
-    /*********************** Enhanced Question Dataset ************************/
-    let QUESTIONS = [];
-    /****************************************************************/
-
-    // App state
-    let state = {
-      pool: [], // filtered question ids
-      index: 0, // current index in pool
-      mode: 'practice',
-      endless: false,
-      answers: {}, // {questionId: {choice: i, correct: bool, time: ts, confidence: float}}
-      filterSettings: null,
-      sessionId: generateSessionId(),
-      startTime: null,
-      currentQuestionStart: null,
-      userConfidence: null,
-      isSubmitted: false,
-      quizStartTime: Date.now()
-    };
-
-    // DOM refs
-    const dashboardBtn = document.getElementById('dashboardBtn');
-    const restartBtn = document.getElementById('restartBtn');
-    const currentFilters = document.getElementById('currentFilters');
-    const promptEl = document.getElementById('prompt');
-    const optionsEl = document.getElementById('options');
-    const metaLeft = document.getElementById('metaLeft');
-    const metaRight = document.getElementById('metaRight');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const submitBtn = document.getElementById('submitBtn');
-    const progressBar = document.getElementById('progressBar');
-    const progressLabel = document.getElementById('progressLabel');
-    const answeredCount = document.getElementById('answeredCount');
-    const correctCount = document.getElementById('correctCount');
-    const accuracy = document.getElementById('accuracy');
-    const exportBtn = document.getElementById('exportBtn');
-    const backBtn = document.getElementById('backBtn');
-    const confidenceRating = document.getElementById('confidenceRating');
-    const reviewBtn = document.getElementById('reviewBtn');
-    const clearSession = document.getElementById('clearSession');
-
-    // New DOM refs for summary area
-    const emptyState = document.getElementById('emptyState');
-    const summaryContent = document.getElementById('summaryContent');
-    const totalScore = document.getElementById('totalScore');
-    const motivationalMessage = document.getElementById('motivationalMessage');
-    const subjectBreakdown = document.getElementById('subjectBreakdown');
-    const newQuizBtn = document.getElementById('newQuizBtn');
-    const dashboardBtn2 = document.getElementById('dashboardBtn2');
-
-    // NEW: Load only current session data
-    function loadCurrentSession() {
-      const raw = sessionStorage.getItem('current_quiz_answers');
-      if (raw) {
-        try {
-          state.answers = JSON.parse(raw);
-          console.log('Loaded current session answers:', Object.keys(state.answers).length);
-
-          // Check if we have submitted answers and show summary if so
-          const hasSubmittedAnswers = Object.values(state.answers).some(answer => answer.correct !== undefined);
-          if (hasSubmittedAnswers) {
-            state.isSubmitted = true;
-            showSummary();
-          }
-        } catch (e) {
-          console.error('Error loading session data:', e);
-          state.answers = {};
-        }
-      }
-      const progressRaw = sessionStorage.getItem('current_quiz_progress');
-      if (progressRaw) {
-        state.index = parseInt(progressRaw, 10);
-      }
-    }
-
-    function displayCurrentFilters() {
-      let filterText = '';
-      if (state.filterSettings.subjects && state.filterSettings.subjects.length > 0) {
-        filterText += `Subjects: ${state.filterSettings.subjects.join(', ')} • `;
-      }
-      if (state.filterSettings.year !== 'all') {
-        filterText += `Year: ${state.filterSettings.year} • `;
-      }
-      filterText += `Mode: ${state.filterSettings.mode === 'practice' ? 'Practice' : 'Exam'}`;
-      if (state.filterSettings.endless) filterText += ' • Endless';
-
-      currentFilters.innerHTML = filterText;
-    }
-
-    function renderQuestion() {
-      if (state.pool.length === 0) {
-        promptEl.textContent = 'No active session. Choose filters and press Start.';
-        optionsEl.innerHTML = '';
-        metaLeft.textContent = '—';
-        metaRight.textContent = '';
-        return;
-      }
-
-      const qid = state.pool[state.index];
-      const q = QUESTIONS.find(x => x.id === qid);
-
-      if (!q) {
-        console.error("Question not found for ID:", qid);
-        return;
-      }
-
-      metaLeft.textContent = `${q.subject} • ${q.topic} • ${q.year}`;
-      metaRight.textContent = `Question ${state.index + 1} of ${state.pool.length}`;
-      promptEl.textContent = q.q;
-
-      optionsEl.innerHTML = '';
-      q.options.forEach((opt, i) => {
-        const el = document.createElement('div');
-        el.className = 'option';
-        el.tabIndex = 0;
-        el.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center"><span>${String.fromCharCode(65 + i)}. ${opt}</span></div>`;
-        el.addEventListener('click', () => {
-          if (state.isSubmitted) return; // Read-only if submitted
-          selectOption(q.id, i);
-        });
-        optionsEl.appendChild(el);
+      // Navigation handlers
+      document.getElementById('dashboardBtn').addEventListener('click', () => {
+        window.location.href = 'dashboard.html';
       });
 
-      // Restore selection if any
-      const prev = state.answers[q.id];
-      if (prev) {
-        const nodes = optionsEl.querySelectorAll('.option');
-        if (nodes[prev.choice]) {
-          nodes[prev.choice].classList.add('selected');
+      document.getElementById('socialBtn').addEventListener('click', () => {
+        window.location.href = 'social.html';
+      });
+
+      document.getElementById('flashcardsBtn').addEventListener('click', () => {
+        window.location.href = 'flashcards.html';
+      });
+
+      /*********************** Enhanced Question Dataset ************************/
+      let QUESTIONS = [];
+      /****************************************************************/
+
+      // App state
+      let state = {
+        pool: [], // filtered question ids
+        index: 0, // current index in pool
+        mode: 'practice',
+        endless: false,
+        answers: {}, // {questionId: {choice: i, correct: bool, time: ts, confidence: float}}
+        filterSettings: null,
+        sessionId: generateSessionId(),
+        startTime: null,
+        currentQuestionStart: null,
+        userConfidence: null,
+        isSubmitted: false,
+        quizStartTime: Date.now()
+      };
+
+      // DOM refs
+      const dashboardBtn = document.getElementById('dashboardBtn');
+      const restartBtn = document.getElementById('restartBtn');
+      const currentFilters = document.getElementById('currentFilters');
+      const promptEl = document.getElementById('prompt');
+      const optionsEl = document.getElementById('options');
+      const metaLeft = document.getElementById('metaLeft');
+      const metaRight = document.getElementById('metaRight');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const submitBtn = document.getElementById('submitBtn');
+      const progressBar = document.getElementById('progressBar');
+      const progressLabel = document.getElementById('progressLabel');
+      const answeredCount = document.getElementById('answeredCount');
+      const correctCount = document.getElementById('correctCount');
+      const accuracy = document.getElementById('accuracy');
+      const exportBtn = document.getElementById('exportBtn');
+      const backBtn = document.getElementById('backBtn');
+      const confidenceRating = document.getElementById('confidenceRating');
+      const reviewBtn = document.getElementById('reviewBtn');
+      const clearSession = document.getElementById('clearSession');
+
+      // New DOM refs for summary area
+      const emptyState = document.getElementById('emptyState');
+      const summaryContent = document.getElementById('summaryContent');
+      const totalScore = document.getElementById('totalScore');
+      const motivationalMessage = document.getElementById('motivationalMessage');
+      const subjectBreakdown = document.getElementById('subjectBreakdown');
+      const newQuizBtn = document.getElementById('newQuizBtn');
+      const dashboardBtn2 = document.getElementById('dashboardBtn2');
+
+
+
+      // NEW: Load only current session data
+      function loadCurrentSession() {
+        const raw = sessionStorage.getItem('current_quiz_answers');
+        if (raw) {
+          try {
+            state.answers = JSON.parse(raw);
+            console.log('Loaded current session answers:', Object.keys(state.answers).length);
+
+            // Check if we have submitted answers and show summary if so
+            const hasSubmittedAnswers = Object.values(state.answers).some(answer => answer.correct !== undefined);
+            if (hasSubmittedAnswers) {
+              state.isSubmitted = true;
+              showSummary();
+            }
+          } catch (e) {
+            console.error('Error loading session data:', e);
+            state.answers = {};
+          }
+        }
+        const progressRaw = sessionStorage.getItem('current_quiz_progress');
+        if (progressRaw) {
+          state.index = parseInt(progressRaw, 10);
         }
       }
 
-      // Show correctness ONLY if submitted
-      if (state.isSubmitted) {
-        showCorrectness(q.id);
-        confidenceRating.style.display = 'none'; // Hide confidence after submit
-      } else {
-        confidenceRating.style.display = 'block'; // Show confidence during quiz
+      function displayCurrentFilters() {
+        let filterText = '';
+        if (state.filterSettings.subjects && state.filterSettings.subjects.length > 0) {
+          filterText += `Subjects: ${state.filterSettings.subjects.join(', ')} • `;
+        }
+        if (state.filterSettings.year !== 'all') {
+          filterText += `Year: ${state.filterSettings.year} • `;
+        }
+        filterText += `Mode: ${state.filterSettings.mode === 'practice' ? 'Practice' : 'Exam'}`;
+        if (state.filterSettings.endless) filterText += ' • Endless';
+
+        currentFilters.innerHTML = filterText;
       }
 
-      // Button Visibility Logic
-      if (state.index === state.pool.length - 1) {
-        nextBtn.style.display = 'none';
-        submitBtn.textContent = 'Submit Quiz';
-        submitBtn.style.display = 'block';
-      } else {
-        nextBtn.style.display = 'block';
-        submitBtn.textContent = 'Submit Answer';
-        submitBtn.style.display = 'none';
+      function renderQuestion() {
+        if (state.pool.length === 0) {
+          promptEl.textContent = 'No active session. Choose filters and press Start.';
+          optionsEl.innerHTML = '';
+          metaLeft.textContent = '—';
+          metaRight.textContent = '';
+          return;
+        }
+
+
+
+        const qid = state.pool[state.index];
+        const q = QUESTIONS.find(x => x.id === qid);
+
+        if (!q) {
+          console.error("Question not found for ID:", qid);
+          return;
+        }
+
+        metaLeft.textContent = `${q.subject} • ${q.topic} • ${q.year}`;
+        metaRight.textContent = `Question ${state.index + 1} of ${state.pool.length}`;
+        promptEl.textContent = q.q;
+
+        optionsEl.innerHTML = '';
+        q.options.forEach((opt, i) => {
+          const el = document.createElement('div');
+          el.className = 'option';
+          el.tabIndex = 0;
+          el.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center"><span>${String.fromCharCode(65 + i)}. ${opt}</span></div>`;
+          el.addEventListener('click', () => {
+            if (state.isSubmitted) return; // Read-only if submitted
+            selectOption(q.id, i);
+          });
+          optionsEl.appendChild(el);
+        });
+
+        // Restore selection if any
+        const prev = state.answers[q.id];
+        if (prev) {
+          const nodes = optionsEl.querySelectorAll('.option');
+          if (nodes[prev.choice]) {
+            nodes[prev.choice].classList.add('selected');
+          }
+        }
+
+        // Show correctness ONLY if submitted
+        if (state.isSubmitted) {
+          showCorrectness(q.id);
+          confidenceRating.style.display = 'none'; // Hide confidence after submit
+        } else {
+          confidenceRating.style.display = 'block'; // Show confidence during quiz
+        }
+
+        // Button Visibility Logic
+        if (state.index === state.pool.length - 1) {
+          nextBtn.style.display = 'none';
+          submitBtn.textContent = 'Submit Quiz';
+          submitBtn.style.display = 'block';
+        } else {
+          nextBtn.style.display = 'block';
+          submitBtn.textContent = 'Submit Answer';
+          submitBtn.style.display = 'none';
+        }
+
+        // Special case: If submitted, submit button changes to just "Review" logic or hidden? 
+        // Current logic: submit button shows "Submit Quiz" on last question. 
+        // If isSubmitted, we might want to hide Submit button completely?
+        if (state.isSubmitted) {
+          submitBtn.style.display = 'none';
+          if (state.index < state.pool.length - 1) nextBtn.style.display = 'block';
+        }
+
+        // Disable prev button on first question
+        prevBtn.disabled = state.index === 0;
+        prevBtn.style.opacity = state.index === 0 ? '0.5' : '1';
+
+        // Start timing for this question
+        state.currentQuestionStart = Date.now();
       }
 
-      // Disable prev button on first question
-      prevBtn.disabled = state.index === 0;
-      prevBtn.style.opacity = state.index === 0 ? '0.5' : '1';
+      function selectOption(qid, choice) {
+        // toggle selection
+        const nodes = optionsEl.querySelectorAll('.option');
+        nodes.forEach(n => n.classList.remove('selected'));
+        nodes[choice].classList.add('selected');
 
-      // Start timing for this question
-      state.currentQuestionStart = Date.now();
-    }
+        // store temporarily
+        state.answers[qid] = state.answers[qid] || {};
+        state.answers[qid].choice = choice;
 
-    function selectOption(qid, choice) {
-      // toggle selection
-      const nodes = optionsEl.querySelectorAll('.option');
-      nodes.forEach(n => n.classList.remove('selected'));
-      nodes[choice].classList.add('selected');
-
-      // store temporarily
-      state.answers[qid] = state.answers[qid] || {};
-      state.answers[qid].choice = choice;
-
-      // Auto-save session
-      saveSession();
-      updateStats();
-    }
-
-    function saveSession() {
-      try {
-        sessionStorage.setItem('current_quiz_answers', JSON.stringify(state.answers));
-        sessionStorage.setItem('current_quiz_progress', state.index.toString());
-      } catch (e) {
-        console.error('Error saving session:', e);
-      }
-    }
-
-    function handleNext() {
-      // Save current confidence if selected
-      const qid = state.pool[state.index];
-      const confidenceInput = document.querySelector('input[name="confidence"]:checked');
-      if (confidenceInput && state.answers[qid]) {
-        state.answers[qid].confidence = parseFloat(confidenceInput.value);
-      }
-
-      // Move to next
-      if (state.index < state.pool.length - 1) {
-        state.index++;
-        renderQuestion();
-        updateProgress();
+        // Auto-save session
         saveSession();
+        updateStats();
       }
-    }
 
-    function handlePrevious() {
-      if (state.index > 0) {
-        state.index--;
-        renderQuestion();
-        updateProgress();
-        saveSession();
+      function saveSession() {
+        try {
+          sessionStorage.setItem('current_quiz_answers', JSON.stringify(state.answers));
+          sessionStorage.setItem('current_quiz_progress', state.index.toString());
+        } catch (e) {
+          console.error('Error saving session:', e);
+        }
       }
-    }
 
-    async function handleSubmitQuiz() {
-      if (state.index < state.pool.length - 1) {
-        // Submit single answer
+      function handleNext() {
+        // Save current confidence if selected
         const qid = state.pool[state.index];
         const confidenceInput = document.querySelector('input[name="confidence"]:checked');
         if (confidenceInput && state.answers[qid]) {
           state.answers[qid].confidence = parseFloat(confidenceInput.value);
         }
 
-        // Move to next question
-        handleNext();
-        return;
-      }
-
-      // Final submission
-      if (!confirm("Are you sure you want to submit your quiz? You won't be able to change answers.")) {
-        return;
-      }
-
-      // Save final question state
-      const qid = state.pool[state.index];
-      const confidenceInput = document.querySelector('input[name="confidence"]:checked');
-      if (confidenceInput && state.answers[qid]) {
-        state.answers[qid].confidence = parseFloat(confidenceInput.value);
-      }
-
-      state.isSubmitted = true;
-
-      // Calculate results and build batch payload
-      let correctCount = 0;
-      let totalAnswered = 0;
-      const attemptList = [];
-
-      for (const qId of state.pool) {
-        const answer = state.answers[qId];
-        if (answer && typeof answer.choice === 'number') {
-          totalAnswered++;
-          const q = QUESTIONS.find(x => x.id === qId);
-
-          // Check correctness
-          const isCorrect = (answer.choice === q.a);
-          answer.correct = isCorrect; // Update local state for summary
-          if (isCorrect) correctCount++;
-
-          // Build batch payload item
-          attemptList.push({
-            questionId: qId,
-            correct: isCorrect,
-            isCorrect: isCorrect,
-            choice: answer.choice,
-            confidence: answer.confidence || 0.5,
-            subject: q.subject,
-            topic: q.topic,
-            year: q.year,
-            timeSpent: answer.timeSpent || 0
-          });
+        // Move to next
+        if (state.index < state.pool.length - 1) {
+          state.index++;
+          renderQuestion();
+          updateProgress();
+          saveSession();
         }
       }
 
-      // Track full quiz attempt
-      try {
-        const score = totalAnswered ? Math.round((correctCount / totalAnswered) * 100) : 0;
-        const totalTimeSpent = Math.round((Date.now() - state.quizStartTime) / 1000); // seconds
+      function handlePrevious() {
+        if (state.index > 0) {
+          state.index--;
+          renderQuestion();
+          updateProgress();
+          saveSession();
+        }
+      }
 
-        const quizData = {
-          mode: state.mode,
-          score: score,
-          totalQuestions: state.pool.length,
-          answeredCount: totalAnswered,
-          correctCount: correctCount,
-          timeSpent: totalTimeSpent,
-          subjects: [...new Set(QUESTIONS.filter(q => state.pool.includes(q.id)).map(q => q.subject))],
-          timestamp: new Date()
-        };
-
-        if (auth.currentUser) {
-          // 1. Batch save attempts
-          if (attemptList.length > 0) {
-            await batchTrackQuestionAttempts(auth.currentUser.uid, attemptList);
+      async function handleSubmitQuiz() {
+        if (state.index < state.pool.length - 1) {
+          // Submit single answer
+          const qid = state.pool[state.index];
+          const confidenceInput = document.querySelector('input[name="confidence"]:checked');
+          if (confidenceInput && state.answers[qid]) {
+            state.answers[qid].confidence = parseFloat(confidenceInput.value);
           }
 
-          // 2. Save session summary
-          await trackQuizAttempt({ userId: auth.currentUser.uid, ...quizData });
+
+          confidenceRating.addEventListener('click', (e) => {
+            if (!e.target.classList.contains('confidence-btn')) return;
+
+            const qid = state.pool[state.index];
+            const confidence = parseFloat(e.target.dataset.level);
+
+            if (!state.answers[qid]) state.answers[qid] = {};
+            state.answers[qid].confidence = confidence;
+
+            // Visual feedback
+            document.querySelectorAll('.confidence-btn').forEach(btn => {
+              btn.classList.remove('selected');
+            });
+            e.target.classList.add('selected');
+
+            saveSession();
+          });
+
+          // Move to next question
+          handleNext();
+          return;
         }
-      } catch (err) {
-        console.error("Error tracking quiz:", err);
-        logSystemError(err, { context: 'handleSubmitQuiz', sessionId: state.sessionId }, auth.currentUser?.uid);
+
+        // Final submission
+        if (!confirm("Are you sure you want to submit your quiz? You won't be able to change answers.")) {
+          return;
+        }
+
+        // Save final question state
+        const qid = state.pool[state.index];
+        const confidenceInput = document.querySelector('input[name="confidence"]:checked');
+        if (confidenceInput && state.answers[qid]) {
+          state.answers[qid].confidence = parseFloat(confidenceInput.value);
+        }
+
+        state.isSubmitted = true;
+
+        // Calculate results and build batch payload
+        let correctCount = 0;
+        let totalAnswered = 0;
+        const attemptList = [];
+
+        for (const qId of state.pool) {
+          const answer = state.answers[qId];
+          if (answer && typeof answer.choice === 'number') {
+            totalAnswered++;
+            const q = QUESTIONS.find(x => x.id === qId);
+
+            // Check correctness
+            const isCorrect = (answer.choice === q.a);
+            answer.correct = isCorrect; // Update local state for summary
+            if (isCorrect) correctCount++;
+
+            // Build batch payload item
+            attemptList.push({
+              questionId: qId,
+              correct: isCorrect,
+              isCorrect: isCorrect,
+              choice: answer.choice,
+              confidence: answer.confidence || 0.5,
+              subject: q.subject,
+              topic: q.topic,
+              year: q.year,
+              timeSpent: answer.timeSpent || 0
+            });
+          }
+        }
+
+        // Track full quiz attempt
+        try {
+          const score = totalAnswered ? Math.round((correctCount / totalAnswered) * 100) : 0;
+          const totalTimeSpent = Math.round((Date.now() - state.quizStartTime) / 1000); // seconds
+
+          const quizData = {
+            mode: state.mode,
+            score: score,
+            totalQuestions: state.pool.length,
+            answeredCount: totalAnswered,
+            correctCount: correctCount,
+            timeSpent: totalTimeSpent,
+            subjects: [...new Set(QUESTIONS.filter(q => state.pool.includes(q.id)).map(q => q.subject))],
+            timestamp: new Date()
+          };
+
+          if (auth.currentUser) {
+            // 1. Batch save attempts
+            if (attemptList.length > 0) {
+              await batchTrackQuestionAttempts(auth.currentUser.uid, attemptList);
+            }
+
+            // 2. Save session summary
+            await trackQuizAttempt({ userId: auth.currentUser.uid, ...quizData });
+          }
+        } catch (err) {
+          console.error("Error tracking quiz:", err);
+          logSystemError(err, { context: 'handleSubmitQuiz', sessionId: state.sessionId }, auth.currentUser?.uid);
+        }
+
+        saveSession(); // Save "correct" status
+        showSummary();
+        updateStats();
       }
 
-      saveSession(); // Save "correct" status
-      showSummary();
-      updateStats();
-    }
 
 
+      function showCorrectness(qid) {
+        const q = QUESTIONS.find(x => x.id === qid);
+        const nodes = optionsEl.querySelectorAll('.option');
+        nodes.forEach((n, i) => {
+          n.classList.remove('correct', 'wrong');
+          if (i === q.a) n.classList.add('correct');
+          const rec = state.answers[qid];
+          if (rec && rec.choice === i && rec.choice !== q.a) n.classList.add('wrong');
+        });
+      }
 
-    function showCorrectness(qid) {
-      const q = QUESTIONS.find(x => x.id === qid);
-      const nodes = optionsEl.querySelectorAll('.option');
-      nodes.forEach((n, i) => {
-        n.classList.remove('correct', 'wrong');
-        if (i === q.a) n.classList.add('correct');
-        const rec = state.answers[qid];
-        if (rec && rec.choice === i && rec.choice !== q.a) n.classList.add('wrong');
-      });
-    }
+      function updateProgress() {
+        const total = state.pool.length;
+        const current = state.index + 1;
+        const done = Object.keys(state.answers).length;
 
-    function updateProgress() {
-      const total = state.pool.length;
-      const current = state.index + 1;
-      const done = Object.keys(state.answers).length;
+        progressBar.style.width = total ? Math.round((current / total) * 100) + '%' : '0%';
+        progressLabel.textContent = `${current} / ${total}`;
+        answeredCount.textContent = done;
+      }
 
-      progressBar.style.width = total ? Math.round((current / total) * 100) + '%' : '0%';
-      progressLabel.textContent = `${current} / ${total}`;
-      answeredCount.textContent = done;
-    }
+      function updateStats() {
+        const answered = Object.keys(state.answers).length;
+        const correct = Object.values(state.answers).filter(a => a.correct).length;
 
-    function updateStats() {
-      const answered = Object.keys(state.answers).length;
-      const correct = Object.values(state.answers).filter(a => a.correct).length;
+        answeredCount.textContent = answered;
+        correctCount.textContent = correct;
+        accuracy.textContent = answered ? Math.round((correct / answered) * 100) + '%' : '0%';
+      }
 
-      answeredCount.textContent = answered;
-      correctCount.textContent = correct;
-      accuracy.textContent = answered ? Math.round((correct / answered) * 100) + '%' : '0%';
-    }
+      function getMotivationalMessage(score) {
+        if (score === 100) return "🏆 Perfect Score! You're a genius!";
+        if (score >= 80) return "🌟 Amazing Job! You're doing great!";
+        if (score >= 60) return "👍 Good Effort! Keep practicing!";
+        if (score >= 40) return "📚 Nice Try! Review your mistakes and try again.";
+        return "💪 Don't Give Up! Every mistake is a learning opportunity.";
+      }
 
-    function getMotivationalMessage(score) {
-      if (score === 100) return "🏆 Perfect Score! You're a genius!";
-      if (score >= 80) return "🌟 Amazing Job! You're doing great!";
-      if (score >= 60) return "👍 Good Effort! Keep practicing!";
-      if (score >= 40) return "📚 Nice Try! Review your mistakes and try again.";
-      return "💪 Don't Give Up! Every mistake is a learning opportunity.";
-    }
+      function showSummary() {
+        // Hide empty state, show summary
+        emptyState.style.display = 'none';
+        summaryContent.style.display = 'block';
 
-    function showSummary() {
-      // Hide empty state, show summary
-      emptyState.style.display = 'none';
-      summaryContent.style.display = 'block';
+        const answeredIds = Object.keys(state.answers);
+        const totalQuestions = state.pool.length;
+        let correctCount = 0;
 
-      const answeredIds = Object.keys(state.answers);
-      const totalQuestions = state.pool.length;
-      let correctCount = 0;
+        answeredIds.forEach(id => {
+          if (state.answers[id].correct) correctCount++;
+        });
 
-      answeredIds.forEach(id => {
-        if (state.answers[id].correct) correctCount++;
-      });
+        const score = totalQuestions ? Math.round((correctCount / totalQuestions) * 100) : 0;
+        totalScore.textContent = `${score}%`;
+        motivationalMessage.textContent = getMotivationalMessage(score);
 
-      const score = totalQuestions ? Math.round((correctCount / totalQuestions) * 100) : 0;
-      totalScore.textContent = `${score}%`;
-      motivationalMessage.textContent = getMotivationalMessage(score);
+        // Build per-subject summary
+        const bySubject = {};
+        state.pool.forEach(id => {
+          const q = QUESTIONS.find(x => x.id === id);
+          const rec = state.answers[id];
+          bySubject[q.subject] = bySubject[q.subject] || { correct: 0, total: 0 };
+          bySubject[q.subject].total += 1;
+          if (rec && rec.correct) bySubject[q.subject].correct += 1;
+        });
 
-      // Build per-subject summary
-      const bySubject = {};
-      state.pool.forEach(id => {
-        const q = QUESTIONS.find(x => x.id === id);
-        const rec = state.answers[id];
-        bySubject[q.subject] = bySubject[q.subject] || { correct: 0, total: 0 };
-        bySubject[q.subject].total += 1;
-        if (rec && rec.correct) bySubject[q.subject].correct += 1;
-      });
-
-      let html = '';
-      for (const subject of Object.keys(bySubject)) {
-        const s = bySubject[subject];
-        const perc = Math.round((s.correct / s.total) * 100);
-        html += `
+        let html = '';
+        for (const subject of Object.keys(bySubject)) {
+          const s = bySubject[subject];
+          const perc = Math.round((s.correct / s.total) * 100);
+          html += `
           <div class="subject-score">
             <strong>${subject}</strong>
             <div>
@@ -613,164 +647,168 @@
             </div>
           </div>
         `;
-      }
-      subjectBreakdown.innerHTML = html;
-    }
-
-    function exportAnswers() {
-      const { jsPDF } = window.jspdf;
-      const doc = new jsPDF();
-
-      doc.setFontSize(20);
-      doc.text("BECE Quiz Results", 20, 20);
-      doc.setFontSize(12);
-      doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 20, 30);
-
-      // Add summary data
-      const answeredIds = Object.keys(state.answers);
-      const totalQuestions = state.pool.length;
-      let correctCount = 0;
-      answeredIds.forEach(id => {
-        if (state.answers[id].correct) correctCount++;
-      });
-      const score = totalQuestions ? Math.round((correctCount / totalQuestions) * 100) : 0;
-
-      doc.text(`Overall Score: ${score}%`, 20, 45);
-      doc.text(`Correct Answers: ${correctCount}/${totalQuestions}`, 20, 55);
-
-      doc.save("bece-quiz-results.pdf");
-    }
-
-    function bindEvents() {
-      prevBtn.addEventListener('click', handlePrevious);
-      nextBtn.addEventListener('click', handleNext);
-      submitBtn.addEventListener('click', handleSubmitQuiz);
-
-      reviewBtn.addEventListener('click', () => {
-        state.index = 0;
-        renderQuestion();
-      });
-
-      exportBtn.addEventListener('click', exportAnswers);
-
-      clearSession.addEventListener('click', () => {
-        if (confirm("Clear all answers and restart?")) {
-          state.answers = {};
-          state.index = 0;
-          state.isSubmitted = false;
-          saveSession();
-          renderQuestion();
-          updateStats();
-
-          // Show empty state again
-          emptyState.style.display = 'block';
-          summaryContent.style.display = 'none';
         }
-      });
+        subjectBreakdown.innerHTML = html;
+      }
 
-      backBtn.addEventListener('click', () => {
-        if (confirm("Leave quiz? Progress will be lost.")) {
+      function exportAnswers() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        doc.setFontSize(20);
+        doc.text("BECE Quiz Results", 20, 20);
+        doc.setFontSize(12);
+        doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 20, 30);
+
+        // Add summary data
+        const answeredIds = Object.keys(state.answers);
+        const totalQuestions = state.pool.length;
+        let correctCount = 0;
+        answeredIds.forEach(id => {
+          if (state.answers[id].correct) correctCount++;
+        });
+        const score = totalQuestions ? Math.round((correctCount / totalQuestions) * 100) : 0;
+
+        doc.text(`Overall Score: ${score}%`, 20, 45);
+        doc.text(`Correct Answers: ${correctCount}/${totalQuestions}`, 20, 55);
+
+        doc.save("bece-quiz-results.pdf");
+      }
+
+      function bindEvents() {
+
+
+        prevBtn.addEventListener('click', handlePrevious);
+        nextBtn.addEventListener('click', handleNext);
+        submitBtn.addEventListener('click', handleSubmitQuiz);
+
+        reviewBtn.addEventListener('click', () => {
+          state.index = 0;
+          renderQuestion();
+        });
+
+        exportBtn.addEventListener('click', exportAnswers);
+
+        clearSession.addEventListener('click', () => {
+          if (confirm("Clear all answers and restart?")) {
+            state.answers = {};
+            state.index = 0;
+            state.isSubmitted = false;
+            saveSession();
+            renderQuestion();
+            updateStats();
+
+            // Show empty state again
+            emptyState.style.display = 'block';
+            summaryContent.style.display = 'none';
+          }
+        });
+
+        backBtn.addEventListener('click', () => {
+          if (confirm("Leave quiz? Progress will be lost.")) {
+            window.location.href = 'quiz.html';
+          }
+        });
+
+        restartBtn.addEventListener('click', () => {
+          if (confirm("Restart quiz? All answers will be cleared.")) {
+            state.answers = {};
+            state.index = 0;
+            state.isSubmitted = false;
+            saveSession();
+            renderQuestion();
+            updateStats();
+
+            // Show empty state again
+            emptyState.style.display = 'block';
+            summaryContent.style.display = 'none';
+          }
+        });
+
+        newQuizBtn.addEventListener('click', () => {
           window.location.href = 'quiz.html';
-        }
-      });
+        });
 
-      restartBtn.addEventListener('click', () => {
-        if (confirm("Restart quiz? All answers will be cleared.")) {
-          state.answers = {};
-          state.index = 0;
-          state.isSubmitted = false;
-          saveSession();
-          renderQuestion();
-          updateStats();
-
-          // Show empty state again
-          emptyState.style.display = 'block';
-          summaryContent.style.display = 'none';
-        }
-      });
-
-      newQuizBtn.addEventListener('click', () => {
-        window.location.href = 'quiz.html';
-      });
-
-      dashboardBtn2.addEventListener('click', () => {
-        window.location.href = 'dashboard.html';
-      });
-    }
-
-    function generateSessionId() {
-      return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    }
-
-    // Initialize the application
-    async function init() {
-      console.log("Initializing quiz application...");
-
-      // Load filter settings from sessionStorage
-      const filterSettings = sessionStorage.getItem('quizSettings');
-      if (filterSettings) {
-        state.filterSettings = JSON.parse(filterSettings);
-
-        // Fetch questions dynamically
-        try {
-          promptEl.textContent = "Loading questions...";
-          QUESTIONS = await fetchQuestions();
-          console.log("Questions loaded:", QUESTIONS.length);
-
-          displayCurrentFilters();
-          startSession();
-        } catch (error) {
-          console.error("Failed to load questions:", error);
-          logSystemError(error, { context: 'init_fetchQuestions' }, auth.currentUser?.uid);
-          promptEl.textContent = "Error loading questions. Please try again.";
-        }
-
-      } else {
-        promptEl.textContent = "No quiz settings found. Please go back and start a quiz.";
+        dashboardBtn2.addEventListener('click', () => {
+          window.location.href = 'dashboard.html';
+        });
       }
 
-      loadCurrentSession();
-      bindEvents();
-      updateStats();
-    }
-
-    function startSession() {
-      const selectedSubjects = state.filterSettings.subjects;
-      const year = state.filterSettings.year;
-      state.mode = state.filterSettings.mode;
-      state.endless = state.filterSettings.endless;
-
-      state.pool = QUESTIONS.filter(q => {
-        if (selectedSubjects.length && !selectedSubjects.includes(q.subject)) return false;
-        if (year !== 'all' && String(q.year) !== String(year)) return false;
-        return true;
-      }).map(q => q.id);
-
-      if (state.pool.length === 0) {
-        promptEl.textContent = 'No questions match your filters.';
-        optionsEl.innerHTML = '';
-        metaLeft.textContent = '—';
-        metaRight.textContent = '';
-        return;
+      function generateSessionId() {
+        return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
       }
 
-      // If we are reloading a session, don't reset index unless invalid
-      if (state.index >= state.pool.length) state.index = 0;
+      // Initialize the application
+      async function init() {
+        console.log("Initializing quiz application...");
 
-      renderQuestion();
-      updateProgress();
-    }
 
-    // Protect route - redirect if not authenticated
-    onAuthStateChanged(auth, (user) => {
-      if (!user) {
-        window.location.href = "index.html";
-      } else {
-        console.log("Logged in:", user.email);
-        init();
+
+        // Load filter settings from sessionStorage
+        const filterSettings = sessionStorage.getItem('quizSettings');
+        if (filterSettings) {
+          state.filterSettings = JSON.parse(filterSettings);
+
+          // Fetch questions dynamically
+          try {
+            promptEl.textContent = "Loading questions...";
+            QUESTIONS = await fetchQuestions();
+            console.log("Questions loaded:", QUESTIONS.length);
+
+            displayCurrentFilters();
+            startSession();
+          } catch (error) {
+            console.error("Failed to load questions:", error);
+            logSystemError(error, { context: 'init_fetchQuestions' }, auth.currentUser?.uid);
+            promptEl.textContent = "Error loading questions. Please try again.";
+          }
+
+        } else {
+          promptEl.textContent = "No quiz settings found. Please go back and start a quiz.";
+        }
+
+        loadCurrentSession();
+        bindEvents();
+        updateStats();
       }
-    });
-  </script>
+
+      function startSession() {
+        const selectedSubjects = state.filterSettings.subjects;
+        const year = state.filterSettings.year;
+        state.mode = state.filterSettings.mode;
+        state.endless = state.filterSettings.endless;
+
+        state.pool = QUESTIONS.filter(q => {
+          if (selectedSubjects.length && !selectedSubjects.includes(q.subject)) return false;
+          if (year !== 'all' && String(q.year) !== String(year)) return false;
+          return true;
+        }).map(q => q.id);
+
+        if (state.pool.length === 0) {
+          promptEl.textContent = 'No questions match your filters.';
+          optionsEl.innerHTML = '';
+          metaLeft.textContent = '—';
+          metaRight.textContent = '';
+          return;
+        }
+
+        // If we are reloading a session, don't reset index unless invalid
+        if (state.index >= state.pool.length) state.index = 0;
+
+        renderQuestion();
+        updateProgress();
+      }
+
+      // Protect route - redirect if not authenticated
+      onAuthStateChanged(auth, (user) => {
+        if (!user) {
+          window.location.href = "index.html";
+        } else {
+          console.log("Logged in:", user.email);
+          init();
+        }
+      });
+    </script>
 </body>
 
 </html>

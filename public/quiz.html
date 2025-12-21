@@ -74,6 +74,20 @@
 
     // State
     let allQuestions = [];
+    let activeVariant = 'A'; // Default to A
+    let selectedSubjects = new Set(); // Using Set for easier toggling
+
+    // Subject Icons Mapping
+    const subjectIcons = {
+      'Mathematics': '📐',
+      'English Language': '📖',
+      'Integrated Science': '🔬',
+      'Social Studies': '🌍',
+      'ICT': '💻',
+      'RME': '🙏',
+      'French': '🇫🇷',
+      'BDT': '🔨'
+    };
 
     // Initialize
     document.addEventListener('DOMContentLoaded', async () => {
@@ -83,6 +97,9 @@
           window.location.href = 'index.html';
         }
       });
+
+      // A/B Test Assignment
+      assignABVariant();
 
       // Load Data
       try {
@@ -96,34 +113,88 @@
       }
     });
 
+    function assignABVariant() {
+      // Check if user has already been assigned
+      const storedVariant = localStorage.getItem('quiz_ui_variant');
+
+      if (storedVariant) {
+        activeVariant = storedVariant;
+        console.log(`User retrieved active variant: ${activeVariant}`);
+      } else {
+        // Randomly assign A (Chips) or B (Carousel)
+        activeVariant = Math.random() < 0.5 ? 'chips' : 'carousel';
+        localStorage.setItem('quiz_ui_variant', activeVariant);
+        console.log(`User assigned new variant: ${activeVariant}`);
+      }
+    }
+
     function populateFilters() {
       // Extract unique subjects and years
       const subjects = [...new Set(allQuestions.map(q => q.subject))].sort();
       const years = [...new Set(allQuestions.map(q => q.year))].sort((a, b) => b - a);
 
-      // Populate Subjects
-      subjectsList.innerHTML = subjects.map(subject => `
-        <label class="subject-chip">
-          <input type="checkbox" value="${subject}" checked>
-          <span>${subject}</span>
-        </label>
-      `).join('');
+      // Default: NO subjects selected (User must select)
+      selectedSubjects.clear();
 
-      // Populate Years
+      // Render Subjects based on Variant
+      if (activeVariant === 'carousel') {
+        renderCarousel(subjects);
+      } else {
+        renderChips(subjects);
+      }
+
+      // Populate Years (Common)
       yearSelect.innerHTML = '<option value="all">All years</option>' +
         years.map(year => `<option value="${year}">${year}</option>`).join('');
     }
 
+    function renderChips(subjects) {
+      subjectsList.innerHTML = `
+        <div class="subject-chip-grid">
+          ${subjects.map(subject => `
+            <div class="subject-chip" data-subject="${subject}" onclick="toggleSubject('${subject}', this)">
+              <span>${subjectIcons[subject] || '📚'}</span>
+              <span>${subject}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function renderCarousel(subjects) {
+      subjectsList.innerHTML = `
+        <div class="subject-carousel-container">
+          <div class="subject-carousel">
+             ${subjects.map(subject => `
+              <div class="carousel-card" data-subject="${subject}" onclick="toggleSubject('${subject}', this)">
+                <div class="carousel-icon">${subjectIcons[subject] || '📚'}</div>
+                <div class="carousel-title">${subject}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    // Expose to window for onclick
+    window.toggleSubject = function (subject, element) {
+      if (selectedSubjects.has(subject)) {
+        selectedSubjects.delete(subject);
+        element.classList.remove('selected');
+      } else {
+        selectedSubjects.add(subject);
+        element.classList.add('selected');
+      }
+    };
+
     // Start Quiz
     startBtn.addEventListener('click', () => {
-      const selectedSubjects = Array.from(document.querySelectorAll('#subjectsList input:checked'))
-        .map(cb => cb.value);
-
+      const subjectsArray = Array.from(selectedSubjects);
       const selectedYear = yearSelect.value;
       const mode = document.getElementById('modeSelect').value;
       const endless = document.getElementById('endlessMode').checked;
 
-      if (selectedSubjects.length === 0) {
+      if (subjectsArray.length === 0) {
         alert('Please select at least one subject');
         return;
       }
@@ -131,10 +202,11 @@
       // Save settings
       sessionStorage.removeItem('current_quiz_answers'); // Clear old session
       sessionStorage.setItem('quizSettings', JSON.stringify({
-        subjects: selectedSubjects,
+        subjects: subjectsArray,
         year: selectedYear,
         mode: mode,
-        endless: endless
+        endless: endless,
+        uiVariant: activeVariant // Track which UI they used
       }));
 
       window.location.href = 'qna.html';
@@ -145,7 +217,7 @@
     dashboardBtn.addEventListener('click', () => window.location.href = 'dashboard.html');
     flashcardsBtn.addEventListener('click', () => window.location.href = 'flashcards.html');
     socialBtn.addEventListener('click', () => window.location.href = 'social.html');
-    // socialBtn and flashcardsBtn placeholders
+
   </script>
 </body>
 
