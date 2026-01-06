@@ -37,59 +37,73 @@ body {
 /* --- Layout Grid --- */
 .dashboard-container {
     display: grid;
-    grid-template-columns: var(--sidebar-width) 1fr 320px;
+    grid-template-columns: 280px 1fr 320px;
     width: 100%;
     height: 100vh;
+    background: #f3f4f6;
+    /* Light gray background for contrast */
 }
 
-/* --- Left Sidebar --- */
+/* --- Left Sidebar (Floating Glass) --- */
 .sidebar {
-    background-color: var(--bg);
-    border-right: 1px solid var(--border);
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 24px 0;
-    gap: 24px;
+    padding: 24px 16px;
+    gap: 12px;
     z-index: 10;
+
+    /* Floating Styles */
+    margin: 16px;
+    margin-right: 0;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    height: calc(100vh - 32px);
+}
+
+.brand {
+    padding: 0 12px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .brand-icon {
-    font-weight: 800;
-    font-size: 24px;
-    color: var(--accent);
-    margin-bottom: 16px;
-    background: var(--glass);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
+    /* ... existing styles if any ... */
 }
 
 .nav-item {
     color: var(--muted);
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease;
-    padding: 12px;
+    padding: 12px 16px;
     border-radius: 12px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    /* Changed from center */
+    gap: 12px;
 }
 
 .nav-item:hover {
     color: var(--accent);
-    background: var(--glass);
+    background: rgba(37, 99, 235, 0.05);
+    transform: translateX(4px);
 }
 
 .nav-item.active {
     color: var(--accent);
-    background: var(--glass);
-    box-shadow: 0 0 0 1px var(--border);
+    background: rgba(37, 99, 235, 0.1);
+    font-weight: 600;
 }
+
+/* Hide span on very small screens if needed, but we are designing for desktop mainly here */
 
 /* --- Main Content --- */
 .main-content {
@@ -598,4 +612,14 @@ body {
     .search-bar {
         width: 100%;
     }
+}
+
+/* Utility to hide scrollbar but keep functionality */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }

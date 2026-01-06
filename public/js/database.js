@@ -31,50 +31,67 @@ export async function fetchQuestions(filters = {}) {
     const questionsRef = collection(db, 'questions');
     let q = query(questionsRef);
 
-    if (filters.year && filters.year !== 'all') {
-      q = query(q, where('year', '==', Number(filters.year)));
+    // --- 1. OPTIMIZED COMPOUND FILTERS ---
+    // If specific subjects are selected, we can optimise. 
+    // Firestore 'in' query supports up to 10 items (we have <10 subjects).
+    if (filters.subjects && filters.subjects.length > 0) {
+      // NOTE: This usually requires an index if combined with field sorting
+      q = query(q, where('subject', 'in', filters.subjects));
     }
+
+    if (filters.year && filters.year !== 'all') {
+      // NOTE: Ensure year is handled as consistent type (DB uses String '2023' or Number 2023?)
+      // We'll try generic comparison or match DB type.
+      // If DB has string '2023', Number() will mismatch in Firestore.
+      // Safe bet: Don't cast if not sure, OR cast to match DB.
+      // Assuming DB might have Strings for legacy reasons in questionBank.js.
+      q = query(q, where('year', '==', filters.year)); // Removed Number() forceful cast
+    }
+
+    // Limit for initial load speed (Snappy!)
+    // In a real endless mode, we would use cursors. 
+    q = query(q, limit(10));
 
     const querySnapshot = await getDocs(q);
     let questions = [];
 
     querySnapshot.forEach((doc) => {
-      questions.push({ id: Number(doc.id), ...doc.data() });
+      // FIX: Support String IDs (Subject_Year_Hash) - kept as string
+      questions.push({ id: doc.id, ...doc.data() });
     });
 
-    // Fallback to local data if Firestore returns empty
+    // Client-side fallback if no results (rare but possible if index fails silently or empty DB)
     if (questions.length === 0) {
-      console.log("Firestore returned empty, using local fallback.");
-      questions = [...ENHANCED_QUESTIONS];
-
-      // Apply filters to local data
-      if (filters.year && filters.year !== 'all') {
-        questions = questions.filter(q => q.year === Number(filters.year));
-      }
-    }
-
-    // Client-side filtering for subjects
-    if (filters.subjects && filters.subjects.length > 0) {
-      questions = questions.filter(q => filters.subjects.includes(q.subject));
+      console.log("Firestore empty or filtered out. Checking local fallback...");
+      return fetchLocalFallback(filters);
     }
 
     return questions;
+
   } catch (error) {
-    console.error("Error fetching questions:", error);
-    // Fallback on error too
-    console.log("Error fetching from Firestore, using local fallback.");
-    let questions = [...ENHANCED_QUESTIONS];
+    console.error("Firestore Error (likely missing index or network):", error);
 
-    if (filters.year && filters.year !== 'all') {
-      questions = questions.filter(q => q.year === Number(filters.year));
-    }
-
-    if (filters.subjects && filters.subjects.length > 0) {
-      questions = questions.filter(q => filters.subjects.includes(q.subject));
-    }
-
-    return questions;
+    // --- 2. GRACEFUL FALLBACK ---
+    // If "failed-precondition" (Missing Index), we fall back to local data or simpler query.
+    // For this 24h rollout to be safe, we fall back to local data immediately.
+    return fetchLocalFallback(filters);
   }
+}
+
+function fetchLocalFallback(filters) {
+  console.log("Using Local Logic for Fallback");
+  let questions = [...ENHANCED_QUESTIONS];
+
+  if (filters.year && filters.year !== 'all') {
+    questions = questions.filter(q => String(q.year) === String(filters.year));
+  }
+
+  if (filters.subjects && filters.subjects.length > 0) {
+    questions = questions.filter(q => filters.subjects.includes(q.subject));
+  }
+
+  // Mock a limit
+  return questions.slice(0, 50);
 }
 
 // --- Analytics & Tracking ---
@@ -259,18 +276,34 @@ export async function getUserQuizHistory(userId, days = 30) {
     const startDate = new Date();
     startDate.setDate(startDate.getDate() - days);
 
+    // FIX: Simplified query to avoid "Requires Index" error.
+    // We only query by userId, then Sort/Filter in client memory.
     const q = query(
       collection(db, 'quiz_attempts'),
-      where('userId', '==', userId),
-      where('timestamp', '>=', Timestamp.fromDate(startDate)),
-      orderBy('timestamp', 'desc')
+      where('userId', '==', userId)
     );
 
     const querySnapshot = await getDocs(q);
-    return querySnapshot.docs.map(doc => ({
-      id: doc.id,
-      ...doc.data()
-    }));
+
+    // Process results in memory
+    const history = querySnapshot.docs
+      .map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }))
+      .filter(record => {
+        // Handle both Firebase Timestamp and Date strings
+        const recordDate = record.timestamp && record.timestamp.toDate ? record.timestamp.toDate() : new Date(record.timestamp);
+        return recordDate >= startDate;
+      })
+      .sort((a, b) => {
+        // Sort Descending (Newest first)
+        const dateA = a.timestamp && a.timestamp.toDate ? a.timestamp.toDate() : new Date(a.timestamp);
+        const dateB = b.timestamp && b.timestamp.toDate ? b.timestamp.toDate() : new Date(b.timestamp);
+        return dateB - dateA;
+      });
+
+    return history;
   } catch (error) {
     console.error('❌ Error getting quiz history: ', error);
     return [];

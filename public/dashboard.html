@@ -14,21 +14,6 @@
 
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="header-content">
-      <div class="brand">
-        <div class="logo">BE</div>
-        <div>
-          <h1>BECE Prep Analytics</h1>
-          <p>Track your progress and improve your performance</p>
-        </div>
-      </div>
-      <div class="header-actions">
-        <button id="backToQuiz" class="btn btn-secondary">📝 Take Quiz</button>
-        <button id="logoutBtn" class="btn btn-ghost">Logout</button>
-      </div>
-    </div>
-  </header>
 
   <div class="dashboard-container">
     <!-- 1. Left Sidebar -->
@@ -74,18 +59,18 @@
           <!-- Hidden logic element usually, but mapped here visually -->
         </div>
 
-        <!-- Orange Card: Progress/Readiness -->
+        <!-- Orange Card: BECE Readiness -->
         <div class="metric-card orange">
           <div style="display:flex; justify-content:space-between;">
-            <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
-            <div class="card-title">Course Progress</div>
+            <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="card-title">BECE Readiness</div>
           </div>
           <div style="display:flex; align-items:center; gap: 15px;">
             <div>
-              <div class="card-value" id="avgAccuracy">0%</div>
-              <div class="card-trend trend-up" id="accuracyTrend">↗ +5%</div>
+              <div class="card-value" id="mainReadinessValue">0%</div>
+              <div class="card-trend" id="readinessTrend">Calculating...</div>
             </div>
-            <!-- Embedded Arc visual for readiness -->
+            <!-- Visual Ring -->
             <div style="position:relative; width: 60px; height: 60px;">
               <svg class="progress-ring" width="60" height="60">
                 <circle stroke="rgba(0,0,0,0.1)" stroke-width="4" fill="transparent" r="26" cx="30" cy="30" />
@@ -94,10 +79,9 @@
                   style="transition: stroke-dashoffset 1s; transform: rotate(-90deg); transform-origin: 50% 50%;" />
               </svg>
               <div
-                style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:10px; font-weight:bold;"
-                id="readinessValue">0</div>
+                style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:12px; font-weight:bold;"
+                id="miniReadinessValue">0</div>
             </div>
-            <div id="readinessMessage" style="display:none"></div> <!-- Hidden but preserved for logic -->
           </div>
         </div>
 
@@ -264,40 +248,52 @@
     }
 
     function updateReadinessScore(score) {
-      const scoreEl = document.getElementById('readinessValue');
-      const messageEl = document.getElementById('readinessMessage');
+      const mainValueEl = document.getElementById('mainReadinessValue');
+      const miniValueEl = document.getElementById('miniReadinessValue');
+      const trendEl = document.getElementById('readinessTrend');
       const circle = document.getElementById('progressCircle');
 
-      // Animate counter
-      animateCounter(scoreEl, 0, score, 2000);
+      // Animate Main Counter
+      animateCounter(mainValueEl, 0, score, 2000);
 
-      // Update circle
-      const circumference = 2 * Math.PI * 85;
-      const offset = circumference - (score / 100) * circumference;
+      // Update Mini Value
+      miniValueEl.textContent = score; // No % needed inside small circle if tight
+
+      // Update Circle Ring
+      const circumference = 2 * Math.PI * 85; // This seems large for r=26? 
+      // r=26 -> circumference = 2 * PI * 26 ≈ 163. Updated to match SVG.
+      const realCircum = 163;
+      const offset = realCircum - (score / 100) * realCircum;
+      circle.style.strokeDasharray = realCircum;
       circle.style.strokeDashoffset = offset;
 
-      // Update message
+      // Update Trend / Message
       if (score >= 80) {
-        messageEl.textContent = "🎉 Excellent! You're well prepared for the BECE!";
+        trendEl.textContent = "🎉 Exam Ready!";
+        trendEl.className = "card-trend trend-up";
         circle.style.stroke = '#10B981';
       } else if (score >= 60) {
-        messageEl.textContent = "👍 Good progress! Keep practicing to improve.";
+        trendEl.textContent = "👍 On Track";
+        trendEl.className = "card-trend trend-up";
         circle.style.stroke = '#06B6D4';
       } else {
-        messageEl.textContent = "💪 Keep going! More practice will boost your readiness.";
+        trendEl.textContent = "💪 Needs Work";
+        trendEl.className = "card-trend trend-down";
         circle.style.stroke = '#F59E0B';
       }
     }
 
     function updateQuickStats(progress) {
       document.getElementById('totalQuestions').textContent = progress.totalQuestions;
-      document.getElementById('avgAccuracy').textContent = progress.accuracy + '%';
+      // Removed avgAccuracy from Quick Stats as it's now replaced by Readiness
+      // document.getElementById('avgAccuracy').textContent = progress.accuracy + '%';
+
       document.getElementById('studyStreak').textContent = (progress.consistencyScore > 70 ? '7+' : '3') + ' days';
       document.getElementById('studyTime').textContent = (progress.totalStudyTime / 60).toFixed(1) + ' hrs';
 
       // Add trend indicators
       document.getElementById('questionsTrend').textContent = '↗ +12 this week';
-      document.getElementById('accuracyTrend').textContent = progress.accuracy > 70 ? '↗ +5%' : '→ Stable';
+      // document.getElementById('accuracyTrend').textContent = progress.accuracy > 70 ? '↗ +5%' : '→ Stable';
       document.getElementById('streakTrend').textContent = '🔥 Keep it up!';
       document.getElementById('timeTrend').textContent = '↗ +2.3 hrs';
     }
@@ -469,25 +465,34 @@
     }
 
     function showNoDataState() {
-      document.querySelector('.container').innerHTML = `
-        <div class="no-data-state">
-          <div class="no-data-icon">📊</div>
-          <h2>No Data Yet</h2>
-          <p>Start taking quizzes to see your analytics dashboard</p>
-          <button class="btn btn-primary" onclick="window.location.href='quiz.html'">Take Your First Quiz</button>
-        </div>
-      `;
+      // FIX: .container does not exist, use .main-content to preserve sidebar or .dashboard-container to wipe all
+      const container = document.querySelector('.main-content') || document.querySelector('.dashboard-container');
+
+      if (container) {
+        container.innerHTML = `
+          <div class="no-data-state" style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; text-align:center; padding: 2rem;">
+            <div class="no-data-icon" style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+            <h2>No Data Available Yet</h2>
+            <p style="color: grey; margin-bottom: 2rem;">Taking quizzes requires an internet connection to sync your specialized analytics.</p>
+            <button class="btn btn-primary" onclick="window.location.href='quiz.html'">Take a Quiz Now</button>
+          </div>
+        `;
+      }
     }
 
     function showErrorState() {
-      document.querySelector('.container').innerHTML = `
-        <div class="no-data-state">
-          <div class="no-data-icon">⚠️</div>
-          <h2>Unable to Load Data</h2>
-          <p>Please try refreshing the page</p>
-          <button class="btn btn-primary" onclick="location.reload()">Refresh</button>
-        </div>
-      `;
+      const container = document.querySelector('.main-content') || document.querySelector('.dashboard-container');
+
+      if (container) {
+        container.innerHTML = `
+          <div class="no-data-state" style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; text-align:center; padding: 2rem;">
+            <div class="no-data-icon" style="font-size: 3rem; margin-bottom: 1rem;">⚠️</div>
+            <h2>Connection Issue</h2>
+            <p style="color: grey; margin-bottom: 2rem;">We couldn't load your innovative analytics. Please check your internet.</p>
+            <button class="btn btn-primary" onclick="location.reload()">Retry Connection</button>
+          </div>
+        `;
+      }
     }
   </script>
 </body>

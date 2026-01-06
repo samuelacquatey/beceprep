@@ -14,8 +14,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const db = initializeFirestore(app, {
-  experimentalForceLongPolling: true
-}, 'bece-prod-db');
+const db = initializeFirestore(app, {}, '(default)');
 
 export { app, auth, db };

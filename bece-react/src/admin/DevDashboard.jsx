@@ -15,7 +15,7 @@ import {
     Tooltip,
     Legend
 } from 'chart.js';
-import { ENHANCED_QUESTIONS } from '../data/questionBank';
+import { useQuestions } from '../hooks/useQuestions';
 import { Link } from 'react-router-dom';
 
 // Register ChartJS components
@@ -30,6 +30,7 @@ ChartJS.register(
 );
 
 export default function DevDashboard() {
+    const { questions } = useQuestions();
     const [stats, setStats] = useState({
         totalQuestions: 0,
         subjectBreakdown: {},
@@ -38,9 +39,11 @@ export default function DevDashboard() {
     });
 
     useEffect(() => {
+        if (!questions.length) return;
+
         // 1. Calculate Question Stats
-        const total = ENHANCED_QUESTIONS.length;
-        const subjects = ENHANCED_QUESTIONS.reduce((acc, q) => {
+        const total = questions.length;
+        const subjects = questions.reduce((acc, q) => {
             const sub = q.subject || 'UNKNOWN';
             acc[sub] = (acc[sub] || 0) + 1;
             return acc;
@@ -59,7 +62,7 @@ export default function DevDashboard() {
             activeUsers: 42, // Mock current active
             dailyActive: mockDaily
         });
-    }, []);
+    }, [questions]);
 
     const chartData = {
         labels: stats.dailyActive.map(d => d.day),
@@ -111,7 +114,7 @@ export default function DevDashboard() {
                         {stats.totalQuestions.toLocaleString()}
                     </div>
                     <div style={{ marginTop: '0.5rem' }}>
-                        <Link to="/dev/questions" style={{ color: '#4F46E5', fontSize: '0.9rem', textDecoration: 'none' }}>
+                        <Link to="/admin/questions" style={{ color: '#4F46E5', fontSize: '0.9rem', textDecoration: 'none' }}>
                             View Question Bank &rarr;
                         </Link>
                     </div>

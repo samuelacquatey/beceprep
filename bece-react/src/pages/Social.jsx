@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSocial } from '../contexts/SocialContext';
 import { Users, Trophy, Target, Star, MessageCircle, HelpCircle, ArrowLeft } from 'lucide-react';
 import '../assets/styles/dashboard.css';
+import '../assets/styles/social.css';
 
 export default function Social() {
     const navigate = useNavigate();
@@ -50,15 +51,13 @@ export default function Social() {
                     </div>
                     <div className="leaderboard">
                         {schools.map(school => (
-                            <div key={school.id} className={`leaderboard-item ${school.name === userProfile.school ? 'highlight' : ''}`} style={{
-                                display: 'flex', alignItems: 'center', padding: '12px', borderBottom: '1px solid var(--border)', gap: '15px'
-                            }}>
-                                <div style={{ fontWeight: 'bold', color: 'var(--accent)', minWidth: '30px' }}>#{school.rank}</div>
-                                <div style={{ flex: 1 }}>
-                                    <div style={{ fontWeight: '600' }}>{school.name}</div>
-                                    <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{school.students} students</div>
+                            <div key={school.id} className={`school-item ${school.name === userProfile.school ? 'my-school' : ''}`}> {/* Use class from CSS */}
+                                <div className="school-rank">#{school.rank}</div>
+                                <div className="school-info">
+                                    <div className="school-name">{school.name}</div>
+                                    <div className="school-stats">{school.students} students</div>
                                 </div>
-                                <div style={{ fontWeight: 'bold', color: 'var(--primary)' }}>{school.avgScore}%</div>
+                                <div className="school-score">{school.avgScore}%</div>
                             </div>
                         ))}
                     </div>
@@ -72,37 +71,33 @@ export default function Social() {
                     </div>
 
                     {challenge && (
-                        <div style={{ textAlign: 'center', padding: '10px' }}>
+                        <div className="challenge-content">
                             <h3 style={{ margin: '10px 0' }}>{challenge.title}</h3>
                             <p style={{ color: 'var(--text-muted)', marginBottom: '15px' }}>{challenge.description}</p>
 
-                            <div style={{ margin: '15px 0' }}>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', marginBottom: '5px' }}>
-                                    <span>Progress</span>
-                                    <span>{challenge.progress}/{challenge.target}</span>
+                            <div className="challenge-progress">
+                                <div className="progress-bar">
+                                    <div className="progress-fill" style={{ width: `${(challenge.progress / challenge.target) * 100}%` }}></div>
                                 </div>
-                                <div style={{ height: '8px', background: 'var(--surface-hover)', borderRadius: '4px', overflow: 'hidden' }}>
-                                    <div style={{ height: '100%', width: `${(challenge.progress / challenge.target) * 100}%`, background: 'var(--accent)' }}></div>
-                                </div>
-                                <div style={{ marginTop: '5px', fontSize: '11px', color: 'var(--text-muted)' }}>Ends {challenge.endDate}</div>
+                                <div className="progress-text">{challenge.progress}/{challenge.target} • Ends {challenge.endDate}</div>
                             </div>
 
-                            <div style={{ background: 'rgba(16, 185, 129, 0.1)', padding: '10px', borderRadius: '8px', color: '#10B981', fontWeight: '500' }}>
+                            <div className="challenge-reward">
                                 🏆 Reward: {challenge.reward}
                             </div>
 
-                            <div className="stats-row" style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px', borderTop: '1px solid var(--border)', paddingTop: '15px' }}>
-                                <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>Your Points</div>
-                                    <div style={{ fontWeight: 'bold', fontSize: '18px' }}>{userProfile.weeklyPoints}</div>
+                            <div className="my-stats">
+                                <div className="stat-item">
+                                    <span>Your Points</span>
+                                    <strong>{userProfile.weeklyPoints}</strong>
                                 </div>
-                                <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>Questions</div>
-                                    <div style={{ fontWeight: 'bold', fontSize: '18px' }}>{userProfile.weeklyQuestions}</div>
+                                <div className="stat-item">
+                                    <span>Questions</span>
+                                    <strong>{userProfile.weeklyQuestions}</strong>
                                 </div>
-                                <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>Rank</div>
-                                    <div style={{ fontWeight: 'bold', fontSize: '18px' }}>#{userProfile.rank}</div>
+                                <div className="stat-item">
+                                    <span>Current Rank</span>
+                                    <strong>#{userProfile.rank}</strong>
                                 </div>
                             </div>
                         </div>
@@ -121,15 +116,15 @@ export default function Social() {
 
                     <div className="groups-list">
                         {socialData.studyGroups.length === 0 ? (
-                            <div className="no-data">No groups yet. Create one!</div>
+                            <div className="empty-state">No groups yet. Create one!</div>
                         ) : (
                             socialData.studyGroups.map(group => (
-                                <div key={group.id} style={{ border: '1px solid var(--border)', borderRadius: '8px', padding: '15px', marginBottom: '10px' }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                                        <h4 style={{ margin: 0 }}>{group.name}</h4>
-                                        <span className="chip" style={{ fontSize: '10px', padding: '2px 8px' }}>{group.subject}</span>
+                                <div key={group.id} className="group-card">
+                                    <div className="group-header">
+                                        <h4>{group.name}</h4>
+                                        <span className="group-subject">{group.subject}</span>
                                     </div>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: 'var(--text-muted)', marginBottom: '10px' }}>
+                                    <div className="group-details">
                                         <span>👥 {group.members} members</span>
                                         <span>{group.activity}</span>
                                     </div>
@@ -149,17 +144,17 @@ export default function Social() {
 
                     <div className="help-list">
                         {socialData.helpRequests.filter(r => !r.helped).length === 0 ? (
-                            <div className="no-data">No active help requests.</div>
+                            <div className="empty-state">No active help requests.</div>
                         ) : (
                             socialData.helpRequests.filter(r => !r.helped).map(req => (
-                                <div key={req.id} style={{ border: '1px solid var(--border)', borderRadius: '8px', padding: '15px', marginBottom: '10px' }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                                        <span style={{ fontWeight: '600' }}>{req.student}</span>
-                                        <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{req.timestamp}</span>
+                                <div key={req.id} className="help-request">
+                                    <div className="request-header">
+                                        <span className="student-name">{req.student}</span>
+                                        <span className="request-time">{req.timestamp}</span>
                                     </div>
-                                    <div style={{ fontSize: '12px', color: 'var(--accent)', marginBottom: '5px' }}>{req.subject} • {req.topic}</div>
-                                    <p style={{ fontSize: '14px', fontStyle: 'italic', color: 'var(--text-muted)', margin: '0 0 10px 0' }}>"{req.question}"</p>
-                                    <button className="btn btn-primary" style={{ width: '100%', padding: '8px' }} onClick={() => helpStudent(req.id)}>Offer Help (+50pts)</button>
+                                    <div className="request-subject">{req.subject} • {req.topic}</div>
+                                    <p className="request-question">"{req.question}"</p>
+                                    <button className="btn btn-primary help-btn" onClick={() => helpStudent(req.id)}>Offer Help (+50pts)</button>
                                 </div>
                             ))
                         )}
@@ -174,19 +169,21 @@ export default function Social() {
                     </div>
 
                     <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
-                        <div style={{ flex: 1, background: 'var(--glass)', padding: '20px', borderRadius: '12px', textAlign: 'center' }}>
-                            <div style={{ fontSize: '14px', color: 'var(--text-muted)' }}>Total Points</div>
-                            <div style={{ fontSize: '32px', fontWeight: 'bold', color: 'var(--accent)' }}>{userProfile.points}</div>
+                        <div className="points-balance" style={{ flex: 1, flexDirection: 'column' }}>
+                            <div className="points-display">
+                                <span>Total Points</span>
+                                <strong>{userProfile.points}</strong>
+                            </div>
                             <button className="btn btn-ghost" style={{ marginTop: '10px' }}>View Rewards Shop</button>
                         </div>
 
                         <div style={{ flex: 2 }}>
                             <h4 style={{ marginBottom: '10px' }}>Recent Activity</h4>
                             {userProfile.recentActivity.map((act, i) => (
-                                <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0', borderBottom: '1px solid var(--border)' }}>
+                                <div key={i} className="activity-item">
                                     <span>{act.action}</span>
-                                    <span style={{ color: '#10B981', fontWeight: '600' }}>+{act.points} pts</span>
-                                    <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{act.timestamp}</span>
+                                    <span className="activity-points">+{act.points} pts</span>
+                                    <span className="activity-time">{act.timestamp}</span>
                                 </div>
                             ))}
                         </div>
@@ -197,11 +194,8 @@ export default function Social() {
 
             {/* Create Group Modal */}
             {showCreateModal && (
-                <div className="modal-overlay" style={{
-                    position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000
-                }}>
-                    <div className="modal-content" style={{ background: 'white', padding: '24px', borderRadius: '12px', width: '90%', maxWidth: '500px' }}>
+                <div className="modal-overlay">
+                    <div className="modal-content">
                         <h3>Create Study Group</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginTop: '15px' }}>
                             <div>
@@ -230,14 +224,3 @@ export default function Social() {
         </div>
     );
 }
-
-// Inline CSS for the simple input fields since they aren't global yet
-const styles = `
-.input-field {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-family: inherit;
-}
-`;

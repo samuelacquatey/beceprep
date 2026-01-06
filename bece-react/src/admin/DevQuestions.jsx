@@ -1,9 +1,10 @@
 
 import React, { useState, useMemo } from 'react';
-import { ENHANCED_QUESTIONS } from '../data/questionBank';
+import { useQuestions } from '../hooks/useQuestions';
 import { Search, Filter, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function DevQuestions() {
+    const { questions: ENHANCED_QUESTIONS } = useQuestions();
     const [searchTerm, setSearchTerm] = useState('');
     const [subjectFilter, setSubjectFilter] = useState('ALL');
     const [page, setPage] = useState(1);
@@ -11,9 +12,10 @@ export default function DevQuestions() {
 
     // Get unique subjects
     const subjects = useMemo(() => {
+        if (!ENHANCED_QUESTIONS.length) return ['ALL'];
         const subs = new Set(ENHANCED_QUESTIONS.map(q => q.subject));
         return ['ALL', ...Array.from(subs)];
-    }, []);
+    }, [ENHANCED_QUESTIONS]);
 
     // Filter questions
     const filteredQuestions = useMemo(() => {
@@ -23,7 +25,7 @@ export default function DevQuestions() {
             const matchesSubject = subjectFilter === 'ALL' || q.subject === subjectFilter;
             return matchesSearch && matchesSubject;
         });
-    }, [searchTerm, subjectFilter]);
+    }, [searchTerm, subjectFilter, ENHANCED_QUESTIONS]);
 
     // Pagination
     const totalPages = Math.ceil(filteredQuestions.length / itemsPerPage);

@@ -2,8 +2,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { LayoutDashboard, BookOpen, PenTool, Users, Hammer } from 'lucide-react';
+import { useAuth } from '../../contexts/AuthContext';
 
 export default function BottomNav() {
+    const { isAdmin } = useAuth();
     return (
         <nav className="bottom-nav">
             <NavLink to="/dashboard" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
@@ -16,13 +18,15 @@ export default function BottomNav() {
                 <span className="nav-label">Quiz</span>
             </NavLink>
 
-            <NavLink to="/dev" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-                <div style={{ position: 'relative' }}>
-                    <Hammer size={24} />
-                    {/* <span style={{position:'absolute', top:-5, right:-5, width:8, height:8, background:'red', borderRadius:'50%'}}></span> */}
-                </div>
-                <span className="nav-label">Dev</span>
-            </NavLink>
+            {isAdmin && (
+                <NavLink to="/admin" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+                    <div style={{ position: 'relative' }}>
+                        <Hammer size={24} />
+                        {/* <span style={{position:'absolute', top:-5, right:-5, width:8, height:8, background:'red', borderRadius:'50%'}}></span> */}
+                    </div>
+                    <span className="nav-label">Admin</span>
+                </NavLink>
+            )}
 
             <NavLink to="/flashcards" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
                 <BookOpen size={24} />

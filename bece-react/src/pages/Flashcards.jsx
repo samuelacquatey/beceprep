@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useFlashcards } from '../contexts/FlashcardContext';
 import { BookOpen, Layers, PlusCircle, RotateCcw } from 'lucide-react';
 import '../assets/styles/dashboard.css';
+import '../assets/styles/flashcards.css';
 
 export default function Flashcards() {
     const { cards, loading, createCard, rateCard, getStats } = useFlashcards();
@@ -105,46 +106,34 @@ export default function Flashcards() {
                     ) : (
                         // Flashcard Interface
                         <div className="flashcard-study-area">
-                            <div
-                                className={`flashcard-3d ${isFlipped ? 'flipped' : ''}`}
-                                onClick={() => setIsFlipped(!isFlipped)}
-                                style={{
-                                    height: '300px', cursor: 'pointer', perspective: '1000px', position: 'relative',
-                                    transformStyle: 'preserve-3d', transition: 'transform 0.6s'
-                                }}
-                            >
-                                {/* Front */}
-                                <div className="flashcard-side front" style={{
-                                    position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden',
-                                    background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '16px',
-                                    display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '20px',
-                                    transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' // Fix: Only rotate if flipped logic
-                                }}>
-                                    <div className="chip" style={{ marginBottom: '20px' }}>{currentCard.subject}</div>
-                                    <h2 style={{ textAlign: 'center' }}>{currentCard.question}</h2>
-                                    {!isFlipped && currentCard.hint && (
-                                        <div style={{ marginTop: '20px' }}>
-                                            {showHint ? <span style={{ color: 'var(--accent)' }}>💡 {currentCard.hint}</span> : <button className="btn btn-ghost" onClick={(e) => { e.stopPropagation(); setShowHint(true); }}>Show Hint</button>}
-                                        </div>
-                                    )}
-                                    <div style={{ marginTop: 'auto', fontSize: '12px', color: 'var(--text-muted)' }}>Click to flip</div>
-                                </div>
+                            <div className="flashcard-container">
+                                <div
+                                    className={`flashcard-3d ${isFlipped ? 'flipped' : ''}`}
+                                    onClick={() => setIsFlipped(!isFlipped)}
+                                >
+                                    {/* Front */}
+                                    <div className="flashcard-side front">
+                                        <div className="chip" style={{ marginBottom: '20px' }}>{currentCard.subject}</div>
+                                        <div className="card-question">{currentCard.question}</div>
+                                        {!isFlipped && currentCard.hint && (
+                                            <div style={{ marginTop: '20px' }}>
+                                                {showHint ? <span className="card-hint">💡 {currentCard.hint}</span> : <button className="btn btn-ghost" onClick={(e) => { e.stopPropagation(); setShowHint(true); }}>Show Hint</button>}
+                                            </div>
+                                        )}
+                                        <div style={{ marginTop: 'auto', fontSize: '12px', color: 'var(--text-muted)' }}>Click to flip</div>
+                                    </div>
 
-                                {/* Back */}
-                                <div className="flashcard-side back" style={{
-                                    position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden',
-                                    background: 'var(--glass)', border: '1px solid var(--border)', borderRadius: '16px',
-                                    display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '20px',
-                                    transform: 'rotateY(180deg)'
-                                }}>
-                                    <h2 style={{ color: 'var(--accent)', textAlign: 'center' }}>{currentCard.answer}</h2>
-                                    {currentCard.explanation && <p style={{ marginTop: '15px', color: 'var(--text-muted)', textAlign: 'center' }}>{currentCard.explanation}</p>}
+                                    {/* Back */}
+                                    <div className="flashcard-side back">
+                                        <div className="card-answer">{currentCard.answer}</div>
+                                        {currentCard.explanation && <p className="card-explanation">{currentCard.explanation}</p>}
+                                    </div>
                                 </div>
                             </div>
 
                             {/* Controls */}
                             {isFlipped && (
-                                <div style={{ marginTop: '30px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px' }}>
+                                <div className="difficulty-buttons">
                                     <button className="btn" style={{ background: '#EF4444', color: 'white' }} onClick={() => handleRate('again')}>Again</button>
                                     <button className="btn" style={{ background: '#F59E0B', color: 'white' }} onClick={() => handleRate('hard')}>Hard</button>
                                     <button className="btn" style={{ background: '#10B981', color: 'white' }} onClick={() => handleRate('good')}>Good</button>

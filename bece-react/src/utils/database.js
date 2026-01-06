@@ -17,7 +17,8 @@ import {
     Timestamp
 } from "firebase/firestore";
 import { db } from '../config/firebase';
-import { ENHANCED_QUESTIONS } from '../data/questionBank';
+// import { ENHANCED_QUESTIONS } from '../data/questionBank'; // Deprecated
+
 
 // --- Question Management ---
 
@@ -39,19 +40,20 @@ export async function fetchQuestions(filters = {}) {
         let questions = [];
 
         querySnapshot.forEach((doc) => {
-            questions.push({ id: Number(doc.id), ...doc.data() });
+            questions.push({ id: doc.id, ...doc.data() });
         });
 
         // Fallback to local data if Firestore returns empty
-        if (questions.length === 0) {
-            console.log("Firestore returned empty, using local fallback.");
-            questions = [...ENHANCED_QUESTIONS];
+        console.log("Firestore returned empty.");
+        questions = [];
+        // questions = [...ENHANCED_QUESTIONS]; // Deprecated
 
-            // Apply filters to local data
-            if (filters.year && filters.year !== 'all') {
-                questions = questions.filter(q => q.year === Number(filters.year));
-            }
+
+        // Apply filters to local data
+        if (filters.year && filters.year !== 'all') {
+            questions = questions.filter(q => q.year === Number(filters.year));
         }
+
 
         // Client-side filtering for subjects
         if (filters.subjects && filters.subjects.length > 0) {
@@ -62,8 +64,10 @@ export async function fetchQuestions(filters = {}) {
     } catch (error) {
         console.error("Error fetching questions:", error);
         // Fallback on error too
-        console.log("Error fetching from Firestore, using local fallback.");
-        let questions = [...ENHANCED_QUESTIONS];
+        console.log("Error fetching from Firestore.");
+        let questions = [];
+        // let questions = [...ENHANCED_QUESTIONS]; // Deprecated
+
 
         if (filters.year && filters.year !== 'all') {
             questions = questions.filter(q => q.year === Number(filters.year));
@@ -93,6 +97,8 @@ export async function trackQuestionAttempt(userId, questionId, isCorrect, choice
         };
 
         // Fallback lookup if metadata is missing
+        // Fallback lookup removed to decouple from local bundle
+        /*
         if (!attemptData.subject || !attemptData.topic) {
             let question = ENHANCED_QUESTIONS.find(q => q.id === questionId);
             if (question) {
@@ -101,6 +107,7 @@ export async function trackQuestionAttempt(userId, questionId, isCorrect, choice
                 attemptData.year = question.year;
             }
         }
+        */
 
         const docRef = await addDoc(collection(db, 'questionAttempts'), attemptData);
         console.log('✅ Question attempt saved with ID: ', docRef.id);
@@ -126,14 +133,8 @@ export async function batchTrackQuestionAttempts(userId, attempts) {
             };
 
             // Fallback metadata if missing
-            if (!data.subject || !data.topic) {
-                let question = ENHANCED_QUESTIONS.find(q => q.id === attempt.questionId);
-                if (question) {
-                    data.subject = question.subject;
-                    data.topic = question.topic;
-                    data.year = question.year;
-                }
-            }
+            // Fallback metadata calculation removed
+
 
             batch.set(docRef, data);
         });
@@ -169,13 +170,8 @@ async function updateTopicAggregates(userId, newAttempts) {
             let subject = attempt.subject;
             let topic = attempt.topic;
 
-            if (!subject || !topic) {
-                const q = ENHANCED_QUESTIONS.find(x => x.id === attempt.questionId);
-                if (q) {
-                    subject = q.subject;
-                    topic = q.topic;
-                }
-            }
+            // Fallback removed
+
 
             if (!subject || !topic) return;
 

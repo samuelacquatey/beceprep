@@ -1,3 +1,6 @@
+// [DEPRECATED] This file is preserved for PWA offline fallback strategies ONLY.
+// Do not import this directly in components. Use 'useQuestions' hook instead.
+// The primary source of truth is now Firestore (via useQuestions).
 export const ENHANCED_QUESTIONS = [
   {
     "id": 4232,

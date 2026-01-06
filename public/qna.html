@@ -213,8 +213,8 @@
 
     <script type="module">
       import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-      import { fetchQuestions, trackQuizAttempt, batchTrackQuestionAttempts, logSystemError } from "./js/database.js";
-      import { app } from "./js/auth.js";
+      import { fetchQuestions, trackQuizAttempt, batchTrackQuestionAttempts, logSystemError } from "./js/database.js?v=2.2";
+      import { app } from "./js/auth.js?v=2.2";
 
 
       const auth = getAuth(app);
@@ -749,11 +749,19 @@
         if (filterSettings) {
           state.filterSettings = JSON.parse(filterSettings);
 
-          // Fetch questions dynamically
+          // Fetch questions dynamically with filters
           try {
             promptEl.textContent = "Loading questions...";
-            QUESTIONS = await fetchQuestions();
+            // Optimization: Pass filters to fetchQuestions to reduce payload if possible (e.g. by year)
+            QUESTIONS = await fetchQuestions(state.filterSettings);
             console.log("Questions loaded:", QUESTIONS.length);
+
+            if (QUESTIONS.length === 0) {
+              promptEl.textContent = "No questions found for these filters.";
+              // Disable controls
+              submitBtn.disabled = true;
+              return;
+            }
 
             displayCurrentFilters();
             startSession();
