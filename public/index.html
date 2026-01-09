@@ -223,6 +223,7 @@
     document.addEventListener('DOMContentLoaded', function () {
       // UI Elements
       const loadingOverlay = document.getElementById('loadingOverlay');
+      if (loadingOverlay) loadingOverlay.style.display = 'none';
       const alertBox = document.getElementById('alertBox');
       const signInBtn = document.getElementById('signInBtn');
       const signUpBtn = document.getElementById('signUpBtn');
@@ -544,7 +545,7 @@
       onAuthStateChanged(auth, (user) => {
         if (user) {
           // Check if user is a teacher and redirect accordingly
-          /*schoolManager.getTeacherSchool(user.uid)
+          schoolManager.getTeacherSchool(user.uid)
             .then(schoolData => {
               if (schoolData) {
                 window.location.href = 'teacher-admin.html';
@@ -554,7 +555,7 @@
             })
             .catch(() => {
               window.location.href = 'quiz.html';
-            });*/
+            });
         }
       });
     });

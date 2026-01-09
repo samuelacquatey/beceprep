@@ -213,7 +213,7 @@
 
     <script type="module">
       import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-      import { fetchQuestions, trackQuizAttempt, batchTrackQuestionAttempts, logSystemError } from "./js/database.js?v=2.2";
+      import { fetchQuestionsPage, trackQuizAttempt, batchTrackQuestionAttempts, logSystemError } from "./js/database.js?v=2.2";
       import { app } from "./js/auth.js?v=2.2";
 
 
@@ -234,6 +234,13 @@
 
       /*********************** Enhanced Question Dataset ************************/
       let QUESTIONS = [];
+
+      // Pagination state for Firestore‑backed questions
+      let lastQuestionCursor = null;
+      let hasMoreQuestions = true;
+      let isLoadingMore = false;
+      const PAGE_SIZE = 10; // same as database.js
+
       /****************************************************************/
 
       // App state
@@ -442,8 +449,15 @@
           renderQuestion();
           updateProgress();
           saveSession();
+
+          // Prefetch when near the end (e.g. last 5 questions of current pool)
+          const remaining = state.pool.length - 1 - state.index;
+          if (remaining <= 5) {
+            loadMoreQuestionsIfNeeded();
+          }
         }
       }
+
 
       function handlePrevious() {
         if (state.index > 0) {
@@ -740,39 +754,45 @@
 
       // Initialize the application
       async function init() {
-        console.log("Initializing quiz application...");
+        console.log("🚀 Initializing quiz application...");
 
-
-
-        // Load filter settings from sessionStorage
+        // Load filter settings
         const filterSettings = sessionStorage.getItem('quizSettings');
         if (filterSettings) {
           state.filterSettings = JSON.parse(filterSettings);
 
-          // Fetch questions dynamically with filters
           try {
-            promptEl.textContent = "Loading questions...";
-            // Optimization: Pass filters to fetchQuestions to reduce payload if possible (e.g. by year)
-            QUESTIONS = await fetchQuestions(state.filterSettings);
-            console.log("Questions loaded:", QUESTIONS.length);
+            promptEl.textContent = 'Loading questions...';
+
+            // First page load
+            const { questions, lastDoc } = await fetchQuestionsPage({
+              filters: state.filterSettings,
+              pageSize: PAGE_SIZE,
+              cursor: null
+            });
+
+            QUESTIONS = questions;
+            lastQuestionCursor = lastDoc;
+            hasMoreQuestions = !!lastDoc;
+
+            console.log('Questions loaded (first page):', QUESTIONS.length, 'hasMore:', hasMoreQuestions);
 
             if (QUESTIONS.length === 0) {
-              promptEl.textContent = "No questions found for these filters.";
-              // Disable controls
+              promptEl.textContent = 'No questions found for these filters.';
               submitBtn.disabled = true;
               return;
             }
 
             displayCurrentFilters();
             startSession();
-          } catch (error) {
-            console.error("Failed to load questions:", error);
-            logSystemError(error, { context: 'init_fetchQuestions' }, auth.currentUser?.uid);
-            promptEl.textContent = "Error loading questions. Please try again.";
-          }
 
+          } catch (error) {
+            console.error('Failed to load questions:', error);
+            logSystemError(error, { context: 'init/fetchQuestionsPage' }, auth.currentUser?.uid);
+            promptEl.textContent = 'Error loading questions. Please try again.';
+          }
         } else {
-          promptEl.textContent = "No quiz settings found. Please go back and start a quiz.";
+          promptEl.textContent = 'No quiz settings found. Please go back and start a quiz.';
         }
 
         loadCurrentSession();
@@ -780,15 +800,24 @@
         updateStats();
       }
 
+
       function startSession() {
-        const selectedSubjects = state.filterSettings.subjects;
+        const selectedSubjectKeys = state.filterSettings.subjects || [];
         const year = state.filterSettings.year;
+
         state.mode = state.filterSettings.mode;
         state.endless = state.filterSettings.endless;
 
+        // subjects in filter settings and in q.subject are both canonical keys
         state.pool = QUESTIONS.filter(q => {
-          if (selectedSubjects.length && !selectedSubjects.includes(q.subject)) return false;
+          if (selectedSubjectKeys.length) {
+            const normalizedSelected = selectedSubjectKeys.map(s => s.trim().toUpperCase());
+            const qSubject = (q.subject || '').trim().toUpperCase();
+            if (!normalizedSelected.includes(qSubject)) return false;
+          }
+
           if (year !== 'all' && String(q.year) !== String(year)) return false;
+
           return true;
         }).map(q => q.id);
 
@@ -800,12 +829,59 @@
           return;
         }
 
-        // If we are reloading a session, don't reset index unless invalid
         if (state.index >= state.pool.length) state.index = 0;
 
         renderQuestion();
         updateProgress();
       }
+
+      async function loadMoreQuestionsIfNeeded() {
+        // No more from server, or already loading, or we used local fallback (no cursor)
+        if (!hasMoreQuestions || isLoadingMore || !lastQuestionCursor) return;
+
+        isLoadingMore = true;
+        try {
+          const { questions, lastDoc } = await fetchQuestionsPage({
+            filters: state.filterSettings,
+            pageSize: PAGE_SIZE,
+            cursor: lastQuestionCursor
+          });
+
+          if (questions.length > 0) {
+            // Append to master array
+            QUESTIONS = QUESTIONS.concat(questions);
+
+            // Rebuild pool to include any new questions that match filters
+            const oldLength = state.pool.length;
+            const newIds = questions
+              .filter(q => {
+                const subjectKeys = state.filterSettings.subjects || [];
+                if (subjectKeys.length) {
+                  const normalizedSelected = subjectKeys.map(s => s.trim().toUpperCase());
+                  const qSubject = (q.subject || '').trim().toUpperCase();
+                  if (!normalizedSelected.includes(qSubject)) return false;
+                }
+                const year = state.filterSettings.year;
+                if (year !== 'all' && String(q.year) !== String(year)) return false;
+                return true;
+              })
+              .map(q => q.id);
+
+            state.pool = state.pool.concat(newIds);
+            console.log('Loaded more questions:', questions.length, 'total pool:', state.pool.length, 'prev pool:', oldLength);
+          }
+
+          lastQuestionCursor = lastDoc;
+          hasMoreQuestions = !!lastDoc;
+        } catch (err) {
+          console.error('Error loading more questions:', err);
+          logSystemError(err, { context: 'loadMoreQuestionsIfNeeded' }, auth.currentUser?.uid);
+          hasMoreQuestions = false; // avoid spamming retries
+        } finally {
+          isLoadingMore = false;
+        }
+      }
+
 
       // Protect route - redirect if not authenticated
       onAuthStateChanged(auth, (user) => {

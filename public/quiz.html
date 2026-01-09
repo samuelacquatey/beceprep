@@ -115,12 +115,8 @@
 
     // --- Core Logic: Active Filtration ---
     function populateFilters() {
-      // 1. Render Subjects from Metadata
-      if (activeVariant === 'carousel') {
-        renderCarousel(QUIZ_METADATA.subjects);
-      } else {
-        renderChips(QUIZ_METADATA.subjects);
-      }
+
+      renderChips(QUIZ_METADATA.subjects);
 
       // 2. Initial Year Population (All Years)
       updateYearDropdown();
@@ -166,28 +162,7 @@
       });
     }
 
-    function renderCarousel(subjects) {
-      subjectsList.innerHTML = `
-        <div class="subject-carousel-container">
-          <div class="subject-carousel" id="carouselTrack"></div>
-        </div>
-      `;
-      const track = document.getElementById('carouselTrack');
 
-      subjects.forEach(subject => {
-        const card = document.createElement('div');
-        card.className = 'carousel-card'; // Restored class name
-        // Restored inner structure
-        card.innerHTML = `
-            <div class="carousel-icon">${subject.icon}</div>
-            <div class="carousel-title">${subject.name}</div>
-        `;
-        card.dataset.subject = subject.name;
-
-        card.onclick = () => toggleSubject(card, subject.name);
-        track.appendChild(card);
-      });
-    }
 
     function toggleSubject(el, subjectName) {
       if (selectedSubjects.has(subjectName)) {
@@ -207,8 +182,15 @@
 
     // Start Quiz
     startBtn.onclick = () => {
+      // Map selected display names -> canonical dbKeys
+      const subjectKeys = Array.from(selectedSubjects).map(name => {
+        const meta = QUIZ_METADATA.subjects.find(s => s.name === name && s.years.includes(yearSelect.value));
+        // Fallback: if not found for some reason, keep the name
+        return meta ? meta.dbKey : name;
+      });
+
       const settings = {
-        subjects: Array.from(selectedSubjects),
+        subjects: subjectKeys,    // store KEYS, not names
         year: yearSelect.value,
         mode: document.getElementById('modeSelect').value,
         endless: document.getElementById('endlessMode').checked
@@ -219,11 +201,10 @@
         return;
       }
 
-
-      // Save settings
       sessionStorage.setItem('quizSettings', JSON.stringify(settings));
       window.location.href = 'qna.html';
     };
+
 
     // Navigation
     logoutBtn.addEventListener('click', () => signOut(auth));

@@ -7,8 +7,11 @@
         "start": "serve public"
     },
     "dependencies": {
+        "@google/generative-ai": "^0.24.1",
+        "dotenv": "^17.2.3",
         "firebase": "^10.7.1",
-        "firebase-admin": "^13.6.0"
+        "firebase-admin": "^13.6.0",
+        "pdf-parse": "^2.4.5"
     },
     "devDependencies": {
         "serve": "^14.2.1"

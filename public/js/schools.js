@@ -1,19 +1,18 @@
-import { 
-  getFirestore, 
-  doc, 
-  setDoc, 
-  getDoc, 
-  collection, 
-  addDoc, 
-  query, 
-  where, 
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  getDoc,
+  collection,
+  addDoc,
+  query,
+  where,
   getDocs,
   updateDoc,
-  arrayUnion 
+  arrayUnion
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-import { app } from './auth.js';
-
-const db = getFirestore(app);
+import { app, db } from './auth.js';
+// const db = getFirestore(app); // REMOVED: Use shared db instance
 
 // School management system
 export class SchoolManager {
@@ -33,7 +32,7 @@ export class SchoolManager {
   async registerSchool(schoolData, teacherData) {
     try {
       const schoolCode = this.generateSchoolCode(schoolData.name);
-      
+
       const school = {
         id: `school_${Date.now()}`,
         code: schoolCode,
@@ -48,7 +47,7 @@ export class SchoolManager {
 
       // Save to Firebase
       await setDoc(doc(db, 'schools', school.id), school);
-      
+
       // Also store by code for easy lookup
       await setDoc(doc(db, 'schoolCodes', schoolCode), {
         schoolId: school.id,
@@ -72,7 +71,7 @@ export class SchoolManager {
 
       const schoolId = schoolCodeDoc.data().schoolId;
       const schoolDoc = await getDoc(doc(db, 'schools', schoolId));
-      
+
       if (!schoolDoc.exists()) {
         throw new Error('School not found. Please contact your teacher.');
       }
@@ -117,7 +116,7 @@ export class SchoolManager {
 
       const schoolId = schoolCodeDoc.data().schoolId;
       const schoolDoc = await getDoc(doc(db, 'schools', schoolId));
-      
+
       return schoolDoc.exists() ? schoolDoc.data() : null;
     } catch (error) {
       console.error('Error getting school by code:', error);
@@ -132,7 +131,7 @@ export class SchoolManager {
         collection(db, 'schools'),
         where('teachers', 'array-contains', { userId: teacherId })
       );
-      
+
       const snapshot = await getDocs(schoolsQuery);
       if (snapshot.empty) {
         return null;
@@ -155,7 +154,7 @@ export class SchoolManager {
 
       const schoolData = studentSchoolDoc.data();
       const schoolDoc = await getDoc(doc(db, 'schools', schoolData.schoolId));
-      
+
       return schoolDoc.exists() ? schoolDoc.data() : null;
     } catch (error) {
       console.error('Error getting student school:', error);
@@ -211,7 +210,7 @@ export class SchoolManager {
     const firstName = nameParts[0];
     const lastNameInitial = nameParts[nameParts.length - 1].charAt(0);
     const randomNum = Math.floor(10 + Math.random() * 90);
-    
+
     return `${firstName}.${lastNameInitial}${randomNum}`;
   }
 

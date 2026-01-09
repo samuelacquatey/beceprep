@@ -59430,7 +59430,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1067,
@@ -59445,7 +59447,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1111,
@@ -59460,7 +59464,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1112,
@@ -59475,7 +59481,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1145,
@@ -59490,7 +59498,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1146,
@@ -59505,7 +59515,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1147,
@@ -59520,7 +59532,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1148,
@@ -59535,7 +59549,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1149,
@@ -59550,7 +59566,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1150,
@@ -59565,7 +59583,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1177,
@@ -59580,7 +59600,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1178,
@@ -59595,7 +59617,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1179,
@@ -59610,7 +59634,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1180,
@@ -59625,7 +59651,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1181,
@@ -59640,7 +59668,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1182,
@@ -59655,7 +59685,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1183,
@@ -59670,7 +59702,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1184,
@@ -59685,7 +59719,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1185,
@@ -59700,7 +59736,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1186,
@@ -59715,7 +59753,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1187,
@@ -59730,7 +59770,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1188,
@@ -59745,7 +59787,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1189,
@@ -59760,7 +59804,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1190,
@@ -59775,7 +59821,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1191,
@@ -59790,7 +59838,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1192,
@@ -59805,7 +59855,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1193,
@@ -59820,7 +59872,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1194,
@@ -59835,7 +59889,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1195,
@@ -59850,7 +59906,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1196,
@@ -59865,7 +59923,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1197,
@@ -59880,7 +59940,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1198,
@@ -59895,7 +59957,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1199,
@@ -59910,7 +59974,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1200,
@@ -59925,7 +59991,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1201,
@@ -59940,7 +60008,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1202,
@@ -59955,7 +60025,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1203,
@@ -59970,7 +60042,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1204,
@@ -59985,7 +60059,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1205,
@@ -60000,7 +60076,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1206,
@@ -60015,7 +60093,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 721,
@@ -60030,7 +60110,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 722,
@@ -60045,7 +60127,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 723,
@@ -60060,7 +60144,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 724,
@@ -60075,7 +60161,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 725,
@@ -60090,7 +60178,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 726,
@@ -60105,7 +60195,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 727,
@@ -60120,7 +60212,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 728,
@@ -60135,7 +60229,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 730,
@@ -60150,7 +60246,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 729,
@@ -60165,7 +60263,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 731,
@@ -60180,7 +60280,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 732,
@@ -60195,7 +60297,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 733,
@@ -60210,7 +60314,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 734,
@@ -60225,7 +60331,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 735,
@@ -60240,7 +60348,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 736,
@@ -60255,7 +60365,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 737,
@@ -60270,7 +60382,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 738,
@@ -60285,7 +60399,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 739,
@@ -60300,7 +60416,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 740,
@@ -60315,7 +60433,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 741,
@@ -60330,7 +60450,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 742,
@@ -60345,7 +60467,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 743,
@@ -60360,7 +60484,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 744,
@@ -60375,7 +60501,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 745,
@@ -60390,7 +60518,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 746,
@@ -60405,7 +60535,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 747,
@@ -60420,7 +60552,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 748,
@@ -60435,7 +60569,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 749,
@@ -60450,7 +60586,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 750,
@@ -60465,7 +60603,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 751,
@@ -60480,7 +60620,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 752,
@@ -60495,7 +60637,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 753,
@@ -60510,7 +60654,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 754,
@@ -60525,7 +60671,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 755,
@@ -60540,7 +60688,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 756,
@@ -60555,7 +60705,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 757,
@@ -60570,7 +60722,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 758,
@@ -60585,7 +60739,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 759,
@@ -60600,7 +60756,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 760,
@@ -60615,7 +60773,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 79,
@@ -60630,7 +60790,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 80,
@@ -60645,7 +60807,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 81,
@@ -60660,7 +60824,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 82,
@@ -60675,7 +60841,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 83,
@@ -60690,7 +60858,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 157,
@@ -60705,7 +60875,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 158,
@@ -60720,7 +60892,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 159,
@@ -60735,7 +60909,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 160,
@@ -60750,7 +60926,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 161,
@@ -60765,7 +60943,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 461,
@@ -60780,7 +60960,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 462,
@@ -60795,7 +60977,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 463,
@@ -60810,7 +60994,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 464,
@@ -60825,7 +61011,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 465,
@@ -60840,7 +61028,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 466,
@@ -60855,7 +61045,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 467,
@@ -60870,7 +61062,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 468,
@@ -60885,7 +61079,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 469,
@@ -60900,7 +61096,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 470,
@@ -60915,7 +61113,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 471,
@@ -60930,7 +61130,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 472,
@@ -60945,7 +61147,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 473,
@@ -60960,7 +61164,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 474,
@@ -60975,7 +61181,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 475,
@@ -60990,7 +61198,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 476,
@@ -61005,7 +61215,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 477,
@@ -61020,7 +61232,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 479,
@@ -61035,7 +61249,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 482,
@@ -61050,7 +61266,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 483,
@@ -61065,7 +61283,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 484,
@@ -61080,7 +61300,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 485,
@@ -61095,7 +61317,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 486,
@@ -61110,7 +61334,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 487,
@@ -61125,7 +61351,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 488,
@@ -61140,7 +61368,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 489,
@@ -61155,7 +61385,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 490,
@@ -61170,7 +61402,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 491,
@@ -61185,7 +61419,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 496,
@@ -61200,7 +61436,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 497,
@@ -61215,7 +61453,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1014,
@@ -61230,7 +61470,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1015,
@@ -61245,7 +61487,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1016,
@@ -61260,7 +61504,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1017,
@@ -61275,7 +61521,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1018,
@@ -61290,7 +61538,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1019,
@@ -61305,7 +61555,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1020,
@@ -61320,7 +61572,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1021,
@@ -61335,7 +61589,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1022,
@@ -61350,7 +61606,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1023,
@@ -61365,7 +61623,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1056,
@@ -61380,7 +61640,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1057,
@@ -61395,7 +61657,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1058,
@@ -61410,7 +61674,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1059,
@@ -61425,7 +61691,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1060,
@@ -61440,7 +61708,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1061,
@@ -61455,7 +61725,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1062,
@@ -61470,7 +61742,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1063,
@@ -61485,7 +61759,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1064,
@@ -61500,7 +61776,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1065,
@@ -61515,7 +61793,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2283,
@@ -61530,7 +61810,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2288,
@@ -61545,7 +61827,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2294,
@@ -61560,7 +61844,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2297,
@@ -61575,7 +61861,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2303,
@@ -61590,7 +61878,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2304,
@@ -61605,7 +61895,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2305,
@@ -61620,7 +61912,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2306,
@@ -61635,7 +61929,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2307,
@@ -61650,7 +61946,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2308,
@@ -61665,7 +61963,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2320,
@@ -61680,7 +61980,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2321,
@@ -61695,7 +61997,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2322,
@@ -61710,7 +62014,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2323,
@@ -61725,7 +62031,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2324,
@@ -61740,7 +62048,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2325,
@@ -61755,7 +62065,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2326,
@@ -61770,7 +62082,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2327,
@@ -61785,7 +62099,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2328,
@@ -61800,7 +62116,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2329,
@@ -61815,7 +62133,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1507,
@@ -61830,7 +62150,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1508,
@@ -61845,7 +62167,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1509,
@@ -61860,7 +62184,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1510,
@@ -61875,7 +62201,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1511,
@@ -61890,7 +62218,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1512,
@@ -61905,7 +62235,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1513,
@@ -61920,7 +62252,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1514,
@@ -61935,7 +62269,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1515,
@@ -61950,7 +62286,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1516,
@@ -61965,7 +62303,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1517,
@@ -61980,7 +62320,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1518,
@@ -61995,7 +62337,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1519,
@@ -62010,7 +62354,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1520,
@@ -62025,7 +62371,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1521,
@@ -62040,7 +62388,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1522,
@@ -62055,7 +62405,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1523,
@@ -62070,7 +62422,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1524,
@@ -62085,7 +62439,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1525,
@@ -62100,7 +62456,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1526,
@@ -62115,7 +62473,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1527,
@@ -62130,7 +62490,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1528,
@@ -62145,7 +62507,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1529,
@@ -62160,7 +62524,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1530,
@@ -62175,7 +62541,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1531,
@@ -62190,7 +62558,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1532,
@@ -62205,7 +62575,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1533,
@@ -62220,7 +62592,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1534,
@@ -62235,7 +62609,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1535,
@@ -62250,7 +62626,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1536,
@@ -62265,7 +62643,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1537,
@@ -62280,7 +62660,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1538,
@@ -62295,7 +62677,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1539,
@@ -62310,7 +62694,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1540,
@@ -62325,7 +62711,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 1541,
@@ -62340,7 +62728,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 1542,
@@ -62355,7 +62745,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 1543,
@@ -62370,7 +62762,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 1544,
@@ -62385,7 +62779,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 1545,
@@ -62400,7 +62796,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 1546,
@@ -62415,7 +62813,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2583,
@@ -62430,7 +62830,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2584,
@@ -62445,7 +62847,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2585,
@@ -62460,7 +62864,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2586,
@@ -62475,7 +62881,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2587,
@@ -62490,7 +62898,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2588,
@@ -62505,7 +62915,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2589,
@@ -62520,7 +62932,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2590,
@@ -62535,7 +62949,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2591,
@@ -62550,7 +62966,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2592,
@@ -62565,7 +62983,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2593,
@@ -62580,7 +63000,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2594,
@@ -62595,7 +63017,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2595,
@@ -62610,7 +63034,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2596,
@@ -62625,7 +63051,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2597,
@@ -62640,7 +63068,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2598,
@@ -62655,7 +63085,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2599,
@@ -62670,7 +63102,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2600,
@@ -62685,7 +63119,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2601,
@@ -62700,7 +63136,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2602,
@@ -62715,7 +63153,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2603,
@@ -62730,7 +63170,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2604,
@@ -62745,7 +63187,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2605,
@@ -62760,7 +63204,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2606,
@@ -62775,7 +63221,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2607,
@@ -62790,7 +63238,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2608,
@@ -62805,7 +63255,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2609,
@@ -62820,7 +63272,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2610,
@@ -62835,7 +63289,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2611,
@@ -62850,7 +63306,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2612,
@@ -62865,7 +63323,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2613,
@@ -62880,7 +63340,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2614,
@@ -62895,7 +63357,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2615,
@@ -62910,7 +63374,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2616,
@@ -62925,7 +63391,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2617,
@@ -62940,7 +63408,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2618,
@@ -62955,7 +63425,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2619,
@@ -62970,7 +63442,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2620,
@@ -62985,7 +63459,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2621,
@@ -63000,7 +63476,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2622,
@@ -63015,7 +63493,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2623,
@@ -63030,7 +63510,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2624,
@@ -63045,7 +63527,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2625,
@@ -63060,7 +63544,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2626,
@@ -63075,7 +63561,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2627,
@@ -63090,7 +63578,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2628,
@@ -63105,7 +63595,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2629,
@@ -63120,7 +63612,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2630,
@@ -63135,7 +63629,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2631,
@@ -63150,7 +63646,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2632,
@@ -63165,7 +63663,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2633,
@@ -63180,7 +63680,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2634,
@@ -63195,7 +63697,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2635,
@@ -63210,7 +63714,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2636,
@@ -63225,7 +63731,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2637,
@@ -63240,7 +63748,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2638,
@@ -63255,7 +63765,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2639,
@@ -63270,7 +63782,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2640,
@@ -63285,7 +63799,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2641,
@@ -63300,7 +63816,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2642,
@@ -63315,7 +63833,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2643,
@@ -63330,7 +63850,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2644,
@@ -63345,7 +63867,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2645,
@@ -63360,7 +63884,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2646,
@@ -63375,7 +63901,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2647,
@@ -63390,7 +63918,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2648,
@@ -63405,7 +63935,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2649,
@@ -63420,7 +63952,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2650,
@@ -63435,7 +63969,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2651,
@@ -63450,7 +63986,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2652,
@@ -63465,7 +64003,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2653,
@@ -63480,7 +64020,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2654,
@@ -63495,7 +64037,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2655,
@@ -63510,7 +64054,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2656,
@@ -63525,7 +64071,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2657,
@@ -63540,7 +64088,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2658,
@@ -63555,7 +64105,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2659,
@@ -63570,7 +64122,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2660,
@@ -63585,7 +64139,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2661,
@@ -63600,7 +64156,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2662,
@@ -63615,7 +64173,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2733,
@@ -63630,7 +64190,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2734,
@@ -63645,7 +64207,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2735,
@@ -63660,7 +64224,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2736,
@@ -63675,7 +64241,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2737,
@@ -63690,7 +64258,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2738,
@@ -63705,7 +64275,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2739,
@@ -63720,7 +64292,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2740,
@@ -63735,7 +64309,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2741,
@@ -63750,7 +64326,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2742,
@@ -63765,7 +64343,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2743,
@@ -63780,7 +64360,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2744,
@@ -63795,7 +64377,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2745,
@@ -63810,7 +64394,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2746,
@@ -63825,7 +64411,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2747,
@@ -63840,7 +64428,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2759,
@@ -63855,7 +64445,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2760,
@@ -63870,7 +64462,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2767,
@@ -63885,7 +64479,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2776,
@@ -63900,7 +64496,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2783,
@@ -63915,7 +64513,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2786,
@@ -63930,7 +64530,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2790,
@@ -63945,7 +64547,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2798,
@@ -63960,7 +64564,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2801,
@@ -63975,7 +64581,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2808,
@@ -63990,7 +64598,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2826,
@@ -64005,7 +64615,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2833,
@@ -64020,7 +64632,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2834,
@@ -64035,7 +64649,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2843,
@@ -64050,7 +64666,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2847,
@@ -64065,7 +64683,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2848,
@@ -64080,7 +64700,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2849,
@@ -64095,7 +64717,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2850,
@@ -64110,7 +64734,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2851,
@@ -64125,7 +64751,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2852,
@@ -64140,7 +64768,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2853,
@@ -64155,7 +64785,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2854,
@@ -64170,7 +64802,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2855,
@@ -64185,7 +64819,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2856,
@@ -64200,7 +64836,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2857,
@@ -64215,7 +64853,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2881,
@@ -64230,7 +64870,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2882,
@@ -64245,7 +64887,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2883,
@@ -64260,7 +64904,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2884,
@@ -64275,7 +64921,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2885,
@@ -64290,7 +64938,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2886,
@@ -64305,7 +64955,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2887,
@@ -64320,7 +64972,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2888,
@@ -64335,7 +64989,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2889,
@@ -64350,7 +65006,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2890,
@@ -64365,7 +65023,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2891,
@@ -64380,7 +65040,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2892,
@@ -64395,7 +65057,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2893,
@@ -64410,7 +65074,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2894,
@@ -64425,7 +65091,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2895,
@@ -64440,7 +65108,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2896,
@@ -64455,7 +65125,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2897,
@@ -64470,7 +65142,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2898,
@@ -64485,7 +65159,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2899,
@@ -64500,7 +65176,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2900,
@@ -64515,7 +65193,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2904,
@@ -64530,7 +65210,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2905,
@@ -64545,7 +65227,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2909,
@@ -64560,7 +65244,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2922,
@@ -64575,7 +65261,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2923,
@@ -64590,7 +65278,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2924,
@@ -64605,7 +65295,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2940,
@@ -64620,7 +65312,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2967,
@@ -64635,7 +65329,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2968,
@@ -64650,7 +65346,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2969,
@@ -64665,7 +65363,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2970,
@@ -64680,7 +65380,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2971,
@@ -64695,7 +65397,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2972,
@@ -64710,7 +65414,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2973,
@@ -64725,7 +65431,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 2974,
@@ -64740,7 +65448,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 2975,
@@ -64755,7 +65465,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 2976,
@@ -64770,7 +65482,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 2977,
@@ -64785,7 +65499,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 2978,
@@ -64800,7 +65516,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 2979,
@@ -64815,7 +65533,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2013",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 3740,
@@ -64830,7 +65550,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 3741,
@@ -64845,7 +65567,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 3742,
@@ -64860,7 +65584,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 3743,
@@ -64875,7 +65601,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 3744,
@@ -64890,7 +65618,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 3745,
@@ -64905,7 +65635,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 3746,
@@ -64920,7 +65652,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 3747,
@@ -64935,7 +65669,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 3748,
@@ -64950,7 +65686,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 3749,
@@ -64965,7 +65703,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 3750,
@@ -64980,7 +65720,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 3751,
@@ -64995,7 +65737,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 3752,
@@ -65010,7 +65754,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 3753,
@@ -65025,7 +65771,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 3754,
@@ -65040,7 +65788,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 3755,
@@ -65055,7 +65805,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 3756,
@@ -65070,7 +65822,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 3757,
@@ -65085,7 +65839,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 3758,
@@ -65100,7 +65856,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 3759,
@@ -65115,7 +65873,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 3760,
@@ -65130,7 +65890,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 3761,
@@ -65145,7 +65907,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 3762,
@@ -65160,7 +65924,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 3763,
@@ -65175,7 +65941,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 3764,
@@ -65190,7 +65958,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 3765,
@@ -65205,7 +65975,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 3766,
@@ -65220,7 +65992,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 3767,
@@ -65235,7 +66009,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 3768,
@@ -65250,7 +66026,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 3769,
@@ -65265,7 +66043,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 3770,
@@ -65280,7 +66060,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 3771,
@@ -65295,7 +66077,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 3772,
@@ -65310,7 +66094,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 3773,
@@ -65325,7 +66111,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 3774,
@@ -65340,7 +66128,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 3775,
@@ -65355,7 +66145,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 3776,
@@ -65370,7 +66162,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 3777,
@@ -65385,7 +66179,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 3778,
@@ -65400,7 +66196,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 3779,
@@ -65415,7 +66213,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2012",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 4844,
@@ -65430,7 +66230,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 4845,
@@ -65445,7 +66247,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 4846,
@@ -65460,7 +66264,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 4852,
@@ -65475,7 +66281,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 4853,
@@ -65490,7 +66298,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 4854,
@@ -65505,7 +66315,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 4855,
@@ -65520,7 +66332,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 4856,
@@ -65535,7 +66349,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 4857,
@@ -65550,7 +66366,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 4858,
@@ -65565,7 +66383,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 4859,
@@ -65580,7 +66400,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 4860,
@@ -65595,7 +66417,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 4861,
@@ -65610,7 +66434,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 4862,
@@ -65625,7 +66451,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 4863,
@@ -65640,7 +66468,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 4864,
@@ -65655,7 +66485,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 4865,
@@ -65670,7 +66502,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 4866,
@@ -65685,7 +66519,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 4867,
@@ -65700,7 +66536,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 4868,
@@ -65715,7 +66553,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6121,
@@ -65730,7 +66570,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6122,
@@ -65745,7 +66587,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6123,
@@ -65760,7 +66604,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6124,
@@ -65775,7 +66621,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6125,
@@ -65790,7 +66638,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6126,
@@ -65805,7 +66655,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6127,
@@ -65820,7 +66672,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6128,
@@ -65835,7 +66689,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6129,
@@ -65850,7 +66706,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6130,
@@ -65865,7 +66723,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6131,
@@ -65880,7 +66740,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6132,
@@ -65895,7 +66757,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6133,
@@ -65910,7 +66774,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6134,
@@ -65925,7 +66791,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6135,
@@ -65940,7 +66808,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6136,
@@ -65955,7 +66825,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6137,
@@ -65970,7 +66842,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6138,
@@ -65985,7 +66859,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6139,
@@ -66000,7 +66876,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6140,
@@ -66015,7 +66893,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2011",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6227,
@@ -66030,7 +66910,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6228,
@@ -66045,7 +66927,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6229,
@@ -66060,7 +66944,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6230,
@@ -66075,7 +66961,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6231,
@@ -66090,7 +66978,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6232,
@@ -66105,7 +66995,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6233,
@@ -66120,7 +67012,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6234,
@@ -66135,7 +67029,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6235,
@@ -66150,7 +67046,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6236,
@@ -66165,7 +67063,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6237,
@@ -66180,7 +67080,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6238,
@@ -66195,7 +67097,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6239,
@@ -66210,7 +67114,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6240,
@@ -66225,7 +67131,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6241,
@@ -66240,7 +67148,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6242,
@@ -66255,7 +67165,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6243,
@@ -66270,7 +67182,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6244,
@@ -66285,7 +67199,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6245,
@@ -66300,7 +67216,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6246,
@@ -66315,7 +67233,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6247,
@@ -66330,7 +67250,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6248,
@@ -66345,7 +67267,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6249,
@@ -66360,7 +67284,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6250,
@@ -66375,7 +67301,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6251,
@@ -66390,7 +67318,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6252,
@@ -66405,7 +67335,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6253,
@@ -66420,7 +67352,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6254,
@@ -66435,7 +67369,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6255,
@@ -66450,7 +67386,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6256,
@@ -66465,7 +67403,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6257,
@@ -66480,7 +67420,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6258,
@@ -66495,7 +67437,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6259,
@@ -66510,7 +67454,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6260,
@@ -66525,7 +67471,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6261,
@@ -66540,7 +67488,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6262,
@@ -66555,7 +67505,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6263,
@@ -66570,7 +67522,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6264,
@@ -66585,7 +67539,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6265,
@@ -66600,7 +67556,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6266,
@@ -66615,7 +67573,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2009",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6267,
@@ -66630,7 +67590,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6268,
@@ -66645,7 +67607,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6269,
@@ -66660,7 +67624,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6270,
@@ -66675,7 +67641,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6271,
@@ -66690,7 +67658,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6272,
@@ -66705,7 +67675,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6273,
@@ -66720,7 +67692,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6274,
@@ -66735,7 +67709,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6275,
@@ -66750,7 +67726,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6276,
@@ -66765,7 +67743,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6277,
@@ -66780,7 +67760,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6278,
@@ -66795,7 +67777,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6279,
@@ -66810,7 +67794,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6280,
@@ -66825,7 +67811,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6281,
@@ -66840,7 +67828,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6282,
@@ -66855,7 +67845,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6283,
@@ -66870,7 +67862,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6284,
@@ -66885,7 +67879,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6285,
@@ -66900,7 +67896,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6286,
@@ -66915,7 +67913,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6287,
@@ -66930,7 +67930,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6288,
@@ -66945,7 +67947,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6289,
@@ -66960,7 +67964,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6290,
@@ -66975,7 +67981,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6291,
@@ -66990,7 +67998,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6292,
@@ -67005,7 +68015,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6293,
@@ -67020,7 +68032,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6294,
@@ -67035,7 +68049,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6295,
@@ -67050,7 +68066,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6296,
@@ -67065,7 +68083,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6297,
@@ -67080,7 +68100,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6298,
@@ -67095,7 +68117,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6299,
@@ -67110,7 +68134,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6300,
@@ -67125,7 +68151,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6301,
@@ -67140,7 +68168,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6302,
@@ -67155,7 +68185,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6303,
@@ -67170,7 +68202,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6304,
@@ -67185,7 +68219,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6305,
@@ -67200,7 +68236,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6306,
@@ -67215,7 +68253,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2008",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6329,
@@ -67230,7 +68270,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6330,
@@ -67245,7 +68287,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6331,
@@ -67260,7 +68304,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6332,
@@ -67275,7 +68321,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6333,
@@ -67290,7 +68338,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6334,
@@ -67305,7 +68355,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6335,
@@ -67320,7 +68372,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6336,
@@ -67335,7 +68389,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6339,
@@ -67350,7 +68406,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6343,
@@ -67365,7 +68423,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6379,
@@ -67380,7 +68440,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6380,
@@ -67395,7 +68457,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6381,
@@ -67410,7 +68474,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6382,
@@ -67425,7 +68491,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6383,
@@ -67440,7 +68508,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6384,
@@ -67455,7 +68525,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6385,
@@ -67470,7 +68542,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6386,
@@ -67485,7 +68559,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6387,
@@ -67500,7 +68576,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6388,
@@ -67515,7 +68593,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6389,
@@ -67530,7 +68610,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6390,
@@ -67545,7 +68627,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6391,
@@ -67560,7 +68644,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6392,
@@ -67575,7 +68661,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6393,
@@ -67590,7 +68678,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6395,
@@ -67605,7 +68695,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6400,
@@ -67620,7 +68712,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6404,
@@ -67635,7 +68729,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6412,
@@ -67650,7 +68746,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6418,
@@ -67665,7 +68763,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6439,
@@ -67680,7 +68780,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6440,
@@ -67695,7 +68797,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6441,
@@ -67710,7 +68814,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6442,
@@ -67725,7 +68831,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6443,
@@ -67740,7 +68848,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6444,
@@ -67755,7 +68865,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6445,
@@ -67770,7 +68882,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6446,
@@ -67785,7 +68899,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6447,
@@ -67800,7 +68916,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6448,
@@ -67815,7 +68933,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2007",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6529,
@@ -67830,7 +68950,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6530,
@@ -67845,7 +68967,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6531,
@@ -67860,7 +68984,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6532,
@@ -67875,7 +69001,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6533,
@@ -67890,7 +69018,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6534,
@@ -67905,7 +69035,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6535,
@@ -67920,7 +69052,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6536,
@@ -67935,7 +69069,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6537,
@@ -67950,7 +69086,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6538,
@@ -67965,7 +69103,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6539,
@@ -67980,7 +69120,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6540,
@@ -67995,7 +69137,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6541,
@@ -68010,7 +69154,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6542,
@@ -68025,7 +69171,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6543,
@@ -68040,7 +69188,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6544,
@@ -68055,7 +69205,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6545,
@@ -68070,7 +69222,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6546,
@@ -68085,7 +69239,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6547,
@@ -68100,7 +69256,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6548,
@@ -68115,7 +69273,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6549,
@@ -68130,7 +69290,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6550,
@@ -68145,7 +69307,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6551,
@@ -68160,7 +69324,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6552,
@@ -68175,7 +69341,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6553,
@@ -68190,7 +69358,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6554,
@@ -68205,7 +69375,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6555,
@@ -68220,7 +69392,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6556,
@@ -68235,7 +69409,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6557,
@@ -68250,7 +69426,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6558,
@@ -68265,7 +69443,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6559,
@@ -68280,7 +69460,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6560,
@@ -68295,7 +69477,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6561,
@@ -68310,7 +69494,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6562,
@@ -68325,7 +69511,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6563,
@@ -68340,7 +69528,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6564,
@@ -68355,7 +69545,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6565,
@@ -68370,7 +69562,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6566,
@@ -68385,7 +69579,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6567,
@@ -68400,7 +69596,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6568,
@@ -68415,7 +69613,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2006",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6569,
@@ -68430,7 +69630,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6570,
@@ -68445,7 +69647,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6571,
@@ -68460,7 +69664,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6572,
@@ -68475,7 +69681,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6573,
@@ -68490,7 +69698,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6574,
@@ -68505,7 +69715,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6575,
@@ -68520,7 +69732,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6576,
@@ -68535,7 +69749,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6577,
@@ -68550,7 +69766,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6578,
@@ -68565,7 +69783,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6579,
@@ -68580,7 +69800,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6580,
@@ -68595,7 +69817,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6581,
@@ -68610,7 +69834,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6582,
@@ -68625,7 +69851,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6583,
@@ -68640,7 +69868,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6584,
@@ -68655,7 +69885,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6585,
@@ -68670,7 +69902,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6586,
@@ -68685,7 +69919,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6587,
@@ -68700,7 +69936,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6588,
@@ -68715,7 +69953,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6589,
@@ -68730,7 +69970,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6590,
@@ -68745,7 +69987,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6591,
@@ -68760,7 +70004,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6592,
@@ -68775,7 +70021,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6593,
@@ -68790,7 +70038,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6594,
@@ -68805,7 +70055,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6595,
@@ -68820,7 +70072,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6596,
@@ -68835,7 +70089,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6597,
@@ -68850,7 +70106,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6598,
@@ -68865,7 +70123,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6599,
@@ -68880,7 +70140,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6600,
@@ -68895,7 +70157,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6601,
@@ -68910,7 +70174,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6602,
@@ -68925,7 +70191,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6603,
@@ -68940,7 +70208,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6604,
@@ -68955,7 +70225,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6605,
@@ -68970,7 +70242,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6606,
@@ -68985,7 +70259,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6607,
@@ -69000,7 +70276,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6608,
@@ -69015,7 +70293,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2005",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6609,
@@ -69030,7 +70310,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6610,
@@ -69045,7 +70327,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6611,
@@ -69060,7 +70344,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6612,
@@ -69075,7 +70361,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6613,
@@ -69090,7 +70378,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6614,
@@ -69105,7 +70395,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6615,
@@ -69120,7 +70412,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6616,
@@ -69135,7 +70429,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6617,
@@ -69150,7 +70446,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6618,
@@ -69165,7 +70463,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6619,
@@ -69180,7 +70480,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6620,
@@ -69195,7 +70497,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6621,
@@ -69210,7 +70514,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6622,
@@ -69225,7 +70531,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6623,
@@ -69240,7 +70548,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6624,
@@ -69255,7 +70565,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6625,
@@ -69270,7 +70582,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6626,
@@ -69285,7 +70599,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6627,
@@ -69300,7 +70616,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6628,
@@ -69315,7 +70633,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6629,
@@ -69330,7 +70650,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6630,
@@ -69345,7 +70667,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6631,
@@ -69360,7 +70684,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6632,
@@ -69375,7 +70701,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6633,
@@ -69390,7 +70718,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6634,
@@ -69405,7 +70735,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6635,
@@ -69420,7 +70752,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6636,
@@ -69435,7 +70769,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6637,
@@ -69450,7 +70786,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6638,
@@ -69465,7 +70803,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6639,
@@ -69480,7 +70820,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6640,
@@ -69495,7 +70837,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6641,
@@ -69510,7 +70854,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6642,
@@ -69525,7 +70871,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6643,
@@ -69540,7 +70888,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6644,
@@ -69555,7 +70905,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6645,
@@ -69570,7 +70922,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6646,
@@ -69585,7 +70939,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6647,
@@ -69600,7 +70956,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6648,
@@ -69615,7 +70973,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2004",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6689,
@@ -69630,7 +70990,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6690,
@@ -69645,7 +71007,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6691,
@@ -69660,7 +71024,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6692,
@@ -69675,7 +71041,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6693,
@@ -69690,7 +71058,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6694,
@@ -69705,7 +71075,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6695,
@@ -69720,7 +71092,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6696,
@@ -69735,7 +71109,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6697,
@@ -69750,7 +71126,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6698,
@@ -69765,7 +71143,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6699,
@@ -69780,7 +71160,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6700,
@@ -69795,7 +71177,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6701,
@@ -69810,7 +71194,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6702,
@@ -69825,7 +71211,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6703,
@@ -69840,7 +71228,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6704,
@@ -69855,7 +71245,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6705,
@@ -69870,7 +71262,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6706,
@@ -69885,7 +71279,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6707,
@@ -69900,7 +71296,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6708,
@@ -69915,7 +71313,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6736,
@@ -69930,7 +71330,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6747,
@@ -69945,7 +71347,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6751,
@@ -69960,7 +71364,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6752,
@@ -69975,7 +71381,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6753,
@@ -69990,7 +71398,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6761,
@@ -70005,7 +71415,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6773,
@@ -70020,7 +71432,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6782,
@@ -70035,7 +71449,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6797,
@@ -70050,7 +71466,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6798,
@@ -70065,7 +71483,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6799,
@@ -70080,7 +71500,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6800,
@@ -70095,7 +71517,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6801,
@@ -70110,7 +71534,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6802,
@@ -70125,7 +71551,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6803,
@@ -70140,7 +71568,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6804,
@@ -70155,7 +71585,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6805,
@@ -70170,7 +71602,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6806,
@@ -70185,7 +71619,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6807,
@@ -70200,7 +71636,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6808,
@@ -70215,7 +71653,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2003",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7132,
@@ -70230,7 +71670,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7133,
@@ -70245,7 +71687,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7134,
@@ -70260,7 +71704,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7135,
@@ -70275,7 +71721,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7136,
@@ -70290,7 +71738,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7137,
@@ -70305,7 +71755,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7138,
@@ -70320,7 +71772,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7139,
@@ -70335,7 +71789,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7140,
@@ -70350,7 +71806,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7141,
@@ -70365,7 +71823,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7142,
@@ -70380,7 +71840,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7143,
@@ -70395,7 +71857,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7144,
@@ -70410,7 +71874,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7145,
@@ -70425,7 +71891,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7146,
@@ -70440,7 +71908,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7147,
@@ -70455,7 +71925,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7148,
@@ -70470,7 +71942,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7149,
@@ -70485,7 +71959,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7150,
@@ -70500,7 +71976,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7151,
@@ -70515,7 +71993,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7152,
@@ -70530,7 +72010,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7153,
@@ -70545,7 +72027,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7154,
@@ -70560,7 +72044,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7155,
@@ -70575,7 +72061,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7156,
@@ -70590,7 +72078,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7157,
@@ -70605,7 +72095,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7158,
@@ -70620,7 +72112,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7159,
@@ -70635,7 +72129,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7160,
@@ -70650,7 +72146,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7161,
@@ -70665,7 +72163,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7162,
@@ -70680,7 +72180,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7163,
@@ -70695,7 +72197,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7164,
@@ -70710,7 +72214,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7165,
@@ -70725,7 +72231,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7166,
@@ -70740,7 +72248,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7167,
@@ -70755,7 +72265,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7168,
@@ -70770,7 +72282,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7169,
@@ -70785,7 +72299,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7170,
@@ -70800,7 +72316,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7171,
@@ -70815,7 +72333,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS A",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6809,
@@ -70830,7 +72350,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6810,
@@ -70845,7 +72367,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6811,
@@ -70860,7 +72384,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6812,
@@ -70875,7 +72401,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6813,
@@ -70890,7 +72418,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6814,
@@ -70905,7 +72435,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6815,
@@ -70920,7 +72452,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6816,
@@ -70935,7 +72469,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6817,
@@ -70950,7 +72486,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6818,
@@ -70965,7 +72503,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6895,
@@ -70980,7 +72520,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6902,
@@ -70995,7 +72537,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6903,
@@ -71010,7 +72554,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6904,
@@ -71025,7 +72571,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6905,
@@ -71040,7 +72588,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6906,
@@ -71055,7 +72605,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6907,
@@ -71070,7 +72622,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6908,
@@ -71085,7 +72639,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6909,
@@ -71100,7 +72656,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6910,
@@ -71115,7 +72673,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6911,
@@ -71130,7 +72690,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 6926,
@@ -71145,7 +72707,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6939,
@@ -71160,7 +72724,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 6950,
@@ -71175,7 +72741,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 6955,
@@ -71190,7 +72758,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 6964,
@@ -71205,7 +72775,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 6984,
@@ -71220,7 +72792,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 6997,
@@ -71235,7 +72809,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7000,
@@ -71250,7 +72826,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7001,
@@ -71265,7 +72843,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7026,
@@ -71280,7 +72860,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7029,
@@ -71295,7 +72877,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7044,
@@ -71310,7 +72894,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7045,
@@ -71325,7 +72911,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7046,
@@ -71340,7 +72928,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7047,
@@ -71355,7 +72945,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7048,
@@ -71370,7 +72962,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7049,
@@ -71385,7 +72979,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7050,
@@ -71400,7 +72996,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7051,
@@ -71415,7 +73013,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2002",
     "subject": "MATHEMATICS B",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7172,
@@ -71430,7 +73030,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7173,
@@ -71445,7 +73047,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7174,
@@ -71460,7 +73064,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7175,
@@ -71475,7 +73081,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7176,
@@ -71490,7 +73098,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7177,
@@ -71505,7 +73115,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7178,
@@ -71520,7 +73132,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7179,
@@ -71535,7 +73149,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7180,
@@ -71550,7 +73166,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7181,
@@ -71565,7 +73183,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7182,
@@ -71580,7 +73200,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7183,
@@ -71595,7 +73217,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7184,
@@ -71610,7 +73234,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7185,
@@ -71625,7 +73251,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7186,
@@ -71640,7 +73268,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7187,
@@ -71655,7 +73285,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7188,
@@ -71670,7 +73302,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7189,
@@ -71685,7 +73319,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7190,
@@ -71700,7 +73336,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7191,
@@ -71715,7 +73353,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7192,
@@ -71730,7 +73370,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7193,
@@ -71745,7 +73387,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7194,
@@ -71760,7 +73404,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7195,
@@ -71775,7 +73421,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7196,
@@ -71790,7 +73438,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7197,
@@ -71805,7 +73455,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7198,
@@ -71820,7 +73472,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7199,
@@ -71835,7 +73489,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7200,
@@ -71850,7 +73506,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7201,
@@ -71865,7 +73523,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7202,
@@ -71880,7 +73540,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7203,
@@ -71895,7 +73557,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7204,
@@ -71910,7 +73574,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7205,
@@ -71925,7 +73591,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7206,
@@ -71940,7 +73608,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7207,
@@ -71955,7 +73625,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7208,
@@ -71970,7 +73642,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7209,
@@ -71985,7 +73659,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7210,
@@ -72000,7 +73676,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7211,
@@ -72015,7 +73693,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2001",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7212,
@@ -72030,7 +73710,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7213,
@@ -72045,7 +73727,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7214,
@@ -72060,7 +73744,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7215,
@@ -72075,7 +73761,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7216,
@@ -72090,7 +73778,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7217,
@@ -72105,7 +73795,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7218,
@@ -72120,7 +73812,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7219,
@@ -72135,7 +73829,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7220,
@@ -72150,7 +73846,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7221,
@@ -72165,7 +73863,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7222,
@@ -72180,7 +73880,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7223,
@@ -72195,7 +73897,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7224,
@@ -72210,7 +73914,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7225,
@@ -72225,7 +73931,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7226,
@@ -72240,7 +73948,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7227,
@@ -72255,7 +73965,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7228,
@@ -72270,7 +73982,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7229,
@@ -72285,7 +73999,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7230,
@@ -72300,7 +74016,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7231,
@@ -72315,7 +74033,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7232,
@@ -72330,7 +74050,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7233,
@@ -72345,7 +74067,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7234,
@@ -72360,7 +74084,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7235,
@@ -72375,7 +74101,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7236,
@@ -72390,7 +74118,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7237,
@@ -72405,7 +74135,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7238,
@@ -72420,7 +74152,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7239,
@@ -72435,7 +74169,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7240,
@@ -72450,7 +74186,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7241,
@@ -72465,7 +74203,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7242,
@@ -72480,7 +74220,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7243,
@@ -72495,7 +74237,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7244,
@@ -72510,7 +74254,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7245,
@@ -72525,7 +74271,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7246,
@@ -72540,7 +74288,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7247,
@@ -72555,7 +74305,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7248,
@@ -72570,7 +74322,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7249,
@@ -72585,7 +74339,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7250,
@@ -72600,7 +74356,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7251,
@@ -72615,7 +74373,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2000",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7252,
@@ -72630,7 +74390,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7253,
@@ -72645,7 +74407,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7254,
@@ -72660,7 +74424,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7255,
@@ -72675,7 +74441,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7256,
@@ -72690,7 +74458,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7257,
@@ -72705,7 +74475,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7258,
@@ -72720,7 +74492,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7259,
@@ -72735,7 +74509,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7260,
@@ -72750,7 +74526,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7261,
@@ -72765,7 +74543,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7262,
@@ -72780,7 +74560,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7263,
@@ -72795,7 +74577,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7264,
@@ -72810,7 +74594,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7265,
@@ -72825,7 +74611,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7266,
@@ -72840,7 +74628,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7267,
@@ -72855,7 +74645,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7268,
@@ -72870,7 +74662,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7269,
@@ -72885,7 +74679,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7270,
@@ -72900,7 +74696,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7271,
@@ -72915,7 +74713,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7272,
@@ -72930,7 +74730,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7273,
@@ -72945,7 +74747,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7274,
@@ -72960,7 +74764,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7275,
@@ -72975,7 +74781,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7276,
@@ -72990,7 +74798,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7277,
@@ -73005,7 +74815,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7278,
@@ -73020,7 +74832,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7279,
@@ -73035,7 +74849,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7280,
@@ -73050,7 +74866,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7281,
@@ -73065,7 +74883,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7282,
@@ -73080,7 +74900,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7283,
@@ -73095,7 +74917,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7284,
@@ -73110,7 +74934,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7285,
@@ -73125,7 +74951,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7286,
@@ -73140,7 +74968,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7287,
@@ -73155,7 +74985,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7288,
@@ -73170,7 +75002,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7289,
@@ -73185,7 +75019,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7290,
@@ -73200,7 +75036,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7291,
@@ -73215,7 +75053,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1999",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7292,
@@ -73230,7 +75070,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7293,
@@ -73245,7 +75087,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7294,
@@ -73260,7 +75104,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7295,
@@ -73275,7 +75121,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7296,
@@ -73290,7 +75138,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7297,
@@ -73305,7 +75155,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7298,
@@ -73320,7 +75172,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7299,
@@ -73335,7 +75189,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7300,
@@ -73350,7 +75206,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7301,
@@ -73365,7 +75223,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7302,
@@ -73380,7 +75240,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7303,
@@ -73395,7 +75257,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7304,
@@ -73410,7 +75274,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7305,
@@ -73425,7 +75291,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7306,
@@ -73440,7 +75308,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7307,
@@ -73455,7 +75325,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7308,
@@ -73470,7 +75342,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7309,
@@ -73485,7 +75359,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7310,
@@ -73500,7 +75376,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7311,
@@ -73515,7 +75393,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7312,
@@ -73530,7 +75410,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7313,
@@ -73545,7 +75427,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7314,
@@ -73560,7 +75444,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7315,
@@ -73575,7 +75461,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7316,
@@ -73590,7 +75478,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7317,
@@ -73605,7 +75495,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7318,
@@ -73620,7 +75512,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7319,
@@ -73635,7 +75529,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7320,
@@ -73650,7 +75546,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7321,
@@ -73665,7 +75563,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7322,
@@ -73680,7 +75580,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7323,
@@ -73695,7 +75597,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7324,
@@ -73710,7 +75614,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7325,
@@ -73725,7 +75631,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7326,
@@ -73740,7 +75648,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7327,
@@ -73755,7 +75665,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7328,
@@ -73770,7 +75682,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7329,
@@ -73785,7 +75699,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7330,
@@ -73800,7 +75716,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7331,
@@ -73815,7 +75733,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1998",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7332,
@@ -73830,7 +75750,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7333,
@@ -73845,7 +75767,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7334,
@@ -73860,7 +75784,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7335,
@@ -73875,7 +75801,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7336,
@@ -73890,7 +75818,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7337,
@@ -73905,7 +75835,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7338,
@@ -73920,7 +75852,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7339,
@@ -73935,7 +75869,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7340,
@@ -73950,7 +75886,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7341,
@@ -73965,7 +75903,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7342,
@@ -73980,7 +75920,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7343,
@@ -73995,7 +75937,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7344,
@@ -74010,7 +75954,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7345,
@@ -74025,7 +75971,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7346,
@@ -74040,7 +75988,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7347,
@@ -74055,7 +76005,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7348,
@@ -74070,7 +76022,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7349,
@@ -74085,7 +76039,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7350,
@@ -74100,7 +76056,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7351,
@@ -74115,7 +76073,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7352,
@@ -74130,7 +76090,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7353,
@@ -74145,7 +76107,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7354,
@@ -74160,7 +76124,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7355,
@@ -74175,7 +76141,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7356,
@@ -74190,7 +76158,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7357,
@@ -74205,7 +76175,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7358,
@@ -74220,7 +76192,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7359,
@@ -74235,7 +76209,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7360,
@@ -74250,7 +76226,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7361,
@@ -74265,7 +76243,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7362,
@@ -74280,7 +76260,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7363,
@@ -74295,7 +76277,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7364,
@@ -74310,7 +76294,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7365,
@@ -74325,7 +76311,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7366,
@@ -74340,7 +76328,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7367,
@@ -74355,7 +76345,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7368,
@@ -74370,7 +76362,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7369,
@@ -74385,7 +76379,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7370,
@@ -74400,7 +76396,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7371,
@@ -74415,7 +76413,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1997",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7372,
@@ -74430,7 +76430,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7373,
@@ -74445,7 +76447,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7374,
@@ -74460,7 +76464,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7375,
@@ -74475,7 +76481,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7376,
@@ -74490,7 +76498,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7377,
@@ -74505,7 +76515,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7378,
@@ -74520,7 +76532,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7379,
@@ -74535,7 +76549,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7380,
@@ -74550,7 +76566,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7381,
@@ -74565,7 +76583,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7382,
@@ -74580,7 +76600,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7383,
@@ -74595,7 +76617,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7384,
@@ -74610,7 +76634,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7385,
@@ -74625,7 +76651,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7386,
@@ -74640,7 +76668,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7387,
@@ -74655,7 +76685,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7388,
@@ -74670,7 +76702,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7389,
@@ -74685,7 +76719,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7390,
@@ -74700,7 +76736,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7391,
@@ -74715,7 +76753,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7392,
@@ -74730,7 +76770,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7393,
@@ -74745,7 +76787,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7394,
@@ -74760,7 +76804,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7395,
@@ -74775,7 +76821,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7396,
@@ -74790,7 +76838,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7397,
@@ -74805,7 +76855,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7398,
@@ -74820,7 +76872,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7399,
@@ -74835,7 +76889,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7400,
@@ -74850,7 +76906,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7401,
@@ -74865,7 +76923,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7402,
@@ -74880,7 +76940,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7403,
@@ -74895,7 +76957,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7404,
@@ -74910,7 +76974,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7405,
@@ -74925,7 +76991,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7406,
@@ -74940,7 +77008,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7407,
@@ -74955,7 +77025,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7408,
@@ -74970,7 +77042,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7409,
@@ -74985,7 +77059,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7410,
@@ -75000,7 +77076,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7411,
@@ -75015,7 +77093,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1996",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7412,
@@ -75030,7 +77110,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7413,
@@ -75045,7 +77127,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7414,
@@ -75060,7 +77144,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7415,
@@ -75075,7 +77161,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7416,
@@ -75090,7 +77178,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7417,
@@ -75105,7 +77195,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7418,
@@ -75120,7 +77212,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7419,
@@ -75135,7 +77229,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7420,
@@ -75150,7 +77246,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7421,
@@ -75165,7 +77263,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7422,
@@ -75180,7 +77280,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7423,
@@ -75195,7 +77297,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7424,
@@ -75210,7 +77314,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7425,
@@ -75225,7 +77331,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7426,
@@ -75240,7 +77348,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7427,
@@ -75255,7 +77365,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7428,
@@ -75270,7 +77382,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7429,
@@ -75285,7 +77399,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7430,
@@ -75300,7 +77416,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7431,
@@ -75315,7 +77433,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7432,
@@ -75330,7 +77450,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7433,
@@ -75345,7 +77467,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7434,
@@ -75360,7 +77484,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7435,
@@ -75375,7 +77501,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7436,
@@ -75390,7 +77518,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7437,
@@ -75405,7 +77535,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7438,
@@ -75420,7 +77552,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7439,
@@ -75435,7 +77569,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7440,
@@ -75450,7 +77586,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7441,
@@ -75465,7 +77603,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7442,
@@ -75480,7 +77620,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7443,
@@ -75495,7 +77637,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7444,
@@ -75510,7 +77654,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7445,
@@ -75525,7 +77671,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7446,
@@ -75540,7 +77688,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7447,
@@ -75555,7 +77705,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7448,
@@ -75570,7 +77722,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7449,
@@ -75585,7 +77739,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7450,
@@ -75600,7 +77756,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7451,
@@ -75615,7 +77773,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1995",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7452,
@@ -75630,7 +77790,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7453,
@@ -75645,7 +77807,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7454,
@@ -75660,7 +77824,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7455,
@@ -75675,7 +77841,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7456,
@@ -75690,7 +77858,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7457,
@@ -75705,7 +77875,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7458,
@@ -75720,7 +77892,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7459,
@@ -75735,7 +77909,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7460,
@@ -75750,7 +77926,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7461,
@@ -75765,7 +77943,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7462,
@@ -75780,7 +77960,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7463,
@@ -75795,7 +77977,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7464,
@@ -75810,7 +77994,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7465,
@@ -75825,7 +78011,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7466,
@@ -75840,7 +78028,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7467,
@@ -75855,7 +78045,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7468,
@@ -75870,7 +78062,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7469,
@@ -75885,7 +78079,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7470,
@@ -75900,7 +78096,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7471,
@@ -75915,7 +78113,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7472,
@@ -75930,7 +78130,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7473,
@@ -75945,7 +78147,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7474,
@@ -75960,7 +78164,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7475,
@@ -75975,7 +78181,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7476,
@@ -75990,7 +78198,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7477,
@@ -76005,7 +78215,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7478,
@@ -76020,7 +78232,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7479,
@@ -76035,7 +78249,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7480,
@@ -76050,7 +78266,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7481,
@@ -76065,7 +78283,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7482,
@@ -76080,7 +78300,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7483,
@@ -76095,7 +78317,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7484,
@@ -76110,7 +78334,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7485,
@@ -76125,7 +78351,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7486,
@@ -76140,7 +78368,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7487,
@@ -76155,7 +78385,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7488,
@@ -76170,7 +78402,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7489,
@@ -76185,7 +78419,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7490,
@@ -76200,7 +78436,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7491,
@@ -76215,7 +78453,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1994",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7492,
@@ -76230,7 +78470,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7493,
@@ -76245,7 +78487,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7494,
@@ -76260,7 +78504,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7495,
@@ -76275,7 +78521,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7496,
@@ -76290,7 +78538,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7497,
@@ -76305,7 +78555,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7498,
@@ -76320,7 +78572,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7499,
@@ -76335,7 +78589,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7500,
@@ -76350,7 +78606,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7501,
@@ -76365,7 +78623,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7502,
@@ -76380,7 +78640,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7503,
@@ -76395,7 +78657,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7504,
@@ -76410,7 +78674,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7505,
@@ -76425,7 +78691,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7506,
@@ -76440,7 +78708,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7507,
@@ -76455,7 +78725,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7508,
@@ -76470,7 +78742,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7509,
@@ -76485,7 +78759,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7510,
@@ -76500,7 +78776,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7511,
@@ -76515,7 +78793,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7512,
@@ -76530,7 +78810,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7513,
@@ -76545,7 +78827,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7514,
@@ -76560,7 +78844,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7515,
@@ -76575,7 +78861,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7516,
@@ -76590,7 +78878,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7517,
@@ -76605,7 +78895,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7518,
@@ -76620,7 +78912,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7519,
@@ -76635,7 +78929,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7520,
@@ -76650,7 +78946,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7521,
@@ -76665,7 +78963,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7522,
@@ -76680,7 +78980,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7523,
@@ -76695,7 +78997,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7524,
@@ -76710,7 +79014,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7525,
@@ -76725,7 +79031,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7526,
@@ -76740,7 +79048,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7527,
@@ -76755,7 +79065,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7528,
@@ -76770,7 +79082,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7529,
@@ -76785,7 +79099,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7530,
@@ -76800,7 +79116,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7531,
@@ -76815,7 +79133,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1993",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7572,
@@ -76830,7 +79150,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7573,
@@ -76845,7 +79167,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7574,
@@ -76860,7 +79184,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7575,
@@ -76875,7 +79201,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7576,
@@ -76890,7 +79218,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7577,
@@ -76905,7 +79235,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7578,
@@ -76920,7 +79252,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7579,
@@ -76935,7 +79269,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7580,
@@ -76950,7 +79286,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7581,
@@ -76965,7 +79303,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7582,
@@ -76980,7 +79320,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7583,
@@ -76995,7 +79337,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7584,
@@ -77010,7 +79354,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7585,
@@ -77025,7 +79371,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7586,
@@ -77040,7 +79388,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7587,
@@ -77055,7 +79405,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7588,
@@ -77070,7 +79422,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7589,
@@ -77085,7 +79439,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7590,
@@ -77100,7 +79456,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7591,
@@ -77115,7 +79473,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7592,
@@ -77130,7 +79490,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7593,
@@ -77145,7 +79507,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7594,
@@ -77160,7 +79524,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7595,
@@ -77175,7 +79541,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7596,
@@ -77190,7 +79558,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7597,
@@ -77205,7 +79575,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7598,
@@ -77220,7 +79592,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7599,
@@ -77235,7 +79609,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7600,
@@ -77250,7 +79626,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7601,
@@ -77265,7 +79643,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7602,
@@ -77280,7 +79660,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7603,
@@ -77295,7 +79677,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7604,
@@ -77310,7 +79694,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7605,
@@ -77325,7 +79711,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7606,
@@ -77340,7 +79728,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7607,
@@ -77355,7 +79745,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7608,
@@ -77370,7 +79762,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7609,
@@ -77385,7 +79779,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7610,
@@ -77400,7 +79796,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7611,
@@ -77415,7 +79813,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1991",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7612,
@@ -77430,7 +79830,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7613,
@@ -77445,7 +79847,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7614,
@@ -77460,7 +79864,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7615,
@@ -77475,7 +79881,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7616,
@@ -77490,7 +79898,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7617,
@@ -77505,7 +79915,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7618,
@@ -77520,7 +79932,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7619,
@@ -77535,7 +79949,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7620,
@@ -77550,7 +79966,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7621,
@@ -77565,7 +79983,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7622,
@@ -77580,7 +80000,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7623,
@@ -77595,7 +80017,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7624,
@@ -77610,7 +80034,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7625,
@@ -77625,7 +80051,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7626,
@@ -77640,7 +80068,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7627,
@@ -77655,7 +80085,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7628,
@@ -77670,7 +80102,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7629,
@@ -77685,7 +80119,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7630,
@@ -77700,7 +80136,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7631,
@@ -77715,7 +80153,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7632,
@@ -77730,7 +80170,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7633,
@@ -77745,7 +80187,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7634,
@@ -77760,7 +80204,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7635,
@@ -77775,7 +80221,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7636,
@@ -77790,7 +80238,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7637,
@@ -77805,7 +80255,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7638,
@@ -77820,7 +80272,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7639,
@@ -77835,7 +80289,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7640,
@@ -77850,7 +80306,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7641,
@@ -77865,7 +80323,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7642,
@@ -77880,7 +80340,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7643,
@@ -77895,7 +80357,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7644,
@@ -77910,7 +80374,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7645,
@@ -77925,7 +80391,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 7646,
@@ -77940,7 +80408,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRACTIONS_OPS",
+    "topic": "MATH_JHS3_FRACTIONS_OPS"
   },
   {
     "id": 7647,
@@ -77955,7 +80425,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
+    "topic": "MATH_JHS3_ALG_LINEAR_EQUATIONS"
   },
   {
     "id": 7648,
@@ -77970,7 +80442,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_INEQUALITIES",
+    "topic": "MATH_JHS3_ALG_INEQUALITIES"
   },
   {
     "id": 7649,
@@ -77985,7 +80459,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_BEARINGS",
+    "topic": "MATH_JHS3_GEO_BEARINGS"
   },
   {
     "id": 7650,
@@ -78000,7 +80476,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_REAL_NUMBERS",
+    "topic": "MATH_JHS3_NUM_REAL_NUMBERS"
   },
   {
     "id": 7651,
@@ -78015,7 +80493,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "1990",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
+    "topic": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
   },
   {
     "id": 8532,

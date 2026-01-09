@@ -10,54 +10,63 @@ export const QUIZ_METADATA = {
             id: "Mathematics",
             name: "Mathematics",
             icon: "📐",
+            dbKey: 'CAREERTECHNOLOGY',
             years: [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015]
         },
         {
             id: "English Language",
             name: "English Language",
             icon: "📖",
+            dbKey: 'ENGLISH',
             years: [2023, 2022, 2021, 2020, 2019, 2018, 2017]
         },
         {
             id: "Integrated Science",
             name: "Integrated Science",
             icon: "🔬",
+            dbKey: 'SCIENCE',
             years: [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
         },
         {
             id: "Social Studies",
             name: "Social Studies",
             icon: "🌍",
+            dbKey: 'SOCIALSTUDIES',
             years: [2023, 2022, 2021, 2020, 2019, 2018]
         },
         {
             id: "ICT",
             name: "ICT",
             icon: "💻",
+            dbKey: 'INFORMATIONANDCOMMUNICATIONSTECHNOLOGY',
             years: [2023, 2022, 2021, 2020, 2019] // Recent subject
         },
         {
             id: "RME",
             name: "RME",
             icon: "🙏",
+            dbKey: 'RELIGIOUSANDMORALEDUCATION',
             years: [2022, 2021, 2020, 2019, 2018]
         },
         {
             id: "French",
             name: "French",
             icon: "🇫🇷",
+            dbKey: 'FRENCH',
             years: [2022, 2021, 2020, 2019]
         },
         {
             id: "BDT",
             name: "BDT",
             icon: "🔨",
+            dbKey: 'BASICDESIGNANDTECHNOLOGY',
             years: [2021, 2020, 2019, 2018]
         },
         {
             id: "Home Economics",
             name: "Home Economics",
             icon: "🍳",
+            dbKey: 'HOMEECONOMICS',
             years: [2022, 2021, 2020, 2019]
         }
     ],

@@ -1,5 +1,6 @@
 import { getUserTopicPerformance, trackStudySession, trackQuizAttempt, getUserQuizHistory } from './database.js';
 import { TOPIC_HIERARCHY, BECE_PASS_MARK, EXAM_DATE } from './data/topicData.js';
+import { getTopicById } from './data/topicGraph.js';
 
 export class AnalyticsEngine {
   constructor(userId) {
@@ -114,6 +115,7 @@ export class AnalyticsEngine {
         weaknesses.push({
           subject: topic.subject,
           topic: topic.topic,
+          topicId: topic.topicId || null,
           accuracy: Math.round(topic.accuracy),
           totalAttempts: topic.total,
           performanceScore: Math.round(performanceScore),
@@ -161,44 +163,70 @@ export class AnalyticsEngine {
       });
     }
 
-    // Topic-specific recommendations with Hierarchy
+    // Topic-specific recommendations with Hierarchy (Refactored)
     weaknesses.slice(0, 3).forEach(weakness => {
       let message = '';
       let action = '';
       let foundations = [];
-      let tips = '';
+      let outcomes = [];
 
-      // Check hierarchy for remedial help
-      if (TOPIC_HIERARCHY[weakness.subject] && TOPIC_HIERARCHY[weakness.subject][weakness.topic]) {
-        const topicData = TOPIC_HIERARCHY[weakness.subject][weakness.topic];
-        foundations = topicData.foundations || [];
-        tips = topicData.tips || '';
+      // 1. Look up node in new Topic Graph
+      // First try to resolve by topicId if we have it (weakness.topicId)
+      // The aggregation update adds .topicId to the weakness object if available
+      let topicNode = null;
+      if (weakness.topicId) {
+        topicNode = getTopicById(weakness.topicId);
+      }
+
+      // Legacy fallback: name match? 
+      // (Skipping complex name matching for now to rely on IDs)
+
+      if (topicNode) {
+        foundations = topicNode.foundations || [];
+        outcomes = topicNode.learning_outcomes || [];
+      } else {
+        // Fallback to legacy static hierarchy if new graph lookup fails
+        if (TOPIC_HIERARCHY[weakness.subject] && TOPIC_HIERARCHY[weakness.subject][weakness.topic]) {
+          const legData = TOPIC_HIERARCHY[weakness.subject][weakness.topic];
+          foundations = legData.foundations || [];
+        }
       }
 
       if (weakness.accuracy < 40) {
-        message = `You're struggling with ${weakness.topic}.`;
+        message = `You're struggling with ${topicNode ? topicNode.name : weakness.topic}.`;
         if (foundations.length > 0) {
-          action = `Review these foundations: ${foundations.join(', ')}.`;
+          // In a real app, we'd fetch names for these foundation IDs
+          const foundationNames = foundations.map(fid => {
+            const node = getTopicById(fid);
+            return node ? node.name : fid;
+          });
+          action = `Step 1: Review foundations (${foundationNames.join(', ')}).`;
         } else {
-          action = `Study ${weakness.topic} basics and attempt easier questions first`;
+          action = `Review the basics: ${outcomes[0] || 'Key concepts'}.`;
         }
       } else if (weakness.accuracy < 70) {
-        message = `You need more practice with ${weakness.topic}.`;
-        action = tips ? `Tip: ${tips}` : `Practice more ${weakness.topic} questions`;
+        message = `You need more practice with ${topicNode ? topicNode.name : weakness.topic}.`;
+        action = outcomes.length > 0 ? `Focus on: ${outcomes[0]}` : `Practice more questions in this topic.`;
       } else {
-        message = `You're doing well with ${weakness.topic}, aim for mastery.`;
-        action = `Challenge yourself with advanced ${weakness.topic} problems`;
+        message = `Good progress on ${topicNode ? topicNode.name : weakness.topic}.`;
+        if (topicNode && topicNode.next && topicNode.next.length > 0) {
+          const nextNode = getTopicById(topicNode.next[0]);
+          action = `Advance to: ${nextNode ? nextNode.name : 'Next Level'}.`;
+        } else {
+          action = `Challenge yourself with harder questions.`;
+        }
       }
 
       recommendations.push({
         type: 'topic_focus',
         priority: weakness.priority,
-        title: `${weakness.subject}: ${weakness.topic}`,
+        title: `${topicNode ? topicNode.name : weakness.topic}`,
         message: message,
         action: action,
         accuracy: weakness.accuracy,
         subject: weakness.subject,
         topic: weakness.topic,
+        topicId: weakness.topicId,
         foundations: foundations
       });
     });

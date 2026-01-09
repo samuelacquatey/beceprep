@@ -407,16 +407,30 @@
         return;
       }
 
-      container.innerHTML = weakAreas.map(area => `
-        <div class="weak-area-item ${area.priority}">
-          <div class="weak-area-header">
-            <span class="priority-badge ${area.priority}">${area.priority.toUpperCase()}</span>
-            <h4>${area.title}</h4>
-          </div>
-          <p>${area.message}</p>
-          <div class="action-tip">💡 ${area.action}</div>
-        </div>
-      `).join('');
+      container.innerHTML = weakAreas.map(area => {
+        let foundationsHtml = '';
+        if (area.foundations && area.foundations.length > 0) {
+          foundationsHtml = `
+                  <div style="margin-top:8px;">
+                      <span style="font-size:11px; color:#6b7280; font-weight:600;">PREREQUISITES:</span>
+                      <div style="display:flex; gap:5px; flex-wrap:wrap; margin-top:4px;">
+                          ${area.foundations.map(f => `<span style="background:#f3f4f6; color:#4b5563; padding:2px 8px; border-radius:4px; font-size:11px;">${f}</span>`).join('')}
+                      </div>
+                  </div>`;
+        }
+
+        return `
+            <div class="weak-area-item ${area.priority}">
+              <div class="weak-area-header">
+                <span class="priority-badge ${area.priority}">${area.priority.toUpperCase()}</span>
+                <h4>${area.title}</h4>
+              </div>
+              <p>${area.message}</p>
+              <div class="action-tip">💡 ${area.action}</div>
+              ${foundationsHtml}
+            </div>
+          `;
+      }).join('');
     }
 
     function renderActivityTimeline(recentInsights) {

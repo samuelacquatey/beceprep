@@ -14,7 +14,8 @@ import {
   arrayUnion,
   increment,
   writeBatch,
-  Timestamp
+  Timestamp,
+  startAfter // Added import
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 import { db } from './auth.js';
 import { ENHANCED_QUESTIONS } from './data/questionBank.js';
@@ -22,60 +23,63 @@ import { ENHANCED_QUESTIONS } from './data/questionBank.js';
 // --- Question Management ---
 
 /**
- * Fetch questions based on filters
- * @param {Object} filters - { subjects, year, mode, limit }
- * @returns {Promise<Array>} - Array of question objects
+ * Fetch one page of questions based on filters
+ * @param {Object} opts - { filters, pageSize, cursor }
+ * @returns {Promise<{ questions: Array, lastDoc: any }>}
  */
-export async function fetchQuestions(filters = {}) {
+export async function fetchQuestionsPage({ filters = {}, pageSize = 50, cursor = null } = {}) {
   try {
     const questionsRef = collection(db, 'questions');
     let q = query(questionsRef);
 
-    // --- 1. OPTIMIZED COMPOUND FILTERS ---
-    // If specific subjects are selected, we can optimise. 
-    // Firestore 'in' query supports up to 10 items (we have <10 subjects).
+    // Subject filter (canonical keys, uppercased just in case)
     if (filters.subjects && filters.subjects.length > 0) {
-      // NOTE: This usually requires an index if combined with field sorting
-      q = query(q, where('subject', 'in', filters.subjects));
+      const normalizedSubjects = filters.subjects.map(s => s.trim().toUpperCase());
+      q = query(q, where('subject', 'in', normalizedSubjects));
     }
 
+    // Year filter
     if (filters.year && filters.year !== 'all') {
-      // NOTE: Ensure year is handled as consistent type (DB uses String '2023' or Number 2023?)
-      // We'll try generic comparison or match DB type.
-      // If DB has string '2023', Number() will mismatch in Firestore.
-      // Safe bet: Don't cast if not sure, OR cast to match DB.
-      // Assuming DB might have Strings for legacy reasons in questionBank.js.
-      q = query(q, where('year', '==', filters.year)); // Removed Number() forceful cast
+      q = query(q, where('year', '==', String(filters.year)));
     }
 
-    // Limit for initial load speed (Snappy!)
-    // In a real endless mode, we would use cursors. 
-    q = query(q, limit(10));
-
-    const querySnapshot = await getDocs(q);
-    let questions = [];
-
-    querySnapshot.forEach((doc) => {
-      // FIX: Support String IDs (Subject_Year_Hash) - kept as string
-      questions.push({ id: doc.id, ...doc.data() });
-    });
-
-    // Client-side fallback if no results (rare but possible if index fails silently or empty DB)
-    if (questions.length === 0) {
-      console.log("Firestore empty or filtered out. Checking local fallback...");
-      return fetchLocalFallback(filters);
+    // Apply cursor + limit
+    if (cursor) {
+      q = query(q, startAfter(cursor), limit(pageSize));
+    } else {
+      q = query(q, limit(pageSize));
     }
 
-    return questions;
+    const snap = await getDocs(q);
+    const questions = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+    const lastDoc = snap.docs.length > 0 ? snap.docs[snap.docs.length - 1] : null;
+
+    // If Firestore returned nothing AND no cursor (first page), fall back
+    if (!cursor && questions.length === 0) {
+      console.log('Firestore empty or filtered out. Checking local fallback...');
+      const local = fetchLocalFallback(filters).slice(0, pageSize);
+      return { questions: local, lastDoc: null };
+    }
+
+    return { questions, lastDoc };
 
   } catch (error) {
-    console.error("Firestore Error (likely missing index or network):", error);
-
-    // --- 2. GRACEFUL FALLBACK ---
-    // If "failed-precondition" (Missing Index), we fall back to local data or simpler query.
-    // For this 24h rollout to be safe, we fall back to local data immediately.
-    return fetchLocalFallback(filters);
+    console.error('Firestore Error (likely missing index or network):', error);
+    // Graceful fallback only for first page
+    if (!cursor) {
+      const local = fetchLocalFallback(filters).slice(0, pageSize);
+      return { questions: local, lastDoc: null };
+    }
+    return { questions: [], lastDoc: null };
   }
+}
+
+/**
+ * Back‑compat wrapper if you still call fetchQuestions() elsewhere.
+ */
+export async function fetchQuestions(filters = {}) {
+  const { questions } = await fetchQuestionsPage({ filters, pageSize: 50, cursor: null });
+  return questions;
 }
 
 function fetchLocalFallback(filters) {
@@ -87,7 +91,9 @@ function fetchLocalFallback(filters) {
   }
 
   if (filters.subjects && filters.subjects.length > 0) {
-    questions = questions.filter(q => filters.subjects.includes(q.subject));
+    // Case-insensitive filtering
+    const normalizedFilters = filters.subjects.map(s => s.trim().toUpperCase());
+    questions = questions.filter(q => normalizedFilters.includes(q.subject.trim().toUpperCase()));
   }
 
   // Mock a limit
@@ -110,11 +116,12 @@ export async function trackQuestionAttempt(userId, questionId, isCorrect, choice
     };
 
     // Fallback lookup if metadata is missing
-    if (!attemptData.subject || !attemptData.topic) {
+    if (!attemptData.subject || !attemptData.topic || !attemptData.topicId) {
       let question = ENHANCED_QUESTIONS.find(q => q.id === questionId);
       if (question) {
         attemptData.subject = question.subject;
         attemptData.topic = question.topic;
+        attemptData.topicId = question.topicId || null; // Capture topicId
         attemptData.year = question.year;
       }
     }
@@ -143,11 +150,12 @@ export async function batchTrackQuestionAttempts(userId, attempts) {
       };
 
       // Fallback metadata if missing
-      if (!data.subject || !data.topic) {
+      if (!data.subject || !data.topic || !data.topicId) {
         let question = ENHANCED_QUESTIONS.find(q => q.id === attempt.questionId);
         if (question) {
           data.subject = question.subject;
           data.topic = question.topic;
+          data.topicId = question.topicId || null;
           data.year = question.year;
         }
       }
@@ -196,11 +204,12 @@ async function updateTopicAggregates(userId, newAttempts) {
 
       if (!subject || !topic) return;
 
-      const key = `${subject}-${topic}`;
+      const key = attempt.topicId || `${subject}-${topic}`; // Prefer topicId for tracking key
       if (!topicPerformance[key]) {
         topicPerformance[key] = {
           subject,
           topic,
+          topicId: attempt.topicId || null, // Store ID if available
           total: 0,
           correct: 0,
           totalTime: 0,
@@ -337,11 +346,12 @@ export async function getUserTopicPerformance(userId) {
     attempts.forEach(attempt => {
       if (!attempt.subject || !attempt.topic) return;
 
-      const topicKey = `${attempt.subject}-${attempt.topic}`;
+      const topicKey = attempt.topicId || `${attempt.subject}-${attempt.topic}`;
       if (!topicPerformance[topicKey]) {
         topicPerformance[topicKey] = {
           subject: attempt.subject,
           topic: attempt.topic,
+          topicId: attempt.topicId || null,
           total: 0,
           correct: 0,
           totalTime: 0,

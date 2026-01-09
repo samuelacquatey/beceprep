@@ -14,6 +14,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const db = initializeFirestore(app, {}, '(default)');
+const db = initializeFirestore(app, {}, 'bece-prod-db');
 
 export { app, auth, db };
