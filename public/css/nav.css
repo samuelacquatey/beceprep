@@ -1,0 +1,128 @@
+/* --- Responsive Navigation --- */
+
+:root {
+    --nav-height-mobile: 64px;
+    --nav-width-desktop: 80px;
+}
+
+/* Mobile First: Bottom Navigation */
+.app-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height-mobile);
+    background: #FFFFFF;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    padding-bottom: env(safe-area-inset-bottom);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 500;
+    flex: 1;
+    height: 100%;
+    transition: color 0.2s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    color: var(--text-main);
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.nav-item.active {
+    color: var(--accent);
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Active State Logic: SVG handling */
+.nav-item .solid-icon {
+    display: none;
+}
+
+.nav-item .outline-icon {
+    display: block;
+}
+
+.nav-item.active .solid-icon {
+    display: block;
+}
+
+.nav-item.active .outline-icon {
+    display: none;
+}
+
+/* Page Spacing for Mobile */
+body {
+    padding-bottom: calc(var(--nav-height-mobile) + 20px);
+}
+
+/* Desktop: Sidebar Navigation */
+@media (min-width: 768px) {
+    body {
+        padding-bottom: 0;
+        padding-left: var(--nav-width-desktop);
+    }
+
+    .app-nav {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: var(--nav-width-desktop);
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-top: none;
+        border-right: 1px solid var(--border);
+        padding: 24px 0;
+        gap: 32px;
+    }
+
+    .nav-item {
+        flex: 0 0 auto;
+        height: auto;
+        width: 64px;
+        height: 64px;
+        border-radius: 12px;
+        gap: 6px;
+    }
+
+    .nav-item:hover {
+        background-color: var(--bg-hover, #F3F4F6);
+    }
+
+    .nav-item.active {
+        background-color: var(--glass);
+    }
+}
+
+/* --- Layout Adjustments --- */
+/* Center container mostly, but account for sidebar on desktop */
+.container {
+    max-width: 1200px;
+    /* Slight increase for desktop layout */
+}
+
+/* Hide old header if present (we'll remove it manually, but this is a safeguard) */
+header .brand {
+    /* Keep brand? Yes, top bar might still be useful for page title, but simpler */
+}
