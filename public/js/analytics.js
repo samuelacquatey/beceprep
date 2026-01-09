@@ -84,10 +84,9 @@ export class AnalyticsEngine {
   }
 
   calculateBECEReadiness() {
-    // A complex score based on:
-    // 1. Accuracy (50% weight)
-    // 2. Coverage (30% weight) - how many topics attempted
-    // 3. Consistency (20% weight)
+    // Revised Formula based on user feedback:
+    // Readiness = 0.6 * Accuracy + 0.25 * Coverage + 0.15 * Consistency
+    // Coverage is now based on "mastered" topics (accuracy >= 70%) rather than just attempted.
 
     const totalQuestions = this.insights.reduce((sum, day) => sum + day.totalQuestions, 0);
     if (totalQuestions < 10) return 0; // Not enough data
@@ -95,13 +94,15 @@ export class AnalyticsEngine {
     const correctAnswers = this.insights.reduce((sum, day) => sum + day.correctAnswers, 0);
     const accuracy = (correctAnswers / totalQuestions) * 100;
 
-    // Coverage: Assume ~20 topics total for now (can be dynamic)
-    const topicsAttempted = Object.keys(this.topicPerformance).length;
-    const coverage = Math.min((topicsAttempted / 10) * 100, 100); // Cap at 100% if 10+ topics
+    // Coverage: Count topics with >= 70% accuracy (Mastery)
+    // We stick to the heuristic that mastering ~10 topics gives full coverage points for now.
+    const MASTERY_THRESHOLD = 70;
+    const masteredTopicsCount = Object.values(this.topicPerformance).filter(t => t.accuracy >= MASTERY_THRESHOLD).length;
+    const coverage = Math.min((masteredTopicsCount / 10) * 100, 100);
 
     const consistency = this.calculateConsistency();
 
-    const score = (accuracy * 0.5) + (coverage * 0.3) + (consistency * 0.2);
+    const score = (accuracy * 0.6) + (coverage * 0.25) + (consistency * 0.15);
     return Math.round(score);
   }
 
@@ -195,12 +196,13 @@ export class AnalyticsEngine {
       if (weakness.accuracy < 40) {
         message = `You're struggling with ${topicNode ? topicNode.name : weakness.topic}.`;
         if (foundations.length > 0) {
-          // In a real app, we'd fetch names for these foundation IDs
-          const foundationNames = foundations.map(fid => {
+          // Normalize: If we have strings, use them. If objects, use .id
+          const foundationNames = foundations.map(f => {
+            const fid = (typeof f === 'string') ? f : f.id;
             const node = getTopicById(fid);
             return node ? node.name : fid;
           });
-          action = `Step 1: Review foundations (${foundationNames.join(', ')}).`;
+          action = `Review foundations: ${foundationNames.join(', ')}`;
         } else {
           action = `Review the basics: ${outcomes[0] || 'Key concepts'}.`;
         }

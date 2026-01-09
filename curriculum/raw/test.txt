@@ -1,0 +1,7 @@
+This is a test curriculum for Mathematics JHS3.
+Strand 1: Algebra.
+Substrand 1: Basic Algebra.
+Topic: Writing variables.
+Learning Outcome: Understand x and y.
+Topic: Solving equations.
+Learning Outcome: x + 1 = 2.

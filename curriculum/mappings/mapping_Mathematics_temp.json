@@ -1,0 +1,1435 @@
+[
+  {
+    "questionId": "MATHEMATICS_2022_dc9a5278",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "prime factorization"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_325ff44a",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "time calculation"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_362d6a7b",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "identifying quadrilaterals"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_a599ff08",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving linear inequalities"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_fe229866",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "simplifying algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_cc534368",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "substitution"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_b0682cd3",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "reflection"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_bfeabf11",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving equations"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_730098f3",
+    "topicId": "MATH_JHS3_GEO_SHAPES_4",
+    "subSkill": "circle properties"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_fe4169e7",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "factorization"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_a56a76c4",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "finding gradient of a line"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_d62fb403",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_dc95e0c5",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "function mapping"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_0ebf05f9",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "substitution in algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_78f926e3",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "arranging fractions"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_85747ef7",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "word problems on cost"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_72a6d39e",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "forming equations from word problems"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_69807077",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "angles on parallel lines"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_8902f790",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "angles on parallel lines"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_fcad3f04",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "application of Pythagoras theorem"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_ec399cb3",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_4b8a8930",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_cc196013",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions with brackets."
+  },
+  {
+    "questionId": "MATHEMATICS_2022_f425cd7d",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "Interpret bar charts, line graphs and pictograms."
+  },
+  {
+    "questionId": "MATHEMATICS_2022_9195c781",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculate the mean, mode and median for a given set of data."
+  },
+  {
+    "questionId": "MATHEMATICS_2022_8416b158",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculate the mean, mode and median for a given set of data."
+  },
+  {
+    "questionId": "MATHEMATICS_2022_92c04332",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_36bc19dd",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solve linear equations with brackets."
+  },
+  {
+    "questionId": "MATHEMATICS_2022_6888d324",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_511d4438",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_f81cb528",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Find the square roots of numbers"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_f34ec3d3",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "Find the probability of a single event happening"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_e309965e",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying Algebraic Expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_a22f2452",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Form linear equations to solve problems"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_1b86b8c4",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "Solve problems involving area and perimeter of plane shapes"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_92be2163",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Calculate percentage decrease"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_e887ecfb",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Apply percentage increase and decrease to solve problems"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_03cb2e1a",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "Solve problems involving direct proportion"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_80e33b46",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "Solve problems involving direct proportion"
+  },
+  {
+    "questionId": "MATHEMATICS_2022_229661d3",
+    "topicId": "MATH_JHS3_MEASUREMENT_2",
+    "subSkill": "Calculate the volume of a cube and cuboid"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_2b556e2f",
+    "topicId": null
+  },
+  {
+    "questionId": "MATHEMATICS_2021_eb58791f",
+    "topicId": null
+  },
+  {
+    "questionId": "MATHEMATICS_2021_2d945a32",
+    "topicId": null
+  },
+  {
+    "questionId": "MATHEMATICS_2021_11aaa19b",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "substitution"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_ce91e779",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "Rotation"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_b0805064",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "Translation"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_8864cf6a",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "nth term of a sequence"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_45a62f60",
+    "topicId": null
+  },
+  {
+    "questionId": "MATHEMATICS_2021_095a5804",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "direct proportion"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_2173d485",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving linear equations"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_eb3d06da",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving linear inequalities"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_d49025e1",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "perimeter of a rectangle"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_aef19906",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "probability of a single event"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_b0fc75db",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "direct proportion"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_443f677b",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "finding nth term"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_a87f3ab7",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "finding nth term"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_72347948",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "percentage increase"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_1ae72d7e",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "angles on parallel lines"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_9a61c042",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "change of subject"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_d9ce536a",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "simple interest"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_bd82d733",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Form linear equations to solve problems."
+  },
+  {
+    "questionId": "MATHEMATICS_2021_7b234ddc",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions by factorization."
+  },
+  {
+    "questionId": "MATHEMATICS_2021_8dd1e9cc",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions by factorization."
+  },
+  {
+    "questionId": "MATHEMATICS_2021_10bfa856",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "Solve problems involving direct proportion."
+  },
+  {
+    "questionId": "MATHEMATICS_2021_fe229866",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_44ad96f2",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_40ce8c8a",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculate the mean, mode and median for a given set of data."
+  },
+  {
+    "questionId": "MATHEMATICS_2021_9e266895",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions with brackets."
+  },
+  {
+    "questionId": "MATHEMATICS_2021_323dd9a8",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_50d76cf8",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "Calculate the area of a trapezium."
+  },
+  {
+    "questionId": "MATHEMATICS_2021_d3533989",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "finding the mean"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_99c79f51",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "problem solving with operations"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_7d5d4f4a",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "properties of arithmetic"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_54dbc01c",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "forming algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_6b26a9a9",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "division"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_dd3f7b3f",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "substitution"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_73b49cc5",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "simplifying numbers"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_80184d06",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "types of angles"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_dd64f246",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "converting decimals to fractions"
+  },
+  {
+    "questionId": "MATHEMATICS_2021_fc28a3b9",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "simplifying algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_6b872497",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Sets and Unions"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_f9a89ab5",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Standard Form"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_a48ab480",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Comparing Numbers"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_be3edfed",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Significant Figures"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_0e2e15fe",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Simplifying Indices"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_d4b78e8e",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "Lines of Symmetry"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_a6a98ed9",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solving Linear Equations"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_513f7070",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Factorization"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_ef54b120",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Fractions"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_f0c91296",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Converting percentage to fraction"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_7fe5dc5c",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions with brackets"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_9d2144e7",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculate the mean, mode and median for a given set of data"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_73565c95",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "Find the rule for finding the nth term of a sequence"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_a761055d",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "Solve problems involving area and perimeter of plane shapes"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_ab937eac",
+    "topicId": "MATH_JHS3_MEASUREMENT_2",
+    "subSkill": "Calculate the volume of a cube and cuboid"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_1b4e2e62",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "Find the bearing of one point from another"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_b2b5516d",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solve linear equations"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_44b53eb6",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solve linear equations"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_c871b433",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "Solve problems involving direct proportion"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_429dcd11",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "Apply properties of triangles to solve problems"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_17b46fe0",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "direct proportion"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_05d8f1a7",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "probability of a single event"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_41359c53",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": null
+  },
+  {
+    "questionId": "MATHEMATICS_2019_d719e53d",
+    "topicId": "MATH_JHS3_GEO_SHAPES_4",
+    "subSkill": "circumference of a circle"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_4718f845",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "forming linear equations"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_797709b0",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "properties of triangles"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_e8e36e11",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying Algebraic Expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_64ab9dc6",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": null
+  },
+  {
+    "questionId": "MATHEMATICS_2019_d10b367d",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "prime factorization"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_93dd8d96",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying Algebraic Expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_efc60e68",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_01f78f1e",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Multiplying whole numbers"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_f5e0e63b",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Decimal Operations"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_2537df23",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Form linear equations to solve problems"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_abd2f13e",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Calculate percentage"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_e455ef31",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Finding LCM"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_6bbea62b",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Simple Interest"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_4cbcde7a",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculate the median"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_b894a934",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "Interpreting Venn Diagrams"
+  },
+  {
+    "questionId": "MATHEMATICS_2019_ca2d42b1",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "Interpreting Venn Diagrams"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_05b2765a",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "ordering integers"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_3ecdc53e",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "listing members of a set"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_a5cf5ee6",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "identifying infinite sets"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_cf8895cf",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "finding HCF"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_0fb0ddfe",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "writing numbers in figures"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_9202269f",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "divisibility"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_a8cc14df",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "subsets of a set"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_a2611618",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "finding LCM"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_b0868433",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "percentage"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_1dc95dc2",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "ordering fractions"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_4586ce14",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "simple interest"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_1c2815b0",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "ratio and proportion"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_fefdf49b",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "divisibility probability"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_9175b69e",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "percentage profit"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_165bfc77",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "indirect proportion"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_b113f462",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "angles in parallel lines"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_cc4f05ab",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "angles in parallel lines"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_3e6abb1f",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "speed, distance and time"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_2aed53b3",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "area of rectangle"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_d3d4cad8",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "finding the slope"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_db9b4745",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Substitution in algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_99fbf1ec",
+    "topicId": "MATH_JHS3_MEASUREMENT_2",
+    "subSkill": "Volume of a cylinder"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_15e857d7",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "Pythagorean theorem"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_25bef8f4",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "Properties of prisms"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_99ed08a0",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Changing the subject of a formula"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_cfecdccf",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Exponents"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_b6346384",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying algebraic expressions with brackets"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_cca775fa",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Substitution"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_4051bf8b",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "Translation"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_9b91e8da",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "Rotation"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_910b3011",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "interpreting data"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_78ada56e",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "calculating mean"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_177a4bf8",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "properties of rhombus"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_688a90c2",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "scale factor"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_66757632",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "finding rule for mapping"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_b390100b",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving linear inequalities"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_65b25bda",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving linear equations"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_50d71cc0",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "calculating percentage"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_6fba4dad",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "finding bearings"
+  },
+  {
+    "questionId": "MATHEMATICS_2018_a5b706e1",
+    "topicId": "MATH_JHS3_GEO_SHAPES_3",
+    "subSkill": "geometric construction"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_d9213373",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying Algebraic Expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_7fc4b136",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "Solve problems involving proportion"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_14ce8467",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solve linear equations"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_6eab61d0",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_6a8e58fd",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying Algebraic Expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_8e1ac19f",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_923d038d",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "Properties of Quadrilaterals"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_0c57c2c3",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solve linear equations"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_7d74f5a7",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculate the mean"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_b092f434",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Squares and Square Roots"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_dc57ee2b",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "squares of numbers"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_1f5e0fd0",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "simple interest"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_080fe014",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "simplifying algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_cf6eec1d",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Form linear equations to solve problems"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_d80eaa3b",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "Apply properties of triangles to solve problems"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_f6bf3ff7",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "Properties of quadrilaterals"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_9b42c1cf",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Calculate percentage"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_73b49cc5",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions with brackets"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_e05b71a9",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solving Linear Equations"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_871de824",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "simplifying algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_8886301a",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Form linear equations to solve problems."
+  },
+  {
+    "questionId": "MATHEMATICS_2017_fab4a8f7",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "Solve problems involving direct proportion."
+  },
+  {
+    "questionId": "MATHEMATICS_2017_8589c624",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "Apply properties of triangles to solve problems."
+  },
+  {
+    "questionId": "MATHEMATICS_2017_ab52a9b4",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_ef5e8afa",
+    "topicId": "MATH_JHS3_POS_TRANS_1"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_53c16884",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_c45e8521",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_aef2b7af",
+    "topicId": "MATH_JHS3_POS_TRANS_1"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_3cb26ef2",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Solve problems involving measures of central tendency."
+  },
+  {
+    "questionId": "MATHEMATICS_2017_453db1fe",
+    "topicId": "MATH_JHS3_MEASUREMENT_2",
+    "subSkill": "Calculate the volume of a cube and cuboid."
+  },
+  {
+    "questionId": "MATHEMATICS_2017_7b0cd06b",
+    "topicId": "MATH_JHS3_MEASUREMENT_2",
+    "subSkill": "Volume and Weight calculations"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_d0af75b0",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "Conversion of units and division"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_ce7cf285",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Converting fractions to decimals"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_8ce7412e",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "Calculating probability"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_9130c32f",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Finding the median"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_e9a7ff07",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Finding the mode"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_d689a8db",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculating the mean"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_598fa930",
+    "topicId": "MATH_JHS3_GEO_SHAPES_4",
+    "subSkill": "Circle Properties"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_896850f0",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Prime Factorization"
+  },
+  {
+    "questionId": "MATHEMATICS_2017_8df57ef3",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": null
+  },
+  {
+    "questionId": "MATHEMATICS_2016_c419effd",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "Identifying finite sets"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_a0dca7cd",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "Finding the number of subsets"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_7cd7dfb6",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "Set intersection"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_449429b3",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Word problems"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_5d0861dc",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Finding LCM"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_02bb68cb",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Rounding numbers"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_4ac767ab",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Decimal addition"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_513c474c",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Fraction Operations"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_a635d724",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Ordering integers"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_e969df90",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Simplifying numerical expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_938b3707",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "rounding decimals"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_4f42f7d3",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "simple interest"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_fa725709",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "indirect proportion"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_e5cca42e",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "percentage discount"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_609c5796",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "simplifying exponents"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_07937dc4",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "finding the mode"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_fa93371f",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "interpreting data"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_4027c90c",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "probability of a single event"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_2828c148",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "changing the subject of formula"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_9ac71722",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "substitution"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_02f3af62",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions with brackets."
+  },
+  {
+    "questionId": "MATHEMATICS_2016_2db50b2e",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Form linear equations to solve problems."
+  },
+  {
+    "questionId": "MATHEMATICS_2016_390b732a",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solve linear equations with brackets."
+  },
+  {
+    "questionId": "MATHEMATICS_2016_9943af5b",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "Find the nth term of a sequence from a diagram."
+  },
+  {
+    "questionId": "MATHEMATICS_2016_f3e42a24",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "Identify and name different types of quadrilaterals."
+  },
+  {
+    "questionId": "MATHEMATICS_2016_168f1e79",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "Identify and name different types of quadrilaterals."
+  },
+  {
+    "questionId": "MATHEMATICS_2016_7c7d23e8",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "Apply properties of triangles to solve problems."
+  },
+  {
+    "questionId": "MATHEMATICS_2016_e70abb0d",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "Solve problems involving area and perimeter of plane shapes."
+  },
+  {
+    "questionId": "MATHEMATICS_2016_b357afb4",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculate the mean, mode and median for a given set of data."
+  },
+  {
+    "questionId": "MATHEMATICS_2016_a8ed0911",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "Apply properties of quadrilaterals to solve problems."
+  },
+  {
+    "questionId": "MATHEMATICS_2016_4652282e",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "finding angles in equilateral triangles"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_4caafd18",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "properties of rectangles"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_ba661fd7",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "scale factor"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_9011c937",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "identifying number patterns"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_2d9e72f3",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "identifying number patterns"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_2a301540",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "adding percentages"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_4ed2394d",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "finding bearings"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_e4e326a7",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "evaluating algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_ddf9a644",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "reflection in x-axis"
+  },
+  {
+    "questionId": "MATHEMATICS_2016_1e75873b",
+    "topicId": "MATH_JHS3_GEO_SHAPES_3",
+    "subSkill": "measuring angles"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_0bc5fdcd",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Prime factorization"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_7ecddafb",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "Sets and subsets"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_32f57d90",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "Sets"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_66b39240",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Place Value"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_bc6b5da9",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "HCF"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_4d12deb0",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Binary to Decimal"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_f26c900d",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Multiplication"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_04388f4e",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Integers"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_8f12f59e",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Decimal Division"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_b77dab69",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Ordering Fractions"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_7ff50503",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "fractions"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_dc281902",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "indirect proportion"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_7774aba6",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "simple interest"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_4f0b5f1e",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "percentage profit"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_e1797b23",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving linear equations"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_c77787c0",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "standard form"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_fa276411",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "median"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_59a315c6",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "probability"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_6fb483d1",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "expanding algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_702bc5cc",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "place value"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_a09389f6",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "substitution into algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_254b99ed",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "calculating discount"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_cd0a7b34",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving linear equations"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_39811892",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "finding the nth term of a sequence"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_623f670c",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "properties of quadrilaterals"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_23819118",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "area and circumference of a circle"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_71de9a6f",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "types of triangles"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_33e934e7",
+    "topicId": "MATH_JHS3_GEO_SHAPES_4",
+    "subSkill": "angles"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_44820607",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "perimeter of rectangle"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_1f9a7e75",
+    "topicId": "MATH_JHS3_GEO_SHAPES_3",
+    "subSkill": "Loci"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_98488449",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "Rotation"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_a8e9c043",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "Bearings"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_b65a6ea7",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Vectors"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_c241dc30",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "Identifying shapes"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_60920713",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "Number Patterns"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_04e46f93",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "Number Patterns"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_3006957f",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "Number Patterns"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_4b467252",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "Pythagorean theorem"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_269bb469",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "Finding the next term in a sequence"
+  },
+  {
+    "questionId": "MATHEMATICS_2015_33fc4bab",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "Scale"
+  },
+  {
+    "questionId": "MATHEMATICS_2014_bad038ea",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "Interpreting Venn diagrams"
+  },
+  {
+    "questionId": "MATHEMATICS_2014_660992ec",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "Interpreting Venn diagrams"
+  },
+  {
+    "questionId": "MATHEMATICS_2014_fa70bd07",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "Interpreting Venn diagrams"
+  },
+  {
+    "questionId": "MATHEMATICS_2014_6f1f9b67",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Operations with integers"
+  },
+  {
+    "questionId": "MATHEMATICS_2014_d34a7262",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Prime factorization"
+  },
+  {
+    "questionId": "MATHEMATICS_2014_acc6f8b9",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Divisibility"
+  },
+  {
+    "questionId": "MATHEMATICS_2014_f91e612d",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Convert base five to base ten"
+  },
+  {
+    "questionId": "MATHEMATICS_2014_7bf27cd4",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Calculate percentage increase"
+  },
+  {
+    "questionId": "MATHEMATICS_2014_f2c9c9a7",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying algebraic expressions"
+  },
+  {
+    "questionId": "MATHEMATICS_2014_e96d55eb",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Finding Least Common Multiple"
+  }
+]

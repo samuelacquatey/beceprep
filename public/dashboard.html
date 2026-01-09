@@ -127,51 +127,7 @@
     </main>
 
     <!-- 3. Right Panel -->
-    <aside class="right-panel">
-      <div class="profile-header">
-        <div class="avatar-large">👨‍🎓</div>
-        <h3>Kwame O.</h3>
-        <p style="color:var(--text-muted); font-size:14px;">@kwame_student</p>
-
-        <div class="profile-stats-row">
-          <div class="mini-stat"><i class="far fa-clock"></i><b>78h</b></div>
-          <div class="mini-stat"><i class="fas fa-clipboard-list"></i><b>4</b></div>
-          <div class="mini-stat"><i class="fas fa-check-circle"></i><b>19</b></div>
-        </div>
-      </div>
-
-      <div class="section-title">Calender</div>
-      <!-- Moving Subject Chart here as it fits the "Calendar" circle vibe visually -->
-      <div class="calendar-widget">
-        <div style="width: 100%; height: 200px;">
-          <canvas id="subjectChart"></canvas>
-        </div>
-      </div>
-
-      <div class="notice-board">
-        <div class="section-title">Notice Board</div>
-        <div style="font-size:12px; color:var(--text-muted); display:flex; flex-direction:column; gap:15px;">
-          <div style="display:flex; gap:10px;">
-            <div
-              style="background:#000; color:#fff; width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px;">
-              i</div>
-            <div>
-              <b>Exam Schedule Release</b>
-              <p>Check the new BECE timetable.</p>
-            </div>
-          </div>
-          <div style="display:flex; gap:10px;">
-            <div
-              style="background:#000; color:#fff; width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px;">
-              i</div>
-            <div>
-              <b>New Science Module</b>
-              <p>Photosynthesis content added.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </aside>
+    <!--the right panel has been removed-->
   </div>
 
   <!-- Navigation Injection -->
@@ -426,7 +382,10 @@
     }
 
     function renderSubjectChart(analytics) {
-      const ctx = document.getElementById('subjectChart').getContext('2d');
+      const canvas = document.getElementById('subjectChart');
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
       const subjects = {};
 
       Object.values(analytics.topicPerformance).forEach(t => {

@@ -3,7 +3,7 @@ import fs from 'fs/promises';
 import path from 'path';
 
 // Paths
-const QUESTIONS_FILE = path.join(process.cwd(), 'bece-react', 'src', 'data', 'questionBank.js');
+const QUESTIONS_FILE = path.join(process.cwd(), 'public', 'js', 'data', 'questionBank.js');
 const TOPICS_DIR = path.join(process.cwd(), 'curriculum', 'topics');
 const OUTPUT_DIR = path.join(process.cwd(), 'curriculum', 'mappings');
 

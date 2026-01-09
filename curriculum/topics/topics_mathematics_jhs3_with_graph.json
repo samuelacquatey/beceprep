@@ -1,123 +1,355 @@
 {
-    "subject": "Mathematics",
-    "levels": [
+  "subject": "Mathematics",
+  "levels": [
+    {
+      "class": "JHS3",
+      "strands": [
         {
-            "class": "JHS3",
-            "strands": [
+          "name": "NUMBER",
+          "substrands": [
+            {
+              "name": "Number and Numeration System",
+              "topics": [
                 {
-                    "name": "Numbers and Operations",
-                    "substrands": [
-                        {
-                            "name": "Number Systems",
-                            "topics": [
-                                {
-                                    "id": "MATH_JHS3_NUM_REAL_NUMBERS",
-                                    "name": "Real Numbers",
-                                    "learning_outcomes": [
-                                        "Identify and classify real numbers (rational and irrational).",
-                                        "Compare and order real numbers."
-                                    ],
-                                    "foundations": [
-                                        "MATH_JHS2_INTEGERS"
-                                    ],
-                                    "next": [
-                                        "MATH_JHS3_NUM_SIGNIFICANT_FIGURES"
-                                    ]
-                                },
-                                {
-                                    "id": "MATH_JHS3_NUM_SIGNIFICANT_FIGURES",
-                                    "name": "Significant Figures & Standard Form",
-                                    "learning_outcomes": [
-                                        "Express numbers to a given number of significant figures.",
-                                        "Convert numbers to and from standard form."
-                                    ],
-                                    "foundations": [
-                                        "MATH_JHS3_NUM_REAL_NUMBERS"
-                                    ],
-                                    "next": [
-                                        "MATH_JHS3_ALG_LINEAR_EQUATIONS"
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Fractions",
-                            "topics": [
-                                {
-                                    "id": "MATH_JHS3_FRACTIONS_OPS",
-                                    "name": "Operations on Fractions",
-                                    "learning_outcomes": [
-                                        "Add, subtract, multiply and divide algebraic fractions."
-                                    ],
-                                    "foundations": [
-                                        "MATH_JHS2_FRACTIONS"
-                                    ],
-                                    "next": [
-                                        "MATH_JHS3_ALG_LINEAR_EQUATIONS"
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Algebra",
-                    "substrands": [
-                        {
-                            "name": "Algebraic Expressions",
-                            "topics": [
-                                {
-                                    "id": "MATH_JHS3_ALG_LINEAR_EQUATIONS",
-                                    "name": "Linear Equations",
-                                    "learning_outcomes": [
-                                        "Solve linear equations involving brackets and fractions.",
-                                        "Model word problems into linear equations."
-                                    ],
-                                    "foundations": [
-                                        "MATH_JHS2_ALG_EXPRESSIONS"
-                                    ],
-                                    "next": [
-                                        "MATH_JHS3_ALG_INEQUALITIES"
-                                    ]
-                                },
-                                {
-                                    "id": "MATH_JHS3_ALG_INEQUALITIES",
-                                    "name": "Linear Inequalities",
-                                    "learning_outcomes": [
-                                        "Solve simple linear inequalities.",
-                                        "Represent solutions on a number line."
-                                    ],
-                                    "foundations": [
-                                        "MATH_JHS3_ALG_LINEAR_EQUATIONS"
-                                    ],
-                                    "next": []
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Geometry and Measurement",
-                    "substrands": [
-                        {
-                            "name": "Rigid Motion",
-                            "topics": [
-                                {
-                                    "id": "MATH_JHS3_GEO_BEARINGS",
-                                    "name": "Bearings and Vectors",
-                                    "learning_outcomes": [
-                                        "Calculate bearings and solve vector problems."
-                                    ],
-                                    "foundations": [
-                                        "MATH_JHS2_VECTORS"
-                                    ],
-                                    "next": []
-                                }
-                            ]
-                        }
-                    ]
+                  "id": "MATH_JHS3_NUM_NUMERATION_1",
+                  "name": "Binary Numbers",
+                  "learning_outcomes": [
+                    "Convert base ten numerals to base two numerals.",
+                    "Convert base two numerals to base ten numerals."
+                  ],
+                  "foundations": [],
+                  "next": []
                 }
-            ]
+              ]
+            },
+            {
+              "name": "Number Operations",
+              "topics": [
+                {
+                  "id": "MATH_JHS3_NUM_OPERATIONS_1",
+                  "name": "Squares and Square Roots",
+                  "learning_outcomes": [
+                    "Find the squares of numbers.",
+                    "Find the square roots of numbers using prime factorization.",
+                    "Apply squares and square roots to solve problems."
+                  ],
+                  "foundations": [],
+                  "next": [
+                    {
+                      "id": "MATH_JHS3_NUM_OPERATIONS_2"
+                    }
+                  ]
+                },
+                {
+                  "id": "MATH_JHS3_NUM_OPERATIONS_2",
+                  "name": "Cubes and Cube Roots",
+                  "learning_outcomes": [
+                    "Find the cubes of numbers.",
+                    "Find the cube roots of numbers using prime factorization."
+                  ],
+                  "foundations": [
+                    {
+                      "id": "MATH_JHS3_NUM_OPERATIONS_1"
+                    }
+                  ],
+                  "next": []
+                }
+              ]
+            },
+            {
+              "name": "Fractions, Decimals and Percentages",
+              "topics": [
+                {
+                  "id": "MATH_JHS3_FRAC_DEC_PERC_1",
+                  "name": "Percentage Increase and Decrease",
+                  "learning_outcomes": [
+                    "Calculate percentage increase.",
+                    "Calculate percentage decrease.",
+                    "Apply percentage increase and decrease to solve problems."
+                  ],
+                  "foundations": [],
+                  "next": []
+                }
+              ]
+            },
+            {
+              "name": "Number: Ratios and Proportion",
+              "topics": [
+                {
+                  "id": "MATH_JHS3_RATIO_PROP_1",
+                  "name": "Direct and Indirect Proportion",
+                  "learning_outcomes": [
+                    "Solve problems involving direct proportion.",
+                    "Solve problems involving indirect proportion."
+                  ],
+                  "foundations": [],
+                  "next": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ALGEBRA",
+          "substrands": [
+            {
+              "name": "Patterns and Relations",
+              "topics": [
+                {
+                  "id": "MATH_JHS3_ALG_PATTERNS_1",
+                  "name": "Sequences",
+                  "learning_outcomes": [
+                    "Find the nth term of a sequence from a diagram.",
+                    "Find the rule for finding the nth term of a sequence."
+                  ],
+                  "foundations": [],
+                  "next": []
+                },
+                {
+                  "id": "MATH_JHS3_ALG_PATTERNS_2",
+                  "name": "Number Patterns",
+                  "learning_outcomes": [
+                    "Identify number patterns in daily life.",
+                    "Generate number patterns using a given rule."
+                  ],
+                  "foundations": [],
+                  "next": [
+                    {
+                      "id": "MATH_JHS3_ALG_PATTERNS_1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Algebraic Expressions",
+              "topics": [
+                {
+                  "id": "MATH_JHS3_ALG_EXPRESSIONS_1",
+                  "name": "Simplifying Algebraic Expressions",
+                  "learning_outcomes": [
+                    "Simplify algebraic expressions with brackets.",
+                    "Simplify algebraic expressions by factorization."
+                  ],
+                  "foundations": [],
+                  "next": [
+                    {
+                      "id": "MATH_JHS3_ALG_EQUATIONS_1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Variables and Equations",
+              "topics": [
+                {
+                  "id": "MATH_JHS3_ALG_EQUATIONS_1",
+                  "name": "Solving Linear Equations",
+                  "learning_outcomes": [
+                    "Solve linear equations with brackets.",
+                    "Form linear equations to solve problems."
+                  ],
+                  "foundations": [
+                    {
+                      "id": "MATH_JHS3_ALG_EXPRESSIONS_1"
+                    }
+                  ],
+                  "next": [
+                    {
+                      "id": "MATH_JHS3_ALG_EQUATIONS_2"
+                    }
+                  ]
+                },
+                {
+                  "id": "MATH_JHS3_ALG_EQUATIONS_2",
+                  "name": "Simultaneous Linear Equations",
+                  "learning_outcomes": [
+                    "Solve simultaneous linear equations using elimination method.",
+                    "Solve simultaneous linear equations using substitution method."
+                  ],
+                  "foundations": [
+                    {
+                      "id": "MATH_JHS3_ALG_EQUATIONS_1"
+                    }
+                  ],
+                  "next": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "GEOMETRY AND MEASUREMENT",
+          "substrands": [
+            {
+              "name": "Shapes and Space",
+              "topics": [
+                {
+                  "id": "MATH_JHS3_GEO_SHAPES_1",
+                  "name": "Properties of Triangles",
+                  "learning_outcomes": [
+                    "Identify and name different types of triangles.",
+                    "Apply properties of triangles to solve problems."
+                  ],
+                  "foundations": [],
+                  "next": [
+                    {
+                      "id": "MATH_JHS3_GEO_SHAPES_3"
+                    }
+                  ]
+                },
+                {
+                  "id": "MATH_JHS3_GEO_SHAPES_2",
+                  "name": "Properties of Quadrilaterals",
+                  "learning_outcomes": [
+                    "Identify and name different types of quadrilaterals.",
+                    "Apply properties of quadrilaterals to solve problems."
+                  ],
+                  "foundations": [],
+                  "next": [
+                    {
+                      "id": "MATH_JHS3_GEO_SHAPES_3"
+                    }
+                  ]
+                },
+                {
+                  "id": "MATH_JHS3_GEO_SHAPES_3",
+                  "name": "Construction",
+                  "learning_outcomes": [
+                    "Construct special angles using a ruler and a pair of compasses.",
+                    "Construct triangles given three sides or two angles and one side.",
+                    "Construct quadrilaterals given appropriate data."
+                  ],
+                  "foundations": [
+                    {
+                      "id": "MATH_JHS3_GEO_SHAPES_1"
+                    },
+                    {
+                      "id": "MATH_JHS3_GEO_SHAPES_2"
+                    }
+                  ],
+                  "next": []
+                },
+                {
+                  "id": "MATH_JHS3_GEO_SHAPES_4",
+                  "name": "Circle Theorem",
+                  "learning_outcomes": [
+                    "Solve problems on angles at the centre and circumference.",
+                    "Solve problems on angles in the same segment.",
+                    "Solve problems on angles in alternate segment."
+                  ],
+                  "foundations": [],
+                  "next": []
+                }
+              ]
+            },
+            {
+              "name": "Measurement",
+              "topics": [
+                {
+                  "id": "MATH_JHS3_MEASUREMENT_1",
+                  "name": "Area and Perimeter",
+                  "learning_outcomes": [
+                    "Calculate the area of a parallelogram.",
+                    "Calculate the area of a trapezium.",
+                    "Solve problems involving area and perimeter of plane shapes."
+                  ],
+                  "foundations": [],
+                  "next": [
+                    {
+                      "id": "MATH_JHS3_MEASUREMENT_2"
+                    }
+                  ]
+                },
+                {
+                  "id": "MATH_JHS3_MEASUREMENT_2",
+                  "name": "Surface Area and Volume",
+                  "learning_outcomes": [
+                    "Calculate the surface area of a cube and cuboid.",
+                    "Calculate the volume of a cube and cuboid.",
+                    "Solve problems involving surface area and volume."
+                  ],
+                  "foundations": [
+                    {
+                      "id": "MATH_JHS3_MEASUREMENT_1"
+                    }
+                  ],
+                  "next": []
+                }
+              ]
+            },
+            {
+              "name": "Position and Transformation",
+              "topics": [
+                {
+                  "id": "MATH_JHS3_POS_TRANS_1",
+                  "name": "Bearings",
+                  "learning_outcomes": [
+                    "Find the bearing of one point from another.",
+                    "Use bearings to solve problems."
+                  ],
+                  "foundations": [],
+                  "next": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HANDLING DATA",
+          "substrands": [
+            {
+              "name": "Data",
+              "topics": [
+                {
+                  "id": "MATH_JHS3_DATA_1",
+                  "name": "Data Presentation",
+                  "learning_outcomes": [
+                    "Draw and interpret pie charts.",
+                    "Interpret bar charts, line graphs and pictograms."
+                  ],
+                  "foundations": [],
+                  "next": [
+                    {
+                      "id": "MATH_JHS3_DATA_2"
+                    }
+                  ]
+                },
+                {
+                  "id": "MATH_JHS3_DATA_2",
+                  "name": "Measures of Central Tendency",
+                  "learning_outcomes": [
+                    "Calculate the mean, mode and median for a given set of data.",
+                    "Solve problems involving measures of central tendency."
+                  ],
+                  "foundations": [
+                    {
+                      "id": "MATH_JHS3_DATA_1"
+                    }
+                  ],
+                  "next": []
+                }
+              ]
+            },
+            {
+              "name": "Chance or Probability",
+              "topics": [
+                {
+                  "id": "MATH_JHS3_PROBABILITY_1",
+                  "name": "Probability",
+                  "learning_outcomes": [
+                    "Find the probability of a single event happening.",
+                    "Apply probability to solve real-life problems."
+                  ],
+                  "foundations": [],
+                  "next": []
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }

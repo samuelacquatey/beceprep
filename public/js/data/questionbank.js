@@ -59427,7 +59427,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "prime factorization"
   },
   {
     "id": "MATHEMATICS_2022_325ff44a",
@@ -59442,7 +59444,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "time calculation"
   },
   {
     "id": "MATHEMATICS_2022_362d6a7b",
@@ -59457,7 +59461,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "identifying quadrilaterals"
   },
   {
     "id": "MATHEMATICS_2022_a599ff08",
@@ -59472,7 +59478,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving linear inequalities"
   },
   {
     "id": "MATHEMATICS_2022_fe229866",
@@ -59487,7 +59495,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "simplifying algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2022_cc534368",
@@ -59502,7 +59512,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "substitution"
   },
   {
     "id": "MATHEMATICS_2022_b0682cd3",
@@ -59517,7 +59529,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "reflection"
   },
   {
     "id": "MATHEMATICS_2022_bfeabf11",
@@ -59532,7 +59546,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving equations"
   },
   {
     "id": "MATHEMATICS_2022_730098f3",
@@ -59547,7 +59563,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_4",
+    "subSkill": "circle properties"
   },
   {
     "id": "MATHEMATICS_2022_fe4169e7",
@@ -59562,7 +59580,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "factorization"
   },
   {
     "id": "MATHEMATICS_2022_a56a76c4",
@@ -59577,7 +59597,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "finding gradient of a line"
   },
   {
     "id": "MATHEMATICS_2022_d62fb403",
@@ -59592,7 +59614,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1"
   },
   {
     "id": "MATHEMATICS_2022_dc95e0c5",
@@ -59607,7 +59630,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "function mapping"
   },
   {
     "id": "MATHEMATICS_2022_0ebf05f9",
@@ -59622,7 +59647,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "substitution in algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2022_78f926e3",
@@ -59637,7 +59664,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "arranging fractions"
   },
   {
     "id": "MATHEMATICS_2022_85747ef7",
@@ -59652,7 +59681,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "word problems on cost"
   },
   {
     "id": "MATHEMATICS_2022_72a6d39e",
@@ -59667,7 +59698,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "forming equations from word problems"
   },
   {
     "id": "MATHEMATICS_2022_69807077",
@@ -59682,7 +59715,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "angles on parallel lines"
   },
   {
     "id": "MATHEMATICS_2022_8902f790",
@@ -59697,7 +59732,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "angles on parallel lines"
   },
   {
     "id": "MATHEMATICS_2022_fcad3f04",
@@ -59712,7 +59749,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "application of Pythagoras theorem"
   },
   {
     "id": "MATHEMATICS_2022_ec399cb3",
@@ -59727,7 +59766,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1"
   },
   {
     "id": "MATHEMATICS_2022_4b8a8930",
@@ -59742,7 +59782,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1"
   },
   {
     "id": "MATHEMATICS_2022_cc196013",
@@ -59757,7 +59798,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions with brackets."
   },
   {
     "id": "MATHEMATICS_2022_f425cd7d",
@@ -59772,7 +59815,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "Interpret bar charts, line graphs and pictograms."
   },
   {
     "id": "MATHEMATICS_2022_9195c781",
@@ -59787,7 +59832,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculate the mean, mode and median for a given set of data."
   },
   {
     "id": "MATHEMATICS_2022_8416b158",
@@ -59802,7 +59849,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculate the mean, mode and median for a given set of data."
   },
   {
     "id": "MATHEMATICS_2022_92c04332",
@@ -59817,7 +59866,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1"
   },
   {
     "id": "MATHEMATICS_2022_36bc19dd",
@@ -59832,7 +59882,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solve linear equations with brackets."
   },
   {
     "id": "MATHEMATICS_2022_6888d324",
@@ -59847,7 +59899,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1"
   },
   {
     "id": "MATHEMATICS_2022_511d4438",
@@ -59862,7 +59915,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1"
   },
   {
     "id": "MATHEMATICS_2022_f81cb528",
@@ -59877,7 +59931,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Find the square roots of numbers"
   },
   {
     "id": "MATHEMATICS_2022_f34ec3d3",
@@ -59892,7 +59948,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "Find the probability of a single event happening"
   },
   {
     "id": "MATHEMATICS_2022_e309965e",
@@ -59907,7 +59965,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying Algebraic Expressions"
   },
   {
     "id": "MATHEMATICS_2022_a22f2452",
@@ -59922,7 +59982,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Form linear equations to solve problems"
   },
   {
     "id": "MATHEMATICS_2022_1b86b8c4",
@@ -59937,7 +59999,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "Solve problems involving area and perimeter of plane shapes"
   },
   {
     "id": "MATHEMATICS_2022_92be2163",
@@ -59952,7 +60016,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Calculate percentage decrease"
   },
   {
     "id": "MATHEMATICS_2022_e887ecfb",
@@ -59967,7 +60033,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Apply percentage increase and decrease to solve problems"
   },
   {
     "id": "MATHEMATICS_2022_03cb2e1a",
@@ -59982,7 +60050,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "Solve problems involving direct proportion"
   },
   {
     "id": "MATHEMATICS_2022_80e33b46",
@@ -59997,7 +60067,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "Solve problems involving direct proportion"
   },
   {
     "id": "MATHEMATICS_2022_229661d3",
@@ -60012,7 +60084,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2022",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_2",
+    "subSkill": "Calculate the volume of a cube and cuboid"
   },
   {
     "id": "MATHEMATICS_2021_2b556e2f",
@@ -60027,7 +60101,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": null
   },
   {
     "id": "MATHEMATICS_2021_eb58791f",
@@ -60042,7 +60117,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": null
   },
   {
     "id": "MATHEMATICS_2021_2d945a32",
@@ -60057,7 +60133,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": null
   },
   {
     "id": "MATHEMATICS_2021_11aaa19b",
@@ -60072,7 +60149,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "substitution"
   },
   {
     "id": "MATHEMATICS_2021_ce91e779",
@@ -60087,7 +60166,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "Rotation"
   },
   {
     "id": "MATHEMATICS_2021_b0805064",
@@ -60102,7 +60183,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "Translation"
   },
   {
     "id": "MATHEMATICS_2021_8864cf6a",
@@ -60117,7 +60200,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "nth term of a sequence"
   },
   {
     "id": "MATHEMATICS_2021_45a62f60",
@@ -60132,7 +60217,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": null
   },
   {
     "id": "MATHEMATICS_2021_095a5804",
@@ -60147,7 +60233,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "direct proportion"
   },
   {
     "id": "MATHEMATICS_2021_2173d485",
@@ -60162,7 +60250,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving linear equations"
   },
   {
     "id": "MATHEMATICS_2021_eb3d06da",
@@ -60177,7 +60267,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving linear inequalities"
   },
   {
     "id": "MATHEMATICS_2021_d49025e1",
@@ -60192,7 +60284,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "perimeter of a rectangle"
   },
   {
     "id": "MATHEMATICS_2021_aef19906",
@@ -60207,7 +60301,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "probability of a single event"
   },
   {
     "id": "MATHEMATICS_2021_b0fc75db",
@@ -60222,7 +60318,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "direct proportion"
   },
   {
     "id": "MATHEMATICS_2021_443f677b",
@@ -60237,7 +60335,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "finding nth term"
   },
   {
     "id": "MATHEMATICS_2021_a87f3ab7",
@@ -60252,7 +60352,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "finding nth term"
   },
   {
     "id": "MATHEMATICS_2021_72347948",
@@ -60267,7 +60369,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "percentage increase"
   },
   {
     "id": "MATHEMATICS_2021_1ae72d7e",
@@ -60282,7 +60386,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "angles on parallel lines"
   },
   {
     "id": "MATHEMATICS_2021_9a61c042",
@@ -60297,7 +60403,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "change of subject"
   },
   {
     "id": "MATHEMATICS_2021_d9ce536a",
@@ -60312,7 +60420,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "simple interest"
   },
   {
     "id": "MATHEMATICS_2021_bd82d733",
@@ -60327,7 +60437,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Form linear equations to solve problems."
   },
   {
     "id": "MATHEMATICS_2021_7b234ddc",
@@ -60342,7 +60454,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions by factorization."
   },
   {
     "id": "MATHEMATICS_2021_8dd1e9cc",
@@ -60357,7 +60471,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions by factorization."
   },
   {
     "id": "MATHEMATICS_2021_10bfa856",
@@ -60372,7 +60488,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "Solve problems involving direct proportion."
   },
   {
     "id": "MATHEMATICS_2021_fe229866",
@@ -60387,7 +60505,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1"
   },
   {
     "id": "MATHEMATICS_2021_44ad96f2",
@@ -60402,7 +60521,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1"
   },
   {
     "id": "MATHEMATICS_2021_40ce8c8a",
@@ -60417,7 +60537,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculate the mean, mode and median for a given set of data."
   },
   {
     "id": "MATHEMATICS_2021_9e266895",
@@ -60432,7 +60554,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions with brackets."
   },
   {
     "id": "MATHEMATICS_2021_323dd9a8",
@@ -60447,7 +60571,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1"
   },
   {
     "id": "MATHEMATICS_2021_50d76cf8",
@@ -60462,7 +60587,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "Calculate the area of a trapezium."
   },
   {
     "id": "MATHEMATICS_2021_d3533989",
@@ -60477,7 +60604,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "finding the mean"
   },
   {
     "id": "MATHEMATICS_2021_99c79f51",
@@ -60492,7 +60621,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "problem solving with operations"
   },
   {
     "id": "MATHEMATICS_2021_7d5d4f4a",
@@ -60507,7 +60638,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "properties of arithmetic"
   },
   {
     "id": "MATHEMATICS_2021_54dbc01c",
@@ -60522,7 +60655,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "forming algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2021_6b26a9a9",
@@ -60537,7 +60672,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "division"
   },
   {
     "id": "MATHEMATICS_2021_dd3f7b3f",
@@ -60552,7 +60689,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "substitution"
   },
   {
     "id": "MATHEMATICS_2021_73b49cc5",
@@ -60567,7 +60706,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "simplifying numbers"
   },
   {
     "id": "MATHEMATICS_2021_80184d06",
@@ -60582,7 +60723,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "types of angles"
   },
   {
     "id": "MATHEMATICS_2021_dd64f246",
@@ -60597,7 +60740,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "converting decimals to fractions"
   },
   {
     "id": "MATHEMATICS_2021_fc28a3b9",
@@ -60612,7 +60757,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2021",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "simplifying algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2019_6b872497",
@@ -60627,7 +60774,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Sets and Unions"
   },
   {
     "id": "MATHEMATICS_2019_f9a89ab5",
@@ -60642,7 +60791,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Standard Form"
   },
   {
     "id": "MATHEMATICS_2019_a48ab480",
@@ -60657,7 +60808,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Comparing Numbers"
   },
   {
     "id": "MATHEMATICS_2019_be3edfed",
@@ -60672,7 +60825,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Significant Figures"
   },
   {
     "id": "MATHEMATICS_2019_0e2e15fe",
@@ -60687,7 +60842,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Simplifying Indices"
   },
   {
     "id": "MATHEMATICS_2019_d4b78e8e",
@@ -60702,7 +60859,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "Lines of Symmetry"
   },
   {
     "id": "MATHEMATICS_2019_a6a98ed9",
@@ -60717,7 +60876,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solving Linear Equations"
   },
   {
     "id": "MATHEMATICS_2019_513f7070",
@@ -60732,7 +60893,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Factorization"
   },
   {
     "id": "MATHEMATICS_2019_ef54b120",
@@ -60747,7 +60910,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Fractions"
   },
   {
     "id": "MATHEMATICS_2019_f0c91296",
@@ -60762,7 +60927,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Converting percentage to fraction"
   },
   {
     "id": "MATHEMATICS_2019_7fe5dc5c",
@@ -60777,7 +60944,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions with brackets"
   },
   {
     "id": "MATHEMATICS_2019_9d2144e7",
@@ -60792,7 +60961,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculate the mean, mode and median for a given set of data"
   },
   {
     "id": "MATHEMATICS_2019_73565c95",
@@ -60807,7 +60978,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "Find the rule for finding the nth term of a sequence"
   },
   {
     "id": "MATHEMATICS_2019_a761055d",
@@ -60822,7 +60995,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "Solve problems involving area and perimeter of plane shapes"
   },
   {
     "id": "MATHEMATICS_2019_ab937eac",
@@ -60837,7 +61012,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_2",
+    "subSkill": "Calculate the volume of a cube and cuboid"
   },
   {
     "id": "MATHEMATICS_2019_1b4e2e62",
@@ -60852,7 +61029,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "Find the bearing of one point from another"
   },
   {
     "id": "MATHEMATICS_2019_b2b5516d",
@@ -60867,7 +61046,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solve linear equations"
   },
   {
     "id": "MATHEMATICS_2019_44b53eb6",
@@ -60882,7 +61063,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solve linear equations"
   },
   {
     "id": "MATHEMATICS_2019_c871b433",
@@ -60897,7 +61080,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "Solve problems involving direct proportion"
   },
   {
     "id": "MATHEMATICS_2019_429dcd11",
@@ -60912,7 +61097,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "Apply properties of triangles to solve problems"
   },
   {
     "id": "MATHEMATICS_2019_17b46fe0",
@@ -60927,7 +61114,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "direct proportion"
   },
   {
     "id": "MATHEMATICS_2019_05d8f1a7",
@@ -60942,7 +61131,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "probability of a single event"
   },
   {
     "id": "MATHEMATICS_2019_41359c53",
@@ -60957,7 +61148,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": null
   },
   {
     "id": "MATHEMATICS_2019_d719e53d",
@@ -60972,7 +61165,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_4",
+    "subSkill": "circumference of a circle"
   },
   {
     "id": "MATHEMATICS_2019_4718f845",
@@ -60987,7 +61182,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "forming linear equations"
   },
   {
     "id": "MATHEMATICS_2019_797709b0",
@@ -61002,7 +61199,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "properties of triangles"
   },
   {
     "id": "MATHEMATICS_2019_e8e36e11",
@@ -61017,7 +61216,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying Algebraic Expressions"
   },
   {
     "id": "MATHEMATICS_2019_64ab9dc6",
@@ -61032,7 +61233,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": null
   },
   {
     "id": "MATHEMATICS_2019_d10b367d",
@@ -61047,7 +61250,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "prime factorization"
   },
   {
     "id": "MATHEMATICS_2019_93dd8d96",
@@ -61062,7 +61267,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying Algebraic Expressions"
   },
   {
     "id": "MATHEMATICS_2019_efc60e68",
@@ -61077,7 +61284,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2019_01f78f1e",
@@ -61092,7 +61301,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Multiplying whole numbers"
   },
   {
     "id": "MATHEMATICS_2019_f5e0e63b",
@@ -61107,7 +61318,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Decimal Operations"
   },
   {
     "id": "MATHEMATICS_2019_2537df23",
@@ -61122,7 +61335,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Form linear equations to solve problems"
   },
   {
     "id": "MATHEMATICS_2019_abd2f13e",
@@ -61137,7 +61352,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Calculate percentage"
   },
   {
     "id": "MATHEMATICS_2019_e455ef31",
@@ -61152,7 +61369,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Finding LCM"
   },
   {
     "id": "MATHEMATICS_2019_6bbea62b",
@@ -61167,7 +61386,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Simple Interest"
   },
   {
     "id": "MATHEMATICS_2019_4cbcde7a",
@@ -61182,7 +61403,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculate the median"
   },
   {
     "id": "MATHEMATICS_2019_b894a934",
@@ -61197,7 +61420,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "Interpreting Venn Diagrams"
   },
   {
     "id": "MATHEMATICS_2019_ca2d42b1",
@@ -61212,7 +61437,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2019",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "Interpreting Venn Diagrams"
   },
   {
     "id": "MATHEMATICS_2018_05b2765a",
@@ -61227,7 +61454,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "ordering integers"
   },
   {
     "id": "MATHEMATICS_2018_3ecdc53e",
@@ -61242,7 +61471,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "listing members of a set"
   },
   {
     "id": "MATHEMATICS_2018_a5cf5ee6",
@@ -61257,7 +61488,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "identifying infinite sets"
   },
   {
     "id": "MATHEMATICS_2018_cf8895cf",
@@ -61272,7 +61505,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "finding HCF"
   },
   {
     "id": "MATHEMATICS_2018_0fb0ddfe",
@@ -61287,7 +61522,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "writing numbers in figures"
   },
   {
     "id": "MATHEMATICS_2018_9202269f",
@@ -61302,7 +61539,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "divisibility"
   },
   {
     "id": "MATHEMATICS_2018_a8cc14df",
@@ -61317,7 +61556,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "subsets of a set"
   },
   {
     "id": "MATHEMATICS_2018_a2611618",
@@ -61332,7 +61573,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "finding LCM"
   },
   {
     "id": "MATHEMATICS_2018_b0868433",
@@ -61347,7 +61590,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "percentage"
   },
   {
     "id": "MATHEMATICS_2018_1dc95dc2",
@@ -61362,7 +61607,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "ordering fractions"
   },
   {
     "id": "MATHEMATICS_2018_4586ce14",
@@ -61377,7 +61624,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "simple interest"
   },
   {
     "id": "MATHEMATICS_2018_1c2815b0",
@@ -61392,7 +61641,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "ratio and proportion"
   },
   {
     "id": "MATHEMATICS_2018_fefdf49b",
@@ -61407,7 +61658,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "divisibility probability"
   },
   {
     "id": "MATHEMATICS_2018_9175b69e",
@@ -61422,7 +61675,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "percentage profit"
   },
   {
     "id": "MATHEMATICS_2018_165bfc77",
@@ -61437,7 +61692,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "indirect proportion"
   },
   {
     "id": "MATHEMATICS_2018_b113f462",
@@ -61452,7 +61709,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "angles in parallel lines"
   },
   {
     "id": "MATHEMATICS_2018_cc4f05ab",
@@ -61467,7 +61726,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "angles in parallel lines"
   },
   {
     "id": "MATHEMATICS_2018_3e6abb1f",
@@ -61482,7 +61743,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "speed, distance and time"
   },
   {
     "id": "MATHEMATICS_2018_2aed53b3",
@@ -61497,7 +61760,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "area of rectangle"
   },
   {
     "id": "MATHEMATICS_2018_d3d4cad8",
@@ -61512,7 +61777,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "finding the slope"
   },
   {
     "id": "MATHEMATICS_2018_db9b4745",
@@ -61527,7 +61794,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Substitution in algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2018_99fbf1ec",
@@ -61542,7 +61811,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_2",
+    "subSkill": "Volume of a cylinder"
   },
   {
     "id": "MATHEMATICS_2018_15e857d7",
@@ -61557,7 +61828,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "Pythagorean theorem"
   },
   {
     "id": "MATHEMATICS_2018_25bef8f4",
@@ -61572,7 +61845,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "Properties of prisms"
   },
   {
     "id": "MATHEMATICS_2018_99ed08a0",
@@ -61587,7 +61862,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Changing the subject of a formula"
   },
   {
     "id": "MATHEMATICS_2018_cfecdccf",
@@ -61602,7 +61879,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Exponents"
   },
   {
     "id": "MATHEMATICS_2018_b6346384",
@@ -61617,7 +61896,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying algebraic expressions with brackets"
   },
   {
     "id": "MATHEMATICS_2018_cca775fa",
@@ -61632,7 +61913,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Substitution"
   },
   {
     "id": "MATHEMATICS_2018_4051bf8b",
@@ -61647,7 +61930,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "Translation"
   },
   {
     "id": "MATHEMATICS_2018_9b91e8da",
@@ -61662,7 +61947,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "Rotation"
   },
   {
     "id": "MATHEMATICS_2018_910b3011",
@@ -61677,7 +61964,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "interpreting data"
   },
   {
     "id": "MATHEMATICS_2018_78ada56e",
@@ -61692,7 +61981,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "calculating mean"
   },
   {
     "id": "MATHEMATICS_2018_177a4bf8",
@@ -61707,7 +61998,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "properties of rhombus"
   },
   {
     "id": "MATHEMATICS_2018_688a90c2",
@@ -61722,7 +62015,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "scale factor"
   },
   {
     "id": "MATHEMATICS_2018_66757632",
@@ -61737,7 +62032,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "finding rule for mapping"
   },
   {
     "id": "MATHEMATICS_2018_b390100b",
@@ -61752,7 +62049,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving linear inequalities"
   },
   {
     "id": "MATHEMATICS_2018_65b25bda",
@@ -61767,7 +62066,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving linear equations"
   },
   {
     "id": "MATHEMATICS_2018_50d71cc0",
@@ -61782,7 +62083,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "calculating percentage"
   },
   {
     "id": "MATHEMATICS_2018_6fba4dad",
@@ -61797,7 +62100,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "finding bearings"
   },
   {
     "id": "MATHEMATICS_2018_a5b706e1",
@@ -61812,7 +62117,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2018",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_3",
+    "subSkill": "geometric construction"
   },
   {
     "id": "MATHEMATICS_2017_d9213373",
@@ -61827,7 +62134,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying Algebraic Expressions"
   },
   {
     "id": "MATHEMATICS_2017_7fc4b136",
@@ -61842,7 +62151,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "Solve problems involving proportion"
   },
   {
     "id": "MATHEMATICS_2017_14ce8467",
@@ -61857,7 +62168,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solve linear equations"
   },
   {
     "id": "MATHEMATICS_2017_6eab61d0",
@@ -61872,7 +62185,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2017_6a8e58fd",
@@ -61887,7 +62202,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying Algebraic Expressions"
   },
   {
     "id": "MATHEMATICS_2017_8e1ac19f",
@@ -61902,7 +62219,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2017_923d038d",
@@ -61917,7 +62236,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "Properties of Quadrilaterals"
   },
   {
     "id": "MATHEMATICS_2017_0c57c2c3",
@@ -61932,7 +62253,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solve linear equations"
   },
   {
     "id": "MATHEMATICS_2017_7d74f5a7",
@@ -61947,7 +62270,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculate the mean"
   },
   {
     "id": "MATHEMATICS_2017_b092f434",
@@ -61962,7 +62287,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Squares and Square Roots"
   },
   {
     "id": "MATHEMATICS_2017_dc57ee2b",
@@ -61977,7 +62304,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "squares of numbers"
   },
   {
     "id": "MATHEMATICS_2017_1f5e0fd0",
@@ -61992,7 +62321,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "simple interest"
   },
   {
     "id": "MATHEMATICS_2017_080fe014",
@@ -62007,7 +62338,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "simplifying algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2017_cf6eec1d",
@@ -62022,7 +62355,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Form linear equations to solve problems"
   },
   {
     "id": "MATHEMATICS_2017_d80eaa3b",
@@ -62037,7 +62372,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "Apply properties of triangles to solve problems"
   },
   {
     "id": "MATHEMATICS_2017_f6bf3ff7",
@@ -62052,7 +62389,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "Properties of quadrilaterals"
   },
   {
     "id": "MATHEMATICS_2017_9b42c1cf",
@@ -62067,7 +62406,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Calculate percentage"
   },
   {
     "id": "MATHEMATICS_2017_73b49cc5",
@@ -62082,7 +62423,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions with brackets"
   },
   {
     "id": "MATHEMATICS_2017_e05b71a9",
@@ -62097,7 +62440,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solving Linear Equations"
   },
   {
     "id": "MATHEMATICS_2017_871de824",
@@ -62112,7 +62457,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "simplifying algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2017_8886301a",
@@ -62127,7 +62474,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Form linear equations to solve problems."
   },
   {
     "id": "MATHEMATICS_2017_fab4a8f7",
@@ -62142,7 +62491,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "Solve problems involving direct proportion."
   },
   {
     "id": "MATHEMATICS_2017_8589c624",
@@ -62157,7 +62508,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "Apply properties of triangles to solve problems."
   },
   {
     "id": "MATHEMATICS_2017_ab52a9b4",
@@ -62172,7 +62525,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1"
   },
   {
     "id": "MATHEMATICS_2017_ef5e8afa",
@@ -62187,7 +62541,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_POS_TRANS_1"
   },
   {
     "id": "MATHEMATICS_2017_53c16884",
@@ -62202,7 +62557,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2017_c45e8521",
@@ -62217,7 +62574,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1"
   },
   {
     "id": "MATHEMATICS_2017_aef2b7af",
@@ -62232,7 +62590,8 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_POS_TRANS_1"
   },
   {
     "id": "MATHEMATICS_2017_3cb26ef2",
@@ -62247,7 +62606,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Solve problems involving measures of central tendency."
   },
   {
     "id": "MATHEMATICS_2017_453db1fe",
@@ -62262,7 +62623,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_2",
+    "subSkill": "Calculate the volume of a cube and cuboid."
   },
   {
     "id": "MATHEMATICS_2017_7b0cd06b",
@@ -62277,7 +62640,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_2",
+    "subSkill": "Volume and Weight calculations"
   },
   {
     "id": "MATHEMATICS_2017_d0af75b0",
@@ -62292,7 +62657,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "Conversion of units and division"
   },
   {
     "id": "MATHEMATICS_2017_ce7cf285",
@@ -62307,7 +62674,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Converting fractions to decimals"
   },
   {
     "id": "MATHEMATICS_2017_8ce7412e",
@@ -62322,7 +62691,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "Calculating probability"
   },
   {
     "id": "MATHEMATICS_2017_9130c32f",
@@ -62337,7 +62708,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Finding the median"
   },
   {
     "id": "MATHEMATICS_2017_e9a7ff07",
@@ -62352,7 +62725,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Finding the mode"
   },
   {
     "id": "MATHEMATICS_2017_d689a8db",
@@ -62367,7 +62742,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculating the mean"
   },
   {
     "id": "MATHEMATICS_2017_598fa930",
@@ -62382,7 +62759,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_4",
+    "subSkill": "Circle Properties"
   },
   {
     "id": "MATHEMATICS_2017_896850f0",
@@ -62397,7 +62776,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Prime Factorization"
   },
   {
     "id": "MATHEMATICS_2017_8df57ef3",
@@ -62412,7 +62793,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2017",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": null
   },
   {
     "id": "MATHEMATICS_2016_c419effd",
@@ -62427,7 +62810,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "Identifying finite sets"
   },
   {
     "id": "MATHEMATICS_2016_a0dca7cd",
@@ -62442,7 +62827,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "Finding the number of subsets"
   },
   {
     "id": "MATHEMATICS_2016_7cd7dfb6",
@@ -62457,7 +62844,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "Set intersection"
   },
   {
     "id": "MATHEMATICS_2016_449429b3",
@@ -62472,7 +62861,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Word problems"
   },
   {
     "id": "MATHEMATICS_2016_5d0861dc",
@@ -62487,7 +62878,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Finding LCM"
   },
   {
     "id": "MATHEMATICS_2016_02bb68cb",
@@ -62502,7 +62895,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Rounding numbers"
   },
   {
     "id": "MATHEMATICS_2016_4ac767ab",
@@ -62517,7 +62912,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Decimal addition"
   },
   {
     "id": "MATHEMATICS_2016_513c474c",
@@ -62532,7 +62929,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Fraction Operations"
   },
   {
     "id": "MATHEMATICS_2016_a635d724",
@@ -62547,7 +62946,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Ordering integers"
   },
   {
     "id": "MATHEMATICS_2016_e969df90",
@@ -62562,7 +62963,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Simplifying numerical expressions"
   },
   {
     "id": "MATHEMATICS_2016_938b3707",
@@ -62577,7 +62980,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "rounding decimals"
   },
   {
     "id": "MATHEMATICS_2016_4f42f7d3",
@@ -62592,7 +62997,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "simple interest"
   },
   {
     "id": "MATHEMATICS_2016_fa725709",
@@ -62607,7 +63014,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "indirect proportion"
   },
   {
     "id": "MATHEMATICS_2016_e5cca42e",
@@ -62622,7 +63031,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "percentage discount"
   },
   {
     "id": "MATHEMATICS_2016_609c5796",
@@ -62637,7 +63048,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "simplifying exponents"
   },
   {
     "id": "MATHEMATICS_2016_07937dc4",
@@ -62652,7 +63065,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "finding the mode"
   },
   {
     "id": "MATHEMATICS_2016_fa93371f",
@@ -62667,7 +63082,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "interpreting data"
   },
   {
     "id": "MATHEMATICS_2016_4027c90c",
@@ -62682,7 +63099,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "probability of a single event"
   },
   {
     "id": "MATHEMATICS_2016_2828c148",
@@ -62697,7 +63116,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "changing the subject of formula"
   },
   {
     "id": "MATHEMATICS_2016_9ac71722",
@@ -62712,7 +63133,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "substitution"
   },
   {
     "id": "MATHEMATICS_2016_02f3af62",
@@ -62727,7 +63150,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplify algebraic expressions with brackets."
   },
   {
     "id": "MATHEMATICS_2016_2db50b2e",
@@ -62742,7 +63167,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Form linear equations to solve problems."
   },
   {
     "id": "MATHEMATICS_2016_390b732a",
@@ -62757,7 +63184,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "Solve linear equations with brackets."
   },
   {
     "id": "MATHEMATICS_2016_9943af5b",
@@ -62772,7 +63201,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "Find the nth term of a sequence from a diagram."
   },
   {
     "id": "MATHEMATICS_2016_f3e42a24",
@@ -62787,7 +63218,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "Identify and name different types of quadrilaterals."
   },
   {
     "id": "MATHEMATICS_2016_168f1e79",
@@ -62802,7 +63235,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "Identify and name different types of quadrilaterals."
   },
   {
     "id": "MATHEMATICS_2016_7c7d23e8",
@@ -62817,7 +63252,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "Apply properties of triangles to solve problems."
   },
   {
     "id": "MATHEMATICS_2016_e70abb0d",
@@ -62832,7 +63269,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "Solve problems involving area and perimeter of plane shapes."
   },
   {
     "id": "MATHEMATICS_2016_b357afb4",
@@ -62847,7 +63286,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "Calculate the mean, mode and median for a given set of data."
   },
   {
     "id": "MATHEMATICS_2016_a8ed0911",
@@ -62862,7 +63303,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "Apply properties of quadrilaterals to solve problems."
   },
   {
     "id": "MATHEMATICS_2016_4652282e",
@@ -62877,7 +63320,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "finding angles in equilateral triangles"
   },
   {
     "id": "MATHEMATICS_2016_4caafd18",
@@ -62892,7 +63337,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "properties of rectangles"
   },
   {
     "id": "MATHEMATICS_2016_ba661fd7",
@@ -62907,7 +63354,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "scale factor"
   },
   {
     "id": "MATHEMATICS_2016_9011c937",
@@ -62922,7 +63371,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "identifying number patterns"
   },
   {
     "id": "MATHEMATICS_2016_2d9e72f3",
@@ -62937,7 +63388,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "identifying number patterns"
   },
   {
     "id": "MATHEMATICS_2016_2a301540",
@@ -62952,7 +63405,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "adding percentages"
   },
   {
     "id": "MATHEMATICS_2016_4ed2394d",
@@ -62967,7 +63422,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "finding bearings"
   },
   {
     "id": "MATHEMATICS_2016_e4e326a7",
@@ -62982,7 +63439,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "evaluating algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2016_ddf9a644",
@@ -62997,7 +63456,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "reflection in x-axis"
   },
   {
     "id": "MATHEMATICS_2016_1e75873b",
@@ -63012,7 +63473,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2016",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_3",
+    "subSkill": "measuring angles"
   },
   {
     "id": "MATHEMATICS_2015_0bc5fdcd",
@@ -63027,7 +63490,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Prime factorization"
   },
   {
     "id": "MATHEMATICS_2015_7ecddafb",
@@ -63042,7 +63507,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "Sets and subsets"
   },
   {
     "id": "MATHEMATICS_2015_32f57d90",
@@ -63057,7 +63524,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "Sets"
   },
   {
     "id": "MATHEMATICS_2015_66b39240",
@@ -63072,7 +63541,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Place Value"
   },
   {
     "id": "MATHEMATICS_2015_bc6b5da9",
@@ -63087,7 +63558,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "HCF"
   },
   {
     "id": "MATHEMATICS_2015_4d12deb0",
@@ -63102,7 +63575,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Binary to Decimal"
   },
   {
     "id": "MATHEMATICS_2015_f26c900d",
@@ -63117,7 +63592,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Multiplication"
   },
   {
     "id": "MATHEMATICS_2015_04388f4e",
@@ -63132,7 +63609,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Integers"
   },
   {
     "id": "MATHEMATICS_2015_8f12f59e",
@@ -63147,7 +63626,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Decimal Division"
   },
   {
     "id": "MATHEMATICS_2015_b77dab69",
@@ -63162,7 +63643,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Ordering Fractions"
   },
   {
     "id": "MATHEMATICS_2015_7ff50503",
@@ -63177,7 +63660,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "fractions"
   },
   {
     "id": "MATHEMATICS_2015_dc281902",
@@ -63192,7 +63677,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "indirect proportion"
   },
   {
     "id": "MATHEMATICS_2015_7774aba6",
@@ -63207,7 +63694,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "simple interest"
   },
   {
     "id": "MATHEMATICS_2015_4f0b5f1e",
@@ -63222,7 +63711,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "percentage profit"
   },
   {
     "id": "MATHEMATICS_2015_e1797b23",
@@ -63237,7 +63728,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving linear equations"
   },
   {
     "id": "MATHEMATICS_2015_c77787c0",
@@ -63252,7 +63745,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "standard form"
   },
   {
     "id": "MATHEMATICS_2015_fa276411",
@@ -63267,7 +63762,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_2",
+    "subSkill": "median"
   },
   {
     "id": "MATHEMATICS_2015_59a315c6",
@@ -63282,7 +63779,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_PROBABILITY_1",
+    "subSkill": "probability"
   },
   {
     "id": "MATHEMATICS_2015_6fb483d1",
@@ -63297,7 +63796,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "expanding algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2015_702bc5cc",
@@ -63312,7 +63813,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "place value"
   },
   {
     "id": "MATHEMATICS_2015_a09389f6",
@@ -63327,7 +63830,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "substitution into algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2015_254b99ed",
@@ -63342,7 +63847,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "calculating discount"
   },
   {
     "id": "MATHEMATICS_2015_cd0a7b34",
@@ -63357,7 +63864,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EQUATIONS_1",
+    "subSkill": "solving linear equations"
   },
   {
     "id": "MATHEMATICS_2015_39811892",
@@ -63372,7 +63881,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "finding the nth term of a sequence"
   },
   {
     "id": "MATHEMATICS_2015_623f670c",
@@ -63387,7 +63898,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_2",
+    "subSkill": "properties of quadrilaterals"
   },
   {
     "id": "MATHEMATICS_2015_23819118",
@@ -63402,7 +63915,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "area and circumference of a circle"
   },
   {
     "id": "MATHEMATICS_2015_71de9a6f",
@@ -63417,7 +63932,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "types of triangles"
   },
   {
     "id": "MATHEMATICS_2015_33e934e7",
@@ -63432,7 +63949,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_4",
+    "subSkill": "angles"
   },
   {
     "id": "MATHEMATICS_2015_44820607",
@@ -63447,7 +63966,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_MEASUREMENT_1",
+    "subSkill": "perimeter of rectangle"
   },
   {
     "id": "MATHEMATICS_2015_1f9a7e75",
@@ -63462,7 +63983,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_3",
+    "subSkill": "Loci"
   },
   {
     "id": "MATHEMATICS_2015_98488449",
@@ -63477,7 +64000,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "Rotation"
   },
   {
     "id": "MATHEMATICS_2015_a8e9c043",
@@ -63492,7 +64017,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_POS_TRANS_1",
+    "subSkill": "Bearings"
   },
   {
     "id": "MATHEMATICS_2015_b65a6ea7",
@@ -63507,7 +64034,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Vectors"
   },
   {
     "id": "MATHEMATICS_2015_c241dc30",
@@ -63522,7 +64051,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "Identifying shapes"
   },
   {
     "id": "MATHEMATICS_2015_60920713",
@@ -63537,7 +64068,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "Number Patterns"
   },
   {
     "id": "MATHEMATICS_2015_04e46f93",
@@ -63552,7 +64085,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "Number Patterns"
   },
   {
     "id": "MATHEMATICS_2015_3006957f",
@@ -63567,7 +64102,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_2",
+    "subSkill": "Number Patterns"
   },
   {
     "id": "MATHEMATICS_2015_4b467252",
@@ -63582,7 +64119,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_GEO_SHAPES_1",
+    "subSkill": "Pythagorean theorem"
   },
   {
     "id": "MATHEMATICS_2015_269bb469",
@@ -63597,7 +64136,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_PATTERNS_1",
+    "subSkill": "Finding the next term in a sequence"
   },
   {
     "id": "MATHEMATICS_2015_33fc4bab",
@@ -63612,7 +64153,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2015",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_RATIO_PROP_1",
+    "subSkill": "Scale"
   },
   {
     "id": "MATHEMATICS_2014_bad038ea",
@@ -63627,7 +64170,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "Interpreting Venn diagrams"
   },
   {
     "id": "MATHEMATICS_2014_660992ec",
@@ -63642,7 +64187,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "Interpreting Venn diagrams"
   },
   {
     "id": "MATHEMATICS_2014_fa70bd07",
@@ -63657,7 +64204,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_DATA_1",
+    "subSkill": "Interpreting Venn diagrams"
   },
   {
     "id": "MATHEMATICS_2014_6f1f9b67",
@@ -63672,7 +64221,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Operations with integers"
   },
   {
     "id": "MATHEMATICS_2014_d34a7262",
@@ -63687,7 +64238,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Prime factorization"
   },
   {
     "id": "MATHEMATICS_2014_acc6f8b9",
@@ -63702,7 +64255,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Divisibility"
   },
   {
     "id": "MATHEMATICS_2014_f91e612d",
@@ -63717,7 +64272,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_NUMERATION_1",
+    "subSkill": "Convert base five to base ten"
   },
   {
     "id": "MATHEMATICS_2014_7bf27cd4",
@@ -63732,7 +64289,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_FRAC_DEC_PERC_1",
+    "subSkill": "Calculate percentage increase"
   },
   {
     "id": "MATHEMATICS_2014_f2c9c9a7",
@@ -63747,7 +64306,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_ALG_EXPRESSIONS_1",
+    "subSkill": "Simplifying algebraic expressions"
   },
   {
     "id": "MATHEMATICS_2014_e96d55eb",
@@ -63762,7 +64323,9 @@ export const ENHANCED_QUESTIONS = [
     "year": "2014",
     "subject": "MATHEMATICS",
     "difficulty": "medium",
-    "explanation": ""
+    "explanation": "",
+    "topicId": "MATH_JHS3_NUM_OPERATIONS_1",
+    "subSkill": "Finding Least Common Multiple"
   },
   {
     "id": "MATHEMATICS_2014_a5e5b84f",
