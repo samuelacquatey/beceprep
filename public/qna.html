@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BECE Q&A - Practice</title>
+  <title>ClassMaster - Q&A Practice</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -35,13 +35,15 @@
     }
 
     .option.correct {
-      background: rgba(40, 167, 69, 0.1);
-      border-color: #28a745;
+      background: rgba(16, 185, 129, 0.2) !important;
+      border-color: #10B981 !important;
+      color: #065F46 !important;
     }
 
     .option.wrong {
-      background: rgba(220, 53, 69, 0.1);
-      border-color: #dc3545;
+      background: rgba(239, 68, 68, 0.2) !important;
+      border-color: #EF4444 !important;
+      color: #991B1B !important;
     }
 
     .progress-track {
@@ -99,17 +101,14 @@
 <body>
   <div class="container">
     <!-- Header -->
-    <header>
+    <nav class="app-top-bar">
       <div class="brand">
-        <div class="logo">BE</div>
-        <div>
-          <h1>BECE Prep</h1>
+        <div class="logo">CM</div>
+        <div class="brand-text">
+          <h1>ClassMaster</h1>
         </div>
       </div>
-      <div style="display: flex; gap: 8px; align-items: center;">
-        <!-- Nav buttons replaced by global nav -->
-      </div>
-    </header>
+    </nav>
 
     <!-- Main Quiz Area -->
     <div class="card">
@@ -117,7 +116,11 @@
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
         <button id="backBtn" class="btn ghost"><i class="fas fa-arrow-left"></i> Back</button>
         <div id="currentFilters" style="font-size: 0.9em; color: var(--muted); text-align: center;"></div>
-        <button id="restartBtn" class="btn ghost"><i class="fas fa-redo"></i> Restart</button>
+        <div style="display:flex; gap:8px;">
+          <button id="earlySubmitBtn" class="btn ghost"
+            style="color: var(--primary); border-color: var(--primary);">Finish</button>
+          <button id="restartBtn" class="btn ghost"><i class="fas fa-redo"></i> Restart</button>
+        </div>
       </div>
 
       <!-- Progress -->
@@ -292,16 +295,19 @@
       </a>
     </nav>
     <script type="module">
-      import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+      import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
       import { fetchQuestionsPage, trackQuizAttempt, batchTrackQuestionAttempts, logSystemError } from "./js/database.js?v=2.2";
-      import { app } from "./js/auth.js?v=2.2";
+      import { app, requireAuth } from "./js/auth.js?v=2.2";
 
 
       const auth = getAuth(app);
 
-      // Navigation handlers
-      // Navigation handlers
-      //   document.getElementById('dashboardBtn').addEventListener('click', () => {
+      // Init Auth Check
+      requireAuth((user) => {
+        console.log("User authenticated in Q&A:", user.email);
+        init();
+      });
+
       //     window.location.href = 'dashboard.html';
       //   });
 
@@ -443,6 +449,7 @@
           el.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center"><span>${String.fromCharCode(65 + i)}. ${opt}</span></div>`;
           el.addEventListener('click', () => {
             if (state.isSubmitted) return; // Read-only if submitted
+            if (state.mode === 'practice' && state.answers[q.id]) return; // Read-only if already answered in practice mode
             selectOption(q.id, i);
           });
           optionsEl.appendChild(el);
@@ -457,10 +464,12 @@
           }
         }
 
-        // Show correctness ONLY if submitted
-        if (state.isSubmitted) {
+        // Show correctness:
+        // 1. If global submission (Exam mode finished)
+        // 2. If Practice mode AND question is answered
+        if (state.isSubmitted || (state.mode === 'practice' && state.answers[q.id])) {
           showCorrectness(q.id);
-          confidenceRating.style.display = 'none'; // Hide confidence after submit
+          confidenceRating.style.display = 'none'; // Hide confidence after answer
         } else {
           confidenceRating.style.display = 'block'; // Show confidence during quiz
         }
@@ -496,11 +505,21 @@
         // toggle selection
         const nodes = optionsEl.querySelectorAll('.option');
         nodes.forEach(n => n.classList.remove('selected'));
-        nodes[choice].classList.add('selected');
+        if (nodes[choice]) nodes[choice].classList.add('selected');
 
         // store temporarily
         state.answers[qid] = state.answers[qid] || {};
         state.answers[qid].choice = choice;
+
+        // In Practice Mode, compute correctness and visualize immediately
+        if (state.mode === 'practice') {
+          const q = QUESTIONS.find(x => x.id === qid);
+          const isCorrect = (choice == q.a); // Loose equality
+          state.answers[qid].correct = isCorrect;
+
+          // Re-render immediately to update class names (green/red)
+          requestAnimationFrame(() => renderQuestion());
+        }
 
         // Auto-save session
         saveSession();
@@ -549,43 +568,43 @@
         }
       }
 
-      async function handleSubmitQuiz() {
-        if (state.index < state.pool.length - 1) {
-          // Submit single answer
-          const qid = state.pool[state.index];
-          const confidenceInput = document.querySelector('input[name="confidence"]:checked');
-          if (confidenceInput && state.answers[qid]) {
-            state.answers[qid].confidence = parseFloat(confidenceInput.value);
-          }
+      // 1. Restart Logic
+      restartBtn.addEventListener('click', () => {
+        if (confirm("Restart this session? All progress will be reset.")) {
+          state.answers = {};
+          state.index = 0; // reset index to start
+          state.isSubmitted = false;
+          sessionStorage.removeItem('current_quiz_answers');
+          sessionStorage.removeItem('current_quiz_progress');
 
+          // Reset UI
+          summaryContent.style.display = 'none';
+          emptyState.style.display = 'block'; // Show empty state again? Or just hide summary
 
-          confidenceRating.addEventListener('click', (e) => {
-            if (!e.target.classList.contains('confidence-btn')) return;
+          renderQuestion();
+          updateProgress();
+          updateStats();
+        }
+      });
 
-            const qid = state.pool[state.index];
-            const confidence = parseFloat(e.target.dataset.level);
+      // 2. Submit / Next Logic
+      async function handleSubmitQuiz(forceFinish = false) {
+        // If not forcing finish, and we are not at the end, acts as "Next" or "Submit Answer"
+        // But "Submit Answer" is only relevant if we want to lock in an answer.
+        // Current design: "Submit Answer" button is shown for questions not last.
 
-            if (!state.answers[qid]) state.answers[qid] = {};
-            state.answers[qid].confidence = confidence;
-
-            // Visual feedback
-            document.querySelectorAll('.confidence-btn').forEach(btn => {
-              btn.classList.remove('selected');
-            });
-            e.target.classList.add('selected');
-
-            saveSession();
-          });
-
-          // Move to next question
-          handleNext();
+        if (!forceFinish && state.index < state.pool.length - 1) {
+          handleNext(); // Just go next if not submitting
           return;
         }
 
-        // Final submission
-        if (!confirm("Are you sure you want to submit your quiz? You won't be able to change answers.")) {
+        // Final submission (either clicked 'Finish' or 'Submit Quiz' at end)
+        if (!forceFinish && !confirm("Are you sure you want to submit your quiz?")) {
           return;
         }
+
+        // ... proceeding to submit logic ...
+
 
         // Save final question state
         const qid = state.pool[state.index];
@@ -608,7 +627,7 @@
             const q = QUESTIONS.find(x => x.id === qId);
 
             // Check correctness
-            const isCorrect = (answer.choice === q.a);
+            const isCorrect = (answer.choice == q.a);
             answer.correct = isCorrect; // Update local state for summary
             if (isCorrect) correctCount++;
 
@@ -669,9 +688,13 @@
         const nodes = optionsEl.querySelectorAll('.option');
         nodes.forEach((n, i) => {
           n.classList.remove('correct', 'wrong');
-          if (i === q.a) n.classList.add('correct');
+          // Use loose equality (==) to handle if q.a is string "2" vs number 2
+          if (i == q.a) n.classList.add('correct');
+
           const rec = state.answers[qid];
-          if (rec && rec.choice === i && rec.choice !== q.a) n.classList.add('wrong');
+          if (rec && rec.choice === i && rec.choice != q.a) {
+            n.classList.add('wrong');
+          }
         });
       }
 
@@ -751,7 +774,7 @@
         const doc = new jsPDF();
 
         doc.setFontSize(20);
-        doc.text("BECE Quiz Results", 20, 20);
+        doc.text("ClassMaster Quiz Results", 20, 20);
         doc.setFontSize(12);
         doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 20, 30);
 
@@ -784,6 +807,11 @@
 
         exportBtn.addEventListener('click', exportAnswers);
 
+        document.getElementById('earlySubmitBtn').addEventListener('click', () => {
+          // Force standard submission flow
+          handleSubmitQuiz(true);
+        });
+
         clearSession.addEventListener('click', () => {
           if (confirm("Clear all answers and restart?")) {
             state.answers = {};
@@ -805,20 +833,7 @@
           }
         });
 
-        restartBtn.addEventListener('click', () => {
-          if (confirm("Restart quiz? All answers will be cleared.")) {
-            state.answers = {};
-            state.index = 0;
-            state.isSubmitted = false;
-            saveSession();
-            renderQuestion();
-            updateStats();
-
-            // Show empty state again
-            emptyState.style.display = 'block';
-            summaryContent.style.display = 'none';
-          }
-        });
+        // Duplicate restart listener removed. Handled above.
 
         newQuizBtn.addEventListener('click', () => {
           window.location.href = 'quiz.html';
@@ -964,15 +979,7 @@
       }
 
 
-      // Protect route - redirect if not authenticated
-      onAuthStateChanged(auth, (user) => {
-        if (!user) {
-          window.location.href = "index.html";
-        } else {
-          console.log("Logged in:", user.email);
-          init();
-        }
-      });
+      // Auth handled by requireAuth at the top
     </script>
 </body>
 

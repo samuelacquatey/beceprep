@@ -4,416 +4,423 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BECE Prep - Smart Flashcards</title>
+  <title>ClassMaster - Smart Flashcards</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css" />
+  <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <header>
+    <nav class="app-top-bar">
       <div class="brand">
-        <div class="logo">BE</div>
+        <div class="logo">CM</div>
+        <div class="brand-text">
+          <h1>ClassMaster</h1>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
         <div>
-          <h1>Smart Flashcards</h1>
-          <p class="lead">Master topics with spaced repetition</p>
+          <h1 style="font-size: 24px; font-weight: 700; color: #111827;">Smart Flashcards</h1>
+          <p style="color: var(--muted);">Master topics with spaced repetition</p>
+        </div>
+        <div>
+          <button id="backToQuiz" class="btn ghost">Back to Quiz</button>
+          <button id="createCardBtn" class="btn">+ Create Card</button>
         </div>
       </div>
-      <div>
-        <button id="backToQuiz" class="btn ghost">Back to Quiz</button>
-        <button id="createCardBtn" class="btn">+ Create Card</button>
-      </div>
-    </header>
 
-    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 24px;">
-      <!-- Flashcard Interface -->
-      <div class="card">
-        <h3>🎴 Study Cards</h3>
-        <div class="flashcard-container">
-          <div class="flashcard" id="currentFlashcard">
-            <div class="flashcard-front">
-              <div class="card-content">
-                <div class="card-subject" id="cardSubject">Mathematics</div>
-                <div class="card-question" id="cardQuestion">What is the formula for the area of a circle?</div>
-                <div class="card-hint" id="cardHint" style="display: none;">
-                  <small>Hint: Think about π and radius</small>
+      <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 24px;">
+        <!-- Flashcard Interface -->
+        <div class="card">
+          <h3>🎴 Study Cards</h3>
+          <div class="flashcard-container">
+            <div class="flashcard" id="currentFlashcard">
+              <div class="flashcard-front">
+                <div class="card-content">
+                  <div class="card-subject" id="cardSubject">Mathematics</div>
+                  <div class="card-question" id="cardQuestion">What is the formula for the area of a circle?</div>
+                  <div class="card-hint" id="cardHint" style="display: none;">
+                    <small>Hint: Think about π and radius</small>
+                  </div>
+                </div>
+                <button class="btn ghost" id="showHintBtn">💡 Show Hint</button>
+              </div>
+              <div class="flashcard-back">
+                <div class="card-content">
+                  <div class="card-answer" id="cardAnswer">πr²</div>
+                  <div class="card-explanation" id="cardExplanation">
+                    The area of a circle is calculated by multiplying π (approximately 3.14159) by the square of the
+                    radius.
+                  </div>
                 </div>
               </div>
-              <button class="btn ghost" id="showHintBtn">💡 Show Hint</button>
             </div>
-            <div class="flashcard-back">
-              <div class="card-content">
-                <div class="card-answer" id="cardAnswer">πr²</div>
-                <div class="card-explanation" id="cardExplanation">
-                  The area of a circle is calculated by multiplying π (approximately 3.14159) by the square of the
-                  radius.
+
+            <div class="flashcard-controls">
+              <div class="difficulty-buttons">
+                <button class="btn" id="againBtn">🔴 Again</button>
+                <button class="btn" id="hardBtn">🟠 Hard</button>
+                <button class="btn" id="goodBtn">🟢 Good</button>
+                <button class="btn" id="easyBtn">🔵 Easy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress Stats -->
+        <div class="card">
+          <h3>📊 Study Progress</h3>
+          <div class="flashcard-stats">
+            <div class="stat">
+              <strong id="dueCount">0</strong>
+              <span>Due Today</span>
+            </div>
+            <div class="stat">
+              <strong id="totalCount">0</strong>
+              <span>Total Cards</span>
+            </div>
+            <div class="stat">
+              <strong id="masteredCount">0</strong>
+              <span>Mastered</span>
+            </div>
+            <div class="stat">
+              <strong id="streakCount">0</strong>
+              <span>Day Streak</span>
+            </div>
+          </div>
+
+          <div class="progress-chart">
+            <h4>Mastery Progress</h4>
+            <div class="subject-progress">
+              <div class="progress-item">
+                <span>Mathematics</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 75%"></div>
                 </div>
+                <span>75%</span>
               </div>
-            </div>
-          </div>
-
-          <div class="flashcard-controls">
-            <div class="difficulty-buttons">
-              <button class="btn" id="againBtn">🔴 Again</button>
-              <button class="btn" id="hardBtn">🟠 Hard</button>
-              <button class="btn" id="goodBtn">🟢 Good</button>
-              <button class="btn" id="easyBtn">🔵 Easy</button>
+              <div class="progress-item">
+                <span>English</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 60%"></div>
+                </div>
+                <span>60%</span>
+              </div>
+              <div class="progress-item">
+                <span>Science</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 45%"></div>
+                </div>
+                <span>45%</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Progress Stats -->
-      <div class="card">
-        <h3>📊 Study Progress</h3>
-        <div class="flashcard-stats">
-          <div class="stat">
-            <strong id="dueCount">0</strong>
-            <span>Due Today</span>
-          </div>
-          <div class="stat">
-            <strong id="totalCount">0</strong>
-            <span>Total Cards</span>
-          </div>
-          <div class="stat">
-            <strong id="masteredCount">0</strong>
-            <span>Mastered</span>
-          </div>
-          <div class="stat">
-            <strong id="streakCount">0</strong>
-            <span>Day Streak</span>
-          </div>
-        </div>
-
-        <div class="progress-chart">
-          <h4>Mastery Progress</h4>
-          <div class="subject-progress">
-            <div class="progress-item">
-              <span>Mathematics</span>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 75%"></div>
-              </div>
-              <span>75%</span>
+        <!-- Card Management -->
+        <div class="card" style="grid-column: span 2;">
+          <h3>📝 My Flashcard Decks</h3>
+          <div class="deck-management">
+            <div class="deck-filters">
+              <button class="btn ghost active" data-filter="all">All Cards</button>
+              <button class="btn ghost" data-filter="due">Due for Review</button>
+              <button class="btn ghost" data-filter="new">New Cards</button>
+              <button class="btn ghost" data-filter="mastered">Mastered</button>
             </div>
-            <div class="progress-item">
-              <span>English</span>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 60%"></div>
-              </div>
-              <span>60%</span>
-            </div>
-            <div class="progress-item">
-              <span>Science</span>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 45%"></div>
-              </div>
-              <span>45%</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Card Management -->
-      <div class="card" style="grid-column: span 2;">
-        <h3>📝 My Flashcard Decks</h3>
-        <div class="deck-management">
-          <div class="deck-filters">
-            <button class="btn ghost active" data-filter="all">All Cards</button>
-            <button class="btn ghost" data-filter="due">Due for Review</button>
-            <button class="btn ghost" data-filter="new">New Cards</button>
-            <button class="btn ghost" data-filter="mastered">Mastered</button>
-          </div>
-
-          <div class="decks-grid" id="decksContainer">
-            <!-- Dynamic deck cards will be inserted here -->
+            <div class="decks-grid" id="decksContainer">
+              <!-- Dynamic deck cards will be inserted here -->
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Navigation Injection -->
-  <nav class="app-nav">
-    <a href="quiz.html" class="nav-item" id="nav-home">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path
-            d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.69Z" />
-          <path
-            d="M12 5.432 2.625 14.807v6.068a2.625 2.625 0 0 0 2.625 2.625h13.5a2.625 2.625 0 0 0 2.625-2.625v-6.068L12 5.432Z" />
-        </svg>
-      </div>
-      <span>Home</span>
-    </a>
-    <a href="dashboard.html" class="nav-item" id="nav-analytics">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path fill-rule="evenodd"
-            d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z"
-            clip-rule="evenodd" />
-          <path fill-rule="evenodd"
-            d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z"
-            clip-rule="evenodd" />
-        </svg>
-      </div>
-      <span>Analytics</span>
-    </a>
-    <a href="flashcards.html" class="nav-item active" id="nav-flashcards">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path d="M11.25 3v18H6.75a2.25 2.25 0 0 1-2.25-2.25V5.25A2.25 2.25 0 0 1 6.75 3h4.5Z" />
-          <path d="M12.75 3v18h4.5a2.25 2.25 0 0 0 2.25-2.25V5.25A2.25 2.25 0 0 0 17.25 3h-4.5Z" />
-        </svg>
-      </div>
-      <span>Memorize</span>
-    </a>
-    <a href="social.html" class="nav-item" id="nav-social">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path
-            d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.161Z" />
-        </svg>
-      </div>
-      <span>Community</span>
-    </a>
-    <a href="profile.html" class="nav-item" id="nav-profile">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path fill-rule="evenodd"
-            d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-            clip-rule="evenodd" />
-        </svg>
-      </div>
-      <span>Profile</span>
-    </a>
-  </nav>
-  <!-- Create Card Modal -->
-  <div id="createCardModal" class="modal" style="display: none;">
-    <div class="modal-content">
-      <h3>Create New Flashcard</h3>
-      <div class="form-container">
-        <div class="form-group">
-          <label for="cardSubject">Subject</label>
-          <select id="cardSubjectSelect">
-            <option value="Mathematics">Mathematics</option>
-            <option value="English">English</option>
-            <option value="Integrated Science">Integrated Science</option>
-            <option value="Social Studies">Social Studies</option>
-          </select>
+    <!-- Navigation Injection -->
+    <nav class="app-nav">
+      <a href="quiz.html" class="nav-item" id="nav-home">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path
+              d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.69Z" />
+            <path
+              d="M12 5.432 2.625 14.807v6.068a2.625 2.625 0 0 0 2.625 2.625h13.5a2.625 2.625 0 0 0 2.625-2.625v-6.068L12 5.432Z" />
+          </svg>
         </div>
-        <div class="form-group">
-          <label for="cardTopic">Topic</label>
-          <input type="text" id="cardTopic" placeholder="e.g., Algebra, Geometry, Grammar">
+        <span>Home</span>
+      </a>
+      <a href="dashboard.html" class="nav-item" id="nav-analytics">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path fill-rule="evenodd"
+              d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z"
+              clip-rule="evenodd" />
+            <path fill-rule="evenodd"
+              d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z"
+              clip-rule="evenodd" />
+          </svg>
         </div>
-        <div class="form-group">
-          <label for="cardQuestion">Question/Front</label>
-          <textarea id="cardQuestionInput" placeholder="Enter the question or term" rows="3"></textarea>
+        <span>Analytics</span>
+      </a>
+      <a href="flashcards.html" class="nav-item active" id="nav-flashcards">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path d="M11.25 3v18H6.75a2.25 2.25 0 0 1-2.25-2.25V5.25A2.25 2.25 0 0 1 6.75 3h4.5Z" />
+            <path d="M12.75 3v18h4.5a2.25 2.25 0 0 0 2.25-2.25V5.25A2.25 2.25 0 0 0 17.25 3h-4.5Z" />
+          </svg>
         </div>
-        <div class="form-group">
-          <label for="cardAnswer">Answer/Back</label>
-          <textarea id="cardAnswerInput" placeholder="Enter the answer or definition" rows="3"></textarea>
+        <span>Memorize</span>
+      </a>
+      <a href="social.html" class="nav-item" id="nav-social">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path
+              d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.161Z" />
+          </svg>
         </div>
-        <div class="form-group">
-          <label for="cardHint">Hint (Optional)</label>
-          <input type="text" id="cardHintInput" placeholder="Optional hint for the question">
+        <span>Community</span>
+      </a>
+      <a href="profile.html" class="nav-item" id="nav-profile">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path fill-rule="evenodd"
+              d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+              clip-rule="evenodd" />
+          </svg>
         </div>
-        <div class="form-group">
-          <label for="cardExplanation">Explanation (Optional)</label>
-          <textarea id="cardExplanationInput" placeholder="Detailed explanation" rows="2"></textarea>
+        <span>Profile</span>
+      </a>
+    </nav>
+    <!-- Create Card Modal -->
+    <div id="createCardModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <h3>Create New Flashcard</h3>
+        <div class="form-container">
+          <div class="form-group">
+            <label for="cardSubject">Subject</label>
+            <select id="cardSubjectSelect">
+              <option value="Mathematics">Mathematics</option>
+              <option value="English">English</option>
+              <option value="Integrated Science">Integrated Science</option>
+              <option value="Social Studies">Social Studies</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cardTopic">Topic</label>
+            <input type="text" id="cardTopic" placeholder="e.g., Algebra, Geometry, Grammar">
+          </div>
+          <div class="form-group">
+            <label for="cardQuestion">Question/Front</label>
+            <textarea id="cardQuestionInput" placeholder="Enter the question or term" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="cardAnswer">Answer/Back</label>
+            <textarea id="cardAnswerInput" placeholder="Enter the answer or definition" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="cardHint">Hint (Optional)</label>
+            <input type="text" id="cardHintInput" placeholder="Optional hint for the question">
+          </div>
+          <div class="form-group">
+            <label for="cardExplanation">Explanation (Optional)</label>
+            <textarea id="cardExplanationInput" placeholder="Detailed explanation" rows="2"></textarea>
+          </div>
         </div>
-      </div>
-      <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 20px;">
-        <button class="btn ghost" id="cancelCreateCard">Cancel</button>
-        <button class="btn" id="saveCardBtn">Save Card</button>
+        <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 20px;">
+          <button class="btn ghost" id="cancelCreateCard">Cancel</button>
+          <button class="btn" id="saveCardBtn">Save Card</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script type="module">
-    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-    import { FlashcardSystem } from "./js/flashcards.js";
-    import { app } from "./js/auth.js";
+    <script type="module">
+      import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+      import { FlashcardSystem } from "./js/flashcards.js";
+      import { app, requireAuth } from "./js/auth.js";
+      import { initTour } from "./js/tour.js";
 
-    const auth = getAuth(app);
-    const flashcardSystem = new FlashcardSystem();
+      const auth = getAuth(app);
+      const flashcardSystem = new FlashcardSystem();
 
-    let currentCardIndex = 0;
-    let isFlipped = false;
+      let currentCardIndex = 0;
+      let isFlipped = false;
 
-    onAuthStateChanged(auth, async (user) => {
-      if (!user) {
-        window.location.href = 'index.html';
-        return;
-      }
+      requireAuth(async (user) => {
+        await initializeFlashcards(user);
+        initTour('flashcards');
+      });
 
-      await initializeFlashcards(user);
-    });
+      async function initializeFlashcards(user) {
+        console.log('Initializing flashcards for user:', user.uid);
 
-    async function initializeFlashcards(user) {
-      console.log('Initializing flashcards for user:', user.uid);
+        try {
+          await flashcardSystem.loadUserCards(user.uid);
+          console.log('Flashcards loaded:', flashcardSystem.cards);
 
-      try {
-        await flashcardSystem.loadUserCards(user.uid);
-        console.log('Flashcards loaded:', flashcardSystem.cards);
-
-        // Debug: Log all cards and their due dates
-        flashcardSystem.cards.forEach((card, index) => {
-          console.log(`Card ${index + 1}:`, {
-            question: card.question.substring(0, 50) + '...',
-            dueDate: card.dueDate,
-            isDue: card.dueDate <= new Date()
+          // Debug: Log all cards and their due dates
+          flashcardSystem.cards.forEach((card, index) => {
+            console.log(`Card ${index + 1}:`, {
+              question: card.question.substring(0, 50) + '...',
+              dueDate: card.dueDate,
+              isDue: card.dueDate <= new Date()
+            });
           });
-        });
 
-        updateStats();
-        showNextCard();
-        setupEventListeners();
-        loadDecks();
+          updateStats();
+          showNextCard();
+          setupEventListeners();
+          loadDecks();
 
-        console.log('Flashcards initialization complete');
-      } catch (error) {
-        console.error('Error initializing flashcards:', error);
-        // Show error message to user
-        const flashcardElement = document.getElementById('currentFlashcard');
-        if (flashcardElement) {
-          flashcardElement.innerHTML = `
+          console.log('Flashcards initialization complete');
+        } catch (error) {
+          console.error('Error initializing flashcards:', error);
+          // Show error message to user
+          const flashcardElement = document.getElementById('currentFlashcard');
+          if (flashcardElement) {
+            flashcardElement.innerHTML = `
           <div class="no-cards-message">
             <h3>⚠️ Error Loading Flashcards</h3>
             <p>There was a problem loading your flashcards. Please try refreshing the page.</p>
             <button class="btn" onclick="location.reload()">Refresh Page</button>
           </div>
         `;
+          }
         }
       }
-    }
 
-    function setupEventListeners() {
-      // Safe element access with null checks
-      const currentFlashcard = document.getElementById('currentFlashcard');
-      const againBtn = document.getElementById('againBtn');
-      const hardBtn = document.getElementById('hardBtn');
-      const goodBtn = document.getElementById('goodBtn');
-      const easyBtn = document.getElementById('easyBtn');
-      const showHintBtn = document.getElementById('showHintBtn');
-      const backToQuiz = document.getElementById('backToQuiz');
-      const createCardBtn = document.getElementById('createCardBtn');
-      const cancelCreateCard = document.getElementById('cancelCreateCard');
-      const saveCardBtn = document.getElementById('saveCardBtn');
+      function setupEventListeners() {
+        // Safe element access with null checks
+        const currentFlashcard = document.getElementById('currentFlashcard');
+        const againBtn = document.getElementById('againBtn');
+        const hardBtn = document.getElementById('hardBtn');
+        const goodBtn = document.getElementById('goodBtn');
+        const easyBtn = document.getElementById('easyBtn');
+        const showHintBtn = document.getElementById('showHintBtn');
+        const backToQuiz = document.getElementById('backToQuiz');
+        const createCardBtn = document.getElementById('createCardBtn');
+        const cancelCreateCard = document.getElementById('cancelCreateCard');
+        const saveCardBtn = document.getElementById('saveCardBtn');
 
-      // Flashcard flip
-      if (currentFlashcard) {
-        currentFlashcard.addEventListener('click', flipCard);
-      }
+        // Flashcard flip
+        if (currentFlashcard) {
+          currentFlashcard.addEventListener('click', flipCard);
+        }
 
-      // Difficulty buttons
-      if (againBtn) againBtn.addEventListener('click', () => rateCard('again'));
-      if (hardBtn) hardBtn.addEventListener('click', () => rateCard('hard'));
-      if (goodBtn) goodBtn.addEventListener('click', () => rateCard('good'));
-      if (easyBtn) easyBtn.addEventListener('click', () => rateCard('easy'));
+        // Difficulty buttons
+        if (againBtn) againBtn.addEventListener('click', () => rateCard('again'));
+        if (hardBtn) hardBtn.addEventListener('click', () => rateCard('hard'));
+        if (goodBtn) goodBtn.addEventListener('click', () => rateCard('good'));
+        if (easyBtn) easyBtn.addEventListener('click', () => rateCard('easy'));
 
-      // Hint button
-      if (showHintBtn) showHintBtn.addEventListener('click', showHint);
+        // Hint button
+        if (showHintBtn) showHintBtn.addEventListener('click', showHint);
 
-      // Navigation
-      if (backToQuiz) {
-        backToQuiz.addEventListener('click', () => {
-          window.location.href = 'quiz.html';
+        // Navigation
+        if (backToQuiz) {
+          backToQuiz.addEventListener('click', () => {
+            window.location.href = 'quiz.html';
+          });
+        }
+
+        // Create card modal
+        if (createCardBtn) createCardBtn.addEventListener('click', showCreateModal);
+        if (cancelCreateCard) cancelCreateCard.addEventListener('click', hideCreateModal);
+        if (saveCardBtn) saveCardBtn.addEventListener('click', saveNewCard);
+
+        // Deck filters
+        document.querySelectorAll('.deck-filters .btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            document.querySelectorAll('.deck-filters .btn').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            filterDecks(e.target.dataset.filter);
+          });
         });
       }
 
-      // Create card modal
-      if (createCardBtn) createCardBtn.addEventListener('click', showCreateModal);
-      if (cancelCreateCard) cancelCreateCard.addEventListener('click', hideCreateModal);
-      if (saveCardBtn) saveCardBtn.addEventListener('click', saveNewCard);
+      function flipCard() {
+        const card = document.getElementById('currentFlashcard');
+        if (!card) return;
 
-      // Deck filters
-      document.querySelectorAll('.deck-filters .btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          document.querySelectorAll('.deck-filters .btn').forEach(b => b.classList.remove('active'));
-          e.target.classList.add('active');
-          filterDecks(e.target.dataset.filter);
-        });
-      });
-    }
+        isFlipped = !isFlipped;
 
-    function flipCard() {
-      const card = document.getElementById('currentFlashcard');
-      if (!card) return;
-
-      isFlipped = !isFlipped;
-
-      if (isFlipped) {
-        card.classList.add('flipped');
-      } else {
-        card.classList.remove('flipped');
-      }
-    }
-
-    function showHint(e) {
-      e.stopPropagation();
-      const hintElement = document.getElementById('cardHint');
-      const showHintBtn = document.getElementById('showHintBtn');
-
-      if (hintElement) hintElement.style.display = 'block';
-      if (showHintBtn) showHintBtn.style.display = 'none';
-    }
-
-    async function rateCard(difficulty) {
-      const dueCards = flashcardSystem.getDueCards();
-      if (dueCards.length === 0) return;
-
-      const currentCard = dueCards[currentCardIndex];
-      if (!currentCard) return;
-
-      await flashcardSystem.rateCard(currentCard.id, difficulty);
-
-      // Move to next card
-      currentCardIndex++;
-      if (currentCardIndex >= dueCards.length) {
-        currentCardIndex = 0;
+        if (isFlipped) {
+          card.classList.add('flipped');
+        } else {
+          card.classList.remove('flipped');
+        }
       }
 
-      isFlipped = false;
-      showNextCard();
-      updateStats();
-    }
+      function showHint(e) {
+        e.stopPropagation();
+        const hintElement = document.getElementById('cardHint');
+        const showHintBtn = document.getElementById('showHintBtn');
 
-    function showNextCard() {
-      const dueCards = flashcardSystem.getDueCards();
-      console.log('Showing next card. Due cards:', dueCards.length);
+        if (hintElement) hintElement.style.display = 'block';
+        if (showHintBtn) showHintBtn.style.display = 'none';
+      }
 
-      const flashcardElement = document.getElementById('currentFlashcard');
-      if (!flashcardElement) return;
+      async function rateCard(difficulty) {
+        const dueCards = flashcardSystem.getDueCards();
+        if (dueCards.length === 0) return;
 
-      if (dueCards.length === 0) {
-        // No cards due, show message
-        flashcardElement.innerHTML = `
+        const currentCard = dueCards[currentCardIndex];
+        if (!currentCard) return;
+
+        await flashcardSystem.rateCard(currentCard.id, difficulty);
+
+        // Move to next card
+        currentCardIndex++;
+        if (currentCardIndex >= dueCards.length) {
+          currentCardIndex = 0;
+        }
+
+        isFlipped = false;
+        showNextCard();
+        updateStats();
+      }
+
+      function showNextCard() {
+        const dueCards = flashcardSystem.getDueCards();
+        console.log('Showing next card. Due cards:', dueCards.length);
+
+        const flashcardElement = document.getElementById('currentFlashcard');
+        if (!flashcardElement) return;
+
+        if (dueCards.length === 0) {
+          // No cards due, show message
+          flashcardElement.innerHTML = `
         <div class="no-cards-message">
           <h3>🎉 All Caught Up!</h3>
           <p>No cards due for review today.</p>
@@ -423,84 +430,84 @@
         </div>
       `;
 
-        // Add event listeners to dynamically created buttons
-        setTimeout(() => {
-          const studyNewCardsBtn = document.getElementById('studyNewCards');
-          const createFirstCardBtn = document.getElementById('createFirstCard');
-          if (studyNewCardsBtn) studyNewCardsBtn.addEventListener('click', studyNewCards);
-          if (createFirstCardBtn) createFirstCardBtn.addEventListener('click', showCreateModal);
-        }, 0);
+          // Add event listeners to dynamically created buttons
+          setTimeout(() => {
+            const studyNewCardsBtn = document.getElementById('studyNewCards');
+            const createFirstCardBtn = document.getElementById('createFirstCard');
+            if (studyNewCardsBtn) studyNewCardsBtn.addEventListener('click', studyNewCards);
+            if (createFirstCardBtn) createFirstCardBtn.addEventListener('click', showCreateModal);
+          }, 0);
 
-        return;
-      }
-
-      // Make sure we don't go out of bounds
-      if (currentCardIndex >= dueCards.length) {
-        currentCardIndex = 0;
-      }
-
-      const card = dueCards[currentCardIndex];
-      console.log('Displaying card:', card.question);
-
-      // Update card content
-      const cardSubject = document.getElementById('cardSubject');
-      const cardQuestion = document.getElementById('cardQuestion');
-      const cardAnswer = document.getElementById('cardAnswer');
-      const cardExplanation = document.getElementById('cardExplanation');
-
-      if (cardSubject) cardSubject.textContent = card.subject || 'General';
-      if (cardQuestion) cardQuestion.textContent = card.question;
-      if (cardAnswer) cardAnswer.textContent = card.answer;
-      if (cardExplanation) cardExplanation.textContent = card.explanation || 'No explanation available.';
-
-      // Handle hint
-      const hintElement = document.getElementById('cardHint');
-      const showHintBtn = document.getElementById('showHintBtn');
-
-      if (card.hint) {
-        if (hintElement) {
-          hintElement.innerHTML = `<small>💡 ${card.hint}</small>`;
-          hintElement.style.display = 'none';
+          return;
         }
-        if (showHintBtn) showHintBtn.style.display = 'block';
-      } else {
-        if (hintElement) hintElement.style.display = 'none';
-        if (showHintBtn) showHintBtn.style.display = 'none';
+
+        // Make sure we don't go out of bounds
+        if (currentCardIndex >= dueCards.length) {
+          currentCardIndex = 0;
+        }
+
+        const card = dueCards[currentCardIndex];
+        console.log('Displaying card:', card.question);
+
+        // Update card content
+        const cardSubject = document.getElementById('cardSubject');
+        const cardQuestion = document.getElementById('cardQuestion');
+        const cardAnswer = document.getElementById('cardAnswer');
+        const cardExplanation = document.getElementById('cardExplanation');
+
+        if (cardSubject) cardSubject.textContent = card.subject || 'General';
+        if (cardQuestion) cardQuestion.textContent = card.question;
+        if (cardAnswer) cardAnswer.textContent = card.answer;
+        if (cardExplanation) cardExplanation.textContent = card.explanation || 'No explanation available.';
+
+        // Handle hint
+        const hintElement = document.getElementById('cardHint');
+        const showHintBtn = document.getElementById('showHintBtn');
+
+        if (card.hint) {
+          if (hintElement) {
+            hintElement.innerHTML = `<small>💡 ${card.hint}</small>`;
+            hintElement.style.display = 'none';
+          }
+          if (showHintBtn) showHintBtn.style.display = 'block';
+        } else {
+          if (hintElement) hintElement.style.display = 'none';
+          if (showHintBtn) showHintBtn.style.display = 'none';
+        }
+
+        // Reset card state
+        flashcardElement.classList.remove('flipped');
+        flashcardElement.style.display = 'block';
+        isFlipped = false;
+
+        console.log('Card displayed successfully');
       }
 
-      // Reset card state
-      flashcardElement.classList.remove('flipped');
-      flashcardElement.style.display = 'block';
-      isFlipped = false;
+      function studyNewCards() {
+        // Show new cards instead of due cards
+        currentCardIndex = 0;
+        showNextCard();
+      }
 
-      console.log('Card displayed successfully');
-    }
+      function updateStats() {
+        const stats = flashcardSystem.getStats();
+        const dueCount = document.getElementById('dueCount');
+        const totalCount = document.getElementById('totalCount');
+        const masteredCount = document.getElementById('masteredCount');
+        const streakCount = document.getElementById('streakCount');
 
-    function studyNewCards() {
-      // Show new cards instead of due cards
-      currentCardIndex = 0;
-      showNextCard();
-    }
+        if (dueCount) dueCount.textContent = stats.dueToday;
+        if (totalCount) totalCount.textContent = stats.totalCards;
+        if (masteredCount) masteredCount.textContent = stats.mastered;
+        if (streakCount) streakCount.textContent = stats.streak;
+      }
 
-    function updateStats() {
-      const stats = flashcardSystem.getStats();
-      const dueCount = document.getElementById('dueCount');
-      const totalCount = document.getElementById('totalCount');
-      const masteredCount = document.getElementById('masteredCount');
-      const streakCount = document.getElementById('streakCount');
+      function loadDecks() {
+        const decks = flashcardSystem.getDecksBySubject();
+        const container = document.getElementById('decksContainer');
+        if (!container) return;
 
-      if (dueCount) dueCount.textContent = stats.dueToday;
-      if (totalCount) totalCount.textContent = stats.totalCards;
-      if (masteredCount) masteredCount.textContent = stats.mastered;
-      if (streakCount) streakCount.textContent = stats.streak;
-    }
-
-    function loadDecks() {
-      const decks = flashcardSystem.getDecksBySubject();
-      const container = document.getElementById('decksContainer');
-      if (!container) return;
-
-      container.innerHTML = Object.entries(decks).map(([subject, cards]) => `
+        container.innerHTML = Object.entries(decks).map(([subject, cards]) => `
       <div class="deck-card">
         <div class="deck-header">
           <h4>${subject}</h4>
@@ -519,272 +526,272 @@
       </div>
     `).join('');
 
-      // Add deck action listeners
-      document.querySelectorAll('.study-deck').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          studyDeck(e.target.dataset.subject);
+        // Add deck action listeners
+        document.querySelectorAll('.study-deck').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            studyDeck(e.target.dataset.subject);
+          });
         });
-      });
-    }
-
-    function calculateMastery(cards) {
-      const mastered = cards.filter(card => card.interval > 21).length;
-      return cards.length > 0 ? (mastered / cards.length) * 100 : 0;
-    }
-
-    function studyDeck(subject) {
-      flashcardSystem.setCurrentDeck(subject);
-      currentCardIndex = 0;
-      showNextCard();
-    }
-
-    function filterDecks(filter) {
-      // Implementation for filtering decks
-      console.log('Filtering decks by:', filter);
-    }
-
-    function showCreateModal() {
-      const modal = document.getElementById('createCardModal');
-      if (modal) modal.style.display = 'flex';
-    }
-
-    function hideCreateModal() {
-      const modal = document.getElementById('createCardModal');
-      if (modal) modal.style.display = 'none';
-    }
-
-    async function saveNewCard() {
-      const cardSubjectSelect = document.getElementById('cardSubjectSelect');
-      const cardTopic = document.getElementById('cardTopic');
-      const cardQuestionInput = document.getElementById('cardQuestionInput');
-      const cardAnswerInput = document.getElementById('cardAnswerInput');
-      const cardHintInput = document.getElementById('cardHintInput');
-      const cardExplanationInput = document.getElementById('cardExplanationInput');
-
-      if (!cardSubjectSelect || !cardTopic || !cardQuestionInput || !cardAnswerInput) return;
-
-      const cardData = {
-        subject: cardSubjectSelect.value,
-        topic: cardTopic.value,
-        question: cardQuestionInput.value,
-        answer: cardAnswerInput.value,
-        hint: cardHintInput ? cardHintInput.value : '',
-        explanation: cardExplanationInput ? cardExplanationInput.value : ''
-      };
-
-      if (!cardData.question || !cardData.answer) {
-        alert('Please fill in both question and answer fields.');
-        return;
       }
 
-      const user = auth.currentUser;
-      await flashcardSystem.createCard(user.uid, cardData);
+      function calculateMastery(cards) {
+        const mastered = cards.filter(card => card.interval > 21).length;
+        return cards.length > 0 ? (mastered / cards.length) * 100 : 0;
+      }
 
-      hideCreateModal();
-      updateStats();
-      loadDecks();
+      function studyDeck(subject) {
+        flashcardSystem.setCurrentDeck(subject);
+        currentCardIndex = 0;
+        showNextCard();
+      }
 
-      // Reset form
-      if (cardTopic) cardTopic.value = '';
-      if (cardQuestionInput) cardQuestionInput.value = '';
-      if (cardAnswerInput) cardAnswerInput.value = '';
-      if (cardHintInput) cardHintInput.value = '';
-      if (cardExplanationInput) cardExplanationInput.value = '';
-    }
-  </script>
+      function filterDecks(filter) {
+        // Implementation for filtering decks
+        console.log('Filtering decks by:', filter);
+      }
 
-  <style>
-    .flashcard-container {
-      perspective: 1000px;
-      margin-bottom: 20px;
-    }
+      function showCreateModal() {
+        const modal = document.getElementById('createCardModal');
+        if (modal) modal.style.display = 'flex';
+      }
 
-    .flashcard {
-      width: 100%;
-      height: 300px;
-      position: relative;
-      transform-style: preserve-3d;
-      transition: transform 0.6s;
-      cursor: pointer;
-    }
+      function hideCreateModal() {
+        const modal = document.getElementById('createCardModal');
+        if (modal) modal.style.display = 'none';
+      }
 
-    .flashcard.flipped {
-      transform: rotateY(180deg);
-    }
+      async function saveNewCard() {
+        const cardSubjectSelect = document.getElementById('cardSubjectSelect');
+        const cardTopic = document.getElementById('cardTopic');
+        const cardQuestionInput = document.getElementById('cardQuestionInput');
+        const cardAnswerInput = document.getElementById('cardAnswerInput');
+        const cardHintInput = document.getElementById('cardHintInput');
+        const cardExplanationInput = document.getElementById('cardExplanationInput');
 
-    .flashcard-front,
-    .flashcard-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 24px;
-      border-radius: 12px;
-      background: white;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
+        if (!cardSubjectSelect || !cardTopic || !cardQuestionInput || !cardAnswerInput) return;
 
-    .flashcard-back {
-      transform: rotateY(180deg);
-      background: var(--glass);
-    }
+        const cardData = {
+          subject: cardSubjectSelect.value,
+          topic: cardTopic.value,
+          question: cardQuestionInput.value,
+          answer: cardAnswerInput.value,
+          hint: cardHintInput ? cardHintInput.value : '',
+          explanation: cardExplanationInput ? cardExplanationInput.value : ''
+        };
 
-    .card-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-    }
+        if (!cardData.question || !cardData.answer) {
+          alert('Please fill in both question and answer fields.');
+          return;
+        }
 
-    .card-subject {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
+        const user = auth.currentUser;
+        await flashcardSystem.createCard(user.uid, cardData);
 
-    .card-question,
-    .card-answer {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
+        hideCreateModal();
+        updateStats();
+        loadDecks();
 
-    .card-explanation {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
+        // Reset form
+        if (cardTopic) cardTopic.value = '';
+        if (cardQuestionInput) cardQuestionInput.value = '';
+        if (cardAnswerInput) cardAnswerInput.value = '';
+        if (cardHintInput) cardHintInput.value = '';
+        if (cardExplanationInput) cardExplanationInput.value = '';
+      }
+    </script>
 
-    .card-hint {
-      font-size: 12px;
-      color: var(--accent);
-      margin-top: 12px;
-    }
+    <style>
+      .flashcard-container {
+        perspective: 1000px;
+        margin-bottom: 20px;
+      }
 
-    .flashcard-controls {
-      margin-top: 20px;
-    }
+      .flashcard {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+        cursor: pointer;
+      }
 
-    .difficulty-buttons {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
+      .flashcard.flipped {
+        transform: rotateY(180deg);
+      }
 
-    .flashcard-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
+      .flashcard-front,
+      .flashcard-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px;
+        border-radius: 12px;
+        background: white;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
 
-    .flashcard-stats .stat {
-      text-align: center;
-      padding: 16px;
-      background: var(--glass);
-      border-radius: 8px;
-    }
+      .flashcard-back {
+        transform: rotateY(180deg);
+        background: var(--glass);
+      }
 
-    .flashcard-stats .stat strong {
-      display: block;
-      font-size: 24px;
-      color: var(--accent);
-    }
+      .card-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
 
-    .progress-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
+      .card-subject {
+        font-size: 14px;
+        color: var(--muted);
+        margin-bottom: 12px;
+      }
 
-    .progress-item span:first-child {
-      flex: 1;
-      font-size: 14px;
-    }
+      .card-question,
+      .card-answer {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
 
-    .progress-bar {
-      flex: 2;
-      height: 8px;
-      background: #E5E7EB;
-      border-radius: 4px;
-      overflow: hidden;
-    }
+      .card-explanation {
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
 
-    .progress-fill {
-      height: 100%;
-      background: var(--accent);
-      transition: width 0.3s ease;
-    }
+      .card-hint {
+        font-size: 12px;
+        color: var(--accent);
+        margin-top: 12px;
+      }
 
-    .decks-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 16px;
-      margin-top: 16px;
-    }
+      .flashcard-controls {
+        margin-top: 20px;
+      }
 
-    .deck-card {
-      padding: 16px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-    }
+      .difficulty-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
 
-    .deck-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-    }
+      .flashcard-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
 
-    .deck-count {
-      font-size: 12px;
-      color: var(--muted);
-    }
+      .flashcard-stats .stat {
+        text-align: center;
+        padding: 16px;
+        background: var(--glass);
+        border-radius: 8px;
+      }
 
-    .deck-progress {
-      margin-bottom: 12px;
-    }
+      .flashcard-stats .stat strong {
+        display: block;
+        font-size: 24px;
+        color: var(--accent);
+      }
 
-    .deck-actions {
-      display: flex;
-      gap: 8px;
-    }
+      .progress-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
 
-    .no-cards-message {
-      text-align: center;
-      padding: 40px;
-    }
+      .progress-item span:first-child {
+        flex: 1;
+        font-size: 14px;
+      }
 
-    .modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
+      .progress-bar {
+        flex: 2;
+        height: 8px;
+        background: #E5E7EB;
+        border-radius: 4px;
+        overflow: hidden;
+      }
 
-    .modal-content {
-      background: white;
-      padding: 24px;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 500px;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-  </style>
+      .progress-fill {
+        height: 100%;
+        background: var(--accent);
+        transition: width 0.3s ease;
+      }
+
+      .decks-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      .deck-card {
+        padding: 16px;
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+      }
+
+      .deck-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .deck-count {
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .deck-progress {
+        margin-bottom: 12px;
+      }
+
+      .deck-actions {
+        display: flex;
+        gap: 8px;
+      }
+
+      .no-cards-message {
+        text-align: center;
+        padding: 40px;
+      }
+
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        width: 90%;
+        max-width: 500px;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+    </style>
 </body>
 
 </html>

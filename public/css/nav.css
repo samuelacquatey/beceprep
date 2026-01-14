@@ -84,17 +84,20 @@ body {
     }
 
     .app-nav {
-        top: 0;
+        top: var(--top-bar-height);
+        /* Below top bar */
         left: 0;
         bottom: 0;
         width: var(--nav-width-desktop);
-        height: 100vh;
+        height: calc(100vh - var(--top-bar-height));
         flex-direction: column;
         justify-content: flex-start;
         border-top: none;
         border-right: 1px solid var(--border);
         padding: 24px 0;
         gap: 32px;
+        z-index: var(--z-nav);
+        /* Ensure below top bar if overlap occurs, though strictly layout handles it */
     }
 
     .nav-item {
@@ -123,6 +126,4 @@ body {
 }
 
 /* Hide old header if present (we'll remove it manually, but this is a safeguard) */
-header .brand {
-    /* Keep brand? Yes, top bar might still be useful for page title, but simpler */
-}
+/* header .brand rule removed */

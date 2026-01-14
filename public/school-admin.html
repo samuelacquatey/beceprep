@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BECE Prep - Teacher Admin</title>
+  <title>ClassMaster - Teacher Admin</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <div class="container">
     <header>
       <div class="brand">
-        <div class="logo">BE</div>
+        <div class="logo">CM</div>
         <div>
           <h1>Teacher Admin Panel</h1>
-          <p class="lead">Manage your school and students on BECE Prep</p>
+          <p class="lead">Manage your school and students on ClassMaster</p>
         </div>
       </div>
       <div>
@@ -32,11 +34,12 @@
           <div><strong>Students Registered:</strong> <span id="studentCount">0</span></div>
           <div><strong>Registration Date:</strong> <span id="regDate"></span></div>
         </div>
-        
+
         <div style="margin-top: 20px;">
           <h4>Share School Code</h4>
           <div style="background: var(--glass); padding: 16px; border-radius: 8px;">
-            <div style="font-size: 24px; font-weight: bold; text-align: center; color: var(--accent);" id="shareableCode"></div>
+            <div style="font-size: 24px; font-weight: bold; text-align: center; color: var(--accent);"
+              id="shareableCode"></div>
             <div style="text-align: center; color: var(--muted); font-size: 14px; margin-top: 8px;">
               Share this code with your students
             </div>
@@ -62,7 +65,7 @@
           <input type="text" id="searchStudents" placeholder="Search students..." style="flex: 1;">
           <button class="btn" id="addStudentBtn">+ Add Student</button>
         </div>
-        
+
         <div id="studentsList" class="students-table">
           <!-- Dynamic student list -->
         </div>
@@ -73,12 +76,13 @@
         <div class="modal-content">
           <h3>📥 Bulk Import Students</h3>
           <p>Upload a CSV file or enter student details manually</p>
-          
+
           <div style="margin: 20px 0;">
-            <textarea id="studentData" placeholder="Full Name,Class&#10;Kwame Mensah,JHS 3A&#10;Ama Serwaa,JHS 3B&#10;Kofi Annan,JHS 3A" 
-                      style="width: 100%; height: 200px; padding: 12px; border: 1px solid var(--border); border-radius: 8px;"></textarea>
+            <textarea id="studentData"
+              placeholder="Full Name,Class&#10;Kwame Mensah,JHS 3A&#10;Ama Serwaa,JHS 3B&#10;Kofi Annan,JHS 3A"
+              style="width: 100%; height: 200px; padding: 12px; border: 1px solid var(--border); border-radius: 8px;"></textarea>
           </div>
-          
+
           <div style="display: flex; gap: 12px; justify-content: flex-end;">
             <button class="btn ghost" id="cancelImport">Cancel</button>
             <button class="btn" id="confirmImport">Import Students</button>
@@ -89,26 +93,21 @@
   </div>
 
   <script type="module">
-    import { SchoolManager, generateStudentUsername } from '../js/schools.js';
-    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-    import { app } from '../js/auth.js';
+    import { SchoolManager, generateStudentUsername } from './js/schools.js';
+    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    import { app, requireAuth } from './js/auth.js';
 
     const auth = getAuth(app);
     const schoolManager = new SchoolManager();
 
-    onAuthStateChanged(auth, async (user) => {
-      if (!user) {
-        window.location.href = 'index.html';
-        return;
-      }
-
+    requireAuth(async (user) => {
       await initializeTeacherAdmin(user);
     });
 
     async function initializeTeacherAdmin(user) {
       // Load school data for this teacher
       const schoolData = await schoolManager.getTeacherSchool(user.uid);
-      
+
       if (schoolData) {
         displaySchoolInfo(schoolData);
         loadStudentsList(schoolData.students);
@@ -130,7 +129,7 @@
 
     function loadStudentsList(students) {
       const container = document.getElementById('studentsList');
-      
+
       if (students.length === 0) {
         container.innerHTML = `
           <div style="text-align: center; padding: 40px; color: var(--muted);">
@@ -182,7 +181,7 @@
       document.getElementById('confirmImport').addEventListener('click', async () => {
         const studentData = document.getElementById('studentData').value;
         const students = parseStudentData(studentData);
-        
+
         const results = await schoolManager.bulkImportStudents(
           document.getElementById('schoolCodeDisplay').textContent,
           students
@@ -195,7 +194,7 @@
 
       document.getElementById('logoutBtn').addEventListener('click', () => {
         signOut(auth).then(() => {
-          window.location.href = '../index.html';
+          window.location.href = 'login.html';
         });
       });
     }
@@ -239,4 +238,5 @@
     }
   </style>
 </body>
+
 </html>

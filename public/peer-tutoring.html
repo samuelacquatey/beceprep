@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BECE Prep - Peer Tutoring</title>
+  <title>ClassMaster - Peer Tutoring</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
   <div class="container">
     <header>
       <div class="brand">
-        <div class="logo">BE</div>
+        <div class="logo">CM</div>
         <div>
           <h1>Peer Tutoring Hub</h1>
           <p class="lead">Help others, earn rewards, and master topics together</p>
@@ -80,7 +82,7 @@
   <script type="module">
     const peerTutoringSystem = {
       // Student gets matched with tutor based on topic performance
-      matchTutor: function(strugglingStudentId, topic) {
+      matchTutor: function (strugglingStudentId, topic) {
         const potentialTutors = this.getTopPerformers(topic);
         return {
           matchId: `match_${Date.now()}`,
@@ -93,7 +95,7 @@
       },
 
       // Reward system
-      calculateReward: function(improvementScore, topicDifficulty) {
+      calculateReward: function (improvementScore, topicDifficulty) {
         const basePoints = 50;
         const improvementBonus = improvementScore * 20; // 0-100 scale
         const difficultyMultiplier = topicDifficulty === 'hard' ? 1.5 : 1;
@@ -111,4 +113,5 @@
     };
   </script>
 </body>
+
 </html>

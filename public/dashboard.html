@@ -4,35 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BECE Prep - Analytics Dashboard</title>
+  <title>ClassMaster - Analytics Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/dashboard-modern.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
 </head>
 
 <body>
   <!-- Header -->
 
-  <div class="dashboard-container">
-    <!-- 1. Left Sidebar -->
-    <!-- 1. Left Sidebar Removed (Replaced by App Nav) -->
+  <nav class="app-top-bar">
+    <div class="brand">
+      <div class="logo">CM</div>
+      <div class="brand-text">
+        <h1>ClassMaster</h1>
+      </div>
+    </div>
+  </nav>
 
+  <div class="dashboard-container">
     <!-- 2. Main Content -->
     <main class="main-content">
-      <!-- Header -->
-      <header class="header">
-        <h1>Dashboard</h1>
-        <div class="search-bar">
-          <i class="fas fa-search"></i>
-          <span>Search...</span>
-        </div>
+      <!-- Header Removed: Now using Top Bar -->
+      <div style="display:flex; justify-content:space-between; margin-bottom: 20px; align-items:center;">
+        <h1 style="font-size:24px; font-weight:700;">Dashboard</h1>
         <div style="display:flex; gap:10px;">
           <button id="backToQuiz" class="btn btn-primary">📝 Take Quiz</button>
         </div>
-      </header>
+      </div>
 
       <!-- Top Row: Metrics (Pastel Cards) -->
       <section class="metrics-grid">
@@ -53,20 +58,20 @@
         <div class="metric-card orange">
           <div style="display:flex; justify-content:space-between;">
             <div class="card-icon"><i class="fas fa-chart-line"></i></div>
-            <div class="card-title">BECE Readiness</div>
+            <div class="card-title">Exam Readiness</div>
           </div>
-          <div style="display:flex; align-items:center; gap: 15px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; width:100%; gap: 15px;">
             <div>
               <div class="card-value" id="mainReadinessValue">0%</div>
               <div class="card-trend" id="readinessTrend">Calculating...</div>
             </div>
             <!-- Visual Ring -->
-            <div style="position:relative; width: 60px; height: 60px;">
-              <svg class="progress-ring" width="60" height="60">
+            <div style="position:relative; width: 60px; height: 60px; flex-shrink: 0;">
+              <svg class="progress-ring" width="60" height="60" style="overflow: visible;">
                 <circle stroke="rgba(0,0,0,0.1)" stroke-width="4" fill="transparent" r="26" cx="30" cy="30" />
                 <circle id="progressCircle" stroke="#FF9500" stroke-width="4" fill="transparent" r="26" cx="30" cy="30"
                   stroke-dasharray="163" stroke-dashoffset="163"
-                  style="transition: stroke-dashoffset 1s; transform: rotate(-90deg); transform-origin: 50% 50%;" />
+                  style="transition: stroke-dashoffset 1s; transform: rotate(-90deg); transform-origin: 30px 30px;" />
               </svg>
               <div
                 style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:12px; font-weight:bold;"
@@ -95,8 +100,7 @@
         <!-- Big Graph -->
         <div class="content-card">
           <div class="section-title">
-            <span>Activity Hours</span>
-            <button class="btn btn-ghost" style="font-size:12px;">Weekly ▼</button>
+            <span>Activity Hours (Last 7 Days)</span>
           </div>
           <div class="chart-wrapper">
             <canvas id="performanceChart"></canvas>
@@ -211,18 +215,16 @@
     </a>
   </nav>
   <script type="module">
-    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
     import { AnalyticsEngine } from "./js/analytics.js";
-    import { app } from "./js/auth.js";
+    import { app, requireAuth } from "./js/auth.js";
+    import { initTour } from "./js/tour.js";
 
     const auth = getAuth(app);
 
-    onAuthStateChanged(auth, async (user) => {
-      if (!user) {
-        window.location.href = 'index.html';
-        return;
-      }
+    requireAuth(async (user) => {
       await initializeDashboard(user);
+      initTour('dashboard');
     });
 
     async function initializeDashboard(user) {
@@ -273,7 +275,7 @@
       });
 
       // document.getElementById('logoutBtn').addEventListener('click', () => {
-      //   signOut(auth).then(() => window.location.href = 'index.html');
+      //   signOut(auth).then(() => window.location.href = 'login.html');
       // });
     }
 
@@ -330,28 +332,53 @@
 
     function renderPerformanceChart(analytics) {
       const ctx = document.getElementById('performanceChart').getContext('2d');
-      const insights = analytics.insights.slice(-7);
+
+      // Generate last 7 days explicitly to ensure continuous timeline
+      const labels = [];
+      const dataPoints = [];
+      const statsMap = {};
+
+      // Index available data by date string
+      analytics.insights.forEach(d => {
+        statsMap[new Date(d.date).toLocaleDateString()] = d;
+      });
+
+      // iterate from 6 days ago to today
+      for (let i = 6; i >= 0; i--) {
+        const d = new Date();
+        d.setDate(d.getDate() - i);
+        const dateStr = d.toLocaleDateString();
+
+        labels.push(d.toLocaleDateString('en-US', { weekday: 'short' }));
+
+        if (statsMap[dateStr]) {
+          dataPoints.push(Math.round((statsMap[dateStr].timeSpent || 0) / 60));
+        } else {
+          dataPoints.push(0); // Fill missing days with 0
+        }
+      }
 
       new Chart(ctx, {
         type: 'line',
         data: {
-          labels: insights.map(d => new Date(d.date).toLocaleDateString('en-US', { weekday: 'short' })),
+          labels: labels,
           datasets: [{
-            label: 'Accuracy',
-            data: insights.map(d => d.totalQuestions > 0 ? (d.correctAnswers / d.totalQuestions) * 100 : 0),
-            borderColor: '#7C3AED',
-            backgroundColor: 'rgba(124, 58, 237, 0.1)',
+            label: 'Minutes Studied',
+            data: dataPoints,
+            borderColor: '#2563EB', // Brand accent
+            backgroundColor: 'rgba(37, 99, 235, 0.1)', // Light fill
             fill: true,
-            tension: 0.4,
+            tension: 0.4, // Smooth curve
             borderWidth: 3,
-            pointRadius: 6,
-            pointBackgroundColor: '#7C3AED',
+            pointRadius: 4,
+            pointBackgroundColor: '#2563EB',
             pointBorderColor: '#fff',
             pointBorderWidth: 2,
-            pointHoverRadius: 8
+            pointHoverRadius: 6
           }]
         },
         options: {
+          resizeDelay: 0, // Fix resize flicker
           responsive: true,
           maintainAspectRatio: false,
           plugins: {
@@ -361,20 +388,36 @@
               padding: 12,
               titleColor: '#fff',
               bodyColor: '#fff',
-              borderColor: '#7C3AED',
-              borderWidth: 1
+              displayColors: false,
+              callbacks: {
+                label: function (context) {
+                  return context.raw + ' mins';
+                }
+              }
             }
           },
           scales: {
             y: {
               beginAtZero: true,
-              max: 100,
-              grid: { color: '#E5E7EB', drawBorder: false },
-              ticks: { color: '#64748B', callback: value => value + '%' }
+              grace: '20%', // Add breathing room at top
+              grid: {
+                color: '#F3F4F6',
+                drawBorder: false,
+                borderDash: [5, 5]
+              },
+              ticks: {
+                color: '#9CA3AF',
+                font: { size: 11 }
+              },
+              border: { display: false }
             },
             x: {
               grid: { display: false },
-              ticks: { color: '#64748B' }
+              ticks: {
+                color: '#6B7280',
+                font: { size: 12, weight: '500' }
+              },
+              border: { display: false }
             }
           }
         }

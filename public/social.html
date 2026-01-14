@@ -4,424 +4,441 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BECE Prep - Social Hub</title>
+  <title>ClassMaster - Social Hub</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css" />
+  <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <header>
+    <nav class="app-top-bar">
       <div class="brand">
-        <div class="logo">BE</div>
+        <div class="logo">CM</div>
+        <div class="brand-text">
+          <h1>ClassMaster</h1>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
         <div>
-          <h1>Social Learning Hub</h1>
-          <p class="lead">Compete with schools, join study groups, and earn rewards together</p>
+          <h1 style="font-size: 24px; font-weight: 700; color: #111827;">Social Hub</h1>
+          <p style="color: var(--muted);">Compete, collaborate, and earn rewards</p>
         </div>
-      </div>
-      <div>
-        <button id="backToQuiz" class="btn ghost">Back to Quiz</button>
-        <button id="refreshData" class="btn">🔄 Refresh</button>
-      </div>
-    </header>
-
-    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 24px;">
-      <!-- School Leaderboard -->
-      <div class="card">
-        <h3>🏆 School Rankings</h3>
-        <div class="leaderboard" id="schoolLeaderboard">
-          <!-- Dynamic content -->
+        <div>
+          <button id="backToQuiz" class="btn ghost">Back to Quiz</button>
+          <button id="refreshData" class="btn">🔄 Refresh</button>
         </div>
       </div>
 
-      <!-- Weekly Challenge -->
-      <div class="card">
-        <h3>🎯 Weekly Challenge</h3>
-        <div class="challenge-card" id="weeklyChallenge">
-          <!-- Dynamic content -->
-        </div>
-
-        <div class="my-stats">
-          <h4>📊 My Progress</h4>
-          <div class="stat-item">
-            <span>This Week's Points</span>
-            <strong id="weeklyPoints">0</strong>
-          </div>
-          <div class="stat-item">
-            <span>Questions Solved</span>
-            <strong id="weeklyQuestions">0</strong>
-          </div>
-          <div class="stat-item">
-            <span>Current Rank</span>
-            <strong id="myRank">-</strong>
+      <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 24px;">
+        <!-- School Leaderboard -->
+        <div class="card">
+          <h3>🏆 School Rankings</h3>
+          <div class="leaderboard" id="schoolLeaderboard">
+            <!-- Dynamic content -->
           </div>
         </div>
-      </div>
 
-      <!-- Study Groups -->
-      <div class="card">
-        <h3>👥 My Study Groups</h3>
-        <button class="btn" id="createGroupBtn" style="margin-bottom: 16px;">+ Create Study Group</button>
-        <div class="groups-list" id="studyGroups">
-          <!-- Dynamic content -->
-        </div>
-      </div>
+        <!-- Weekly Challenge -->
+        <div class="card">
+          <h3>🎯 Weekly Challenge</h3>
+          <div class="challenge-card" id="weeklyChallenge">
+            <!-- Dynamic content -->
+          </div>
 
-      <!-- Peer Help Requests -->
-      <div class="card">
-        <h3>🆘 Help Requests</h3>
-        <div class="help-requests" id="helpRequests">
-          <!-- Dynamic content -->
-        </div>
-      </div>
-
-      <!-- My Rewards -->
-      <div class="card" style="grid-column: span 2;">
-        <h3>🎁 My Rewards & Points</h3>
-        <div class="rewards-section">
-          <div class="points-balance">
-            <div class="points-display">
-              <span>Total Points</span>
-              <strong id="totalPoints">0</strong>
+          <div class="my-stats">
+            <h4>📊 My Progress</h4>
+            <div class="stat-item">
+              <span>This Week's Points</span>
+              <strong id="weeklyPoints">0</strong>
             </div>
-            <button class="btn ghost" id="viewRewardsBtn">View Rewards Shop</button>
+            <div class="stat-item">
+              <span>Questions Solved</span>
+              <strong id="weeklyQuestions">0</strong>
+            </div>
+            <div class="stat-item">
+              <span>Current Rank</span>
+              <strong id="myRank">-</strong>
+            </div>
           </div>
+        </div>
 
-          <div class="recent-activity">
-            <h4>Recent Activity</h4>
-            <div id="recentActivity">
-              <!-- Dynamic content -->
+        <!-- Study Groups -->
+        <div class="card">
+          <h3>👥 My Study Groups</h3>
+          <button class="btn" id="createGroupBtn" style="margin-bottom: 16px;">+ Create Study Group</button>
+          <div class="groups-list" id="studyGroups">
+            <!-- Dynamic content -->
+          </div>
+        </div>
+
+        <!-- Peer Help Requests -->
+        <div class="card">
+          <h3>🆘 Help Requests</h3>
+          <div class="help-requests" id="helpRequests">
+            <!-- Dynamic content -->
+          </div>
+        </div>
+
+        <!-- My Rewards -->
+        <div class="card" style="grid-column: span 2;">
+          <h3>🎁 My Rewards & Points</h3>
+          <div class="rewards-section">
+            <div class="points-balance">
+              <div class="points-display">
+                <span>Total Points</span>
+                <strong id="totalPoints">0</strong>
+              </div>
+              <button class="btn ghost" id="viewRewardsBtn">View Rewards Shop</button>
+            </div>
+
+            <div class="recent-activity">
+              <h4>Recent Activity</h4>
+              <div id="recentActivity">
+                <!-- Dynamic content -->
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Navigation Injection -->
-  <nav class="app-nav">
-    <a href="quiz.html" class="nav-item" id="nav-home">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path
-            d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.69Z" />
-          <path
-            d="M12 5.432 2.625 14.807v6.068a2.625 2.625 0 0 0 2.625 2.625h13.5a2.625 2.625 0 0 0 2.625-2.625v-6.068L12 5.432Z" />
-        </svg>
-      </div>
-      <span>Home</span>
-    </a>
-    <a href="dashboard.html" class="nav-item" id="nav-analytics">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path fill-rule="evenodd"
-            d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z"
-            clip-rule="evenodd" />
-          <path fill-rule="evenodd"
-            d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z"
-            clip-rule="evenodd" />
-        </svg>
-      </div>
-      <span>Analytics</span>
-    </a>
-    <a href="flashcards.html" class="nav-item" id="nav-flashcards">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path d="M11.25 3v18H6.75a2.25 2.25 0 0 1-2.25-2.25V5.25A2.25 2.25 0 0 1 6.75 3h4.5Z" />
-          <path d="M12.75 3v18h4.5a2.25 2.25 0 0 0 2.25-2.25V5.25A2.25 2.25 0 0 0 17.25 3h-4.5Z" />
-        </svg>
-      </div>
-      <span>Memorize</span>
-    </a>
-    <a href="social.html" class="nav-item active" id="nav-social">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path
-            d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.161Z" />
-        </svg>
-      </div>
-      <span>Community</span>
-    </a>
-    <a href="profile.html" class="nav-item" id="nav-profile">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path fill-rule="evenodd"
-            d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-            clip-rule="evenodd" />
-        </svg>
-      </div>
-      <span>Profile</span>
-    </a>
-  </nav>
-  <!-- Create Group Modal -->
-  <div id="createGroupModal" class="modal" style="display: none;">
-    <div class="modal-content">
-      <h3>Create Study Group</h3>
-      <div class="form-container">
-        <div class="form-group">
-          <label for="groupName">Group Name</label>
-          <input type="text" id="groupName" placeholder="e.g., Math Warriors, Science Squad">
+    <!-- Navigation Injection -->
+    <nav class="app-nav">
+      <a href="quiz.html" class="nav-item" id="nav-home">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path
+              d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.69Z" />
+            <path
+              d="M12 5.432 2.625 14.807v6.068a2.625 2.625 0 0 0 2.625 2.625h13.5a2.625 2.625 0 0 0 2.625-2.625v-6.068L12 5.432Z" />
+          </svg>
         </div>
-        <div class="form-group">
-          <label for="groupSubject">Focus Subject</label>
-          <select id="groupSubject">
-            <option value="Mathematics">Mathematics</option>
-            <option value="English">English</option>
-            <option value="Integrated Science">Integrated Science</option>
-            <option value="Social Studies">Social Studies</option>
-            <option value="All Subjects">All Subjects</option>
-          </select>
+        <span>Home</span>
+      </a>
+      <a href="dashboard.html" class="nav-item" id="nav-analytics">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path fill-rule="evenodd"
+              d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z"
+              clip-rule="evenodd" />
+            <path fill-rule="evenodd"
+              d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z"
+              clip-rule="evenodd" />
+          </svg>
         </div>
-        <div class="form-group">
-          <label for="groupDescription">Description</label>
-          <textarea id="groupDescription" placeholder="What will your group focus on?" rows="3"></textarea>
+        <span>Analytics</span>
+      </a>
+      <a href="flashcards.html" class="nav-item" id="nav-flashcards">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path d="M11.25 3v18H6.75a2.25 2.25 0 0 1-2.25-2.25V5.25A2.25 2.25 0 0 1 6.75 3h4.5Z" />
+            <path d="M12.75 3v18h4.5a2.25 2.25 0 0 0 2.25-2.25V5.25A2.25 2.25 0 0 0 17.25 3h-4.5Z" />
+          </svg>
         </div>
-      </div>
-      <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 20px;">
-        <button class="btn ghost" id="cancelCreateGroup">Cancel</button>
-        <button class="btn" id="confirmCreateGroup">Create Group</button>
+        <span>Memorize</span>
+      </a>
+      <a href="social.html" class="nav-item active" id="nav-social">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path
+              d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.161Z" />
+          </svg>
+        </div>
+        <span>Community</span>
+      </a>
+      <a href="profile.html" class="nav-item" id="nav-profile">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path fill-rule="evenodd"
+              d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <span>Profile</span>
+      </a>
+    </nav>
+    <!-- Create Group Modal -->
+    <div id="createGroupModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <h3>Create Study Group</h3>
+        <div class="form-container">
+          <div class="form-group">
+            <label for="groupName">Group Name</label>
+            <input type="text" id="groupName" placeholder="e.g., Math Warriors, Science Squad">
+          </div>
+          <div class="form-group">
+            <label for="groupSubject">Focus Subject</label>
+            <select id="groupSubject">
+              <option value="Mathematics">Mathematics</option>
+              <option value="English">English</option>
+              <option value="Integrated Science">Integrated Science</option>
+              <option value="Social Studies">Social Studies</option>
+              <option value="All Subjects">All Subjects</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="groupDescription">Description</label>
+            <textarea id="groupDescription" placeholder="What will your group focus on?" rows="3"></textarea>
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 20px;">
+          <button class="btn ghost" id="cancelCreateGroup">Cancel</button>
+          <button class="btn" id="confirmCreateGroup">Create Group</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script>
-    // Local Social Data Manager
-    class SocialManager {
-      constructor() {
-        this.storageKey = 'bece_social_data';
-        this.userKey = 'bece_user_profile';
-        this.loadData();
-      }
+    <script type="module">
+      import { requireAuth } from './js/auth.js';
+      import { initTour } from "./js/tour.js";
 
-      loadData() {
-        // Load social data from localStorage
-        const saved = localStorage.getItem(this.storageKey);
-        if (saved) {
-          this.data = JSON.parse(saved);
-        } else {
-          // Initialize with demo data
-          this.data = this.getDefaultData();
-          this.saveData();
+      // Local Social Data Manager
+      class SocialManager {
+        constructor() {
+          this.storageKey = 'classmaster_social_data';
+          this.userKey = 'classmaster_user_profile';
+          this.loadData();
         }
 
-        // Load user profile
-        const userProfile = localStorage.getItem(this.userKey);
-        if (userProfile) {
-          this.user = JSON.parse(userProfile);
-        } else {
-          this.user = this.getDefaultUser();
-          this.saveUser();
-        }
-      }
-
-      getDefaultData() {
-        return {
-          schools: [
-            { id: 1, name: 'Presec Legon', avgScore: 78, students: 45, rank: 1 },
-            { id: 2, name: 'Achimota School', avgScore: 75, students: 38, rank: 2 },
-            { id: 3, name: 'Wesley Girls', avgScore: 72, students: 42, rank: 3 },
-            { id: 4, name: 'St. Thomas Aquinas', avgScore: 68, students: 35, rank: 4 },
-            { id: 5, name: 'Mfantsipim School', avgScore: 65, students: 40, rank: 5 }
-          ],
-          studyGroups: [
-            {
-              id: 1,
-              name: 'Math Warriors',
-              subject: 'Mathematics',
-              members: 8,
-              createdBy: 'Kwame Mensah',
-              activity: '2 hours ago'
-            },
-            {
-              id: 2,
-              name: 'Science Squad',
-              subject: 'Integrated Science',
-              members: 5,
-              createdBy: 'Ama Serwaa',
-              activity: '1 day ago'
-            }
-          ],
-          helpRequests: [
-            {
-              id: 1,
-              student: 'Kofi Annan',
-              subject: 'Mathematics',
-              topic: 'Algebra',
-              question: 'Struggling with quadratic equations',
-              timestamp: '2 hours ago',
-              helped: false
-            },
-            {
-              id: 2,
-              student: 'Esi Boateng',
-              subject: 'English',
-              topic: 'Grammar',
-              question: 'Need help with verb tenses',
-              timestamp: '5 hours ago',
-              helped: false
-            }
-          ],
-          weeklyChallenge: {
-            title: 'Math Mastery Week',
-            description: 'Solve 50 Mathematics questions with 80%+ accuracy',
-            reward: '500 points + Math Champion Badge',
-            progress: 32,
-            target: 50,
-            endDate: 'in 3 days'
+        loadData() {
+          // Load social data from localStorage
+          const saved = localStorage.getItem(this.storageKey);
+          if (saved) {
+            this.data = JSON.parse(saved);
+          } else {
+            // Initialize with demo data
+            this.data = this.getDefaultData();
+            this.saveData();
           }
-        };
-      }
 
-      getDefaultUser() {
-        return {
-          name: 'Current Student',
-          points: 1250,
-          weeklyPoints: 320,
-          weeklyQuestions: 45,
-          rank: 15,
-          school: 'Presec Legon',
-          recentActivity: [
-            { action: 'Helped with Algebra', points: 50, timestamp: '2 hours ago' },
-            { action: 'Completed Math Quiz', points: 25, timestamp: '5 hours ago' },
-            { action: 'Joined Science Squad', points: 10, timestamp: '1 day ago' }
-          ]
-        };
-      }
-
-      saveData() {
-        localStorage.setItem(this.storageKey, JSON.stringify(this.data));
-      }
-
-      saveUser() {
-        localStorage.setItem(this.userKey, JSON.stringify(this.user));
-      }
-
-      // Study Group Management
-      createGroup(groupData) {
-        const newGroup = {
-          id: Date.now(),
-          ...groupData,
-          members: 1,
-          createdBy: this.user.name,
-          activity: 'just now'
-        };
-
-        this.data.studyGroups.unshift(newGroup);
-        this.saveData();
-        return newGroup;
-      }
-
-      joinGroup(groupId) {
-        const group = this.data.studyGroups.find(g => g.id === groupId);
-        if (group) {
-          group.members++;
-          group.activity = 'just now';
-          this.saveData();
+          // Load user profile
+          const userProfile = localStorage.getItem(this.userKey);
+          if (userProfile) {
+            this.user = JSON.parse(userProfile);
+          } else {
+            this.user = this.getDefaultUser();
+            this.saveUser();
+          }
         }
-      }
 
-      // Help Request Management
-      createHelpRequest(requestData) {
-        const newRequest = {
-          id: Date.now(),
-          ...requestData,
-          student: this.user.name,
-          timestamp: 'just now',
-          helped: false
-        };
+        getDefaultData() {
+          return {
+            schools: [
+              { id: 1, name: 'Presec Legon', avgScore: 78, students: 45, rank: 1 },
+              { id: 2, name: 'Achimota School', avgScore: 75, students: 38, rank: 2 },
+              { id: 3, name: 'Wesley Girls', avgScore: 72, students: 42, rank: 3 },
+              { id: 4, name: 'St. Thomas Aquinas', avgScore: 68, students: 35, rank: 4 },
+              { id: 5, name: 'Mfantsipim School', avgScore: 65, students: 40, rank: 5 }
+            ],
+            studyGroups: [
+              {
+                id: 1,
+                name: 'Math Warriors',
+                subject: 'Mathematics',
+                members: 8,
+                createdBy: 'Kwame Mensah',
+                activity: '2 hours ago'
+              },
+              {
+                id: 2,
+                name: 'Science Squad',
+                subject: 'Integrated Science',
+                members: 5,
+                createdBy: 'Ama Serwaa',
+                activity: '1 day ago'
+              }
+            ],
+            helpRequests: [
+              {
+                id: 1,
+                student: 'Kofi Annan',
+                subject: 'Mathematics',
+                topic: 'Algebra',
+                question: 'Struggling with quadratic equations',
+                timestamp: '2 hours ago',
+                helped: false
+              },
+              {
+                id: 2,
+                student: 'Esi Boateng',
+                subject: 'English',
+                topic: 'Grammar',
+                question: 'Need help with verb tenses',
+                timestamp: '5 hours ago',
+                helped: false
+              }
+            ],
+            weeklyChallenge: {
+              title: 'Math Mastery Week',
+              description: 'Solve 50 Mathematics questions with 80%+ accuracy',
+              reward: '500 points + Math Champion Badge',
+              progress: 32,
+              target: 50,
+              endDate: 'in 3 days'
+            }
+          };
+        }
 
-        this.data.helpRequests.unshift(newRequest);
-        this.saveData();
-        return newRequest;
-      }
+        getDefaultUser() {
+          return {
+            name: 'Current Student',
+            points: 1250,
+            weeklyPoints: 320,
+            weeklyQuestions: 45,
+            rank: 15,
+            school: 'Presec Legon',
+            recentActivity: [
+              { action: 'Helped with Algebra', points: 50, timestamp: '2 hours ago' },
+              { action: 'Completed Math Quiz', points: 25, timestamp: '5 hours ago' },
+              { action: 'Joined Science Squad', points: 10, timestamp: '1 day ago' }
+            ]
+          };
+        }
 
-      helpStudent(requestId) {
-        const request = this.data.helpRequests.find(r => r.id === requestId);
-        if (request && !request.helped) {
-          request.helped = true;
-          request.helpedBy = this.user.name;
+        saveData() {
+          localStorage.setItem(this.storageKey, JSON.stringify(this.data));
+        }
 
-          // Award points for helping
-          this.user.points += 50;
-          this.user.weeklyPoints += 50;
-          this.user.recentActivity.unshift({
-            action: `Helped with ${request.topic}`,
-            points: 50,
-            timestamp: 'just now'
-          });
+        saveUser() {
+          localStorage.setItem(this.userKey, JSON.stringify(this.user));
+        }
 
+        // Study Group Management
+        createGroup(groupData) {
+          const newGroup = {
+            id: Date.now(),
+            ...groupData,
+            members: 1,
+            createdBy: this.user.name,
+            activity: 'just now'
+          };
+
+          this.data.studyGroups.unshift(newGroup);
           this.saveData();
+          return newGroup;
+        }
+
+        joinGroup(groupId) {
+          const group = this.data.studyGroups.find(g => g.id === groupId);
+          if (group) {
+            group.members++;
+            group.activity = 'just now';
+            this.saveData();
+          }
+        }
+
+        // Help Request Management
+        createHelpRequest(requestData) {
+          const newRequest = {
+            id: Date.now(),
+            ...requestData,
+            student: this.user.name,
+            timestamp: 'just now',
+            helped: false
+          };
+
+          this.data.helpRequests.unshift(newRequest);
+          this.saveData();
+          return newRequest;
+        }
+
+        helpStudent(requestId) {
+          const request = this.data.helpRequests.find(r => r.id === requestId);
+          if (request && !request.helped) {
+            request.helped = true;
+            request.helpedBy = this.user.name;
+
+            // Award points for helping
+            this.user.points += 50;
+            this.user.weeklyPoints += 50;
+            this.user.recentActivity.unshift({
+              action: `Helped with ${request.topic}`,
+              points: 50,
+              timestamp: 'just now'
+            });
+
+            this.saveData();
+            this.saveUser();
+            return true;
+          }
+          return false;
+        }
+
+        // Challenge Progress
+        updateChallengeProgress(questionsSolved) {
+          this.user.weeklyQuestions += questionsSolved;
+          this.user.weeklyPoints += questionsSolved * 5;
           this.saveUser();
-          return true;
         }
-        return false;
+
+        getSchoolRankings() {
+          return this.data.schools.sort((a, b) => a.rank - b.rank);
+        }
+
+        getUserRank() {
+          return this.user.rank;
+        }
       }
 
-      // Challenge Progress
-      updateChallengeProgress(questionsSolved) {
-        this.user.weeklyQuestions += questionsSolved;
-        this.user.weeklyPoints += questionsSolved * 5;
-        this.saveUser();
+      // Initialize when page loads
+      let socialManager;
+
+      document.addEventListener('DOMContentLoaded', function () {
+        requireAuth((user) => {
+          socialManager = new SocialManager();
+          // Optionally pass user info to socialManager if needed
+          initializeSocialPage();
+          setupEventListeners();
+          initTour('social');
+        });
+      });
+
+      function initializeSocialPage() {
+        renderSchoolLeaderboard();
+        renderWeeklyChallenge();
+        renderStudyGroups();
+        renderHelpRequests();
+        renderUserStats();
+        renderRecentActivity();
       }
 
-      getSchoolRankings() {
-        return this.data.schools.sort((a, b) => a.rank - b.rank);
-      }
+      function renderSchoolLeaderboard() {
+        const schools = socialManager.getSchoolRankings();
+        const container = document.getElementById('schoolLeaderboard');
 
-      getUserRank() {
-        return this.user.rank;
-      }
-    }
-
-    // Initialize when page loads
-    let socialManager;
-
-    document.addEventListener('DOMContentLoaded', function () {
-      socialManager = new SocialManager();
-      initializeSocialPage();
-      setupEventListeners();
-    });
-
-    function initializeSocialPage() {
-      renderSchoolLeaderboard();
-      renderWeeklyChallenge();
-      renderStudyGroups();
-      renderHelpRequests();
-      renderUserStats();
-      renderRecentActivity();
-    }
-
-    function renderSchoolLeaderboard() {
-      const schools = socialManager.getSchoolRankings();
-      const container = document.getElementById('schoolLeaderboard');
-
-      container.innerHTML = schools.map(school => `
+        container.innerHTML = schools.map(school => `
         <div class="school-item ${school.name === socialManager.user.school ? 'my-school' : ''}">
           <div class="school-rank">#${school.rank}</div>
           <div class="school-info">
@@ -431,13 +448,13 @@
           <div class="school-score">${school.avgScore}%</div>
         </div>
       `).join('');
-    }
+      }
 
-    function renderWeeklyChallenge() {
-      const challenge = socialManager.data.weeklyChallenge;
-      const progressPercent = (challenge.progress / challenge.target) * 100;
+      function renderWeeklyChallenge() {
+        const challenge = socialManager.data.weeklyChallenge;
+        const progressPercent = (challenge.progress / challenge.target) * 100;
 
-      document.getElementById('weeklyChallenge').innerHTML = `
+        document.getElementById('weeklyChallenge').innerHTML = `
         <div class="challenge-content">
           <h4>${challenge.title}</h4>
           <p>${challenge.description}</p>
@@ -450,22 +467,22 @@
           <div class="challenge-reward">🏆 Reward: ${challenge.reward}</div>
         </div>
       `;
-    }
+      }
 
-    function renderStudyGroups() {
-      const groups = socialManager.data.studyGroups;
-      const container = document.getElementById('studyGroups');
+      function renderStudyGroups() {
+        const groups = socialManager.data.studyGroups;
+        const container = document.getElementById('studyGroups');
 
-      if (groups.length === 0) {
-        container.innerHTML = `
+        if (groups.length === 0) {
+          container.innerHTML = `
           <div class="empty-state">
             <p>No study groups yet. Create one to start collaborating!</p>
           </div>
         `;
-        return;
-      }
+          return;
+        }
 
-      container.innerHTML = groups.map(group => `
+        container.innerHTML = groups.map(group => `
         <div class="group-card">
           <div class="group-header">
             <h4>${group.name}</h4>
@@ -480,22 +497,22 @@
           </div>
         </div>
       `).join('');
-    }
+      }
 
-    function renderHelpRequests() {
-      const requests = socialManager.data.helpRequests.filter(r => !r.helped);
-      const container = document.getElementById('helpRequests');
+      function renderHelpRequests() {
+        const requests = socialManager.data.helpRequests.filter(r => !r.helped);
+        const container = document.getElementById('helpRequests');
 
-      if (requests.length === 0) {
-        container.innerHTML = `
+        if (requests.length === 0) {
+          container.innerHTML = `
           <div class="empty-state">
             <p>No help requests right now. Check back later!</p>
           </div>
         `;
-        return;
-      }
+          return;
+        }
 
-      container.innerHTML = requests.map(request => `
+        container.innerHTML = requests.map(request => `
         <div class="help-request">
           <div class="request-header">
             <span class="student-name">${request.student}</span>
@@ -506,334 +523,334 @@
           <button class="btn help-btn" data-request="${request.id}">Offer Help</button>
         </div>
       `).join('');
-    }
+      }
 
-    function renderUserStats() {
-      document.getElementById('weeklyPoints').textContent = socialManager.user.weeklyPoints;
-      document.getElementById('weeklyQuestions').textContent = socialManager.user.weeklyQuestions;
-      document.getElementById('myRank').textContent = `#${socialManager.user.rank}`;
-      document.getElementById('totalPoints').textContent = socialManager.user.points;
-    }
+      function renderUserStats() {
+        document.getElementById('weeklyPoints').textContent = socialManager.user.weeklyPoints;
+        document.getElementById('weeklyQuestions').textContent = socialManager.user.weeklyQuestions;
+        document.getElementById('myRank').textContent = `#${socialManager.user.rank}`;
+        document.getElementById('totalPoints').textContent = socialManager.user.points;
+      }
 
-    function renderRecentActivity() {
-      const activity = socialManager.user.recentActivity.slice(0, 5);
-      const container = document.getElementById('recentActivity');
+      function renderRecentActivity() {
+        const activity = socialManager.user.recentActivity.slice(0, 5);
+        const container = document.getElementById('recentActivity');
 
-      container.innerHTML = activity.map(item => `
+        container.innerHTML = activity.map(item => `
         <div class="activity-item">
           <span class="activity-action">${item.action}</span>
           <span class="activity-points">+${item.points} pts</span>
           <span class="activity-time">${item.timestamp}</span>
         </div>
       `).join('');
-    }
+      }
 
-    function setupEventListeners() {
-      // Navigation
-      document.getElementById('backToQuiz').addEventListener('click', () => {
-        window.location.href = 'quiz.html';
-      });
+      function setupEventListeners() {
+        // Navigation
+        document.getElementById('backToQuiz').addEventListener('click', () => {
+          window.location.href = 'quiz.html';
+        });
 
-      document.getElementById('refreshData').addEventListener('click', () => {
-        socialManager.loadData();
-        initializeSocialPage();
-      });
+        document.getElementById('refreshData').addEventListener('click', () => {
+          socialManager.loadData();
+          initializeSocialPage();
+        });
 
-      // Create Group Modal
-      document.getElementById('createGroupBtn').addEventListener('click', () => {
-        document.getElementById('createGroupModal').style.display = 'flex';
-      });
+        // Create Group Modal
+        document.getElementById('createGroupBtn').addEventListener('click', () => {
+          document.getElementById('createGroupModal').style.display = 'flex';
+        });
 
-      document.getElementById('cancelCreateGroup').addEventListener('click', () => {
-        document.getElementById('createGroupModal').style.display = 'none';
-      });
+        document.getElementById('cancelCreateGroup').addEventListener('click', () => {
+          document.getElementById('createGroupModal').style.display = 'none';
+        });
 
-      document.getElementById('confirmCreateGroup').addEventListener('click', () => {
-        const groupData = {
-          name: document.getElementById('groupName').value,
-          subject: document.getElementById('groupSubject').value,
-          description: document.getElementById('groupDescription').value
-        };
+        document.getElementById('confirmCreateGroup').addEventListener('click', () => {
+          const groupData = {
+            name: document.getElementById('groupName').value,
+            subject: document.getElementById('groupSubject').value,
+            description: document.getElementById('groupDescription').value
+          };
 
-        if (!groupData.name) {
-          alert('Please enter a group name');
-          return;
-        }
-
-        socialManager.createGroup(groupData);
-        document.getElementById('createGroupModal').style.display = 'none';
-        renderStudyGroups();
-
-        // Reset form
-        document.getElementById('groupName').value = '';
-        document.getElementById('groupDescription').value = '';
-      });
-
-      // Join Group buttons (delegated)
-      document.getElementById('studyGroups').addEventListener('click', (e) => {
-        if (e.target.classList.contains('join-group')) {
-          const groupId = parseInt(e.target.dataset.group);
-          socialManager.joinGroup(groupId);
-          renderStudyGroups();
-          alert('Joined group successfully!');
-        }
-      });
-
-      // Help buttons (delegated)
-      document.getElementById('helpRequests').addEventListener('click', (e) => {
-        if (e.target.classList.contains('help-btn')) {
-          const requestId = parseInt(e.target.dataset.request);
-          const helped = socialManager.helpStudent(requestId);
-          if (helped) {
-            renderHelpRequests();
-            renderUserStats();
-            renderRecentActivity();
-            alert('Thanks for helping! You earned 50 points.');
+          if (!groupData.name) {
+            alert('Please enter a group name');
+            return;
           }
-        }
-      });
-    }
-  </script>
 
-  <style>
-    .school-item {
-      display: flex;
-      align-items: center;
-      padding: 12px;
-      border-radius: 8px;
-      margin-bottom: 8px;
-      background: white;
-      border: 1px solid var(--border);
-    }
+          socialManager.createGroup(groupData);
+          document.getElementById('createGroupModal').style.display = 'none';
+          renderStudyGroups();
 
-    .school-item.my-school {
-      background: rgba(37, 99, 235, 0.05);
-      border-color: var(--accent);
-    }
+          // Reset form
+          document.getElementById('groupName').value = '';
+          document.getElementById('groupDescription').value = '';
+        });
 
-    .school-rank {
-      font-weight: 700;
-      font-size: 18px;
-      color: var(--accent);
-      min-width: 40px;
-    }
+        // Join Group buttons (delegated)
+        document.getElementById('studyGroups').addEventListener('click', (e) => {
+          if (e.target.classList.contains('join-group')) {
+            const groupId = parseInt(e.target.dataset.group);
+            socialManager.joinGroup(groupId);
+            renderStudyGroups();
+            alert('Joined group successfully!');
+          }
+        });
 
-    .school-info {
-      flex: 1;
-    }
+        // Help buttons (delegated)
+        document.getElementById('helpRequests').addEventListener('click', (e) => {
+          if (e.target.classList.contains('help-btn')) {
+            const requestId = parseInt(e.target.dataset.request);
+            const helped = socialManager.helpStudent(requestId);
+            if (helped) {
+              renderHelpRequests();
+              renderUserStats();
+              renderRecentActivity();
+              alert('Thanks for helping! You earned 50 points.');
+            }
+          }
+        });
+      }
+    </script>
 
-    .school-name {
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
+    <style>
+      .school-item {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        background: white;
+        border: 1px solid var(--border);
+      }
 
-    .school-stats {
-      font-size: 12px;
-      color: var(--muted);
-    }
+      .school-item.my-school {
+        background: rgba(37, 99, 235, 0.05);
+        border-color: var(--accent);
+      }
 
-    .school-score {
-      font-weight: 700;
-      color: var(--accent);
-    }
+      .school-rank {
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--accent);
+        min-width: 40px;
+      }
 
-    .challenge-content {
-      text-align: center;
-    }
+      .school-info {
+        flex: 1;
+      }
 
-    .challenge-progress {
-      margin: 16px 0;
-    }
+      .school-name {
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
 
-    .progress-bar {
-      height: 8px;
-      background: #E5E7EB;
-      border-radius: 4px;
-      overflow: hidden;
-      margin-bottom: 8px;
-    }
+      .school-stats {
+        font-size: 12px;
+        color: var(--muted);
+      }
 
-    .progress-fill {
-      height: 100%;
-      background: var(--accent);
-      transition: width 0.3s ease;
-    }
+      .school-score {
+        font-weight: 700;
+        color: var(--accent);
+      }
 
-    .progress-text {
-      font-size: 12px;
-      color: var(--muted);
-    }
+      .challenge-content {
+        text-align: center;
+      }
 
-    .challenge-reward {
-      font-size: 14px;
-      color: var(--success);
-      font-weight: 500;
-    }
+      .challenge-progress {
+        margin: 16px 0;
+      }
 
-    .group-card {
-      padding: 16px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      margin-bottom: 12px;
-      background: white;
-    }
+      .progress-bar {
+        height: 8px;
+        background: #E5E7EB;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 8px;
+      }
 
-    .group-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: start;
-      margin-bottom: 8px;
-    }
+      .progress-fill {
+        height: 100%;
+        background: var(--accent);
+        transition: width 0.3s ease;
+      }
 
-    .group-header h4 {
-      margin: 0;
-    }
+      .progress-text {
+        font-size: 12px;
+        color: var(--muted);
+      }
 
-    .group-subject {
-      font-size: 12px;
-      background: var(--glass);
-      padding: 4px 8px;
-      border-radius: 12px;
-      color: var(--muted);
-    }
+      .challenge-reward {
+        font-size: 14px;
+        color: var(--success);
+        font-weight: 500;
+      }
 
-    .group-details {
-      display: flex;
-      justify-content: space-between;
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
+      .group-card {
+        padding: 16px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        margin-bottom: 12px;
+        background: white;
+      }
 
-    .group-actions {
-      text-align: right;
-    }
+      .group-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: 8px;
+      }
 
-    .help-request {
-      padding: 16px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      margin-bottom: 12px;
-      background: white;
-    }
+      .group-header h4 {
+        margin: 0;
+      }
 
-    .request-header {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 4px;
-    }
+      .group-subject {
+        font-size: 12px;
+        background: var(--glass);
+        padding: 4px 8px;
+        border-radius: 12px;
+        color: var(--muted);
+      }
 
-    .student-name {
-      font-weight: 600;
-    }
+      .group-details {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: 12px;
+      }
 
-    .request-time {
-      font-size: 12px;
-      color: var(--muted);
-    }
+      .group-actions {
+        text-align: right;
+      }
 
-    .request-subject {
-      font-size: 14px;
-      color: var(--accent);
-      margin-bottom: 4px;
-    }
+      .help-request {
+        padding: 16px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        margin-bottom: 12px;
+        background: white;
+      }
 
-    .request-question {
-      font-style: italic;
-      margin-bottom: 12px;
-      color: var(--muted);
-    }
+      .request-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4px;
+      }
 
-    .help-btn {
-      width: 100%;
-    }
+      .student-name {
+        font-weight: 600;
+      }
 
-    .my-stats {
-      margin-top: 20px;
-    }
+      .request-time {
+        font-size: 12px;
+        color: var(--muted);
+      }
 
-    .stat-item {
-      display: flex;
-      justify-content: space-between;
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border);
-    }
+      .request-subject {
+        font-size: 14px;
+        color: var(--accent);
+        margin-bottom: 4px;
+      }
 
-    .stat-item:last-child {
-      border-bottom: none;
-    }
+      .request-question {
+        font-style: italic;
+        margin-bottom: 12px;
+        color: var(--muted);
+      }
 
-    .points-balance {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background: var(--glass);
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
+      .help-btn {
+        width: 100%;
+      }
 
-    .points-display {
-      text-align: center;
-    }
+      .my-stats {
+        margin-top: 20px;
+      }
 
-    .points-display strong {
-      display: block;
-      font-size: 32px;
-      color: var(--accent);
-    }
+      .stat-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--border);
+      }
 
-    .activity-item {
-      display: flex;
-      justify-content: space-between;
-      padding: 8px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 14px;
-    }
+      .stat-item:last-child {
+        border-bottom: none;
+      }
 
-    .activity-item:last-child {
-      border-bottom: none;
-    }
+      .points-balance {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background: var(--glass);
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
 
-    .activity-points {
-      color: var(--success);
-      font-weight: 600;
-    }
+      .points-display {
+        text-align: center;
+      }
 
-    .activity-time {
-      color: var(--muted);
-      font-size: 12px;
-    }
+      .points-display strong {
+        display: block;
+        font-size: 32px;
+        color: var(--accent);
+      }
 
-    .empty-state {
-      text-align: center;
-      padding: 40px 20px;
-      color: var(--muted);
-    }
+      .activity-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 14px;
+      }
 
-    .modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
+      .activity-item:last-child {
+        border-bottom: none;
+      }
 
-    .modal-content {
-      background: white;
-      padding: 24px;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 500px;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-  </style>
+      .activity-points {
+        color: var(--success);
+        font-weight: 600;
+      }
+
+      .activity-time {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .empty-state {
+        text-align: center;
+        padding: 40px 20px;
+        color: var(--muted);
+      }
+
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        width: 90%;
+        max-width: 500px;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+    </style>
 </body>
 
 </html>

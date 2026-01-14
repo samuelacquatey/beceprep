@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BECE Prep - Parent Portal</title>
+  <title>ClassMaster - Parent Portal</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
   <div class="container">
     <header>
       <div class="brand">
-        <div class="logo">BE</div>
+        <div class="logo">CM</div>
         <div>
           <h1>Parent Portal</h1>
-          <p class="lead">Monitor your child's BECE preparation progress</p>
+          <p class="lead">Monitor your child's ClassMaster preparation progress</p>
         </div>
       </div>
       <div>
@@ -41,7 +43,7 @@
             <span>Session Streak</span>
           </div>
         </div>
-        
+
         <div class="study-habits">
           <h4>📊 Study Habits</h4>
           <div>Preferred Time: <strong>Evenings (6-9PM)</strong></div>
@@ -84,7 +86,7 @@
 
       <!-- BECE Readiness -->
       <div class="card" style="grid-column: span 2;">
-        <h3>🎓 BECE Readiness Tracker</h3>
+        <h3>🎓 ClassMaster Readiness Tracker</h3>
         <div class="readiness-metrics">
           <div class="readiness-item">
             <span>Mathematics</span>
@@ -115,7 +117,7 @@
   <script type="module">
     const parentPortal = {
       // Generate parent-friendly insights
-      getParentInsights: function(studentId) {
+      getParentInsights: function (studentId) {
         const studentData = this.getStudentData(studentId);
         return {
           strengths: this.identifyStrengths(studentData),
@@ -126,7 +128,7 @@
       },
 
       // Weekly report generator
-      generateWeeklyReport: function(studentId) {
+      generateWeeklyReport: function (studentId) {
         const weekData = this.getWeekData(studentId);
         return {
           summary: `Kwame studied for ${weekData.totalHours} hours this week`,
@@ -137,7 +139,7 @@
       },
 
       // Parent action items
-      getParentActions: function(studentData) {
+      getParentActions: function (studentData) {
         return [
           {
             action: "Encourage more Integrated Science practice",
@@ -154,4 +156,5 @@
     };
   </script>
 </body>
+
 </html>

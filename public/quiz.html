@@ -4,292 +4,286 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BECE Past Questions — Select Filters</title>
+  <title>ClassMaster - Select Filters</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=2.1">
+  <link rel="stylesheet" href="css/styles.css?v=2.1">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css" />
+  <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <header>
+    <nav class="app-top-bar">
       <div class="brand">
-        <div class="logo">BE</div>
-        <div>
-          <h1>BECE Prep [Interactive MVP]</h1>
-          <p class="lead">Practice by subject or year • Get performance analytics and improvement tips</p>
+        <div class="logo">CM</div>
+        <div class="brand-text">
+          <h1>ClassMaster</h1>
         </div>
       </div>
-      <!-- Old Nav Removed -->
-    </header>
+    </nav>
 
-    <div class="card fade-in">
-      <div class="loading-overlay" id="loadingOverlay" style="display: none;">
-        <div class="spinner"></div>
+    <div class="container">
+      <div style="margin-bottom: 24px;">
+        <h1 style="font-size: 24px; font-weight: 700; color: #111827;">Quiz Setup</h1>
+        <p style="color: var(--muted);">Select your preferences to start practicing.</p>
       </div>
 
-      <div class="section">
-        <h3>🎯 Configure Your Session</h3>
-        <p class="text-sm text-muted mb-4">Select the subjects and mode you want to practice.</p>
-
-        <div class="filter-group" style="display:flex;gap:12px;align-items:center;margin-bottom:16px; flex-wrap:wrap;">
-          <select id="yearSelect" aria-label="Select year" class="flex-1">
-            <option value="all">All Years</option>
-          </select>
-
-          <select id="modeSelect" aria-label="Mode" class="flex-1">
-            <option value="practice">📝 Practice Mode</option>
-            <option value="exam">⏱️ Exam Mode</option>
-          </select>
+      <div class="card fade-in">
+        <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+          <div class="spinner"></div>
         </div>
 
-        <h3 class="mt-4">Subjects</h3>
-        <div class="subjects" id="subjectsList">
-          <!-- Populated by JS -->
-          <div style="padding: 20px; text-align: center; width: 100%; color: var(--muted);">Loading subjects...</div>
-        </div>
-      </div>
+        <div class="section">
+          <h3>🎯 Configure Your Session</h3>
+          <p class="text-sm text-muted mb-4">Select the subjects and mode you want to practice.</p>
 
-      <div class="section mt-4" style="border-top: 1px solid var(--border); padding-top: 20px;">
-        <div class="controls" style="justify-content: space-between;">
-          <label class="switch" style="display:flex; align-items:center; gap:8px; cursor:pointer;">
-            <input type="checkbox" id="endlessMode">
-            <span style="font-size: 14px; color: var(--text-main)">♾️ Endless Mode</span>
-          </label>
-          <button id="startBtn" class="btn primary">Start Quiz 🚀</button>
+          <div class="filter-group"
+            style="display:flex;gap:12px;align-items:center;margin-bottom:16px; flex-wrap:wrap;">
+            <select id="yearSelect" aria-label="Select year" class="flex-1">
+              <option value="all">All Years</option>
+            </select>
+
+            <select id="modeSelect" aria-label="Mode" class="flex-1">
+              <option value="practice">📝 Practice Mode</option>
+              <option value="exam">⏱️ Exam Mode</option>
+            </select>
+          </div>
+
+          <h3 class="mt-4">Subjects</h3>
+          <div class="subjects" id="subjectsList">
+            <!-- Populated by JS -->
+            <div style="padding: 20px; text-align: center; width: 100%; color: var(--muted);">Loading subjects...</div>
+          </div>
+        </div>
+
+        <div class="section mt-4" style="border-top: 1px solid var(--border); padding-top: 20px;">
+          <div class="controls" style="justify-content: space-between;">
+            <label class="switch" style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+              <input type="checkbox" id="endlessMode">
+              <span style="font-size: 14px; color: var(--text-main)">♾️ Endless Mode</span>
+            </label>
+            <button id="startBtn" class="btn primary">Start Quiz 🚀</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Navigation Injection -->
-  <nav class="app-nav">
-    <a href="quiz.html" class="nav-item" id="nav-home">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path
-            d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.69Z" />
-          <path
-            d="M12 5.432 2.625 14.807v6.068a2.625 2.625 0 0 0 2.625 2.625h13.5a2.625 2.625 0 0 0 2.625-2.625v-6.068L12 5.432Z" />
-        </svg>
-      </div>
-      <span>Home</span>
-    </a>
-    <a href="dashboard.html" class="nav-item" id="nav-analytics">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path fill-rule="evenodd"
-            d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z"
-            clip-rule="evenodd" />
-          <path fill-rule="evenodd"
-            d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z"
-            clip-rule="evenodd" />
-        </svg>
-      </div>
-      <span>Analytics</span>
-    </a>
-    <a href="flashcards.html" class="nav-item" id="nav-flashcards">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path d="M11.25 3v18H6.75a2.25 2.25 0 0 1-2.25-2.25V5.25A2.25 2.25 0 0 1 6.75 3h4.5Z" />
-          <path d="M12.75 3v18h4.5a2.25 2.25 0 0 0 2.25-2.25V5.25A2.25 2.25 0 0 0 17.25 3h-4.5Z" />
-        </svg>
-      </div>
-      <span>Memorize</span>
-    </a>
-    <a href="social.html" class="nav-item" id="nav-social">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path
-            d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.161Z" />
-        </svg>
-      </div>
-      <span>Community</span>
-    </a>
-    <a href="profile.html" class="nav-item" id="nav-profile">
-      <div class="nav-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="outline-icon">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
-          <path fill-rule="evenodd"
-            d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-            clip-rule="evenodd" />
-        </svg>
-      </div>
-      <span>Profile</span>
-    </a>
-  </nav>
+    <!-- Navigation Injection -->
+    <nav class="app-nav">
+      <a href="quiz.html" class="nav-item" id="nav-home">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path
+              d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.69Z" />
+            <path
+              d="M12 5.432 2.625 14.807v6.068a2.625 2.625 0 0 0 2.625 2.625h13.5a2.625 2.625 0 0 0 2.625-2.625v-6.068L12 5.432Z" />
+          </svg>
+        </div>
+        <span>Home</span>
+      </a>
+      <a href="dashboard.html" class="nav-item" id="nav-analytics">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path fill-rule="evenodd"
+              d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z"
+              clip-rule="evenodd" />
+            <path fill-rule="evenodd"
+              d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <span>Analytics</span>
+      </a>
+      <a href="flashcards.html" class="nav-item" id="nav-flashcards">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path d="M11.25 3v18H6.75a2.25 2.25 0 0 1-2.25-2.25V5.25A2.25 2.25 0 0 1 6.75 3h4.5Z" />
+            <path d="M12.75 3v18h4.5a2.25 2.25 0 0 0 2.25-2.25V5.25A2.25 2.25 0 0 0 17.25 3h-4.5Z" />
+          </svg>
+        </div>
+        <span>Memorize</span>
+      </a>
+      <a href="social.html" class="nav-item" id="nav-social">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path
+              d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.161Z" />
+          </svg>
+        </div>
+        <span>Community</span>
+      </a>
+      <a href="profile.html" class="nav-item" id="nav-profile">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="outline-icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="solid-icon">
+            <path fill-rule="evenodd"
+              d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <span>Profile</span>
+      </a>
+    </nav>
 
-  <script type="module">
-    import { auth } from './js/auth.js';
-    import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-    import { QUIZ_METADATA } from './js/metadata.js';
+    <script type="module">
+      import { auth, requireAuth } from './js/auth.js';
+      import { signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+      import { QUIZ_METADATA } from './js/metadata.js';
+      import { initTour } from "./js/tour.js";
 
-    // DOM Elements
-    const subjectsList = document.getElementById('subjectsList');
-    const yearSelect = document.getElementById('yearSelect');
-    const startBtn = document.getElementById('startBtn');
-    const logoutBtn = document.getElementById('logoutBtn');
-    const dashboardBtn = document.getElementById('dashboardBtn');
-    const socialBtn = document.getElementById('socialBtn');
-    const flashcardsBtn = document.getElementById('flashcardsBtn');
+      // DOM Elements
+      const subjectsList = document.getElementById('subjectsList');
+      const yearSelect = document.getElementById('yearSelect');
+      const startBtn = document.getElementById('startBtn');
+      const logoutBtn = document.getElementById('logoutBtn');
+      const dashboardBtn = document.getElementById('dashboardBtn');
+      const socialBtn = document.getElementById('socialBtn');
+      const flashcardsBtn = document.getElementById('flashcardsBtn');
 
-    // State
-    let activeVariant = 'A';
-    let selectedSubjects = new Set();
+      // State
+      let activeVariant = 'A';
+      let selectedSubjects = new Set();
 
-    // Initialize
-    document.addEventListener('DOMContentLoaded', async () => {
-      const loadingOverlay = document.getElementById('loadingOverlay');
-      if (loadingOverlay) loadingOverlay.style.display = 'none';
+      // Initialize
+      document.addEventListener('DOMContentLoaded', async () => {
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) loadingOverlay.style.display = 'none';
 
-      // Check auth
-      onAuthStateChanged(auth, (user) => {
-        if (!user) {
-          window.location.href = 'index.html';
+        // Check auth
+        requireAuth((user) => {
+          // Auth success - user is logged in
+          // Instant Load using Metadata
+          populateFilters();
+          initTour('quiz');
+        });
+      });
+
+      // --- Core Logic: Active Filtration ---
+      function populateFilters() {
+
+        renderChips(QUIZ_METADATA.subjects);
+
+        // 2. Initial Year Population (All Years)
+        updateYearDropdown();
+      }
+
+      function updateYearDropdown() {
+        const selectedNames = Array.from(selectedSubjects);
+        const availableYears = QUIZ_METADATA.getAvailableYears(selectedNames);
+
+        const currentSelection = yearSelect.value;
+
+        // Rebuild Options
+        let html = '<option value="all">All Years</option>';
+        availableYears.forEach(year => {
+          html += `<option value="${year}">${year}</option>`;
+        });
+
+        yearSelect.innerHTML = html;
+
+        // Attempt to preserve selection if valid
+        if (currentSelection !== 'all' && availableYears.includes(Number(currentSelection))) {
+          yearSelect.value = currentSelection;
+        } else {
+          yearSelect.value = 'all';
         }
-      });
-
-      // A/B Test Assignment
-      assignABVariant();
-
-      // Instant Load using Metadata
-      populateFilters();
-    });
-
-    function assignABVariant() {
-      const storedVariant = localStorage.getItem('quiz_ui_variant');
-      if (storedVariant) {
-        activeVariant = storedVariant;
-      } else {
-        activeVariant = Math.random() < 0.5 ? 'chips' : 'carousel';
-        localStorage.setItem('quiz_ui_variant', activeVariant);
-      }
-    }
-
-    // --- Core Logic: Active Filtration ---
-    function populateFilters() {
-
-      renderChips(QUIZ_METADATA.subjects);
-
-      // 2. Initial Year Population (All Years)
-      updateYearDropdown();
-    }
-
-    function updateYearDropdown() {
-      const selectedNames = Array.from(selectedSubjects);
-      const availableYears = QUIZ_METADATA.getAvailableYears(selectedNames);
-
-      const currentSelection = yearSelect.value;
-
-      // Rebuild Options
-      let html = '<option value="all">All Years</option>';
-      availableYears.forEach(year => {
-        html += `<option value="${year}">${year}</option>`;
-      });
-
-      yearSelect.innerHTML = html;
-
-      // Attempt to preserve selection if valid
-      if (currentSelection !== 'all' && availableYears.includes(Number(currentSelection))) {
-        yearSelect.value = currentSelection;
-      } else {
-        yearSelect.value = 'all';
-      }
-    }
-
-    // --- Renderers ---
-
-    function renderChips(subjects) {
-      subjectsList.innerHTML = '<div class="subject-chip-grid" role="group" aria-label="Subject Selection"></div>';
-      const container = subjectsList.querySelector('.subject-chip-grid');
-
-      subjects.forEach(subject => {
-        const chip = document.createElement('div');
-        chip.className = 'subject-chip';
-        // Restore original structure
-        chip.innerHTML = `<span>${subject.icon}</span> <span>${subject.name}</span>`;
-        chip.dataset.subject = subject.name;
-
-        chip.onclick = () => toggleSubject(chip, subject.name);
-        container.appendChild(chip);
-      });
-    }
-
-
-
-    function toggleSubject(el, subjectName) {
-      if (selectedSubjects.has(subjectName)) {
-        selectedSubjects.delete(subjectName);
-        el.classList.remove('selected');
-        // Check for both possible active classes just in case css uses one or other
-        el.classList.remove('active');
-      } else {
-        selectedSubjects.add(subjectName);
-        el.classList.add('selected');
-        el.classList.add('active');
       }
 
-      // TRIGGER ACTIVE FILTRATION
-      updateYearDropdown();
-    }
+      // --- Renderers ---
 
-    // Start Quiz
-    startBtn.onclick = () => {
-      // Map selected display names -> canonical dbKeys
-      const subjectKeys = Array.from(selectedSubjects).map(name => {
-        const meta = QUIZ_METADATA.subjects.find(s => s.name === name && s.years.includes(yearSelect.value));
-        // Fallback: if not found for some reason, keep the name
-        return meta ? meta.dbKey : name;
-      });
+      function renderChips(subjects) {
+        subjectsList.innerHTML = '<div class="subject-chip-grid" role="group" aria-label="Subject Selection"></div>';
+        const container = subjectsList.querySelector('.subject-chip-grid');
 
-      const settings = {
-        subjects: subjectKeys,    // store KEYS, not names
-        year: yearSelect.value,
-        mode: document.getElementById('modeSelect').value,
-        endless: document.getElementById('endlessMode').checked
+        subjects.forEach(subject => {
+          const chip = document.createElement('div');
+          chip.className = 'subject-chip';
+          // Restore original structure
+          chip.innerHTML = `<span>${subject.icon}</span> <span>${subject.name}</span>`;
+          chip.dataset.subject = subject.name;
+
+          chip.onclick = () => toggleSubject(chip, subject.name);
+          container.appendChild(chip);
+        });
+      }
+
+
+
+      function toggleSubject(el, subjectName) {
+        if (selectedSubjects.has(subjectName)) {
+          selectedSubjects.delete(subjectName);
+          el.classList.remove('selected');
+          // Check for both possible active classes just in case css uses one or other
+          el.classList.remove('active');
+        } else {
+          selectedSubjects.add(subjectName);
+          el.classList.add('selected');
+          el.classList.add('active');
+        }
+
+        // TRIGGER ACTIVE FILTRATION
+        updateYearDropdown();
+      }
+
+      // Start Quiz
+      startBtn.onclick = () => {
+        // Map selected display names -> canonical dbKeys
+        const subjectKeys = Array.from(selectedSubjects).map(name => {
+          // Fix: Simply find by name. The year filter is applied later in the query.
+          const meta = QUIZ_METADATA.subjects.find(s => s.name === name);
+          return meta ? meta.dbKey : name;
+        });
+
+        const settings = {
+          subjects: subjectKeys,    // store KEYS, not names
+          year: yearSelect.value,
+          mode: document.getElementById('modeSelect').value,
+          endless: document.getElementById('endlessMode').checked
+        };
+
+        if (settings.subjects.length === 0) {
+          alert('Please select at least one subject!');
+          return;
+        }
+
+        sessionStorage.setItem('quizSettings', JSON.stringify(settings));
+        window.location.href = 'qna.html';
       };
 
-      if (settings.subjects.length === 0) {
-        alert('Please select at least one subject!');
-        return;
-      }
 
-      sessionStorage.setItem('quizSettings', JSON.stringify(settings));
-      window.location.href = 'qna.html';
-    };
+      // Navigation Removal (Handled by global nav)
+      // logoutBtn.addEventListener('click', () => signOut(auth));
+      // dashboardBtn.addEventListener('click', () => window.location.href = 'dashboard.html');
+      // flashcardsBtn.addEventListener('click', () => window.location.href = 'flashcards.html');
+      // socialBtn.addEventListener('click', () => window.location.href = 'social.html');
 
-
-    // Navigation Removal (Handled by global nav)
-    // logoutBtn.addEventListener('click', () => signOut(auth));
-    // dashboardBtn.addEventListener('click', () => window.location.href = 'dashboard.html');
-    // flashcardsBtn.addEventListener('click', () => window.location.href = 'flashcards.html');
-    // socialBtn.addEventListener('click', () => window.location.href = 'social.html');
-
-  </script>
+    </script>
 </body>
 
 </html>

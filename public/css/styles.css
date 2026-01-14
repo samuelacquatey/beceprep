@@ -10,6 +10,9 @@
   --border: #E5E7EB;
   --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --top-bar-height: 64px;
+  --z-top-bar: 2000;
+  --z-nav: 1000;
 }
 
 * {
@@ -340,6 +343,55 @@ header {
   gap: 16px;
   padding: 20px 0;
   border-bottom: 1px solid var(--border);
+}
+
+/* Top Bar Styles */
+.app-top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--top-bar-height);
+  background: white;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  z-index: var(--z-top-bar);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.app-top-bar .brand {
+  display: flex;
+  flex-direction: row;
+  /* Force horizontal layout */
+  align-items: center;
+  justify-content: flex-start;
+  /* Ensure left alignment */
+  gap: 12px;
+  margin: 0;
+  /* Reset default margin */
+}
+
+.app-top-bar .logo {
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: none;
+  /* Flatter look for bar */
+}
+
+.app-top-bar .brand-text h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+
+/* Adjust body padding for top bar */
+body {
+  padding-top: calc(var(--top-bar-height) + 20px);
 }
 
 .grid {
@@ -781,12 +833,10 @@ footer.small {
 }
 
 .subject-chip.selected {
-  background: rgba(37, 99, 235, 0.1);
-  /* Translucent blue */
-  color: var(--accent);
+  background: var(--accent);
+  color: white;
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px var(--accent);
-  /* Subtle glow effect */
+  box-shadow: var(--shadow);
 }
 
 /* Loading Spinner */

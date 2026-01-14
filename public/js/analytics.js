@@ -1,5 +1,5 @@
 import { getUserTopicPerformance, trackStudySession, trackQuizAttempt, getUserQuizHistory } from './database.js';
-import { TOPIC_HIERARCHY, BECE_PASS_MARK, EXAM_DATE } from './data/topicData.js';
+import { TOPIC_HIERARCHY, EXAM_PASS_MARK, EXAM_DATE } from './data/topicData.js';
 import { getTopicById } from './data/topicGraph.js';
 
 export class AnalyticsEngine {
@@ -79,11 +79,11 @@ export class AnalyticsEngine {
       averageTimePerQuestion: totalQuestions > 0 ? Math.round(totalTime / totalQuestions) : 0,
       consistencyScore: this.calculateConsistency(),
       totalStudyTime: Math.round(totalTime / 60), // in minutes
-      readinessScore: this.calculateBECEReadiness()
+      readinessScore: this.calculateExamReadiness()
     };
   }
 
-  calculateBECEReadiness() {
+  calculateExamReadiness() {
     // Revised Formula based on user feedback:
     // Readiness = 0.6 * Accuracy + 0.25 * Coverage + 0.15 * Consistency
     // Coverage is now based on "mastered" topics (accuracy >= 70%) rather than just attempted.

@@ -60,5 +60,5 @@ export const TOPIC_HIERARCHY = {
     }
 };
 
-export const BECE_PASS_MARK = 50; // Example pass mark
-export const EXAM_DATE = new Date('2025-08-01'); // Example BECE date
+export const EXAM_PASS_MARK = 50; // Example pass mark
+export const EXAM_DATE = new Date('2025-08-01'); // Example Exam date

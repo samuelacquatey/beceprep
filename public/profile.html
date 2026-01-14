@@ -4,23 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile - BECE Prep</title>
+    <title>My Profile - ClassMaster</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css" />
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
 </head>
 
 <body>
     <div class="container">
         <!-- New Header (Simplified) -->
-        <header style="justify-content: center; border-bottom: none;">
+        <nav class="app-top-bar">
             <div class="brand">
-                <div class="logo">BE</div>
+                <div class="logo">CM</div>
                 <div class="brand-text">
-                    <h1>My Profile</h1>
+                    <h1>ClassMaster</h1>
                 </div>
             </div>
-        </header>
+        </nav>
+
+        <div style="margin-bottom: 24px; text-align: center;">
+            <h1 style="font-size: 24px; font-weight: 700; color: #111827;">My Profile</h1>
+        </div>
 
         <div class="card fade-in">
             <div style="text-align: center; margin-bottom: 32px;">
@@ -131,35 +138,33 @@
     </nav>
 
     <script type="module">
-        import { auth } from './js/auth.js';
-        import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { auth, requireAuth } from './js/auth.js';
+        import { signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
         import { SchoolManager } from "./js/schools.js";
+        import { initTour } from "./js/tour.js";
 
         // Logic
         document.addEventListener('DOMContentLoaded', () => {
-            onAuthStateChanged(auth, async (user) => {
-                if (user) {
-                    document.getElementById('profileName').textContent = user.displayName || 'User';
-                    document.getElementById('profileEmail').textContent = user.email;
+            requireAuth(async (user) => {
+                document.getElementById('profileName').textContent = user.displayName || 'User';
+                document.getElementById('profileEmail').textContent = user.email;
 
-                    // Fetch school info
-                    const schoolManager = new SchoolManager();
-                    try {
-                        const school = await schoolManager.getStudentSchool(user.uid);
-                        if (school) {
-                            document.getElementById('profileSchool').textContent = school.name;
-                        }
-                    } catch (e) {
-                        console.error("Error fetching school:", e);
+                // Fetch school info
+                const schoolManager = new SchoolManager();
+                try {
+                    const school = await schoolManager.getStudentSchool(user.uid);
+                    if (school) {
+                        document.getElementById('profileSchool').textContent = school.name;
                     }
-                } else {
-                    window.location.href = 'index.html';
+                } catch (e) {
+                    console.error("Error fetching school:", e);
                 }
+                initTour('profile');
             });
 
             document.getElementById('logoutBtn').addEventListener('click', () => {
                 signOut(auth).then(() => {
-                    window.location.href = 'index.html';
+                    window.location.href = 'login.html';
                 });
             });
         });

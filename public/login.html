@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClassMaster - Master Your Exams</title>
+  <meta name="description"
+    content="The ultimate ClassMaster preparation platform. Practice past questions, track your progress, and join study groups to ace your exams.">
+  <meta name="keywords" content="ClassMaster, WAEC, Ghana, Past Questions, JHS, Education, Study App">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bece-2eb33.web.app/">
+  <meta property="og:title" content="ClassMaster - Master Your Exams">
+  <meta property="og:description"
+    content="Practice past questions, track progress, and ace your ClassMaster exams with our intelligent platform.">
+  <meta property="og:image" content="https://bece-2eb33.web.app/assets/og-image.jpg">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Firebase SDK -->
+  <!-- Removed Compat SDKs -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+      </div>
+
+      <div class="alert" id="alertBox"></div>
+
+      <div class="brand">
+        <div class="logo">CM</div>
+        <div class="brand-text">
+          <h1>ClassMaster</h1>
+          <p>Master your exams with practice</p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active" id="signin-tab">Sign In</div>
+        <div class="tab" id="signup-tab">Sign Up</div>
+      </div>
+
+      <div class="form-page active" id="signin-form">
+        <div class="form-container">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+          </div>
+
+          <div class="form-group password-toggle">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <span class="toggle-icon" id="toggle-password">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
+          </div>
+
+          <div class="remember-forgot">
+            <label class="remember">
+              <input type="checkbox" id="remember">
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot" id="forgotPassword">Forgot password?</a>
+          </div>
+
+          <button class="btn" id="signInBtn">Sign In</button>
+        </div>
+
+        <div class="divider">or continue with</div>
+
+        <div class="social-login">
+          <button class="social-btn" id="googleSignIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+              <path
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+              <path
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+              <path
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+            </svg>
+            Google
+          </button>
+        </div>
+
+        <div class="signup-prompt">
+          Don't have an account? <a href="#" id="switch-to-signup">Sign up</a>
+        </div>
+      </div>
+
+      <div class="form-page" id="signup-form">
+        <div class="form-container">
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" placeholder="Enter your full name">
+          </div>
+
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" placeholder="Enter your email">
+          </div>
+
+          <div class="form-group password-toggle">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" placeholder="Create a password (min. 6 characters)">
+            <span class="toggle-icon" id="toggle-signup-password">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
+          </div>
+
+          <div class="form-group password-toggle">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="Confirm your password">
+            <span class="toggle-icon" id="toggle-confirm-password">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
+          </div>
+
+          <!-- School Code Section -->
+          <div class="form-group">
+            <label for="schoolCode">School Code (Optional)</label>
+            <input type="text" id="schoolCode" placeholder="Enter your school code if provided">
+            <small style="color: var(--muted); font-size: 12px;">If your school registered with ClassMaster, enter the
+              code to join your class</small>
+          </div>
+
+          <!-- Teacher Registration Option -->
+          <div class="form-group">
+            <label class="remember">
+              <input type="checkbox" id="isTeacher">
+              <span>I am a teacher registering my school</span>
+            </label>
+          </div>
+
+          <!-- School Registration Form (hidden by default) -->
+          <div id="schoolRegistrationForm"
+            style="display: none; background: var(--glass); padding: 16px; border-radius: 8px; margin-top: 12px;">
+            <h4 style="margin-bottom: 16px; color: var(--accent);">🏫 School Registration</h4>
+            <div class="form-group">
+              <label for="schoolName">School Name</label>
+              <input type="text" id="schoolName" placeholder="e.g., Presec Legon">
+            </div>
+            <div class="form-group">
+              <label for="schoolLocation">School Location</label>
+              <input type="text" id="schoolLocation" placeholder="e.g., Accra, Ghana">
+            </div>
+            <div class="form-group">
+              <label for="teacherId">Teacher ID Number</label>
+              <input type="text" id="teacherId" placeholder="School-provided ID">
+            </div>
+          </div>
+
+          <div class="remember">
+            <input type="checkbox" id="terms">
+            <label for="terms">I agree to the <a href="#" style="color: var(--accent);">Terms & Conditions</a></label>
+          </div>
+
+          <button class="btn" id="signUpBtn">Create Account</button>
+        </div>
+
+        <div class="divider">or continue with</div>
+
+        <div class="social-login">
+          <button class="social-btn" id="googleSignUp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+              <path
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+              <path
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+              <path
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+            </svg>
+            Google
+          </button>
+        </div>
+
+        <div class="signup-prompt">
+          Already have an account? <a href="#" id="switch-to-signin">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import {
+      createUserWithEmailAndPassword,
+      signInWithEmailAndPassword,
+      signInWithPopup,
+      GoogleAuthProvider,
+      sendPasswordResetEmail,
+      updateProfile,
+      onAuthStateChanged,
+      setPersistence,
+      browserSessionPersistence,
+      browserLocalPersistence
+    } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    import { SchoolManager } from "./js/schools.js";
+    import { app, auth, db } from "./js/auth.js";
+
+    // Initialize Firebase
+    // app, auth, db are already initialized in ./js/auth.js
+    const googleProvider = new GoogleAuthProvider();
+    const schoolManager = new SchoolManager();
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // UI Elements
+      const loadingOverlay = document.getElementById('loadingOverlay');
+      if (loadingOverlay) loadingOverlay.style.display = 'none';
+      const alertBox = document.getElementById('alertBox');
+      const signInBtn = document.getElementById('signInBtn');
+      const signUpBtn = document.getElementById('signUpBtn');
+      const googleSignIn = document.getElementById('googleSignIn');
+      const googleSignUp = document.getElementById('googleSignUp');
+      const forgotPassword = document.getElementById('forgotPassword');
+      const isTeacherCheckbox = document.getElementById('isTeacher');
+      const schoolRegistrationForm = document.getElementById('schoolRegistrationForm');
+
+      // Show alert message
+      function showAlert(message, type = 'error') {
+        alertBox.textContent = message;
+        alertBox.className = `alert alert-${type}`;
+        alertBox.style.display = 'block';
+
+        setTimeout(() => {
+          alertBox.style.display = 'none';
+        }, 5000);
+      }
+
+      // Show loading state
+      function setLoading(isLoading) {
+        loadingOverlay.style.display = isLoading ? 'flex' : 'none';
+        signInBtn.disabled = isLoading;
+        signUpBtn.disabled = isLoading;
+        googleSignIn.disabled = isLoading;
+        googleSignUp.disabled = isLoading;
+      }
+
+      // Toggle password visibility with SVG icons
+      function setupPasswordToggle(toggleId, inputId) {
+        const toggle = document.getElementById(toggleId);
+        const input = document.getElementById(inputId);
+
+        toggle.addEventListener('click', function () {
+          if (input.type === 'password') {
+            input.type = 'text';
+            toggle.innerHTML = `
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+            `;
+          } else {
+            input.type = 'password';
+            toggle.innerHTML = `
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            `;
+          }
+        });
+      }
+
+      // Setup all password toggles
+      setupPasswordToggle('toggle-password', 'password');
+      setupPasswordToggle('toggle-signup-password', 'signup-password');
+      setupPasswordToggle('toggle-confirm-password', 'confirm-password');
+
+      // Toggle school registration form
+      isTeacherCheckbox.addEventListener('change', function (e) {
+        if (e.target.checked) {
+          schoolRegistrationForm.style.display = 'block';
+        } else {
+          schoolRegistrationForm.style.display = 'none';
+        }
+      });
+
+      // Toggle between sign in and sign up forms
+      const signinTab = document.getElementById('signin-tab');
+      const signupTab = document.getElementById('signup-tab');
+      const signinForm = document.getElementById('signin-form');
+      const signupForm = document.getElementById('signup-form');
+      const switchToSignup = document.getElementById('switch-to-signup');
+      const switchToSignin = document.getElementById('switch-to-signin');
+
+      function activateSignIn() {
+        signinTab.classList.add('active');
+        signupTab.classList.remove('active');
+        signinForm.classList.add('active');
+        signupForm.classList.remove('active');
+        alertBox.style.display = 'none';
+      }
+
+      function activateSignUp() {
+        signinTab.classList.remove('active');
+        signupTab.classList.add('active');
+        signinForm.classList.remove('active');
+        signupForm.classList.add('active');
+        alertBox.style.display = 'none';
+      }
+
+      signinTab.addEventListener('click', activateSignIn);
+      signupTab.addEventListener('click', activateSignUp);
+      switchToSignup.addEventListener('click', function (e) {
+        e.preventDefault();
+        activateSignUp();
+      });
+      switchToSignin.addEventListener('click', function (e) {
+        e.preventDefault();
+        activateSignIn();
+      });
+
+      // Email/password authentication
+      signInBtn.addEventListener('click', function () {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const rememberMe = document.getElementById('remember').checked;
+
+        if (!email || !password) {
+          showAlert('Please fill in all fields');
+          return;
+        }
+
+        setLoading(true);
+
+        // Set persistence based on "remember me" selection
+        const persistence = rememberMe ? browserLocalPersistence : browserSessionPersistence;
+
+        setPersistence(auth, persistence)
+          .then(() => {
+            // Sign in with Firebase
+            return signInWithEmailAndPassword(auth, email, password);
+          })
+          .then((userCredential) => {
+            const user = userCredential.user;
+            showAlert('Sign in successful! Redirecting...', 'success');
+
+            // NEW: Clear any previous session data
+            sessionStorage.clear();
+
+            // Check if user is a teacher and redirect accordingly
+            schoolManager.getTeacherSchool(user.uid)
+              .then(schoolData => {
+                if (schoolData) {
+                  window.location.href = 'teacher-admin.html';
+                } else {
+                  window.location.href = 'quiz.html';
+                }
+              })
+              .catch(() => {
+                window.location.href = 'quiz.html';
+              });
+          })
+          .catch((error) => {
+            setLoading(false);
+            const errorCode = error.code;
+
+            if (errorCode === 'auth/invalid-email') {
+              showAlert('Invalid email address');
+            } else if (errorCode === 'auth/user-disabled') {
+              showAlert('This account has been disabled');
+            } else if (errorCode === 'auth/user-not-found') {
+              showAlert('No account found with this email');
+            } else if (errorCode === 'auth/wrong-password') {
+              showAlert('Incorrect password');
+            } else {
+              showAlert('Sign in failed. Please try again.');
+            }
+          });
+      });
+
+      signUpBtn.addEventListener('click', async function () {
+        const fullname = document.getElementById('fullname').value;
+        const email = document.getElementById('signup-email').value;
+        const password = document.getElementById('signup-password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+        const terms = document.getElementById('terms').checked;
+        const schoolCode = document.getElementById('schoolCode').value;
+        const isTeacher = document.getElementById('isTeacher').checked;
+        const schoolName = document.getElementById('schoolName')?.value;
+        const schoolLocation = document.getElementById('schoolLocation')?.value;
+        const teacherId = document.getElementById('teacherId')?.value;
+
+        if (!fullname || !email || !password || !confirmPassword) {
+          showAlert('Please fill in all fields');
+          return;
+        }
+
+        if (password.length < 6) {
+          showAlert('Password must be at least 6 characters long');
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          showAlert('Passwords do not match');
+          return;
+        }
+
+        if (!terms) {
+          showAlert('Please agree to the Terms & Conditions');
+          return;
+        }
+
+        if (isTeacher && (!schoolName || !schoolLocation || !teacherId)) {
+          showAlert('Please fill in all school registration details');
+          return;
+        }
+
+        setLoading(true);
+
+        try {
+          // Create user with Firebase
+          const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+          const user = userCredential.user;
+
+          // Update user profile with display name
+          await updateProfile(user, { displayName: fullname });
+
+          let redirectUrl = 'quiz.html';
+          let successMessage = 'Account created successfully!';
+
+          // Handle school registration/joining
+          if (isTeacher) {
+            // Teacher registering new school
+            const schoolData = await schoolManager.registerSchool(
+              { name: schoolName, location: schoolLocation },
+              { userId: user.uid, fullName: fullname, teacherId: teacherId }
+            );
+            successMessage = `School registered successfully! Your school code is: ${schoolData.code}`;
+            redirectUrl = 'teacher-admin.html';
+          } else if (schoolCode) {
+            // Student joining existing school
+            const studentData = {
+              fullName: fullname,
+              class: 'JHS 3' // Default, can be updated later
+            };
+
+            await schoolManager.joinSchool(user.uid, schoolCode, studentData);
+            successMessage = 'Successfully joined school!';
+          }
+
+          showAlert(successMessage, 'success');
+
+          // NEW: Clear any previous session data
+          sessionStorage.clear();
+
+          // Redirect after delay
+          setTimeout(() => {
+            window.location.href = redirectUrl;
+          }, 2000);
+
+        } catch (error) {
+          setLoading(false);
+          const errorCode = error.code;
+
+          if (errorCode === 'auth/email-already-in-use') {
+            showAlert('This email is already registered');
+          } else if (errorCode === 'auth/invalid-email') {
+            showAlert('Invalid email address');
+          } else if (errorCode === 'auth/weak-password') {
+            showAlert('Password is too weak');
+          } else if (errorCode === 'auth/operation-not-allowed') {
+            showAlert('Email/password accounts are not enabled');
+          } else if (error.message.includes('school')) {
+            showAlert(error.message);
+          } else {
+            showAlert('Account creation failed. Please try again.');
+          }
+        }
+      });
+
+
+      // Google authentication
+      function signInWithGoogle() {
+        setLoading(true);
+
+        signInWithPopup(auth, googleProvider)
+          .then((result) => {
+            // Signed in successfully
+            showAlert('Sign in successful! Redirecting...', 'success');
+
+            // NEW: Clear any previous session data
+            sessionStorage.clear();
+
+            // Redirect to quiz app after a brief delay
+            setTimeout(() => {
+              window.location.href = 'quiz.html';
+            }, 1500);
+          })
+          .catch((error) => {
+            setLoading(false);
+            console.error("Google Sign-In Error:", error);
+            showAlert(`Google sign-in failed: ${error.message}`);
+          });
+      }
+
+      googleSignIn.addEventListener('click', signInWithGoogle);
+      googleSignUp.addEventListener('click', signInWithGoogle);
+
+      // Password reset
+      forgotPassword.addEventListener('click', function (e) {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+
+        if (!email) {
+          showAlert('Please enter your email address first');
+          return;
+        }
+
+        setLoading(true);
+
+        sendPasswordResetEmail(auth, email)
+          .then(() => {
+            setLoading(false);
+            showAlert('Password reset email sent! Check your inbox.', 'success');
+          })
+          .catch((error) => {
+            setLoading(false);
+            if (error.code === 'auth/user-not-found') {
+              showAlert('No account found with this email');
+            } else {
+              showAlert('Failed to send reset email. Please try again.');
+            }
+          });
+      });
+
+      // Check if user is already logged in
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // Check if user is a teacher and redirect accordingly
+          schoolManager.getTeacherSchool(user.uid)
+            .then(schoolData => {
+              if (schoolData) {
+                window.location.href = 'teacher-admin.html';
+              } else {
+                window.location.href = 'quiz.html';
+              }
+            })
+            .catch(() => {
+              window.location.href = 'quiz.html';
+            });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

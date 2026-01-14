@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BECE Prep - Teacher Dashboard</title>
+  <title>ClassMaster - Teacher Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
   <div class="container">
     <header>
       <div class="brand">
-        <div class="logo">BE</div>
+        <div class="logo">CM</div>
         <div>
           <h1>Teacher Dashboard</h1>
           <p class="lead">Monitor class performance and identify learning gaps</p>
@@ -75,9 +77,16 @@
   </div>
 
   <script type="module">
+    import { requireAuth } from './js/auth.js';
+
+    requireAuth((user) => {
+      console.log("Teacher authenticated:", user.uid);
+      // Initialize dashboard
+    });
+
     const teacherAnalytics = {
       // Identify topics needing class-wide revision
-      getTopicsForRevision: function(classId) {
+      getTopicsForRevision: function (classId) {
         const classPerformance = this.getClassPerformance(classId);
         return classPerformance.topics
           .filter(topic => topic.accuracy < 60)
@@ -85,7 +94,7 @@
       },
 
       // Generate revision schedule
-      createRevisionPlan: function(weakTopics, availableTime) {
+      createRevisionPlan: function (weakTopics, availableTime) {
         return weakTopics.map(topic => ({
           topic: topic.name,
           priority: topic.accuracy < 40 ? 'high' : 'medium',
@@ -96,9 +105,9 @@
       },
 
       // Monitor individual student progress
-      getStudentAlerts: function() {
-        return students.filter(student => 
-          student.accuracy < 50 || 
+      getStudentAlerts: function () {
+        return students.filter(student =>
+          student.accuracy < 50 ||
           student.studyTime < 2 || // hours per week
           student.performanceTrend === 'declining'
         );
@@ -106,4 +115,5 @@
     };
   </script>
 </body>
+
 </html>
